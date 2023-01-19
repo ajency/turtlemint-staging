@@ -38,12 +38,13 @@ body {
 }
 
 // locator section
-.locator-section-main{
-    @media(max-width:767.98px){
+.locator-section-main {
+    @media(max-width:767.98px) {
         margin-top: -48px !important;
         margin-bottom: 32px !important;
     }
 }
+
 .locator-section {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -89,7 +90,7 @@ body {
     }
 
     .pincode {
-        @include body(600);
+        @include h4(600);
         color: $tm-black !important;
         text-transform: capitalize;
     }
@@ -169,7 +170,7 @@ body {
         }
 
         .title {
-            @include body(600);
+            @include h4(600);
             position: relative;
             padding-right: 20px;
 
@@ -195,12 +196,13 @@ body {
         position: absolute;
         width: 240px;
         left: calc(50% - 120px);
+        z-index: 1;
 
         .tm-select-option {
             padding: 16px;
             display: flex;
             align-items: center;
-            @include fontStyle(14px, 17px, 500);
+            @include body(500);
             color: #333333;
             gap: 27px;
             position: relative;
@@ -233,7 +235,9 @@ body {
             }
         }
     }
-    .tm-select-value, .tm-select-option{
+
+    .tm-select-value,
+    .tm-select-option {
         cursor: pointer;
     }
 
@@ -262,6 +266,129 @@ body {
 
         .tm-select-options {
             left: 0px;
+        }
+    }
+}
+
+//advisor list
+.advisors-list-section {
+    margin-top: 25px;
+    margin-bottom: 32px;
+
+    @media(max-width:767.98px) {
+        margin-top: 21px;
+        margin-bottom: 20px;
+    }
+}
+
+.tm-advisor-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 21px 22px;
+
+    @media(max-width:991.98px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width:767.98px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.advisor-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0px;
+
+    &__wraper {
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            height: 96px;
+            width: 100%;
+            background-image: url(../img/tm-img/advisor-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        .advisor-image {
+            width: 96px;
+            height: 96px;
+            margin: 28px auto 16px;
+            border-radius: 100%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .advisor-name {
+            margin-bottom: 8px;
+        }
+
+        .advisor-location {
+            margin-bottom: 20px;
+        }
+
+        .tm-stats {
+            margin-bottom: 24px;
+
+            .stat-title {
+                margin-bottom: 8px;
+            }
+
+            .stat-subtitle {
+                margin-bottom: 0px;
+            }
+
+            .stat {
+                &:not(:last-child) {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        height: 100%;
+                        width: 1px;
+                        background-color: #000000;
+                        opacity: 0.2;
+                        position: absolute;
+                        right: 0px;
+                        top: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:767.98px) {
+        &__wraper {
+            &:before {
+                height: 68px;
+            }
+
+            .advisor-image {
+                margin-top: 4px;
+                margin-bottom: 16px;
+                width: 80px;
+                height: 80px;
+            }
+
+            .tm-stats {
+                .stat-title {
+                    margin-bottom: 4px;
+                }
+            }
         }
     }
 }

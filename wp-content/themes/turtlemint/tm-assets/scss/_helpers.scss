@@ -5,14 +5,179 @@ $tm-black : #121617;
 $tm-grey: #666666;
 $tm-green: #00A364;
 
+.tm-grey-text {
+    color: $tm-grey;
+}
+
 //typography
-@mixin fontStyle($size, $lineheight, $weight){
+@mixin fontStyle($size, $lineheight, $weight) {
     font-size: $size;
     line-height: $lineheight;
     font-weight: $weight;
 }
-@mixin body($weight){
+
+@mixin body($weight) {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: $weight;
+}
+
+@mixin h1($weight) {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: $weight;
+}
+
+@mixin h2($weight) {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: $weight;
+}
+
+@mixin h4($weight) {
     font-size: 16px;
     line-height: 20px;
     font-weight: $weight;
+}
+
+.tm {
+    &-body {
+        @include body(400);
+
+        &-regular {
+            @include body(500);
+        }
+    }
+
+    &-h1 {
+        @include h1(400);
+
+        &-regular {
+            @include h1(500);
+        }
+
+        &-bold {
+            @include h1(700);
+        }
+    }
+
+    &-h2 {
+        @include h2(400);
+
+        &-regular {
+            @include h2(500);
+        }
+
+        &-bold {
+            @include h2(700);
+        }
+    }
+
+    &-h4 {
+        @include h4(400);
+
+        &-regular {
+            @include h4(500);
+        }
+
+        &-medium {
+            @include h4(600);
+        }
+
+        &-bold {
+            @include h4(700);
+        }
+    }
+
+    @media(max-width:767.98px) {
+        &-body {
+            line-height: 21px;
+
+            &-regular {
+                line-height: 21px;
+            }
+        }
+
+        &-h1 {
+            font-size: 22px;
+            line-height: 28px;
+
+            &-regular,
+            &-bold {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+
+        &-h2 {
+            font-size: 18px;
+            line-height: 22px;
+            &-regular, &-bold{
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+.tm-highlight-text {
+    color: #00A465;
+}
+
+.tm-section-heading {
+    margin-bottom: 8px
+}
+
+.mb {
+    &-0 {
+        margin-bottom: 0px !important;
+    }
+}
+
+// button
+.tm-button-green {
+    background: #00A465;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF !important;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 24px;
+}
+
+//hide
+.hide-lg-down {
+    @media (max-width: 991.98px) {
+        display: none;
+    }
+}
+
+.hide-md-down {
+    @media (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+.hide-sm-down {
+    @media (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+.hide-lg-up {
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+.hide-md-up {
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
