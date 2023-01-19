@@ -1,0 +1,18 @@
+// fonts
+$montserrat : 'Montserrat';
+
+$tm-black : #121617;
+$tm-grey: #666666;
+$tm-green: #00A364;
+
+//typography
+@mixin fontStyle($size, $lineheight, $weight){
+    font-size: $size;
+    line-height: $lineheight;
+    font-weight: $weight;
+}
+@mixin body($weight){
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: $weight;
+}

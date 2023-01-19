@@ -541,6 +541,7 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/index.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/verticalLanding.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js"></script>
 <script>
 	jQuery('.slider-nav').slick({
 	    slidesToShow: 6,
