@@ -1,0 +1,315 @@
+
+/*Desktop */
+
+/*Banner */
+.claim-banner {
+    background: url(../img/Raising-Claim.png), #F8F4F3;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    height: 500px;
+    align-items: center;
+display: flex;}
+	
+.raise-claim-btn{    background: #007D64 !important;
+    height: 50px;
+    width: 220px;
+	color:#fff;
+    text-align: center;   
+    padding: 12px 0;
+    font-size: 18px;
+    font-family: Montserrat-medium;
+    border-radius: 4px;
+    text-decoration: none;    display: block;     margin-top: 60px;}
+a:hover{color:#000 !important;}	
+	
+
+.claim-banner-txt h2{font-family:'Montserrat-Bold'; margin-top:-60px;}
+.claim-banner-txt h4{font-family:'Montserrat-medium'; margin-top: 50px;}
+
+/* How It Works */
+
+.secondary-banner-claim{ border-radius: 0 100px 0 0 !important; background:#F8F4F3 !important;}
+
+.border-box{border: 1px solid #B7B7B7;
+    position:absolute;
+	align-items:center;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    height: 290px;
+    width: 300px;}
+	
+.border-box1{border: 1px solid #B7B7B7;
+	margin:0 auto;
+	align-items:center;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    height: 68%;
+    width: 55%;
+	border-radius:100%;
+	background:#fff;}
+	
+.border-box h5{padding:20px;}
+
+.cornertext{position:relative; 
+display:block;
+background:#00D679;
+height:70px;
+width:45px;
+border-radius: 0 0 50px 0;
+align-items:center; 
+padding:15px 0; }
+
+.arrowimg{ margin-left: 33px; margin-top: 130px; width: 54px;}
+
+.section-heading h3{text-align:center; font-size:40px; font-family:font-family:'Montserrat-Bold'; padding-bottom:30px;}
+
+.padd-web-60{padding: 100px 0px;}
+.padd-web-40{padding-bottom: 140px;    padding-top: 80px;}
+
+.bottom-seo-text1 ul,.bottom-seo-text1 li, .faq-section ul, .bottom-seo-text1 ol ul li, .faq-section li{list-style-type: disc; font-size:14px;}
+.bottom-seo-text1 ol li{list-style-type: auto; font-family: 'Montserrat-regular'; margin-left:15px;} 
+
+.bottom-seo-text1 p{font-family: 'Montserrat-Regular'; font-size:14px;}
+.SEO-content-text{font-family: 'Montserrat-Regular'; font-size:14px;}
+
+/*Claims Settlement */
+
+.claim-Settlement img{margin:0 auto; display:block; height: 100px;
+    padding-bottom: 30px}
+
+.claim-Settlement h2{text-align:center; font-size:22px; font-family: 'Montserrat-Bold';}
+.claim-Settlement p{text-align:center; font-family: 'Montserrat-regular';font-size:14px;}
+
+
+.claim-border-box{height: 530px; width: 660px; border: 1px solid #F8F4F3; align-items: center;  display: flex;  flex-direction: column;
+    justify-content: center;  }
+	
+.claim-border-box h2{  align-self: flex-start;  margin-left: 36px; font-family: 'Montserrat-medium';}
+
+.claim-border-box p{margin-left: 37px; font-family: 'Montserrat-regular';}
+
+.bg-color{background:#F8F4F3;}
+
+.bottom-seo-text1 h2{font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    font-family: 'Montserrat-Medium';
+	}
+h2.SEO-content-heading{padding-top:8%;}
+.section-heading h2{text-align:center;}
+
+/* .roman li{list-style:lower-roman; margin-top: 15px;  margin-left: 15px; }
+.alphabet li{list-style:lower-alpha; margin-top: 15px;  margin-left: 15px; }
+ol {margin-left:15px;} */
+
+.bg-grey {
+    background: #F8F4F3;
+}
+
+.partner-row h6{font-family:'Montserrat-medium' !important; font-size:14px;}
+
+
+
+
+/*Desktop/tab */
+@media screen and (min-device-width: 835px) and (max-device-width: 1024px) {
+
+.claim-banner-txt h2 {font-size:30px;}
+.claim-banner-txt h4 {font-size:21px;}	
+
+	
+/* How It Works */
+	
+.border-box{height: 270px;  width: 280px;}
+
+.arrowimg {margin-left: 18px;  margin-top: 130px;   width: 54px;  left: 26px;}
+	
+
+}
+
+
+
+/*TAb*/
+
+@media screen and (min-device-width: 769px) and (max-device-width: 834px){ 
+/*Banner */
+.claim-banner {
+    background: #efeeee !important;
+    height: 246px !important;
+}
+.claim-banner-txt h2 {font-size:28px; text-align: center; margin-top:0px;}
+.claim-banner-txt h4 {font-size:20px; text-align: center; margin-bottom: 46px; margin-top:0px;}	
+.raise-claim-btn { display: block;    margin: 0 auto;}
+
+
+
+
+/* How It Works */
+
+.border-box{border: 1px solid #B7B7B7;
+    position:absolute;
+	align-items:center;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    height: 290px;
+    width: 300px;}
+	
+.border-box1{border: 1px solid #B7B7B7;
+	margin:0 auto;
+	align-items:center;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    height: 68%;
+    width: 55%;
+	border-radius:100%;
+	background:#fff;}
+	
+.border-box h5{font-size:14px;}
+.border-box img{height:50px;}
+
+.arrowimg { left: 26px;  margin-left: 8px; margin-top: 84px;}
+   
+.cornertext{height: 59px;  width: 35px; padding: 10px 0 !important;}
+
+/*Claims Settlement */
+
+.claim-border-box { height: 310px; width: 370px;} 
+
+.claim-border-box img{height:204px; width:214px;}
+
+
+
+}
+
+
+
+
+/*Tab/mobile */
+@media screen and (min-device-width: 429px) and (max-device-width: 768px) { 
+
+/*Banner */
+.claim-banner {
+	 height: 246px !important;
+	background: #efeeee !important;
+}
+.claim-banner-txt h2 {font-size:28px; text-align: center; margin-top:0px;}	
+.claim-banner-txt h4 {font-size:20px; text-align: center; margin-bottom: 46px; margin-top:0px;}	
+.raise-claim-btn { display: block;    margin: 0 auto;}
+
+
+/* How It Works */
+
+
+.border-box{height: 201px;  width: 212px;}
+.border-box h5{font-size:14px;}
+.border-box h5{font-size:14px;}
+.border-box img{height:50px;}
+.arrowimg {
+    margin-left: 3px;
+    margin-right: 3px;
+    left: 30px;
+margin-top: 85px;}
+
+.cornertext{height: 55px;
+    width: 32px;
+	padding: 5px 0;} 
+
+	
+/*Claims Settlement */
+
+
+.claim-border-box { height: 310px; width: 370px;}
+
+.claim-border-box img{height:204px; width:214px;}
+
+
+
+}
+
+
+
+/*Mobile */
+@media screen and (min-device-width: 300px) and (max-device-width: 428px) {
+.claim-banner {
+    height: 280px !important; background: #efeeee !important;}
+	
+.section-heading h3{font-size:28px; padding-bottom:0px;}
+	
+.banner-mobile {display: block;}
+
+.padd-web-60{padding: 50px 0px;}
+	
+.claim-banner-txt h2 {font-size: 28px;    font-family: 'Montserrat-Bold';    margin-top: -10px;   text-align: center;}	
+.claim-banner-txt h4 {font-size: 20px;    font-family: 'Montserrat-medium';    margin-top: 0px;    margin-bottom: 46px; text-align: center;}
+.raise-claim-btn {
+    background: #007D64 !important;
+   height: 50px;
+    width: 220px;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 18px;
+    font-family: Montserrat-medium;
+    border-radius: 4px;
+    text-decoration: none;
+    display: block;    
+margin: 0 auto;}
+
+.border-box{border: 1px solid #B7B7B7;
+    position:absolute;
+	align-items:center;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    height: 290px;
+    width: 300px;}
+	
+	
+.border-box1{border: 1px solid #B7B7B7;
+	margin:0 auto;
+	align-items:center;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    height: 68%;
+    width: 40%;
+	border-radius:100%;
+	background:#fff;}
+	
+
+	
+.arrowimg{
+    margin-top: 70px;
+    margin-bottom: 12px;
+    width: 54px;
+    top: 115px;
+	    left: -11px;
+transform: rotate(90deg);}
+
+
+/*Claims Settlement */
+
+.claim-border-box { height: 310px; width: 370px;}
+
+.claim-border-box img{height:204px; width:214px;}
+
+.claim-Settlement p{padding-bottom:20px;}
+
+}
+
+@media screen and (max-width: 390px){
+	.arrowimg{
+    margin-top: 65px;
+	 top: 94px;}
+	 
+.claim-Settlement p{padding-bottom:20px;}
+
+	
+}
+

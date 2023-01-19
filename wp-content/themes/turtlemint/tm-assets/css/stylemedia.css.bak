@@ -1,0 +1,220 @@
+/*Ruchta 11/12/21  */
+
+
+.banner-mobile{      
+    display: none;
+}
+.custom-advisor{	
+	margin-top: -50px;
+}
+.custom-many-optns h4{	
+	font-family: 'Montserrat-Medium';
+	font-size: 22px;
+}
+.custom-become-part{	
+	font-family: 'Montserrat-Bold';
+}
+.custom-orgainize h3 {
+font-family: 'Montserrat-Bold';
+}
+.custom-orgainize h4 {
+    font-family: 'Montserrat-Medium';
+}
+
+.blog-cta-section {
+    padding: 70px 0px;
+}
+
+.blog-cta-section p{
+	font-family: 'Montserrat-Medium';
+}
+
+.blog-cta-section p {   
+    font-family: Montserrat-Medium;   
+    margin-left: 51px;
+}
+
+.faq-section {
+padding: 74px 0px;
+}
+
+
+
+
+
+
+@media only screen and (max-device-width: 414px) and (min-device-width: 360px){
+
+/*Logo */
+
+.logo {
+    width: 106.54px;
+    height: 24.45px;
+    margin-right: 100px;
+	margin-top: -4px;
+	   
+}
+
+/*Nav links */
+
+.custom-nav-links .custom-nav-btn a {
+    width: 163px; 
+    padding: 8px 0px;   
+text-align: center;
+margin-left: -5px !important;}
+
+ .custom-nav-links .custom-nav-btn{
+ margin-left: unset !important; 
+     margin-top: unset !important;
+}
+
+.custom-advisor{
+margin-top: 483px;
+}
+
+
+.mb-3, .my-3 {
+    margin-bottom: 2rem !important;
+}
+
+
+.main-banner-txt p{
+	margin-bottom: 2rem ;
+	
+}
+/*become turtlemint adviser img */
+
+.custom-advisor{
+	    margin-top: -17px;	
+}
+
+.adv-img img {
+    margin-left: 14px;
+	}
+
+
+/*aboutus slider */
+
+
+.c-media img {
+    height: 125px;
+    width: 125px;
+    margin-left: 126px;
+}
+
+.c-caption {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 0 30px	;
+	margin-top: 30px;
+
+}
+
+.slick-slide img{
+	margin:none !important;
+	
+}
+button.slick-next.slick-arrow,button.slick-prev.slick-arrow{
+
+	width:30px !important;
+    height:30px !important;
+}
+
+.slick-next {
+    right: 162px !important;
+    top: 382px !important;
+}
+
+.slick-prev {
+    left: 158px !important ;
+    top: 382px !important;
+}
+
+
+/*orgainize-content */
+
+.orgainize-content ul li {
+    font-size: 16px;
+	
+font-family: 'Montserrat-Medium';
+}
+
+
+.custom-orgainize h4 {
+    font-size: 20px;
+    line-height: 24px;
+font-family: 'Montserrat-Medium';
+}
+
+.custom-orgainize .btn-notify-me{
+margin-bottom: 10px;
+}
+
+.custom-orgainize h3 {
+    font-size: 28px;
+    line-height: 35px;
+    font-family: 'Montserrat-Bold';
+}
+
+
+/*Blog CTA */
+.blog-cta-section p {
+    font-size: 20px;
+	text-align: center;
+}
+
+.btn-visit-blog{
+	
+	width: 194px;
+    height: 44px;
+	margin-left: 74px;
+    margin-top: 28px;
+}
+/*FAQ Section */
+.faq-section {
+    padding: 47px 0px;
+
+}
+
+.banner-mobile{    
+   
+    display: block;
+}
+
+}
+
+
+@media only screen and (min-width: 390px) and (max-width: 767px){
+	
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+.custom-nav-links .custom-nav-btn {
+    margin-left: 5px;
+    margin-top: 9px;
+}
+
+.custom-nav-links .custom-nav-btn2 {
+    margin-left: 12px;
+    margin-top: 9px;
+    margin-right: -42px;
+}
+
+	/*
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+	margin-left: none !important;
+	
+}
+*/
+
+
+
+}
+
+	
+	
+	
+	
+}

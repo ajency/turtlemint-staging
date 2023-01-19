@@ -1,0 +1,266 @@
+// fonts
+// Roboto
+//@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+.font37(){font-size:37px;}
+.font36(){font-size:36px;}
+.font30(){font-size:30px;}
+.font28(){font-size:28px;}
+.font25(){font-size:25px;}
+.font24(){font-size:24px;}
+.font22(){font-size:22px;}
+.font20(){font-size:20px;}
+.font18(){font-size:18px;}
+.font17(){font-size:17px;}
+.font16(){font-size:16px;}
+.font15(){font-size:15px;}
+.font14(){font-size:14px;}
+.font13(){font-size:13px;}
+.font12(){font-size:12px;}
+.font11(){font-size:11px;}
+.font40(){font-size:40px;}
+.font50(){font-size:50px;}
+
+// icon font size
+.icon20(){font-size:20px;}
+.icon18(){font-size:18px;}
+.icon15(){font-size:15px;}
+.icon14(){font-size:14px;}
+.icon10(){font-size:10px;}
+
+
+.bold(){ font-family: 'open_sanssemibold';}
+.regular(){ font-family:'open_sansregular', Arial, sans-serif;}
+.ratLight(){font-family: 'montserratlight';}
+.sourcesansPro(){ font-family: 'source_sans_proregular';}
+.sourcesansProBold(){  font-family: 'Source Sans Pro Semibold';}
+.roboto(){  font-family: 'robotoregular';}
+.robotoBold(){font-family: 'robotomedium';}
+
+.full(){ float: left;  width: 100%;}
+.hover(){.transition(0.3s ease);}
+.flex() {flex: 1;}
+
+
+.greyTxt(){color:#666;}
+
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+  text-shadow: @string;
+}
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow:    @string;
+  box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+  -webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+  -moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+  box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+  -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  -moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-sizing (@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing:    @type;
+  box-sizing:         @type;
+}
+
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+
+.opacity (@opacity: 0.5) {
+  -webkit-opacity: 	@opacity;
+  -moz-opacity: 		@opacity;
+  opacity: 		@opacity;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+  background-image: -moz-linear-gradient(left, @startColor, @endColor);
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
+}
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform: 	 @string;
+  -ms-transform: 		 @string;
+  -o-transform: 		 @string;
+}
+.scale (@factor) {
+  -webkit-transform: scale(@factor);
+  -moz-transform: 	 scale(@factor);
+  -ms-transform: 		 scale(@factor);
+  -o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform: 	 rotate(@deg);
+  -ms-transform: 		 rotate(@deg);
+  -o-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+  -webkit-transform:       skew(@deg, @deg2);
+  -moz-transform: 	 skew(@deg, @deg2);
+  -ms-transform: 		 skew(@deg, @deg2);
+  -o-transform: 		 skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+  -webkit-transform:       translate(@x, @y);
+  -moz-transform: 	 translate(@x, @y);
+  -ms-transform: 		 translate(@x, @y);
+  -o-transform: 		 translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+  -webkit-transform:       translate3d(@x, @y, @z);
+  -moz-transform: 	 translate3d(@x, @y, @z);
+  -ms-transform: 		 translate3d(@x, @y, @z);
+  -o-transform: 		 translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+  -webkit-perspective: 	@value;
+  -moz-perspective: 	@value;
+  -ms-perspective: 	@value;
+  perspective: 		@value;
+}
+.transform-origin (@x:center, @y:center) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin:    @x @y;
+  -ms-transform-origin:     @x @y;
+  -o-transform-origin:      @x @y;
+}
+
+.background-size(@m){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: @m;
+}
+
+.vertical-align(@position: relative) {
+  position: @position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.placeholder-color(@c){
+  &::-webkit-input-placeholder {
+    color: @c;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: @c;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: @c;
+  }
+
+  &:-ms-input-placeholder {
+    color: @c;
+  }
+}
+.flex {
+  .flex()
+}
+.flexcenter {
+  align-items: center;
+  justify-content: center;
+}
+.flexrow {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.flexcolumn {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.flexstartstart {
+  justify-content: flex-start;
+  align-items: start;
+}
+.flexcenterstretch {
+  align-items: stretch;
+  justify-content: center;
+}
+.flexstartstretch {
+  align-items: stretch;
+  justify-content: center;
+}
+.flexendstretch {
+  align-items: stretch;
+  justify-content: center;
+}
+.flexnone {
+  flex: none;
+}
+
+
+/*for form element*/
+.formInput(){
+  border-radius: 2px;
+  border:1px solid fade(@TxtGrey, 70%);
+}

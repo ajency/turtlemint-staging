@@ -1,0 +1,382 @@
+
+@media (max-width:767px){
+    .body-style {
+        padding-top: 60px!important;
+    }
+    .fa-plus:before {
+        content: "+";
+    }
+    .fa-minus:before {
+        content: "-";
+        font-size: 35px;
+        position: relative;
+        bottom: 20px;
+    }
+    .no-box-shadow {
+        box-shadow: none!important;
+    }
+    .sideOpacity{
+        background: #333;
+        position: absolute!important;
+        width: 100%;
+        opacity: 0.6;
+        transition: all 0.1s ease-in;
+        height: 100vh;
+        }
+    .header-menu.navbar-fixed-top{position: absolute;}
+    .support .panel-default>.panel-heading a[aria-expanded="true"] {
+        background-color: @gray-light1;
+        margin-left: -20px!important;
+      }
+      .support .menu-acc .panel-default>.panel-heading a[aria-expanded="true"] {
+       
+       margin-left: -17px!important;
+       padding-left: 17px;
+      }
+      .panel-default>.panel-heading a{
+          padding-left: 20px;
+      }
+    .active-mobile{display: block;}
+    .panel-default > .panel-heading + .panel-collapse > .panel-body{
+        border: none;
+        opacity: 0.67;
+        padding: 16px 0 0 30px;
+    }
+    .menu-acc .panel-default > .panel-heading + .panel-collapse > .panel-body{
+        padding-left: 0px;
+        padding-right: 10px;
+        opacity: 0.67;
+        padding-bottom: 10px;
+        a{padding: 15px 0;}
+        // li + li{
+        //     padding:0; 
+        // }
+        li{padding: 0;
+            a{
+                height: auto;
+                padding: 9px 0;
+            }
+        }
+    }
+    // .visible-xs{width: 100%;}
+    .collapsing{
+        opacity: 0;
+        padding: 0;}
+    #commonHeader-mobile{  
+        .logo{
+            height: 60px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            background: @white;
+            position: fixed;
+            width: 100%;
+        }
+        .logo.active{
+            background: @white;
+            // transition: 0.45s ease;
+        }
+        .side-menu-btn {
+            position: relative;
+            float: left;
+            padding: 10px 15px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            span{
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                margin-top: 4px;
+                background-color: @txtblack;
+            }   
+        }
+        .mobile-logo{
+            margin-top: 20px;
+            display: inline-block;
+            width: 118px;
+        }
+        .call{
+            float: right;
+            padding-right:15px;
+            margin-top: 19px;
+            color: @txtblack;
+        }
+    }
+    .sidebar {
+        #car,#bike,#health,#term{
+        display: none;
+        position: relative;
+        width: 0%;
+        right:-270px;
+        opacity: 0;
+        .smart-logo{
+            text-align: left;
+            padding: 11px 21px;
+            height: 41px;
+            #car-back,#bike-back,#health-back,#term-back{
+                display: inline-block;
+            }
+            svg{
+                margin-right: 15px;
+                opacity: 0.9;
+            }
+            a{
+                height: 19px;
+                opacity: 0.9;
+                font-size: 16px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: @white;
+            }
+        }
+        }
+        transform: translateX(-120%);
+        display: inline-block;
+        height: 100vh;
+        background-color: @white;
+        transition: all 0.4s ease-in;
+        width: 270px;
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        .smart-logo {
+            text-align: center;
+            padding: 4px 0;
+            opacity: 0.9;
+            background-color: @txtblack;
+            a {
+                color: @white; 
+                font-size: 12px;
+                opacity: 0.7;
+            }
+        }
+        .side-bar-logo{
+            padding: 20px 0;
+            text-align: center;
+            background-color: @txtblack;
+            width: 100%;
+            .mobile-logo2{
+                height: 20px;
+                width: 121px;
+                margin: auto;
+            }
+        }
+      }
+      .active {
+        transform: translateX(0);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+    //   navigation section
+      .navigation{
+          min-height: 189px;
+          border-bottom: 1px solid @pale-grey;
+          padding: 20px 0 30px 10px;
+      }
+      .nav-list{
+        margin-bottom: 0;
+        margin-left: 0;
+          li{
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            }
+          a{
+            height: 16px;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color:@txtblack;
+            display: block;
+            position: relative;
+            svg{
+              position: absolute;
+              right: 10px;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              width: 6.1666669845581055px;
+              height: 10px;
+              opacity: 0.35;
+              color: @txtblack;  
+                }
+            }
+        }
+        // ends
+        // support section
+        .login-bar{
+            min-height: 128px;
+            border-bottom: 1px solid @pale-grey;
+            padding: 30px 0 26px 0;
+            .login-padding{
+                padding-left: 20px;
+            }
+        }
+        .login-icon{
+            // width: 24px;
+            height: 24px;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+        }
+        .login-btn{
+            margin-bottom: 19px;
+            a{
+                width: 94px;
+                height: 16px;
+                
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color:@txtblack;
+                text-decoration: none;
+            }
+            
+        }
+        .support{
+            min-height: auto;
+            .login-icon{
+                margin-top: 9px;
+            }
+            .padding-left{
+                padding-left: 20px!important;
+            }
+            .panel-group{
+                margin: 0;
+                .panel-default,
+                 .panel-heading{
+                     padding: 0;
+                     background: @white;
+                     border: none;
+                     box-shadow: none;
+                     
+                     h4,a{
+                        display: block;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        padding: 9px 0;
+                        
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        text-decoration: none;
+                        color: @Txtblack;
+                        i{
+                            position: absolute;
+                            right: 20px;
+                            top: 0;
+                            bottom: 0;
+                            font-size: 12px;
+                            margin: auto;
+                            width: 6.2px;
+                            height: 10px;
+                            opacity: 0.35;
+                            color: @txtblack; 
+                        }
+                     }
+                     h4{
+                         position: relative;
+                         padding: 0;
+                     }
+                }
+            }
+            li{
+                padding: 0 0 5px 10px;
+            }
+        }
+        .articles{
+            padding: 30px 0 0 20px;
+            margin: 0;
+            ul{
+                margin: 0;
+                li{
+                    display: block;
+                    padding: 0;
+                    a{
+                        height: 16px;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        text-decoration: none;
+                        color: @Txtblack;
+                        svg{
+                            width: 10px;
+                            height: 15px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                li + li{
+                    margin-top: 22px;
+                }
+            }
+        }
+        .quotes-mobile{
+            border-bottom: solid 1px @pale-grey;
+            height: 56px;
+            p{
+                height: 28px;
+                
+                font-size: 14px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.96;
+                letter-spacing: normal;
+                text-align: left;
+                color: @green;
+                padding: 14px 16px;
+            }
+        }
+        .accordian-title{
+            padding: 25px 17px 25px;
+            margin: 0;
+            p{
+                height: 16px;
+                
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color:@Txtblack;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .menu-acc{
+            padding-left: 17px;
+            .panel-group +.panel-group {
+                margin-top: 12px;
+            }
+        }
+        .more-link{
+            color: @green!important;
+        }
+
+}

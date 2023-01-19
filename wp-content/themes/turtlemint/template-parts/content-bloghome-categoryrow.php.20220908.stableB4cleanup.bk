@@ -1,0 +1,115 @@
+<?php
+/**
+ * Template part for displaying posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Turtlemint
+ */
+
+?>
+<!-- content.php -->
+<div class="col-md-3"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- SG content-bloghome-categoryrow.php -->
+	<div class="custom-blog-crd">
+        
+    <!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/Budget-FY2022-23-1.jpg" width="100%" height="auto" frameborder="0" /> -->    
+    <?php turtlemint_post_thumbnail(); ?>
+    <a href="<?php echo esc_url( get_permalink() ) ?>">
+    <div style="height: 10px;">
+        <!-- <h6 class="author-name">Blog Author Name</h6><h6 class="published-date">Mar 12, 2022</h6> -->
+    </div>
+    <?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			//the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			if(strlen(get_the_title())>70){
+				echo '<h5>'.substr(get_the_title(), 0, 60).'...</h5>';
+			}
+			else{
+				the_title( '<h5>', '</h5>' );
+			}
+            if(strlen(get_the_excerpt())>80){
+				echo '<p class="' . strlen(get_the_excerpt()) . '">' .substr(get_the_excerpt(), 0, 80).'...</p>';
+			}
+			else{
+				the_excerpt();
+			}
+		endif;
+        
+
+	?>
+<!-- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  -->
+	<div class="post-image hidden">
+		<?php turtlemint_post_thumbnail(); ?>
+	</div>
+	<header class="entry-header hidden">
+		<?php if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php turtlemint_posted_by(); ?>
+				<span>/</span>
+				<?php turtlemint_posted_on(); ?>
+				
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			//the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			if(strlen(get_the_title())>70){
+				echo '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'.substr(get_the_title(), 0, 70).'...</a></h2>';
+			}
+			else{
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			}
+		endif;
+
+		 ?>
+	</header><!-- .entry-header -->
+
+	
+	<div class="post-excerpt hidden">
+		<?php //the_excerpt(); ?>
+	</div>
+
+	<div class="entry-content hidden">
+		<?php
+		// the_content( sprintf(
+		// 	wp_kses(
+		// 		/* translators: %s: Name of current post. Only visible to screen readers */
+		// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'turtlemint' ),
+		// 		array(
+		// 			'span' => array(
+		// 				'class' => array(),
+		// 			),
+		// 		)
+		// 	),
+		// 	get_the_title()
+		// ) );
+
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'turtlemint' ),
+			'after'  => '</div>',
+		) );
+		?>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer hidden">
+		
+		<?php //turtlemint_entry_footer(); ?>
+		<?php /*
+
+		<footer class="entry-footer">
+			<span class="cat-links">Posted in <a href="http://localhost/category/life-insurance/" rel="category tag">Life Insurance</a></span>
+			<span class="tags-links">Tagged <a href="http://localhost/tag/life-insurance/" rel="tag">life insurance</a></span>
+			<span class="comments-link"><a href="http://localhost/life-insurance/articles/know-about-lic-jeevan-saral-plan/#respond">Leave a Comment<span class="screen-reader-text"> on Know about LIC Jeevan Saral Plan</span></a></span>
+			<span class="edit-link"><a class="post-edit-link" href="http://localhost/wp-admin/post.php?post=5893&amp;action=edit">Edit <span class="screen-reader-text">Know about LIC Jeevan Saral Plan</span></a></span>
+		</footer>
+
+		*/ ?>
+	</footer><!-- .entry-footer -->
+        <!-- </article> -->
+    </a></div></div><!-- #post-<?php the_ID(); ?> -->
+<!-- SG End of content-bloggrid.php -->

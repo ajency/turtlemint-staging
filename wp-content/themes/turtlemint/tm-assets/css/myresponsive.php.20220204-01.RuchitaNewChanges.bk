@@ -1,0 +1,988 @@
+.navbar-expand-md .navbar-nav .dropdown-content-car{left: -65vh !important;}
+.navbar-expand-md .navbar-nav .dropdown-content-bike{left: -75vh !important;}
+.navbar-expand-md .navbar-nav .dropdown-content-health{left: -75vh !important;}
+.navbar-expand-md .navbar-nav .dropdown-content-life{left: -99vh !important;}
+
+.search-btn{cursor:pointer;}
+
+.mnhover:hover{font-weight:900}
+
+.slick-dots li button::before {
+    color: #DFE0E1;
+    opacity: 1;
+    font-size: 12px;
+}
+
+/* td p{text-align:center;} */
+td p{text-align:left;}
+
+
+.slick-dots li button:before{font-size: 14px;}
+
+.slick-dots li.slick-active button::before {
+    color: #00D679;
+}
+.slick-dots li {
+    width: 14px;
+    height: 14px;
+}
+.slick-dots li button {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.c-caption p{   
+    font-family: 'Montserrat-medium' !important;
+	font-weight:unset !important;} 
+	
+
+.custom-video-crd{box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px; }
+
+.our-plans h5{color: #3B3B3B; }
+.our-plans h5:hover{color: #007D65; text-decoration: none !important;}
+
+.bike-offer p{color: #3B3B3B; }
+.bike-offer p:hover{color: #007D65; text-decoration: none !important;}
+
+.secondary-banner .custom-become-content h3{font-size: 24px !important;} /* added by ruchita */
+ 
+ .hovere:hover{color: #007D65; text-decoration: none !important;}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  
+
+  
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 760px;
+  }
+  
+ 
+  
+  
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1025px){
+
+.col-lg-2{max-width: 14% !important;}
+
+/* .col-md-3{max-width: 15% !important;} */
+.tabhide{display: none;}
+.search-btn{padding: 8% 10%;}
+
+.main-banner-txt h1 {font-size:26px;}
+.main-banner-txt h4 {font-size:22px;}
+.main-banner-txt .icon-text {font-size:12px;}
+
+
+}
+
+
+
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+  
+  
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.bg-cream {
+    background: #F8F4F3;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+/* .main-banner-txt h4 {
+    font-size: 1.6rem;
+} */
+.our-partner.our-plans {
+    background: #F8F4F3;
+    padding: 100px 0px;
+}
+.types-caro .caro-item > div {
+    text-align: center;
+    background: white;
+    padding: 40px 19px;
+    margin: 10px;
+}
+.banner-cta {
+    background-color: white;
+    padding: 0;
+}
+.footer .social-icons{
+    margin-right: 20px;
+}
+.table-responsive table {
+    width: 100%;
+    table-layout: fixed;
+}
+.table-responsive table th{
+    width: 300px;
+    text-align: center;
+}
+.life .table-responsive table th{
+    width: auto;
+}
+
+.footer-copy-right p{
+    margin-bottom: 0;
+}
+.faq-box .panel-title > a:before{
+    /*color: #CBCBCB;
+    right: 10px;
+    position: absolute;
+   padding: 5px 5px !important;*/
+
+   top: 11px;
+    right: 10px;
+    position: absolute;
+    color: #000000;
+    font-size: 10px;
+    padding: 0 !important;
+    height: 22px;
+    line-height: 21px;
+    width: 22px;
+    text-align: center;
+}
+.main-banner-txt h5 a {
+    font-family: 'Montserrat-Medium';
+    color: #007D65;
+}
+
+.main-banner-txt h5 a:hover {
+    font-weight: 600;
+}
+.main-banner-txt h5 a {
+    font-family: 'Montserrat-Medium';
+    color: #007D65;
+}
+.banner-cta-text h5 a {
+    font-family: 'Montserrat-Medium',sans-serif;
+    font-size: .9rem;
+    color: black;
+    text-decoration: none;
+}
+.life .main-banner-txt h4 {
+    margin-top: 10px;
+}
+@media(max-width: 1100px){
+    .gray-background.image-banner img {
+        width: 100%;
+		display:none; 
+    }
+    .main-banner-txt {
+        padding-bottom: 7%;
+        text-align: left;
+    }
+	
+    ./* col-lg-5.col-md-6.banner-cta.new {
+        margin-left: auto;
+        margin-right: auto;
+    } */
+    .continue-nonumber-wrapper {
+        justify-content: left;
+    }
+    .banner-crd {
+        justify-content: left;
+    }
+    .search-btn {
+      /*   padding: 11.95% 16%; */
+		cursor:pointer;
+    }
+	/* .bike-banner {
+        background: #efeeee;
+    } */
+}
+@media (max-width: 991px) {
+	
+	 .secondary-banner .custom-become-content h3{font-size: 20px !important;} /* added by ruchita */
+	 
+    .our-plans.pt-100 {
+        padding-top: 50px;
+    }
+    .types-caro .caro-itemimg {
+        max-height: 53px !important;
+        margin: 0 auto 15px;
+        display: block;
+    }
+    .types-caro .caro-item > div {
+        min-height: 284px;
+    }
+    .custom-video-crd {
+       /*  box-shadow: 0 3px 36px rgba(184, 184, 184, 16%); */
+           }
+    .new-below-banner-cta-text h5 {
+        padding-top: 0 !important;
+    }
+    .gray-background.image-banner img {
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+		display:block;
+    }
+    .continue-nonumber-wrapper {
+        padding-bottom: 14px;
+    }
+    .banner-cta-text h5 {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 0 10px !important;
+        justify-content: space-between;
+    }
+    .new-below-banner-cta-img {
+        float: none;
+        padding-top: 20px;
+    }
+    .footer-col-2{
+        width: 25%;
+    }
+    .footer-col-2.footer-col-2-tab{
+        width: 100%;
+        float: none;
+    
+    }
+    .footer-col-2.footer-col-2-tab .footer-col{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .quiz-row{
+        margin-top: 20px;
+    }
+    .life .quiz-row{
+        margin-top: 0px;
+    }
+    
+    .banner-crd{
+        padding-top: 1%;
+        justify-content: center;
+    }
+    .main-banner-txt {
+    padding-bottom: 0px;
+}
+    .banner-cta{
+        margin: 0 auto;
+    }
+    .banner-cta-text{
+        padding: 5px;
+        margin-top: 20px;
+    }
+    .banner-cta-text h5>img{
+        margin-left: 5px;
+    }
+    .faq-box .panel-title > a:before {
+    top:11px;
+    right: 10px;
+    position: absolute;
+    color: #CBCBCB;
+    font-size: 10px;
+    padding: 0 !important;
+    height: 22px;
+    line-height: 22px;
+    width: 22px;
+    text-align: center;
+}
+.faq-box h4.panel-title a {
+    width: 85%;
+    display: block;
+    font-size: 1rem;
+}
+.faq-box .panel {
+    position: relative;
+}
+   .custom-advisor{
+    margin-top: 50px;
+   }
+    .partner-main{
+        width: auto;
+    }
+    .image-banner img{
+            width: 100%;
+    }
+    .bike-banner {
+        background: #efeeee; /* removed banner on tab */
+        height: 455px;
+    }
+    .gray-background{
+        background: #efeeee;
+    }
+    .life .bike-banner{
+        height: auto;
+    padding-bottom: 100px;
+    }
+    .main-banner-txt h1,.adv-content h5,.adv-content{
+        text-align: center;
+    }
+    .life  .main-banner-txt h1{
+        margin-top: 50px;
+    margin-bottom: 40px;
+    }
+     .main-banner-txt h5{
+        width: 100%;
+        text-align: center;
+       margin-top: 15px !important;
+    margin-bottom: 15px !important;
+     }
+     .main-banner-txt h4, .our-partners h2, 
+     .bottom-seo-text h2, .custom-become-part{
+        font-size: 28px !important;
+        text-align: center;
+     }
+     .section-heading h2{
+        font-size: 1.6rem;
+     }
+     .adv-img{
+        width: 20%;
+     }
+     .adv-img img{
+            width: auto;
+    height: 150px;
+     }
+     .adv-content h5{
+        font-size: 1.75rem;
+        margin-left: -25px;
+     }
+     div.adv-content > a{
+        margin-left: 0;
+     }
+     .search-btn {
+   
+    padding: 7% 8%;
+  cursor:pointer;
+    font-size: 1em;
+    width: 100%;
+    }
+    .banner-crd .col-lg-1{
+        display: block !important;
+    }
+    .row.knowmore-btn-row{
+        text-align: center;
+    }
+    .search-input {
+        padding: 3% 0 3% 4% !important;
+    }
+    .new-below-banner-cta-img > img {
+        margin: 0 auto !important;
+        display: block;
+    }
+    .new-below-banner-cta-text {
+        padding-top: 15px;
+    }
+    .video-row h2 {
+        text-align: left;
+    }
+    .custom-video-crd-desktop{
+        display: none;
+    }
+    .carousel-indicators{
+        bottom: -35px;
+    }
+    .carousel-indicators li{
+        background-color: #B4B4B4;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+
+    }
+    #carouselExampleIndicators .carousel-indicators {
+        bottom: -55px;
+    }
+    .knowmore-title {
+        padding-top: 25px;
+        font-size: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    .knowmore-btn-row .btn-watch-more {
+        display: inline-block;
+        font-size: 1rem;
+        background: #009F69;
+        padding: 17px;
+        min-width: 260px;
+        font-weight: 500;
+    }
+    .knowmore-row {
+        padding-bottom: 50px !important;
+    }
+    .carousel-indicators .active{
+        opacity: 1;
+        background-color: #009F69;
+    } 
+    .bike-offer img {
+        max-height: 53px !important;
+    }
+        /*.custom-become-content h3 {
+        font-size: 1rem !important;
+    } */
+    .slider-client .slick-prev {
+        left: auto !important;
+        right: 80px !important;
+        top: 100% !important;
+    } 
+    .slider-client .slick-next {
+        left: auto !important;
+        right: 41px !important;
+        top: 100% !important;
+    }
+    /* 
+    .slick-dots li button::before {
+        color: #DFE0E1;
+        opacity: 1;
+        font-size: 12px;
+    }
+    .slick-dots li.slick-active button::before {
+        color: #00D679;
+    }
+    .slick-dots li {
+        width: 14px;
+        height: 14px;
+    }
+    .slick-dots li button {
+        width: 14px;
+        height: 14px;
+        padding: 0;
+        font-size: 12px;
+    }
+    */
+
+    .custom-become-content h3 {
+        font-family: 'Montserrat-bold';
+        margin-top: 0;
+        font-weight: 700;
+        font-size: 28px;
+    }
+    .video-row h2, .our-partners h2, .bottom-seo-text h2, .custom-become-part{
+        font-family: Montserrat-bold !important;
+        font-weight: 700 !important;
+    }
+    .custom-become-content p {
+        font-family: 'Montserrat-Medium', sans-serif;
+        font-size: 18px !important;
+        font-weight: 500 !important;
+    }
+    .secondary-banner.padd-tb-50 {
+        margin-top: 50px !important;
+		
+    }
+	
+	/*  .secondary-banner{max-width: 95%;} */
+	 /* .slick-slide img{display:unset !important;} */
+	 
+	 
+    .row.partner-row.padd-tb-30 {
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .customer-about {
+        padding-top: 70px !important;
+    }
+	
+	.c-media img {height: 185px; width:185px;}
+
+	
+    .custom-become-content img {
+        height: 57px !important;
+    }
+    .blog-cta-section {
+        padding: 70px 0px !important;
+    }
+    .slider-client .slick-next {
+        top: 100% !important;
+    }
+    .our-partners {
+        padding: 50px 0px !important;
+    }
+    .row-2.our-partners.our-plans {
+        background: #F8F4F3;
+        padding: 50px 0 80px !important;
+    }
+    .our-partners h2 {
+        font-size: 28px !important;
+        font-weight: 700;
+    }
+    .bottom-seo-text {
+        padding: 50px 0px !important;
+    }
+    .new-below-banner-cta {
+        border-radius: 0px 48px 5px 0;
+    }
+    .secondary-banner .custom-become-content h3{
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    .secondary-banner .custom-become-content p {
+        font-size: 16px !important;
+	font-family:'Montserrat-medium';} /* added by ruchita */
+    
+    .our-partners.our-plans .slick-slide img {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 30%;
+        min-height: 83px;
+        object-fit: contain;
+    }
+    .our-partners.our-plans .carousel-item.slick-slide {
+        margin: 0 10px;
+    }
+    .our-partners.our-plans .slick-list {
+        margin: 0 -30px;
+    }
+    .our-plans h5 {
+        font-size: 20px;
+    }
+    .our-partners.our-plans .bike-offer .col-md-4 {
+        min-height: 280px;
+    }
+    .main-banner-txt .icon-text {
+        max-width: 76%;
+        margin: 0 auto;
+    }
+	
+	.customer-row{width:600px;}
+}
+@media (max-width: 767px){
+     .phone-hide{
+        display: none;
+    }
+    .health .main-banner-txt h1{
+        margin-top: 0 !important;
+    }
+    .life .banner-crd .col-md-3 {
+    width: 50%;
+	padding: 12px;
+    margin-bottom: 30px;
+    }
+   
+    .life .banner-crd  .banner-img{
+        padding: 0;
+    }
+    .health .banner-crd  .banner-img{
+        height: 140px;
+        padding: 10px;
+    }
+    .health .table-responsive table th{
+        width: 300px;
+    }
+    .life .banner-crd  .banner-img img{
+        height: auto;
+    }
+    .health .banner-crd  .banner-img img{
+        height: auto;
+        width: auto;
+    }
+    .life .bike-banner{
+        height: auto !important;
+        padding-bottom: 100px !important;
+    }
+    .life .quiz-row,.life .main-banner-txt h4{
+        margin-top: 0 !important;
+    }
+    
+    .footer-col-2 {
+    width: 100% !important;
+}
+    .new-below-banner-cta-img>img{
+        margin: 0 auto;
+    display: block;
+    height: 40px;
+    margin-top: 10px;
+    }
+    .new-below-banner-cta-text{
+        padding-top: 0;
+    }
+    .banner-cta-text{
+        padding: 5px;
+    }
+    .d-sm-none{
+        display: none !important;
+    }
+    div.d-md-none .custom-nav-links.abc{
+        text-align: center;
+        padding: 20px 0;
+        background: #F8F4F3;
+        margin: 0;
+    }
+    div.d-md-none .custom-nav-links  .custom-nav-btn,
+    div.d-md-none .custom-nav-links .custom-nav-btn2{
+        display: inline-block;
+    } 
+    div.d-md-none .custom-nav-links .custom-nav-btn2{
+        margin-left: 10px;
+    }
+    div.d-md-none .custom-nav-links .custom-nav-btn a{
+        width: auto;
+            padding: 0.5rem 1rem;
+    }
+    .gray-background{
+        background:#efeeee;
+    }
+    .main-banner-txt h1,.adv-content h5,.adv-content{
+        text-align: center;
+        font-size: 23px !important;
+    }
+     .main-banner-txt h5{
+        width: 100%;
+        padding-left: 0;
+
+     }
+     .video-row{
+        padding-top: 1.8rem;
+     }
+      .main-banner-txt .new h5{
+        width: 100%;
+        padding-left: 0;
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+     }
+
+     .main-banner-txt h4,
+     .video-row h2, .our-partners h2, 
+     .bottom-seo-text h2, .custom-become-part{
+        font-size: 26px !important;
+     }
+     .section-heading h2{
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+     }
+     .custom-advisor{
+        position: relative;
+        margin-top: 30px !important;
+     }
+     .adv-img{
+        position: absolute;
+        right: 0;
+     }
+     .row.knowmore-btn-row div{
+        text-align: center;
+     }
+     .c-media,.c-caption{
+        float: none;
+        width: 100%;
+     }
+     .customer-about .c-caption-span-2 img{
+        margin: 0;
+     }
+     .slick-prev,.slick-next{
+        top: unset;
+        bottom: -70px;
+
+     }
+     .search-plans,.search-btn-wrapper{
+        display: inline-block;
+
+     }
+     .search-plans{
+                width: 67%;
+            }
+            .search-btn-wrapper{
+                width: 30%;
+                padding: 0px;
+                margin-top: 0px;
+            }
+
+    .search-btn-wrapper .search-btn{
+      padding: 8px;
+    font-size: 0.8em;
+    border: none;
+    }    
+    .bike-banner{
+        background: #efeeee;
+       height: 500px !important;  /* mobile banner */
+    display: block;
+    padding-top: 20px;
+
+    }    
+   h3.custom-become-part{
+    padding: 0 10px;
+    margin-bottom: 0;
+   }
+   .custom-become-content img{
+    height: 50px;
+   }
+    .knowmore-btn-row .btn-watch-more{
+        display: block;
+    }
+    .custom-video-crd p{
+        margin-bottom: 20px;
+    }
+    .new-below-banner-cta-img{
+        float: none;
+
+    }
+    .banner-cta{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    .banner-cta-text h5>img{
+        margin-left: 10px !important;
+    }
+    .adv-img {
+    width: 33%;
+    }
+    .adv-img img {
+    width: auto;
+    height: 150px;
+    }
+    
+    .knowmore-row{
+        margin-top: 20px;
+    }
+    .btn-watch-more{
+       font-family: 'Montserrat-Medium';
+    }
+    .knowmore-btn-row a.btn-watch-more:nth-child(1){
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin: 0 auto;
+    }
+    .knowmore-btn-row a.btn-watch-more:nth-child(2){
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .slick-prev {
+    left: 40%;
+    }
+    .slick-next{
+        left: 50%;
+    }
+    .customer-about{
+        padding-bottom: 100px;
+    }
+    .bottom-seo-text{
+        padding-top: 0;
+    }
+    .faq-box{
+        padding: 50px 10px;
+    }
+    .faq-box .panel-body{
+        padding: 0;
+    }
+    .faq-box .panel{
+        position: relative;
+    }
+    .faq-box h4.panel-title a{
+        width: 85%;
+    display: block;
+    font-size: 1rem;
+    }
+    .footer-col .logo{
+        margin: 0 auto;
+    display: block;
+    }
+    .footer-col ul li{
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+    }
+    .footer-col p{
+        line-height: 24px;
+    }
+    .padd-ct{
+        text-align: center;
+    }
+    .padd-ct ul{
+        float: none;
+    }
+    .our-partners {
+   
+    padding: 30px 0px;
+   
+    }
+    .customer-about .c-caption p {
+
+   
+   text-align: center;
+    font-size: 18px;
+}
+    .our-partners .slick-slide img{
+        display: inline-block;
+    
+    width: 100%;
+    padding: 0 5px;
+    }
+    .our-partners .slick-dotted.slick-slider{
+        margin-bottom: 0;
+    }
+/*    .our-partners .slick-initialized .slick-slide,.our-partners .slick-slider .slick-track{
+        width: 100% !important;
+    }*/
+
+    .our-partners .slick-slide img + .our-partners .slick-slide img {
+        margin-left: 10px;
+    } 
+    .our-partners .carousel-indicators{
+        bottom: 0;
+    }
+    .our-partners .slick-initialized .slick-slide{
+        padding-bottom: 50px;
+    }
+    .custom-nav-links .custom-nav-btn2 a{
+   
+        padding: 0.5rem 1rem;
+    }
+    .bike-offer.desktop {
+        display: none;
+    }
+    .our-partners .slick-dotted.slick-slider .slick-track {
+        padding-bottom: 30px;
+    }
+    .main-banner-txt h1 br {
+        display: none;
+    }
+    .main-banner-txt {
+        padding-bottom: 15px;
+    }
+    .bike-offer .types-caro .caro-item > div{
+        text-align: center;
+        background: white;
+        padding: 40px 19px;
+        margin: 10px;
+    }
+    .bike-offer .types-caro .caro-item img {
+        width: auto;
+    }
+    .customer-row{width: 379px;}
+}
+@media (min-width: 1200px){
+    .desktop-hide{
+        display: none;
+    }
+}
+@media(max-width: 600px){
+ .banner-crd .col-md-3{padding: 11px 0;  margin: -12px 0px;}
+	
+	
+    .search-plans {
+        width: 62%;
+    }
+    .search-btn-wrapper .search-btn {
+        padding: 9px 8px;
+    }
+    .search-input {
+        font-size: 14px;
+    }
+    .main-banner-txt .new h5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        justify-content: space-between;
+    }
+    .video-row h2 {
+        text-align: center;
+    }
+    .bike-offer .item-box {
+        max-width: 100% !important;
+    }
+    .our-partners .carousel-indicators {
+        bottom: -40px;
+    }
+    h3.custom-become-part {
+        margin-bottom: 20px;
+    }
+    .c-caption span{
+        text-align: center;
+        display: block;
+    }
+    .slider-client .slick-prev {
+        right: 53% !important;
+        top: 110% !important;
+    }
+    .slider-client .slick-next {
+        top: 110% !important;
+        right: 43% !important;
+    }
+    .slider-nav.slider-nav-desktop {
+        display: none;
+    }
+    .our-partners .slick-initialized .slick-slide {
+        padding-bottom: 0;
+    }
+    .bottom-seo-text .custom-many-optns {
+        padding-top: 0;
+    }
+    .new-below-banner-cta-text h5 {
+        font-size: 1rem !important;
+    }
+    .new-below-banner-cta {
+        margin-top: -105px !important;
+    }
+    
+	{
+        height: 445px !important;
+    }
+    .our-partner.our-plans {
+        padding: 50px 0px;
+    }
+    .our-partner.our-plans .slick-dots {
+        display: block !important;
+    }
+    .custom-many-optns h4 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .banner-cta-text {
+        padding: 5px 9px;
+    }
+    .custom-become-content {
+        margin-top: 15px;
+    }
+   /*  .secondary-banner.padd-tb-50 {
+   width: 100% !important;} */
+    
+    .secondary-banner .custom-become-content h3 {font-size: 20px;}
+        /* font-size: 28px; */ /* added by ruchita */
+		
+    
+    .custom-become-content img {
+        height: 64px !important;
+    }
+   /*  .table-responsive table {
+   table-layout: fixed;} */
+    
+    .table-responsive table th {
+        width: 200px;
+    }
+    .slider-nav  .slick-dots ,
+    .mobile-slider  .slick-dots {
+        display: block !important;
+    }
+    /* .customer-content img {
+        margin: 0 auto;
+	display: block; }*/
+    
+    .our-partners.our-plans .bike-offer .col-md-4 {
+        margin: 0;
+    }
+    .our-plans.pb-100 {
+        padding-bottom: 50px;
+    }
+    .main-banner-txt h4 {
+        font-size: 20px !important;
+    }
+    .new-below-banner-cta-text h5 {
+        padding-top: 16px !important;
+    }
+    .life.health .quiz-row,
+    .life .quiz-row {
+        margin-top: 10px !important;
+    }
+	.c-media img {height: 135px; width:135px;}
+}

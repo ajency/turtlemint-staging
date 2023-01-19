@@ -1,0 +1,103 @@
+@green: #0ab775;
+@white: #fff;
+
+.review-rating-form-sec {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #354052;
+
+	.form-heading {
+		color: @white;
+		margin: 0 0 30px 0;
+		text-align: center;
+	}
+
+	.rating-message {
+		color: @white;
+		text-align: center;
+		display: none;
+		justify-content: center;	
+		margin-top: 10px;	
+		&::before{
+			content: '\f06a';
+			font-family: fontawesome;
+			color: red;
+			position: relative;
+			top: 0px;
+			right: 3px;;
+		}
+	}
+	.rating-wrap{
+		color: @white;
+		display: flex;		
+		justify-content: center;
+	}
+
+
+	.star-ratings-css {
+		unicode-bidi: bidi-override;
+		color: @white;
+		font-size: 25px;
+		width: 160px; // It will vary according to your font-size
+		margin: 10px auto;
+		position: relative;
+
+		&-top {
+			position: absolute;
+			z-index: 1;
+			display: block;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			pointer-events: none;
+			width: 0;
+
+			span {
+				&:before {
+					content: '\f005';
+					font-family: fontawesome;
+				}
+				color: @green;
+			}
+
+			span+span {
+				padding-left: 10px;
+			}
+		}
+
+		&-bottom {			
+			display: block;
+			z-index: 0;
+			&:not(.hot){
+				cursor: text;
+			}
+			&.hot { 
+				&:hover {
+				  >	span {
+						color: @green;						
+					}
+					& + .star-ratings-css-top {
+						visibility: hidden;
+					}
+				}
+				> span {
+					cursor: pointer;
+					&:hover {
+						&~span {
+							color: @white;
+						}
+					}
+				}
+			}
+			span {
+				&:before {
+					content: '\f005';
+					font-family: fontawesome;
+				}
+			}
+			span+span {
+				padding-left: 10px;
+			}
+		}
+	}
+}

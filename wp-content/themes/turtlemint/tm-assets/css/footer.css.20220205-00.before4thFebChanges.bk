@@ -1,0 +1,87 @@
+
+.disclaimer{position: absolute; left: 7%;bottom: -0.1%;font-size: 13px;color: #7c7c7c;}
+.new-below-banner-cta{visibility: hidden;}
+a:hover{text-decoration: unset !important;}
+.footer-col  a { color: #000;}
+.footer-col  a:hover	 { color: #000;}
+.fa-lg {margin-right: 5px;}
+
+.footer-desktop .fo-logo {display:block; margin-bottom: 30px}
+
+.fo-logo {}
+.custom-video-crd h5 {min-height: 46px}
+.custom-video-crd p {min-height: 65px}
+.footer-col-100 p {font-size: 13px;text-align: center;padding: 25px 0 0;}
+
+/*Mobile CSS*/
+@media screen and (min-device-width: 200px) and (max-device-width: 428px) { 
+.footer-mobile {display:block}
+.footer-tab{display:none}
+.footer-desktop{display:none}
+
+.footer-logo {width: 200px;display: block;margin: 0 auto;padding-bottom: 20px;}
+
+.footer-col-2 h4{ margin-top: 20px; margin-bottom: 10px;font-size: 18px;font-family: 'Montserrat-Regular';font-weight: bold;}
+
+.footer-col-2 a{color: #000;font-size: 16px;font-family: Montserrat-Regular;}
+.footer-col-2 p{color: #000;font-size: 16px;font-family: Montserrat-Regular;}
+.footer-copy-right p {text-align: center; margin-bottom: 0.5rem;}
+.footer-copy-links {text-align:center;margin:0 0 1.5rem 0}
+.footer-copy-right {margin: 1.5rem 0 0 0;}
+.footer-copy-links a {font-size: 14px;color: #000;font-family: Montserrat-Regular}
+.footer-col-100 p { font-size: 16px;}
+   
+}
+
+
+/*tab CSS*/
+@media screen and (min-device-width: 430px) and (max-device-width: 1024px) { 
+.mobile-nav {display:none}
+.footer-mobile {display:none}
+.footer-tab{display:block}
+.footer-desktop{display:none}
+.footer-col-2 {width: 25%}
+.tab-logo {width:181.81px;display: block;margin: 0 auto; margin-bottom: 3rem}
+}
+
+
+/*desktop CSS*/
+@media screen and (min-device-width: 1025px) and (max-device-width: 1920px) { 
+.footer-mobile {display:none}
+.footer-tab{display:none}
+.footer-desktop{display:block}
+.footer-col p{font-size: 13px;}
+.footer-col ul li a {font-size: 13px;}
+.footer-copy-right p {font-size: 13px;}
+
+
+}
+
+@media screen and (min-device-width: 767px) and (max-device-width: 992px) { 
+
+.footer-col-2 {width: 33% !important}
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1025px) { 
+
+.main-banner {background-size: 450px;}
+.bike-banner {background-size: 450px !important;}
+}
+
+
+
+
+.footer-col-50{width: 48%;float: left;margin-right: 2%;}
+.footer-col-100{width: 100%; clear: both;}
+
+.footer .social-icons {height: 35px !important;}
+.footer-col h4{font-size: 20px;}
+.footer .social-icons {margin:0 !important; padding:0 !important}
+
+
+
+ 
+
+
+
+

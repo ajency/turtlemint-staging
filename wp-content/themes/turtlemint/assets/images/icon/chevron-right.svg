@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="13" viewBox="0 0 7 13">
+  <defs>
+    <path id="chevron-right-a" d="M7.12785,6.54753125 L3.0441,10.9715938 C2.9856,11.0349688 2.9856,11.1373437 3.0441,11.2015313 L3.8931,12.1204688 C3.9516,12.1838438 4.0461,12.1838438 4.1046,12.1204688 L8.24085,7.63953125 L9.24885,6.54753125 C9.2781,6.51584375 9.2781,6.46465625 9.24885,6.43296875 L8.24085,5.34178125 L4.1046,0.86003125 C4.0461,0.79665625 3.9516,0.79665625 3.8931,0.86003125 L3.0441,1.77978125 C2.9856,1.84315625 2.9856,1.94553125 3.0441,2.00890625 L7.12785,6.43296875 C7.1571,6.46465625 7.1571,6.51584375 7.12785,6.54753125"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" opacity=".6" transform="translate(-3)">
+    <mask id="chevron-right-b" fill="#fff">
+      <use xlink:href="#chevron-right-a"/>
+    </mask>
+    <use fill="#000" xlink:href="#chevron-right-a"/>
+    <g fill="#515163" mask="url(#chevron-right-b)">
+      <rect width="12" height="13"/>
+    </g>
+  </g>
+</svg>
