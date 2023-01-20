@@ -3,7 +3,12 @@ $montserrat : 'Montserrat';
 
 $tm-black : #121617;
 $tm-grey: #666666;
+$tm-grey1: #F1F1F1;
+$tm-grey2: #C4C4C4;
+$tm-grey3: #D9D9D9;
 $tm-green: #00A364;
+$tm-light-blue:#E5EAF9;
+$tm-blue:#224FD6;
 
 .tm-grey-text {
     color: $tm-grey;
@@ -54,6 +59,10 @@ $tm-green: #00A364;
 
         &-regular {
             @include h1(500);
+        }
+
+        &-medium {
+            @include h1(600);
         }
 
         &-bold {
@@ -112,7 +121,9 @@ $tm-green: #00A364;
         &-h2 {
             font-size: 18px;
             line-height: 22px;
-            &-regular, &-bold{
+
+            &-regular,
+            &-bold {
                 font-size: 18px;
                 line-height: 22px;
             }
@@ -135,8 +146,7 @@ $tm-green: #00A364;
 }
 
 // button
-.tm-button-green {
-    background: #00A465;
+.tm-button{
     border-radius: 8px;
     text-decoration: none !important;
     font-weight: 600;
@@ -149,6 +159,8 @@ $tm-green: #00A364;
     align-items: center;
     justify-content: center;
     padding: 11px 24px;
+    position: relative;
+    background: #00A465;
 }
 
 //hide
@@ -180,4 +192,179 @@ $tm-green: #00A364;
     @media (min-width: 768px) {
         display: none;
     }
+}
+
+/* skeletons */
+.tm-card-skeleton {
+    background-color: #ffffff;
+    //position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    .advisor-card__wraper {
+        height: 362px;
+        animation: pulsing 1s linear infinite alternate;
+
+        &:before {
+            background-image: url('');
+            background-color: $tm-grey1;
+        }
+
+        .advisor-image,
+        .tm-button-green {
+            background-color: $tm-grey2;
+        }
+
+        .advisor-image {
+            margin-bottom: 23px;
+
+            img {
+                opacity: 0;
+            }
+        }
+
+        .tm-button-green {
+            min-width: 140px;
+        }
+
+        .advisor-name,
+        .advisor-location {
+            min-height: 13px;
+            background-color: $tm-grey3;
+            border-radius: 8px;
+            margin: auto;
+        }
+
+        .stat-title,
+        .stat-subtitle {
+            min-height: 8px;
+            background-color: $tm-grey3;
+            border-radius: 8px;
+            margin: auto;
+        }
+
+        .stat-title {
+            width: 80px;
+        }
+
+        .stat-subtitle {
+            width: 44px;
+        }
+
+        .advisor-name {
+            max-width: 166px;
+            margin-bottom: 17px;
+        }
+
+        .advisor-location {
+            max-width: 80px;
+            margin-bottom: 22px;
+        }
+
+        .tm-stats {
+            margin-bottom: 28px;
+            min-height: 42px;
+        }
+    }
+}
+
+@keyframes pulsing {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.tm-advisor-list.tm-skeleton {
+    display: none;
+}
+
+.tm-loading .tm-skeleton {
+    display: grid;
+}
+
+.tm-loading .tm-advisor-list:not(.tm-skeleton) {
+    display: none;
+}
+
+/* links */
+.tm-link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: $tm-green !important;
+    text-decoration: none !important;
+
+    &.arrow-right-filled {
+        position: relative;
+        padding-right: 13px;
+
+        &:before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            position: absolute;
+            background-image: url(../img/icons/arrow-filled-right.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            right: 0px;
+            top: calc(50% - 3.5px);
+        }
+    }
+}
+
+/* scrollbar */
+.tm-scrollbar-mob {
+    @media(max-width:767.98px){
+        &-horizontal {
+            overflow: hidden;
+            overflow-x: scroll;
+            padding-bottom: 20px;
+    
+            &::-webkit-scrollbar {
+                width: 4px;
+                height: 4px;
+            }
+             
+            &::-webkit-scrollbar-track {
+                -webkit-border-radius: 2px;
+                border-radius: 2px;
+                margin-left: 157px;
+                margin-right: 157px;
+                background: rgba(217, 217, 217, 0.8);
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 2px;
+                border-radius: 2px;
+                background: $tm-green; 
+            }
+            &::-webkit-scrollbar-thumb:window-inactive {
+                background: $tm-green; 
+            }
+        }
+    }
+}
+
+.tm-loader {
+    &:before{
+        content:'';
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: 
+          radial-gradient(farthest-side,#FFFFFF 94%,#0000) top/4px 4px no-repeat,
+          conic-gradient(#0000 30%,#FFFFFF);
+        -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 4px),#000 0);
+        animation:tmLoader 1s infinite linear;
+        position: absolute;
+    }
+  }
+@keyframes tmLoader{ 
+  100%{transform: rotate(1turn)}
 }

@@ -343,6 +343,7 @@ body {
 
         .tm-stats {
             margin-bottom: 24px;
+            align-content: center;
 
             .stat-title {
                 margin-bottom: 8px;
@@ -391,4 +392,133 @@ body {
             }
         }
     }
+}
+
+/* advice steps */
+.tm-advice-steps-container {
+    margin-bottom: 33px;
+
+    &__wraper {
+        background: rgba(217, 217, 217, 0.2);
+        border-radius: 16px;
+        padding: 32px 40px;
+
+        .tm-headings {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tm-advise-steps {
+            margin-top: 32px;
+            display: flex;
+
+            .tm-advise-step {
+                width: 100%;
+                &:last-child{
+                    .step-connector{
+                        visibility: hidden;
+                    }
+                }
+                .image-container {
+                    height: 132px;
+                    width: 132px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .content {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $tm-black;
+                    margin-bottom: 0px;
+                    padding-right: 40px;
+
+                    b {
+                        font-weight: 700;
+                    }
+                }
+
+                .step-num {
+                    background: $tm-light-blue;
+                    border-radius: 4px;
+                    height: 24px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    color: $tm-blue;
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 4px 8px;
+                    margin-bottom: 16px;
+                }
+
+                .step-connector {
+                    opacity: 0.2;
+                    border-top: 1px dashed #000000;
+                    height: 1px;
+                    margin-top: -28px;
+                    margin-bottom: 24px;
+                    z-index: -1;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    @media(max-width:767.98px) {
+        margin-bottom: 20px;
+
+        &__wraper {
+            padding: 28px 20px 24px;
+
+
+            .tm-advise-steps {
+                margin-right: -20px;
+                margin-left: -20px;
+                .tm-advise-step {
+                    min-width: 145px;
+                    &:first-child{
+                        margin-left: 20px;
+                    }
+                    .image-container {
+                        width: 80px;
+                        height: 80px;
+                        margin-bottom: 8px;
+                    }
+                    .step-connector{
+                        margin-bottom: 20px;
+                    }
+                    .content{
+                        font-size: 14px;
+                        line-height: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+            .link-container {
+                text-align: center;
+                margin-top: 24px;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px){
+        border-radius: 0px;
+
+        &__wraper{
+            border-radius: 0px;
+
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+    
 }
