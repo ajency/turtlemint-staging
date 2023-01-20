@@ -15,3 +15,18 @@ $('.tm-select-value').click(function(){
 $('.tm-select-option').click(function(){
     $(this).parent('.tm-select-options').slideUp();
 });
+
+function openPopup(popupId){
+    $('#'+popupId).addClass('show')
+}
+function closePopup(popupId){
+    $('#'+popupId).removeClass('show')
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    $('.tm-popup').click(function(e){
+        if(e.target == this){
+            closePopup($(this).attr('id'))
+        }
+    })
+});

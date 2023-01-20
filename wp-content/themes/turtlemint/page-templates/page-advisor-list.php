@@ -4,17 +4,32 @@
   Template Name: Advisor List
  */
 
+(isset($lat) && isset($long)) ? "hide popup" : "show popup";
+
 get_header('tmhome');
 ?>
 
 <!-- ======= Navbar End ======= -->
-
 <!-- Locate Advisor -->
 <div style="height: 80px; background-color:#F3F3F3;" class="locator-bg">
 </div>
 <div class="container locator-section-main" style="margin-bottom: 57px; margin-top: -44px;">
     <div class="row ">
         <div class="col-md-12">
+            <div class="row locator-section tm-filters-skeleton">
+                <div class="left-side">
+                    <div class="tm-select-dropdown">
+                        <div class="tm-select-value"><div class="icon-container"><img src="" alt="" class="icon"></div> <span class="title"></span></div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="tm-pincode-section">
+                        <p class="pincode-title"></p>
+                        <a class="pincode"></a>
+                    </div>
+                    <a class="locate-me-link"><img class="icon" src=""><span></span></a>
+                </div>
+            </div>
             <div class="row locator-section">
                 <div class="left-side">
                     <div class="tm-select-dropdown">
@@ -42,9 +57,9 @@ get_header('tmhome');
                 <div class="right-side">
                     <div class="tm-pincode-section">
                         <p class="pincode-title">Pincode</p>
-                        <a class="pincode tm-arrow-right" data-toggle="modal" data-target="#pincodePopup">803213</a>
+                        <a class="pincode tm-arrow-right" onclick="openPopup('pincodePopup')">803213</a>
                     </div>
-                    <a class="locate-me-link" data-toggle="modal" data-target="#pincodePopup"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+                    <a class="locate-me-link" onclick="openPopup('pincodePopup')"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
                 </div>
             </div>
         </div>
@@ -52,7 +67,11 @@ get_header('tmhome');
 </div>
 
 <!-- Advisors headings -->
-<div class="container">
+<div class="container tm-loading">
+    <!-- skeleton -->
+    <!-- <p class="hide-md-down tm-h1-regular tm-section-heading heading-skeleton"></p>
+    <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p> -->
+    <!-- headings -->
     <p class="hide-md-down tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span> Available Near you</p>
     <p class="hide-md-up tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span><br>Available Near you</p>
     <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation with our certified and experienced Turtlemint advisors</p>
@@ -423,20 +442,19 @@ get_header('tmhome');
 
 
 <!-- pincode popup -->
-<div class="tm-popup modal fade" id="pincodePopup" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="tm-popup" id="pincodePopup">
+  <div class="tm-popup-dialog" role="document">
+    <div class="tm-popup-content">
+      <div class="tm-popup-header">
+        <button type="button" class="close" onclick="closePopup('pincodePopup')">
           <span aria-hidden="true">&times;</span>
         </button>
 
       </div>
-      <div class="modal-body">
-
+      <div class="tm-popup-body">
+        
       </div>
-      <div class="modal-footer">
+      <div class="tm-popup-footer">
 
       </div>
     </div>
