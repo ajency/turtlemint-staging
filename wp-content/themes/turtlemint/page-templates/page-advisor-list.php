@@ -17,12 +17,36 @@ get_header('tmhome');
     <div class="tm-popup-content">
       <div class="tm-popup-header">
         <button type="button" class="close" onclick="closePopup('pincodePopup')">
-          <span aria-hidden="true">&times;</span>
+          <span class="icon"></span>
         </button>
 
       </div>
       <div class="tm-popup-body">
-        
+        <div class="popup-icon">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/location-icon.svg" alt="location">
+        </div>
+        <p class="popup-heading">Find an advisor near you!</p>
+        <p class="popup-subheading">Enter your Pincode or give access to your location so we can show you advisors in your area</p>
+        <form class="tm-form" id="pincodeForm">
+            <div class="form-wrap">
+            <div class="tm-form-group">
+                <label for="pincode">Pin code</label>
+                <div class="pincode-input-group">
+                    <input class="required" autofocus type="text" maxlength="1">
+                    <input class="required" type="text" maxlength="1">
+                    <input class="required" type="text" maxlength="1">
+                    <input class="required" type="text" maxlength="1">
+                    <input class="required" type="text" maxlength="1">
+                    <input class="required" type="text" maxlength="1">
+                </div>
+            </div>
+            <p class="location-name d-none">Navada, Patna, Bihar</p>
+            </div>
+
+            <button class="tm-button" disabled>Submit</button>
+            <p class="or-text">or</p>
+            <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+        </form>
       </div>
       <div class="tm-popup-footer">
 
