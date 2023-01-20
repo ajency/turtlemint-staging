@@ -42,9 +42,9 @@ get_header('tmhome');
                 <div class="right-side">
                     <div class="tm-pincode-section">
                         <p class="pincode-title">Pincode</p>
-                        <a class="pincode tm-arrow-right">803213</a>
+                        <a class="pincode tm-arrow-right" data-toggle="modal" data-target="#pincodePopup">803213</a>
                     </div>
-                    <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+                    <a class="locate-me-link" data-toggle="modal" data-target="#pincodePopup"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
                 </div>
             </div>
         </div>
@@ -419,6 +419,29 @@ get_header('tmhome');
         </div>
     </div>
 
+</div>
+
+
+<!-- pincode popup -->
+<div class="tm-popup modal fade" id="pincodePopup" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 <?php
