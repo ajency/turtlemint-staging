@@ -13,13 +13,16 @@ get_header('tmhome');
 <!-- Locate Advisor -->
 <div style="height: 80px; background-color:#F3F3F3;" class="locator-bg">
 </div>
-<div class="container locator-section-main" style="margin-bottom: 57px; margin-top: -44px;">
+<div class="container locator-section-main tm-loading" style="margin-bottom: 57px; margin-top: -44px;"><!-- add loading class here -->
     <div class="row ">
         <div class="col-md-12">
+            <!-- skeleton -->
             <div class="row locator-section tm-filters-skeleton">
                 <div class="left-side">
                     <div class="tm-select-dropdown">
-                        <div class="tm-select-value"><div class="icon-container"><img src="" alt="" class="icon"></div> <span class="title"></span></div>
+                        <div class="tm-select-value">
+                            <div class="icon-container"><img src="" alt="" class="icon"></div> <span class="title"></span>
+                        </div>
                     </div>
                 </div>
                 <div class="right-side">
@@ -30,6 +33,7 @@ get_header('tmhome');
                     <a class="locate-me-link"><img class="icon" src=""><span></span></a>
                 </div>
             </div>
+            <!-- filters content -->
             <div class="row locator-section">
                 <div class="left-side">
                     <div class="tm-select-dropdown">
@@ -67,18 +71,22 @@ get_header('tmhome');
 </div>
 
 <!-- Advisors headings -->
-<div class="container tm-loading">
+<div class="container tm-heading-container tm-loading"> <!-- add loading class here -->
     <!-- skeleton -->
-    <!-- <p class="hide-md-down tm-h1-regular tm-section-heading heading-skeleton"></p>
-    <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p> -->
+    <p class="tm-h1-regular tm-section-heading heading-skeleton"></p>
+    <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
     <!-- headings -->
-    <p class="hide-md-down tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span> Available Near you</p>
-    <p class="hide-md-up tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span><br>Available Near you</p>
+    <span class="hide-md-down ">
+        <p class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span> Available Near you</p>
+    </span>
+    <span class="hide-md-up">
+        <p class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span><br>Available Near you</p>
+    </span>
     <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation with our certified and experienced Turtlemint advisors</p>
 </div>
 
 <!-- advisor cards main container -->
-<div class="container advisors-list-section">
+<div class="container advisors-list-section tm-loading"><!-- add loading class here -->
 
     <!-- cards skeleton -->
     <div class="tm-advisor-list tm-skeleton">
@@ -101,7 +109,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle"></p>
                         </div>
                     </div>
-                    <a href="" class="tm-button"></a>
+                    <a class="tm-button"></a>
                 </div>
             </div>
         </div>
@@ -124,7 +132,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle"></p>
                         </div>
                     </div>
-                    <a href="" class="tm-button"></a>
+                    <a class="tm-button"></a>
                 </div>
             </div>
         </div>
@@ -147,7 +155,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle"></p>
                         </div>
                     </div>
-                    <a href="" class="tm-button"></a>
+                    <a class="tm-button"></a>
                 </div>
             </div>
         </div>
@@ -174,7 +182,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch
+                    <a class="tm-button">Get In Touch
                     </a>
                 </div>
             </div>
@@ -198,7 +206,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch</a>
+                    <a class="tm-button">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -221,7 +229,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch</a>
+                    <a class="tm-button">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -229,68 +237,125 @@ get_header('tmhome');
 
 </div>
 
-<!-- advice steps -->
-<div class="container tm-advice-steps-container">
-    <div class="tm-advice-steps-container__wraper">
-        <div class="tm-headings">
-            <div class="left-side">
-                <p class="tm-h1-medium tm-section-heading">What to expect</p>
-                <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right free advise</p>
+<div class="advisor-steps-outer tm-loading"><!-- add loading class here -->
+    <!-- advice steps skeleton-->
+    <div class="container tm-advice-steps-container tm-steps-skeleton">
+        <div class="tm-advice-steps-container__wraper">
+            <div class="tm-headings">
+                <div class="left-side">
+                    <p class="tm-h1-medium tm-section-heading heading-skeleton"></p>
+                    <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
+                </div>
+                <div class="right-side hide-md-down">
+                    <a class="tm-link"></a>
+                </div>
             </div>
-            <div class="right-side hide-md-down">
+            <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="">
+                    </div>
+                    <div class="step-num"></div>
+                    <div class="step-connector"></div>
+                    <p class="content"></p>
+                    <p class="content2"></p>
+                </div>
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="">
+                    </div>
+                    <div class="step-num"></div>
+                    <div class="step-connector"></div>
+                    <p class="content"></p>
+                    <p class="content2"></p>
+                </div>
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="">
+                    </div>
+                    <div class="step-num"></div>
+                    <div class="step-connector"></div>
+                    <p class="content"></p>
+                    <p class="content2"></p>
+                </div>
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="">
+                    </div>
+                    <div class="step-num"></div>
+                    <div class="step-connector"></div>
+                    <p class="content"></p>
+                    <p class="content2"></p>
+                </div>
+            </div>
+            <div class="hide-md-up link-container">
+                <a class="tm-link"></a>
+            </div>
+        </div>
+    </div>
+    <!-- advice steps -->
+    <div class="container tm-advice-steps-container">
+        <div class="tm-advice-steps-container__wraper">
+            <div class="tm-headings">
+                <div class="left-side">
+                    <p class="tm-h1-medium tm-section-heading">What to expect</p>
+                    <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right free advise</p>
+                </div>
+                <div class="right-side hide-md-down">
+                    <a href="#" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
+                </div>
+            </div>
+            <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-1.png" alt="Step 1">
+                    </div>
+                    <div class="step-num">Step 1</div>
+                    <div class="step-connector"></div>
+                    <p class="content">
+                        <b>Search</b> an advisor near you
+                    </p>
+                </div>
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-2.png" alt="Step 2">
+                    </div>
+                    <div class="step-num">Step 2</div>
+                    <div class="step-connector"></div>
+                    <p class="content">
+                        Choose the <b>perfect match</b> for your requirements
+                    </p>
+                </div>
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-3.png" alt="Step 3">
+                    </div>
+                    <div class="step-num">Step 3</div>
+                    <div class="step-connector"></div>
+                    <p class="content">
+                        Direct <b>face-To Face Connect</b>
+                    </p>
+                </div>
+                <div class="tm-advise-step">
+                    <div class="image-container">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-4.png" alt="Step 4">
+                    </div>
+                    <div class="step-num">Step 4</div>
+                    <div class="step-connector"></div>
+                    <p class="content">
+                        Get The <b>right Insurance</b> Policy
+                    </p>
+                </div>
+            </div>
+            <div class="hide-md-up link-container">
                 <a href="#" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
             </div>
-        </div>
-        <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
-            <div class="tm-advise-step">
-                <div class="image-container">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-1.png" alt="Step 1">
-                </div>
-                <div class="step-num">Step 1</div>
-                <div class="step-connector"></div>
-                <p class="content">
-                    <b>Search</b> an advisor near you
-                </p>
-            </div>
-            <div class="tm-advise-step">
-                <div class="image-container">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-2.png" alt="Step 2">
-                </div>
-                <div class="step-num">Step 2</div>
-                <div class="step-connector"></div>
-                <p class="content">
-                    Choose the <b>perfect match</b> for your requirements
-                </p>
-            </div>
-            <div class="tm-advise-step">
-                <div class="image-container">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-3.png" alt="Step 3">
-                </div>
-                <div class="step-num">Step 3</div>
-                <div class="step-connector"></div>
-                <p class="content">
-                    Direct <b>face-To Face Connect</b>
-                </p>
-            </div>
-            <div class="tm-advise-step">
-                <div class="image-container">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-4.png" alt="Step 4">
-                </div>
-                <div class="step-num">Step 4</div>
-                <div class="step-connector"></div>
-                <p class="content">
-                    Get The <b>right Insurance</b> Policy
-                </p>
-            </div>
-        </div>
-        <div class="hide-md-up link-container">
-            <a href="#" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
         </div>
     </div>
 </div>
 
 <!-- advisor cards main container -->
-<div class="container advisors-list-section">
+<div class="container advisors-list-section tm-loading"><!-- add loading class here -->
 
     <!-- cards skeleton -->
     <div class="tm-advisor-list tm-skeleton">
@@ -313,7 +378,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle"></p>
                         </div>
                     </div>
-                    <a href="" class="tm-button"></a>
+                    <a class="tm-button"></a>
                 </div>
             </div>
         </div>
@@ -336,7 +401,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle"></p>
                         </div>
                     </div>
-                    <a href="" class="tm-button"></a>
+                    <a class="tm-button"></a>
                 </div>
             </div>
         </div>
@@ -359,7 +424,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle"></p>
                         </div>
                     </div>
-                    <a href="" class="tm-button"></a>
+                    <a class="tm-button"></a>
                 </div>
             </div>
         </div>
@@ -386,7 +451,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch</a>
+                    <a class="tm-button">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -409,7 +474,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch</a>
+                    <a class="tm-button">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -432,7 +497,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch</a>
+                    <a class="tm-button">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -443,22 +508,22 @@ get_header('tmhome');
 
 <!-- pincode popup -->
 <div class="tm-popup" id="pincodePopup">
-  <div class="tm-popup-dialog" role="document">
-    <div class="tm-popup-content">
-      <div class="tm-popup-header">
-        <button type="button" class="close" onclick="closePopup('pincodePopup')">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    <div class="tm-popup-dialog" role="document">
+        <div class="tm-popup-content">
+            <div class="tm-popup-header">
+                <button type="button" class="close" onclick="closePopup('pincodePopup')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
 
-      </div>
-      <div class="tm-popup-body">
-        
-      </div>
-      <div class="tm-popup-footer">
+            </div>
+            <div class="tm-popup-body">
 
-      </div>
+            </div>
+            <div class="tm-popup-footer">
+
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 </div>
 
