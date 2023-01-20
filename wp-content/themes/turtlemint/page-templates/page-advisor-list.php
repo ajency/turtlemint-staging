@@ -4,10 +4,32 @@
   Template Name: Advisor List
  */
 
-(isset($lat) && isset($long)) ? "hide popup" : "show popup";
+ $pincode = isset($_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
+ $vertical = isset($_GET["vertical"]) ? htmlspecialchars($_GET["vertical"]) : "4-wheeler";
+ $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "1";
 
 get_header('tmhome');
 ?>
+
+<!-- pincode popup -->
+<div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show" : ""; ?>" id="pincodePopup">
+  <div class="tm-popup-dialog" role="document">
+    <div class="tm-popup-content">
+      <div class="tm-popup-header">
+        <button type="button" class="close" onclick="closePopup('pincodePopup')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+      <div class="tm-popup-body">
+        
+      </div>
+      <div class="tm-popup-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ======= Navbar End ======= -->
 <!-- Locate Advisor -->
@@ -15,8 +37,7 @@ get_header('tmhome');
 </div>
 <div class="container locator-section-main tm-loading" style="margin-bottom: 57px; margin-top: -44px;"><!-- add loading class here -->
     <div class="row ">
-        <div class="col-md-12">
-            <!-- skeleton -->
+        <div class="col-md-12 tm-loading">
             <div class="row locator-section tm-filters-skeleton">
                 <div class="left-side">
                     <div class="tm-select-dropdown">
@@ -61,7 +82,7 @@ get_header('tmhome');
                 <div class="right-side">
                     <div class="tm-pincode-section">
                         <p class="pincode-title">Pincode</p>
-                        <a class="pincode tm-arrow-right" onclick="openPopup('pincodePopup')">803213</a>
+                        <a class="pincode tm-arrow-right" onclick="openPopup('pincodePopup')"><?php echo $pincode ?></a>
                     </div>
                     <a class="locate-me-link" onclick="openPopup('pincodePopup')"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
                 </div>
@@ -162,7 +183,7 @@ get_header('tmhome');
     </div>
 
     <!-- advisor cards -->
-    <div class="tm-advisor-list">
+    <div class="tm-advisor-list" id="firstFoldList">
         <!-- advisor card -->
         <div class="tm-advisor-wrap">
             <div class="advisor-card">
@@ -431,7 +452,7 @@ get_header('tmhome');
     </div>
 
     <!-- advisor cards -->
-    <div class="tm-advisor-list">
+    <div class="tm-advisor-list" id="lastFoldList">
         <!-- advisor card -->
         <div class="tm-advisor-wrap">
             <div class="advisor-card">
@@ -507,16 +528,13 @@ get_header('tmhome');
 
 
 <!-- pincode popup -->
-<div class="tm-popup" id="pincodePopup">
-    <div class="tm-popup-dialog" role="document">
-        <div class="tm-popup-content">
-            <div class="tm-popup-header">
-                <button type="button" class="close" onclick="closePopup('pincodePopup')">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </div>
-            <div class="tm-popup-body">
+<!-- <div class="tm-popup" id="pincodePopup">
+  <div class="tm-popup-dialog" role="document">
+    <div class="tm-popup-content">
+      <div class="tm-popup-header">
+        <button type="button" class="close" onclick="closePopup('pincodePopup')">
+          <span aria-hidden="true">&times;</span>
+        </button>
 
             </div>
             <div class="tm-popup-footer">
@@ -524,8 +542,18 @@ get_header('tmhome');
             </div>
         </div>
     </div>
+  </div>
+</div> -->
 </div>
-</div>
+
+<?php if (isset($pincode) && isset($vertical)) { ?>
+    <script type="text/javascript">
+        window.addEventListener("load", async (event) => {
+            let pincodeData = await getPincodeLocation(<?php echo $pincode ?>)
+            getAdvisorList(pincodeData.latitude, pincodeData.longitude, <?php echo  "'".$vertical."', '".$offset."'" ?>)
+        });
+    </script>
+<?php } ?>    
 
 <?php
 get_footer('tmhome');
