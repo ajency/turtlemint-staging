@@ -5,7 +5,8 @@
  */
 
 $pincode = isset($_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
-$vertical = isset($_GET["vertical"]) ? htmlspecialchars($_GET["vertical"]) : "4-wheeler";
+$vertical_array = array('FW','TW','Life','Health');
+$vertical = isset($_GET["vertical"]) && in_array($_GET["vertical"], $vertical_array) ? htmlspecialchars($_GET["vertical"]) : NULL ;
 $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "1";
 
 get_header('tmhome');
@@ -32,36 +33,36 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="pincode">Pin code</label>
                                 <div class="single-input-group pincode-input-group">
-                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[0]?>">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[1]?>">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[2]?>">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[3]?>">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[4]?>">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[5]?>">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
                             <div class="location-wraper"> <!-- add loading class here -->
                                 <p class="location-name location-name-skeleton"></p>
-                                <p class="location-name">Navada, Patna, Bihar</p>
+                                <p class="location-name d-none">Navada, Patna, Bihar</p>
                             </div>
                             <div class="tm-form-group filter-form-group">
                             <div class="tm-select-dropdown">
                                 <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
                                 <div class="tm-select-options">
-                                    <div class="tm-select-option " data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
+                                    <div class="tm-select-option <?php echo $vertical=="FW" ? "selected" : ""; ?>" data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
                                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4-wheeler" class="icon">
                                         <span class="title">4 Wheeler</span>
                                     </div>
-                                    <div class="tm-select-option selected" data-value="TW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
+                                    <div class="tm-select-option <?php echo $vertical=="TW" ? "selected" : ""; ?>" data-value="TW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
                                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg" alt="2-wheeler" class="icon">
                                         <span class="title">2 Wheeler</span>
                                     </div>
-                                    <div class="tm-select-option" data-value="Life" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
+                                    <div class="tm-select-option <?php echo $vertical=="Life" ? "selected" : ""; ?>" data-value="Life" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
                                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg" alt="life" class="icon">
                                         <span class="title">Life</span>
                                     </div>
-                                    <div class="tm-select-option" data-value="Health" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
+                                    <div class="tm-select-option <?php echo $vertical=="Health" ? "selected" : ""; ?>" data-value="Health" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
                                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-icon.svg" alt="health" class="icon">
                                         <span class="title">Health </span>
                                     </div>
@@ -70,7 +71,7 @@ get_header('tmhome');
                             </div>
                         </div>
 
-                        <button class="tm-button" disabled>Submit</button>
+                        <button class="tm-button" <?php echo !(isset($pincode)) ? 'disabled':''; ?> >Submit</button>
                         <p class="or-text">or</p>
                         <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
                     </form>
@@ -92,7 +93,7 @@ get_header('tmhome');
         <div class="col-md-12 tm-loading">
             <div class="row locator-section tm-filters-skeleton">
                 <div class="left-side">
-                    <div class="tm-select-dropdown">
+                    <div class="tm-select-dropdown skeleton-dropdown">
                         <div class="tm-select-value">
                             <div class="icon-container"><img src="" alt="" class="icon"></div> <span class="title"></span>
                         </div>
@@ -112,19 +113,19 @@ get_header('tmhome');
                     <div class="tm-select-dropdown">
                         <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
                         <div class="tm-select-options">
-                            <div class="tm-select-option " data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
+                            <div class="tm-select-option <?php echo $vertical=="FW" ? "selected" : ""; ?>" data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4-wheeler" class="icon">
                                 <span class="title">4 Wheeler</span>
                             </div>
-                            <div class="tm-select-option selected" data-value="TW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
+                            <div class="tm-select-option <?php echo $vertical=="TW" ? "selected" : ""; ?>" data-value="TW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg" alt="2-wheeler" class="icon">
                                 <span class="title">2 Wheeler</span>
                             </div>
-                            <div class="tm-select-option" data-value="Life" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
+                            <div class="tm-select-option <?php echo $vertical=="Life" ? "selected" : ""; ?>" data-value="Life" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg" alt="life" class="icon">
                                 <span class="title">Life</span>
                             </div>
-                            <div class="tm-select-option" data-value="Health" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
+                            <div class="tm-select-option <?php echo $vertical=="Health" ? "selected" : ""; ?>" data-value="Health" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-icon.svg" alt="health" class="icon">
                                 <span class="title">Health </span>
                             </div>
@@ -134,7 +135,7 @@ get_header('tmhome');
                 <div class="right-side">
                     <div class="tm-pincode-section">
                         <p class="pincode-title">Pincode</p>
-                        <a class="pincode tm-arrow-right" onclick="openPopup('pincodePopup')"><?php echo $pincode ?></a>
+                        <a class="pincode tm-arrow-right" id="pincode-filter-input" onclick="openPopup('pincodePopup')"><?php echo $pincode ?></a>
                     </div>
                     <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
                 </div>
@@ -605,7 +606,7 @@ get_header('tmhome');
 </div>
 
 <!-- Advisor List - Empty State  -->
-<div class="container d-none">
+<div class="container d-none" id="empty-screen-wrap">
     <div class="tm-empty-list">
         <div class="image-container">
             <img height="160" width="160" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/empty-advisor-list.png" alt="No Advisors Found">
@@ -737,14 +738,19 @@ get_header('tmhome');
     </div>
 </div>
 
-<?php if (isset($pincode) && isset($vertical)) { ?>
-    <script type="text/javascript">
-        window.addEventListener("load", async (event) => {
+<script type="text/javascript">
+    window.addEventListener("load", async (event) => {
+    <?php if (isset($pincode) && isset($vertical)) { ?>
             let pincodeData = await getPincodeLocation(<?php echo $pincode ?>)
             getAdvisorList(pincodeData.latitude, pincodeData.longitude, <?php echo  "'" . $vertical . "', '" . $offset . "'" ?>)
-        });
-    </script>
-<?php } ?>
+    <?php } if(isset($vertical)) {  ?>
+            populateVertical()
+    <?php } if(isset($pincode)) { ?>
+        pincodeValidaion()
+        window.tm_pincode_data = <?php echo $pincode;
+    }?>
+    });
+</script>
 
 <?php
 get_footer('tmhome');

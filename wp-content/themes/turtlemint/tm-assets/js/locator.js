@@ -64,7 +64,8 @@ const DATA = {
     "city": "Mumbai",
     "pinCode": null,
     "yearsOfExperience": 5.0,
-    "customersServed": 100
+    "customersServed": 100,
+    "profilePicUrl": "https://turtlemint-stage.dreamhosters.com/wp-content/themes/turtlemint/tm-assets/img/tm-img/kaleen.png"
     },
     {
     "partnerId": "56cdef",
@@ -128,6 +129,24 @@ const DATA = {
     "pinCode": null,
     "yearsOfExperience": 5.0,
     "customersServed": 800
+    },
+    {
+    "partnerId": "56cdef",
+    "partnerName": "Munna Bhaiya",
+    "area": "Andheri West",
+    "city": "Mumbai",
+    "pinCode": null,
+    "yearsOfExperience": 5.0,
+    "customersServed": 900
+    },
+    {
+    "partnerId": "56cdef",
+    "partnerName": "Munna Bhaiya",
+    "area": "Andheri West",
+    "city": "Mumbai",
+    "pinCode": null,
+    "yearsOfExperience": 5.0,
+    "customersServed": 10
     }
 ]
 }
@@ -145,7 +164,7 @@ async function getPincodeLocation(pincode){
         console.log(data)
         if(data.area && data.city && data.city){
             window.tm_pincode_data = data
-            $('#pincode-filter-input').text(data.pincode)
+            $('#pincode-filter-input').text(pincode)
             return data;
         }
         else{
@@ -161,12 +180,13 @@ async function getPincodeLocation(pincode){
         // }
 
         //TODO replace return
+        $('#pincode-filter-input').text(pincode)
         window.window.tm_pincode_data= {
-            "pincode": 110018
+            "pincode": pincode
         }
         return {
-            "id": 11000,
-            "pincode": 110018,
+            "id": pincode,
+            "pincode": pincode,
             "area": "Patto",
             "city": "Panjim",
             "state": "Goa"
@@ -190,12 +210,15 @@ async function getAdvisorList(pincode, vertical, offset) {
         });
         let data = await response.json();
         console.log(data)
+        //TODO pass data instead of DATA
+        data.advisors.length > 0 ? renderContent(DATA): renderEmptyScreen();
     }
     catch(err){
         console.log(err)
+        // TODO render empty screen instead of DATA
+        // renderEmptyScreen()
+        renderContent(DATA)
     }
-    //TODO pass data instead of DATA
-    renderContent(DATA)
 }
 
 function renderContent(data){
@@ -209,7 +232,7 @@ function renderContent(data){
         <div class="advisor-card">
             <div class="advisor-card__wraper">
                 <div class="advisor-image">
-                    <img src="https://turtlemint-stage.dreamhosters.com/wp-content/themes/turtlemint/tm-assets/img/tm-img/kaleen.png" alt="kaleen">
+                    ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+advisor.partnerName+'">' : '' }
                 </div>
                 <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                 <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -234,7 +257,7 @@ function renderContent(data){
             <div class="advisor-card">
                 <div class="advisor-card__wraper">
                     <div class="advisor-image">
-                        <img src="https://turtlemint-stage.dreamhosters.com/wp-content/themes/turtlemint/tm-assets/img/tm-img/kaleen.png" alt="kaleen">
+                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+advisor.partnerName+'">' : '' }
                     </div>
                     <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                     <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -257,17 +280,26 @@ function renderContent(data){
     console.log(htmlFirstFold)
     console.log(htmlLastFold)
     firstFoldParent.innerHTML = htmlFirstFold;
-    lastFoldParent.innerHTML = htmlLastFold;
+    lastFoldParent.innerHTML = data.advisors.length > 3 ? htmlLastFold : '';
     $('#pincodeForm .tm-button').removeClass('tm-loader')
+    populateVertical()
     closePopup('pincodePopup')
     $('.tm-loading').removeClass('tm-loading')
 }
 
+function renderEmptyScreen () {
+    $('.advisor-list-wraper').addClass('d-none')
+    $('#empty-screen-wrap').removeClass('d-none')
+    $('#pincodeForm .tm-button').removeClass('tm-loader')
+    populateVertical()
+    closePopup('pincodePopup')
+    $('.tm-loading').removeClass('tm-loading')
+}
 //render script end
 
 function populateVertical(){
-  let selectedVertical = $('.tm-select-dropdown').find('.tm-select-options .tm-select-option.selected');
-  let defaultVertical = $('.tm-select-dropdown .tm-select-value');
+  let selectedVertical = $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option.selected');
+  let defaultVertical = $('.tm-select-dropdown:not(.skeleton-dropdown) .tm-select-value');
   //console.log("value : ", $(selectedVertical).data('value'));
   $(defaultVertical).html($(selectedVertical).html());
 }
@@ -328,7 +360,7 @@ $(document).on('change keyup', '.required', function(e){
     
     if(Disabled){
         $(parent).find('.tm-button').prop("disabled", true);
-        $('#pincodeForm .location-name, #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+        $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
     }
     else{
         console.log($(parent).attr('id'))
@@ -450,6 +482,7 @@ function resendCode(element){
 }
 async function pincodeValidaion(){
     let pincode = ''
+    $('#pincodeForm .location-wraper').addClass('tm-loading')
     $('#pincodeForm .required').each(function(){
         pincode += $(this).val()
     })
@@ -459,14 +492,17 @@ async function pincodeValidaion(){
         $('#pincodeForm .error-message').text(pincodeData.info).addClass('d-block')
     }
     else{
-        $('#pincodeForm .location-name').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
+        $('#pincodeForm .location-name:not(.location-name-skeleton)').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
         $('#pincodeForm .tm-button').prop("disabled", false);
     }
+    $('#pincodeForm .location-wraper').removeClass('tm-loading')
 }
 
 document.getElementById('pincodeForm').addEventListener('submit', function(e){
     e.preventDefault();
     $(this).find('.tm-button').addClass('tm-loader')
     console.log('test',window.tm_pincode_data)
-    getAdvisorList(window.tm_pincode_data.pincode,'TW')
+    let vertical = $(this).find('.tm-select-value.selected').data('value')
+    $('.tm-select-option[data-value='+vertical+']').addClass('selected')
+    getAdvisorList(window.tm_pincode_data.pincode,vertical)
 })
