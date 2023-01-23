@@ -110,7 +110,7 @@ get_header('tmhome');
                         <p class="pincode-title">Pincode</p>
                         <a class="pincode tm-arrow-right" onclick="openPopup('pincodePopup')"><?php echo $pincode ?></a>
                     </div>
-                    <a class="locate-me-link" onclick="openPopup('pincodePopup')"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+                    <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
                 </div>
             </div>
         </div>
