@@ -30,12 +30,12 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="pincode">Pin code</label>
                                 <div class="single-input-group pincode-input-group">
-                                    <input class="required" autofocus type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
+                                    <input class="required" autofocus type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
@@ -568,7 +568,7 @@ get_header('tmhome');
 </div>
 
 <!-- popup triggers -->
-<div class="container">
+<div class="container d-none">
     <button class="tm-button mb-4" onclick="openPopup('tmSuccessPopup')">Success Popup</button>
     <button class="tm-button mb-4" onclick="openPopup('tmOtpPopup')">OTP Popup</button>
 </div>
@@ -665,16 +665,16 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="otp">OTP</label>
                                 <div class="single-input-group otp-input-group">
-                                    <input class="required" autofocus type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
-                                    <input class="required" type="number" max="1">
+                                    <input class="required" autofocus type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
-                            <p class="resend-timer"><span class="resent-text">Resend code in</span> <span class="timer" id="countdowntimer"></span></p>
+                            <p class="resend-timer"><span class="resend-text">Resend code in</span> <span class="timer" id="countdowntimer"></span></p>
                         </div>
 
                         <button class="tm-button" disabled>Submit</button>

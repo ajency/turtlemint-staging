@@ -302,9 +302,7 @@ container = document.getElementById('countdowntimer');
 
 let dataHours 	= hours,
 dataMinutes = minutes,
-dataSeconds = seconds,
-timerEnd 		= container.getAttribute('data-timer-end'),
-timerOnEndMsg = "data-timer-end";
+dataSeconds = seconds
 
 if (dataHours == '' || dataHours == null || dataHours == NaN) {
 dataHours = "0";
@@ -370,16 +368,10 @@ if (m > 0) {
 
 finished = ()=>{
 max = 0;
-let timerEnd = container.getAttribute(timerOnEndMsg);
-container.setAttribute(timerOnEndMsg, 'true');
-if (timerEnd == '' || timerEnd == null) {
 $(container).parent('.resend-timer').addClass('success');
 $(container).parent('.resend-timer').attr('onclick', 'resendCode(this)');
-$(container).parent('.resend-timer').find('.resent-text').text('Resend code');
+$(container).parent('.resend-timer').find('.resend-text').text('Resend code');
 $(container).parent('.resend-timer').find('.timer').text('');
-} else {
-  console.log("timer end!");
-}
 }
 
 counter = setInterval(()=>{
@@ -404,7 +396,8 @@ container.appendChild(child);
 }
 
 function resendCode(element){
-  console.log($(element).find('.timer').data('timer-end'));
-  $(element).find('.timer').data('timer-end', false);
+  $(element).removeClass('success');
+  $(element).find('.resend-text').text('Resend code in');
+  $(element).attr('onclick', '');
   countDownTimer(0, 0, 5);
 }
