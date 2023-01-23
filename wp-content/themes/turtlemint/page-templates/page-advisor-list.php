@@ -32,12 +32,12 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="pincode">Pin code</label>
                                 <div class="single-input-group pincode-input-group">
-                                    <input class="required" autofocus type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                                 </div>
                                 <p class="error-message"></p>
                             </div>

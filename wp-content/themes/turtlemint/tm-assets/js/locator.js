@@ -133,36 +133,67 @@ const DATA = {
 }
 
 async function getPincodeLocation(pincode){
-    let headersList = {
-    "Content-Type": "application/json"
+    try{
+        let headersList = {
+        "Content-Type": "application/json"
+        }
+        let response = await fetch("https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io/api/agent-locator/pin-details/"+pincode, { 
+            method: "GET",
+            headers: headersList
+        });
+        let data = await response.json();
+        console.log(data)
+        if(data.area && data.city && data.city){
+            window.tm_pincode_data = data
+            $('#pincode-filter-input').text(data.pincode)
+            return data;
+        }
+        else{
+            console.log('error')
+            throw 'Pincode not found';
+        }
     }
-    let response = await fetch("https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io/api/agent-locator/pin-details/"+pincode, { 
-        method: "GET",
-        headers: headersList
-    });
-    let data = await response.json();
-    console.log(data)
-    window.tm_pincode_data = data
-    return(data);
+    catch(err){
+        // return {
+        //     'error': true,
+        //     'info': 'Pincode not found',
+        //     'data': err
+        // }
+
+        //TODO replace return
+        window.window.tm_pincode_data= {
+            "pincode": 110018
+        }
+        return {
+            "id": 11000,
+            "pincode": 110018,
+            "area": "Patto",
+            "city": "Panjim",
+            "state": "Goa"
+        }
+    }
 }
 
-async function getAdvisorList(lat, long, vertical, offset) {
-    let headersList = {
-    "Content-Type": "application/json"
+async function getAdvisorList(pincode, vertical, offset) {
+    try{
+        let headersList = {
+        "Content-Type": "application/json"
+        }
+        let bodyContent = JSON.stringify({
+            "pinCode": pincode,
+            "vertical": vertical
+        });
+        let response = await fetch("https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io/api/agent-locator/advisors?offset=0&limit=10", { 
+            method: "POST",
+            body: bodyContent,
+            headers: headersList
+        });
+        let data = await response.json();
+        console.log(data)
     }
-    let bodyContent = JSON.stringify({
-        "productCategory": vertical,
-        "vertical": vertical,
-        "latitude": lat,
-        "longitude": long
-    });
-    let response = await fetch("https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io/api/agent-locator/advisors?offset=0&limit=10", { 
-        method: "POST",
-        body: bodyContent,
-        headers: headersList
-    });
-    let data = await response.json();
-    console.log(data)
+    catch(err){
+        console.log(err)
+    }
     //TODO pass data instead of DATA
     renderContent(DATA)
 }
@@ -227,6 +258,8 @@ function renderContent(data){
     console.log(htmlLastFold)
     firstFoldParent.innerHTML = htmlFirstFold;
     lastFoldParent.innerHTML = htmlLastFold;
+    $('#pincodeForm .tm-button').removeClass('tm-loader')
+    closePopup('pincodePopup')
     $('.tm-loading').removeClass('tm-loading')
 }
 
@@ -288,10 +321,18 @@ $(document).on('change keyup', '.required', function(e){
      });
     
     if(Disabled){
-         $('.tm-button').prop("disabled", true);
-       }else{
-         $('.tm-button').prop("disabled", false);
-       }
+        $(parent).find('.tm-button').prop("disabled", true);
+        $('#pincodeForm .location-name, #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+    }
+    else{
+        console.log($(parent).attr('id'))
+        if($(parent).attr('id') == 'pincodePopup'){
+            pincodeValidaion()
+        }
+        else{
+            $(parent).find('.tm-button').prop("disabled", false);
+        }
+    }
   })
 
 /* otp timer */
@@ -401,3 +442,25 @@ function resendCode(element){
   $(element).attr('onclick', '');
   countDownTimer(0, 0, 5);
 }
+async function pincodeValidaion(){
+    let pincode = ''
+    $('#pincodeForm .required').each(function(){
+        pincode += $(this).val()
+    })
+    let pincodeData = await getPincodeLocation(pincode);
+    console.log('pinDara', pincodeData)
+    if(pincodeData.error){
+        $('#pincodeForm .error-message').text(pincodeData.info).addClass('d-block')
+    }
+    else{
+        $('#pincodeForm .location-name').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
+        $('#pincodeForm .tm-button').prop("disabled", false);
+    }
+}
+
+document.getElementById('pincodeForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    $(this).find('.tm-button').addClass('tm-loader')
+    console.log('test',window.tm_pincode_data)
+    getAdvisorList(window.tm_pincode_data.pincode,'TW')
+})
