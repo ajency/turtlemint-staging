@@ -41,7 +41,33 @@ get_header('tmhome');
                                 </div>
                                 <p class="error-message"></p>
                             </div>
-                            <p class="location-name d-none">Navada, Patna, Bihar</p>
+                            <div class="location-wraper"> <!-- add loading class here -->
+                                <p class="location-name location-name-skeleton"></p>
+                                <p class="location-name">Navada, Patna, Bihar</p>
+                            </div>
+                            <div class="tm-form-group filter-form-group">
+                            <div class="tm-select-dropdown">
+                                <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
+                                <div class="tm-select-options">
+                                    <div class="tm-select-option " data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4-wheeler" class="icon">
+                                        <span class="title">4 Wheeler</span>
+                                    </div>
+                                    <div class="tm-select-option selected" data-value="TW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg" alt="2-wheeler" class="icon">
+                                        <span class="title">2 Wheeler</span>
+                                    </div>
+                                    <div class="tm-select-option" data-value="Life" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg" alt="life" class="icon">
+                                        <span class="title">Life</span>
+                                    </div>
+                                    <div class="tm-select-option" data-value="Health" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-icon.svg" alt="health" class="icon">
+                                        <span class="title">Health </span>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
 
                         <button class="tm-button" disabled>Submit</button>
@@ -84,21 +110,21 @@ get_header('tmhome');
             <div class="row locator-section">
                 <div class="left-side">
                     <div class="tm-select-dropdown">
-                        <div class="tm-select-value" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
+                        <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
                         <div class="tm-select-options">
-                            <div class="tm-select-option selected" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
+                            <div class="tm-select-option " data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4-wheeler" class="icon">
                                 <span class="title">4 Wheeler</span>
                             </div>
-                            <div class="tm-select-option" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
+                            <div class="tm-select-option selected" data-value="TW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg" alt="2-wheeler" class="icon">
                                 <span class="title">2 Wheeler</span>
                             </div>
-                            <div class="tm-select-option" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
+                            <div class="tm-select-option" data-value="Life" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg" alt="life" class="icon">
                                 <span class="title">Life</span>
                             </div>
-                            <div class="tm-select-option" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
+                            <div class="tm-select-option" data-value="Health" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-icon.svg" alt="health" class="icon">
                                 <span class="title">Health </span>
                             </div>

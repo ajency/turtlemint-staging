@@ -265,6 +265,12 @@ function renderContent(data){
 
 //render script end
 
+function populateVertical(){
+  let selectedVertical = $('.tm-select-dropdown').find('.tm-select-options .tm-select-option.selected');
+  let defaultVertical = $('.tm-select-dropdown .tm-select-value');
+  //console.log("value : ", $(selectedVertical).data('value'));
+  $(defaultVertical).html($(selectedVertical).html());
+}
 
 /* pincode form */
 const inputs = document.querySelectorAll('.single-input-group input');
