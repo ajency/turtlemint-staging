@@ -552,7 +552,7 @@ get_header('tmhome');
 
 <!-- Advisor List - Empty State  -->
 <div class="container d-none">
-    <div class="tm-emty-list">
+    <div class="tm-empty-list">
         <div class="image-container">
             <img height="160" width="160" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/empty-advisor-list.png" alt="No Advisors Found">
         </div>
@@ -568,7 +568,7 @@ get_header('tmhome');
 </div>
 
 <!-- popup triggers -->
-<div class="container d-none">
+<div class="container">
     <button class="tm-button mb-4" onclick="openPopup('tmSuccessPopup')">Success Popup</button>
     <button class="tm-button mb-4" onclick="openPopup('tmOtpPopup')">OTP Popup</button>
 </div>
