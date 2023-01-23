@@ -24,6 +24,23 @@
 		<!-- SG test -->
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-favicon.png" type="image/x-icon">
 		<!-- inject:head -->
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "<?php echo home_url() ?>"
+			},{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Insurance Advisor Near Me",
+				"item": "<?php echo get_permalink( get_the_ID() ); ?>"
+			}]
+			}
+		</script>
 		<!--Required tags-->
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick-theme.css" />

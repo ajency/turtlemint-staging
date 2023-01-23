@@ -87,7 +87,7 @@ get_header('tmhome');
 <!-- Locate Advisor -->
 <div style="height: 80px; background-color:#F3F3F3;" class="locator-bg">
 </div>
-<div class="container locator-section-main tm-loading" style="margin-bottom: 57px; margin-top: -44px;"><!-- add loading class here -->
+<div class="container locator-section-main tm-loading" style="margin-bottom: 29px; margin-top: -44px;"><!-- add loading class here -->
     <div class="row ">
         <div class="col-md-12 tm-loading">
             <div class="row locator-section tm-filters-skeleton">
@@ -145,6 +145,28 @@ get_header('tmhome');
 
 <div class="advisor-list-wraper">
 
+    <!-- Breadcrumb -->
+    <div class="container tm-loading"><!-- add loading class here -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- breadcrumb-skeleton -->
+                <div class="tm-breadcrumb breadcrumb-skeleton">
+                    <div class="home-icon"></div>
+                    <p></p>
+                </div>
+                <!-- breadcrumb content -->
+                <ul class="tm-breadcrumb breadcrumb">
+                    <li><a href="<?php echo home_url() ?>"><img class="brdcrm-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/homebc.png"></a></li>
+                        <?php if(!empty($html_list_of_breadcrumbs)) : ?>
+                        <?php echo $html_list_of_breadcrumbs; ?>  
+                        <?php else : ?>
+                        <?php echo get_hansel_and_gretel_breadcrumbs(); ?>
+                        <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Advisors headings -->
     <div class="container tm-heading-container tm-loading"> <!-- add loading class here -->
         <!-- skeleton -->
@@ -152,10 +174,10 @@ get_header('tmhome');
         <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
         <!-- headings -->
         <span class="hide-md-down ">
-            <p class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span> Available Near you</p>
+            <h1 class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Insurance Advisors</span> Available Near you</h1>
         </span>
         <span class="hide-md-up">
-            <p class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span><br>Available Near you</p>
+            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Insurance Advisors</span><br>Available Near you</h1>
         </span>
         <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation with our certified and experienced Turtlemint advisors</p>
     </div>
