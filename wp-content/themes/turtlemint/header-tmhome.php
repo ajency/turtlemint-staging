@@ -20,6 +20,9 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Find Experienced Insurance Advisors Near You | Turtlemint</title>
+		<meta name="description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
+		<meta name="keywords" content="insurance advisor near me">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<!-- SG test -->
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-favicon.png" type="image/x-icon">
