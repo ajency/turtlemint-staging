@@ -39,7 +39,7 @@ function closePopup(popupId) {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  $(".tm-popup").click(function (e) {
+  $(".tm-popup:not(#pincodePopup)").click(function (e) {
     if (e.target == this) {
       closePopup($(this).attr("id"));
     }
