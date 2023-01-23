@@ -17,7 +17,9 @@ get_header('tmhome');
         <div class="content-wrap">
             <div class="tm-popup-content">
                 <div class="tm-popup-header">
-
+                    <button type="button" class="close" onclick="closePopup('pincodePopup')">
+                        <span class="icon"></span>
+                    </button>
                 </div>
                 <div class="tm-popup-body">
                     <div class="popup-icon">
@@ -115,437 +117,441 @@ get_header('tmhome');
     </div>
 </div>
 
-<!-- Advisors headings -->
-<div class="container tm-heading-container tm-loading"> <!-- add loading class here -->
-    <!-- skeleton -->
-    <p class="tm-h1-regular tm-section-heading heading-skeleton"></p>
-    <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
-    <!-- headings -->
-    <span class="hide-md-down ">
-        <p class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span> Available Near you</p>
-    </span>
-    <span class="hide-md-up">
-        <p class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span><br>Available Near you</p>
-    </span>
-    <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation with our certified and experienced Turtlemint advisors</p>
-</div>
+<div class="advisor-list-wraper">
 
-<!-- advisor cards main container -->
-<div class="container advisors-list-section tm-loading"><!-- add loading class here -->
-
-    <!-- cards skeleton -->
-    <div class="tm-advisor-list tm-skeleton">
-        <!-- skeleton card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card tm-card-skeleton">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="" alt="">
-                    </div>
-                    <p class="tm-h2-bold advisor-name"></p>
-                    <p class="tm-body tm-grey-text advisor-location"></p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                    </div>
-                    <a class="tm-button"></a>
-                </div>
-            </div>
-        </div>
-        <!-- skeleton card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card tm-card-skeleton">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="" alt="">
-                    </div>
-                    <p class="tm-h2-bold advisor-name"></p>
-                    <p class="tm-body tm-grey-text advisor-location"></p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                    </div>
-                    <a class="tm-button"></a>
-                </div>
-            </div>
-        </div>
-        <!-- skeleton card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card tm-card-skeleton">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="" alt="">
-                    </div>
-                    <p class="tm-h2-bold advisor-name"></p>
-                    <p class="tm-body tm-grey-text advisor-location"></p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                    </div>
-                    <a class="tm-button"></a>
-                </div>
-            </div>
-        </div>
+    <!-- Advisors headings -->
+    <div class="container tm-heading-container tm-loading"> <!-- add loading class here -->
+        <!-- skeleton -->
+        <p class="tm-h1-regular tm-section-heading heading-skeleton"></p>
+        <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
+        <!-- headings -->
+        <span class="hide-md-down ">
+            <p class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span> Available Near you</p>
+        </span>
+        <span class="hide-md-up">
+            <p class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Advisors</span><br>Available Near you</p>
+        </span>
+        <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation with our certified and experienced Turtlemint advisors</p>
     </div>
 
-    <!-- advisor cards -->
-    <div class="tm-advisor-list" id="firstFoldList">
-        <!-- advisor card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/kaleen.png" alt="kaleen">
-                    </div>
-                    <p class="tm-h2-bold advisor-name">Kaleen Bhaiya</p>
-                    <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">5 Years</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+    <!-- advisor cards main container -->
+    <div class="container advisors-list-section tm-loading"><!-- add loading class here -->
+
+        <!-- cards skeleton -->
+        <div class="tm-advisor-list tm-skeleton">
+            <!-- skeleton card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card tm-card-skeleton">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="" alt="">
                         </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">700+</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                        <p class="tm-h2-bold advisor-name"></p>
+                        <p class="tm-body tm-grey-text advisor-location"></p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
                         </div>
+                        <a class="tm-button"></a>
                     </div>
-                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch
-                    </a>
+                </div>
+            </div>
+            <!-- skeleton card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card tm-card-skeleton">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="tm-h2-bold advisor-name"></p>
+                        <p class="tm-body tm-grey-text advisor-location"></p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                        </div>
+                        <a class="tm-button"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- skeleton card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card tm-card-skeleton">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="tm-h2-bold advisor-name"></p>
+                        <p class="tm-body tm-grey-text advisor-location"></p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                        </div>
+                        <a class="tm-button"></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- advisor card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/munna.png" alt="Munna Bhaiya">
-                    </div>
-                    <p class="tm-h2-bold advisor-name">Munna Bhaiya</p>
-                    <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">5 Years</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+
+        <!-- advisor cards -->
+        <div class="tm-advisor-list" id="firstFoldList">
+            <!-- advisor card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/kaleen.png" alt="kaleen">
                         </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">700+</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                        <p class="tm-h2-bold advisor-name">Kaleen Bhaiya</p>
+                        <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">5 Years</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">700+</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                            </div>
                         </div>
+                        <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch
+                        </a>
                     </div>
-                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                </div>
+            </div>
+            <!-- advisor card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/munna.png" alt="Munna Bhaiya">
+                        </div>
+                        <p class="tm-h2-bold advisor-name">Munna Bhaiya</p>
+                        <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">5 Years</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">700+</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                            </div>
+                        </div>
+                        <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+            <!-- advisor card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-placeholder.png" alt="Guddu Bhaiya">
+                        </div>
+                        <p class="tm-h2-bold advisor-name">Guddu Bhaiya</p>
+                        <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">5 Years</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">700+</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                            </div>
+                        </div>
+                        <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- advisor card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-placeholder.png" alt="Guddu Bhaiya">
-                    </div>
-                    <p class="tm-h2-bold advisor-name">Guddu Bhaiya</p>
-                    <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">5 Years</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">700+</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
-                        </div>
-                    </div>
-                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 
-</div>
-
-<div class="advisor-steps-outer tm-loading"><!-- add loading class here -->
-    <!-- advice steps skeleton-->
-    <div class="container tm-advice-steps-container tm-steps-skeleton">
-        <div class="tm-advice-steps-container__wraper">
-            <div class="tm-headings">
-                <div class="left-side">
-                    <p class="tm-h1-medium tm-section-heading heading-skeleton"></p>
-                    <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
+    <div class="advisor-steps-outer tm-loading"><!-- add loading class here -->
+        <!-- advice steps skeleton-->
+        <div class="container tm-advice-steps-container tm-steps-skeleton">
+            <div class="tm-advice-steps-container__wraper">
+                <div class="tm-headings">
+                    <div class="left-side">
+                        <p class="tm-h1-medium tm-section-heading heading-skeleton"></p>
+                        <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
+                    </div>
+                    <div class="right-side hide-md-down">
+                        <a class="tm-link"></a>
+                    </div>
                 </div>
-                <div class="right-side hide-md-down">
+                <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="">
+                        </div>
+                        <div class="step-num"></div>
+                        <div class="step-connector"></div>
+                        <p class="content"></p>
+                        <p class="content2"></p>
+                    </div>
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="">
+                        </div>
+                        <div class="step-num"></div>
+                        <div class="step-connector"></div>
+                        <p class="content"></p>
+                        <p class="content2"></p>
+                    </div>
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="">
+                        </div>
+                        <div class="step-num"></div>
+                        <div class="step-connector"></div>
+                        <p class="content"></p>
+                        <p class="content2"></p>
+                    </div>
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="">
+                        </div>
+                        <div class="step-num"></div>
+                        <div class="step-connector"></div>
+                        <p class="content"></p>
+                        <p class="content2"></p>
+                    </div>
+                </div>
+                <div class="hide-md-up link-container">
                     <a class="tm-link"></a>
                 </div>
             </div>
-            <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="">
-                    </div>
-                    <div class="step-num"></div>
-                    <div class="step-connector"></div>
-                    <p class="content"></p>
-                    <p class="content2"></p>
-                </div>
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="">
-                    </div>
-                    <div class="step-num"></div>
-                    <div class="step-connector"></div>
-                    <p class="content"></p>
-                    <p class="content2"></p>
-                </div>
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="">
-                    </div>
-                    <div class="step-num"></div>
-                    <div class="step-connector"></div>
-                    <p class="content"></p>
-                    <p class="content2"></p>
-                </div>
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="">
-                    </div>
-                    <div class="step-num"></div>
-                    <div class="step-connector"></div>
-                    <p class="content"></p>
-                    <p class="content2"></p>
-                </div>
-            </div>
-            <div class="hide-md-up link-container">
-                <a class="tm-link"></a>
-            </div>
         </div>
-    </div>
-    <!-- advice steps -->
-    <div class="container tm-advice-steps-container">
-        <div class="tm-advice-steps-container__wraper">
-            <div class="tm-headings">
-                <div class="left-side">
-                    <p class="tm-h1-medium tm-section-heading">What to expect</p>
-                    <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right free advise</p>
+        <!-- advice steps -->
+        <div class="container tm-advice-steps-container">
+            <div class="tm-advice-steps-container__wraper">
+                <div class="tm-headings">
+                    <div class="left-side">
+                        <p class="tm-h1-medium tm-section-heading">What to expect</p>
+                        <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right free advise</p>
+                    </div>
+                    <div class="right-side hide-md-down">
+                        <a href="#" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
+                    </div>
                 </div>
-                <div class="right-side hide-md-down">
+                <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-1.png" alt="Step 1">
+                        </div>
+                        <div class="step-num">Step 1</div>
+                        <div class="step-connector"></div>
+                        <p class="content">
+                            <b>Search</b> an advisor near you
+                        </p>
+                    </div>
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-2.png" alt="Step 2">
+                        </div>
+                        <div class="step-num">Step 2</div>
+                        <div class="step-connector"></div>
+                        <p class="content">
+                            Choose the <b>perfect match</b> for your requirements
+                        </p>
+                    </div>
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-3.png" alt="Step 3">
+                        </div>
+                        <div class="step-num">Step 3</div>
+                        <div class="step-connector"></div>
+                        <p class="content">
+                            Direct <b>face-To Face Connect</b>
+                        </p>
+                    </div>
+                    <div class="tm-advise-step">
+                        <div class="image-container">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-4.png" alt="Step 4">
+                        </div>
+                        <div class="step-num">Step 4</div>
+                        <div class="step-connector"></div>
+                        <p class="content">
+                            Get The <b>right Insurance</b> Policy
+                        </p>
+                    </div>
+                </div>
+                <div class="hide-md-up link-container">
                     <a href="#" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
                 </div>
             </div>
-            <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-1.png" alt="Step 1">
-                    </div>
-                    <div class="step-num">Step 1</div>
-                    <div class="step-connector"></div>
-                    <p class="content">
-                        <b>Search</b> an advisor near you
-                    </p>
-                </div>
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-2.png" alt="Step 2">
-                    </div>
-                    <div class="step-num">Step 2</div>
-                    <div class="step-connector"></div>
-                    <p class="content">
-                        Choose the <b>perfect match</b> for your requirements
-                    </p>
-                </div>
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-3.png" alt="Step 3">
-                    </div>
-                    <div class="step-num">Step 3</div>
-                    <div class="step-connector"></div>
-                    <p class="content">
-                        Direct <b>face-To Face Connect</b>
-                    </p>
-                </div>
-                <div class="tm-advise-step">
-                    <div class="image-container">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/step-4.png" alt="Step 4">
-                    </div>
-                    <div class="step-num">Step 4</div>
-                    <div class="step-connector"></div>
-                    <p class="content">
-                        Get The <b>right Insurance</b> Policy
-                    </p>
-                </div>
-            </div>
-            <div class="hide-md-up link-container">
-                <a href="#" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- advisor cards main container -->
-<div class="container advisors-list-section tm-loading"><!-- add loading class here -->
-
-    <!-- cards skeleton -->
-    <div class="tm-advisor-list tm-skeleton">
-        <!-- skeleton card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card tm-card-skeleton">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="" alt="">
-                    </div>
-                    <p class="tm-h2-bold advisor-name"></p>
-                    <p class="tm-body tm-grey-text advisor-location"></p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                    </div>
-                    <a class="tm-button"></a>
-                </div>
-            </div>
-        </div>
-        <!-- skeleton card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card tm-card-skeleton">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="" alt="">
-                    </div>
-                    <p class="tm-h2-bold advisor-name"></p>
-                    <p class="tm-body tm-grey-text advisor-location"></p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                    </div>
-                    <a class="tm-button"></a>
-                </div>
-            </div>
-        </div>
-        <!-- skeleton card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card tm-card-skeleton">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="" alt="">
-                    </div>
-                    <p class="tm-h2-bold advisor-name"></p>
-                    <p class="tm-body tm-grey-text advisor-location"></p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title"></p>
-                            <p class="tm-body tm-grey-text stat-subtitle"></p>
-                        </div>
-                    </div>
-                    <a class="tm-button"></a>
-                </div>
-            </div>
         </div>
     </div>
 
-    <!-- advisor cards -->
-    <div class="tm-advisor-list" id="lastFoldList">
-        <!-- advisor card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/kaleen.png" alt="kaleen">
-                    </div>
-                    <p class="tm-h2-bold advisor-name">Kaleen Bhaiya</p>
-                    <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">5 Years</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+    <!-- advisor cards main container -->
+    <div class="container advisors-list-section tm-loading"><!-- add loading class here -->
+
+        <!-- cards skeleton -->
+        <div class="tm-advisor-list tm-skeleton">
+            <!-- skeleton card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card tm-card-skeleton">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="" alt="">
                         </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">700+</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                        <p class="tm-h2-bold advisor-name"></p>
+                        <p class="tm-body tm-grey-text advisor-location"></p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
                         </div>
+                        <a class="tm-button"></a>
                     </div>
-                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                </div>
+            </div>
+            <!-- skeleton card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card tm-card-skeleton">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="tm-h2-bold advisor-name"></p>
+                        <p class="tm-body tm-grey-text advisor-location"></p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                        </div>
+                        <a class="tm-button"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- skeleton card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card tm-card-skeleton">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="tm-h2-bold advisor-name"></p>
+                        <p class="tm-body tm-grey-text advisor-location"></p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title"></p>
+                                <p class="tm-body tm-grey-text stat-subtitle"></p>
+                            </div>
+                        </div>
+                        <a class="tm-button"></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- advisor card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/munna.png" alt="Munna Bhaiya">
-                    </div>
-                    <p class="tm-h2-bold advisor-name">Munna Bhaiya</p>
-                    <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">5 Years</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+
+        <!-- advisor cards -->
+        <div class="tm-advisor-list" id="lastFoldList">
+            <!-- advisor card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/kaleen.png" alt="kaleen">
                         </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">700+</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                        <p class="tm-h2-bold advisor-name">Kaleen Bhaiya</p>
+                        <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">5 Years</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">700+</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                            </div>
                         </div>
+                        <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                     </div>
-                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                </div>
+            </div>
+            <!-- advisor card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/munna.png" alt="Munna Bhaiya">
+                        </div>
+                        <p class="tm-h2-bold advisor-name">Munna Bhaiya</p>
+                        <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">5 Years</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">700+</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                            </div>
+                        </div>
+                        <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+            <!-- advisor card -->
+            <div class="tm-advisor-wrap">
+                <div class="advisor-card">
+                    <div class="advisor-card__wraper">
+                        <div class="advisor-image">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/guddu.png" alt="Guddu Bhaiya">
+                        </div>
+                        <p class="tm-h2-bold advisor-name">Guddu Bhaiya</p>
+                        <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
+                        <div class="row tm-stats">
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">5 Years</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
+                            </div>
+                            <div class="col-6 stat">
+                                <p class="tm-h2-regular stat-title">700+</p>
+                                <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
+                            </div>
+                        </div>
+                        <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- advisor card -->
-        <div class="tm-advisor-wrap">
-            <div class="advisor-card">
-                <div class="advisor-card__wraper">
-                    <div class="advisor-image">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/guddu.png" alt="Guddu Bhaiya">
-                    </div>
-                    <p class="tm-h2-bold advisor-name">Guddu Bhaiya</p>
-                    <p class="tm-body tm-grey-text advisor-location">Andheri West, Mumbai</p>
-                    <div class="row tm-stats">
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">5 Years</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
-                        </div>
-                        <div class="col-6 stat">
-                            <p class="tm-h2-regular stat-title">700+</p>
-                            <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
-                        </div>
-                    </div>
-                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 
 </div>
@@ -565,12 +571,6 @@ get_header('tmhome');
         </div>
 
     </div>
-</div>
-
-<!-- popup triggers -->
-<div class="container d-none">
-    <button class="tm-button mb-4" onclick="openPopup('tmSuccessPopup')">Success Popup</button>
-    <button class="tm-button mb-4" onclick="openPopup('tmOtpPopup')">OTP Popup</button>
 </div>
 
 <!-- success popup -->
@@ -626,8 +626,9 @@ get_header('tmhome');
                                 <label for="mobileNo">Mobile No.</label>
                                 <div class="prefix">
                                     <span class="input-group-prefix">+91</span>
-                                    <input class="required" type="number" name="mobileNo" id="mobileNo" max="10">
+                                    <input class="required" type="number" name="mobileNo" id="mobileNo">
                                 </div>
+                                <p class="error-message"></p>
                             </div>
 
                             <button class="tm-button" disabled>Submit</button>

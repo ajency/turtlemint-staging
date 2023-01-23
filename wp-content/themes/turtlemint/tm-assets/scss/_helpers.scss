@@ -755,7 +755,8 @@ $tm-blue:#224FD6;
             color: #4D5556;
             margin-top: 44px;
             margin-bottom: 0px;
-            &.success{
+
+            &.success {
                 color: #00A465;
                 cursor: pointer;
             }
@@ -884,7 +885,8 @@ $tm-blue:#224FD6;
         display: grid;
     }
 
-    .pincode-input-group, .otp-input-group {
+    .pincode-input-group,
+    .otp-input-group {
         display: flex;
         justify-content: space-between;
 
@@ -1029,4 +1031,26 @@ $tm-blue:#224FD6;
             }
         }
     }
+}
+
+.tm-form {
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+        box-shadow: 0 0 0 30px #fff inset !important;
+        font-family: $montserrat !important;
+    }
+}
+
+.advisor-card__wraper .advisor-image {
+    width: 96px;
+    height: 96px;
+    margin: 28px auto 16px;
+    border-radius: 100%;
+    background-image: url(../img/tm-img/advisor-placeholder.png);
+    background-size: contain;
+    overflow: hidden;
 }
