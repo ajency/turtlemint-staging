@@ -163,10 +163,19 @@ $tm-blue:#224FD6;
     padding: 11px 24px;
     position: relative;
     background: #00A465;
+    cursor: pointer;
 
     &:disabled {
         background: #D2D5D6;
         color: #A1A6A7 !important;
+    }
+
+    &.large {
+        height: 56px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
 }
 
@@ -607,6 +616,12 @@ $tm-blue:#224FD6;
 
 /* button loader class */
 .tm-loader {
+    color: transparent !important;
+
+    &.disabled {
+        color: transparent !important;
+    }
+
     &:before {
         content: '';
         width: 25px;
@@ -649,17 +664,27 @@ $tm-blue:#224FD6;
     }
 
     &-dialog {
-        height: 100%;
+        /* height: 100%;
+        width: 100%; */
+    }
+
+    .content-wrap {
         width: 100%;
+        height: calc(100% - 200px);
+        margin: 100px auto 100px;
+        min-width: 494px;
+        max-width: 494px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &-content {
         position: relative;
-        width: calc(100% - 40px);
-        max-width: 494px;
         background: #FFFFFF;
         border-radius: 16px;
-        margin: 160px auto 100px;
+        margin: auto;
+        width: 100%;
     }
 
     &-header {
@@ -684,6 +709,12 @@ $tm-blue:#224FD6;
     &-body {
         padding: 40px 60px;
         text-align: center;
+        max-height: 80vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .popup-icon {
             width: 76px;
@@ -714,6 +745,20 @@ $tm-blue:#224FD6;
             text-align: center;
             color: #4D5556;
             margin-bottom: 31px;
+        }
+
+        .resend-timer {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #4D5556;
+            margin-top: 44px;
+            margin-bottom: 0px;
+            &.success{
+                color: #00A465;
+                cursor: pointer;
+            }
         }
 
         .locate-me-link {
@@ -782,13 +827,25 @@ $tm-blue:#224FD6;
         }
 
         .close {
-            top: 10px;
-            right: 10px;
+            display: none;
         }
     }
 }
 
 .tm-form {
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
     .form-wrap {
         max-width: calc(100% - 80px);
         margin: auto;
@@ -801,6 +858,16 @@ $tm-blue:#224FD6;
         line-height: 20px;
         color: #4D5556;
         margin-bottom: 12px;
+    }
+
+    .error-message {
+        display: none;
+        margin-bottom: 0px;
+        margin-top: 8px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FF3B30;
     }
 
     .tm-button {
@@ -817,7 +884,7 @@ $tm-blue:#224FD6;
         display: grid;
     }
 
-    .pincode-input-group {
+    .pincode-input-group, .otp-input-group {
         display: flex;
         justify-content: space-between;
 
@@ -835,7 +902,91 @@ $tm-blue:#224FD6;
         }
     }
 
-    @media(max-width:768px) {
+    &.style2 {
+        label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #4D5556;
+            margin-bottom: 4px;
+        }
+
+        input {
+            height: 48px;
+            background: #FFFFFF;
+            border: 1px solid #D2D5D6;
+            border-radius: 4px;
+            outline: none !important;
+            padding: 12px 16px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #121617;
+        }
+
+        .form-wrap {
+            max-width: 100%;
+
+            .tm-form-group {
+                &:not(:last-child) {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+
+        .tm-button {
+            max-width: 100%;
+        }
+
+        .form-note {
+            margin-top: 16px;
+            margin-bottom: 0px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            color: #4D5556;
+        }
+
+        .prefix {
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid #D2D5D6;
+            border-radius: 4px;
+            height: 48px;
+            padding: 14px 16px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #A1A6A7;
+
+            input {
+                border: none;
+                padding: 0px;
+                padding-left: 16px;
+                height: auto;
+                width: 100%;
+            }
+
+            .input-group-prefix {
+                padding-right: 16px;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    height: 30px;
+                    width: 1px;
+                    background-color: #D2D5D6;
+                    position: absolute;
+                    right: 0px;
+                    top: -3px;
+                }
+            }
+        }
+    }
+
+    @media(max-width:767.98px) {
         .form-wrap {
             max-width: calc(100% - 40px);
         }
@@ -853,6 +1004,28 @@ $tm-blue:#224FD6;
         .pincode-input-group {
             input {
                 font-size: 16px;
+            }
+        }
+
+        &.style2 {
+            .form-wrap {
+                .tm-form-group {
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+
+            label {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+
+        .prefix {
+            .input-group-prefix {
+                font-size: 16px;
+                line-height: 19px;
             }
         }
     }

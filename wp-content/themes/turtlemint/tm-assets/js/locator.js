@@ -29,6 +29,10 @@ $(".tm-select-option").click(function () {
 /* popup */
 function openPopup(popupId) {
   $("#" + popupId).addClass("show");
+
+  if(popupId == 'tmOtpPopup'){
+    countDownTimer(0, 0, 5);
+  }
 }
 function closePopup(popupId) {
   $("#" + popupId).removeClass("show");
@@ -188,7 +192,7 @@ function renderContent(data){
                         <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                     </div>
                 </div>
-                <a href="" class="tm-button">Get In Touch</a>
+                <a onclick="openPopup('getInTouchPopup')" class="tm-button">Get In Touch</a>
             </div>
         </div>
     </div>`
@@ -213,7 +217,7 @@ function renderContent(data){
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a href="" class="tm-button">Get In Touch</a>
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                 </div>
             </div>
         </div>`
@@ -230,8 +234,7 @@ function renderContent(data){
 
 
 /* pincode form */
-//To Do: Add Visibility toggle  
-const inputs = document.querySelectorAll('.pincode-input-group input');
+const inputs = document.querySelectorAll('.single-input-group input');
 inputs[0].focus();
 for (elem of inputs) {
   elem.addEventListener('input', function() {
@@ -270,8 +273,10 @@ for (let elem of inputs) {
   });
 }
 $(document).on('change keyup', '.required', function(e){
+  let parent = $(e.target).parents('.tm-popup');
+
     let Disabled = true;
-     $(".required").each(function() {
+     $(parent).find(".required").each(function() {
        let value = this.value
        if ((value)&&(value.trim() !=''))
            {
@@ -288,3 +293,118 @@ $(document).on('change keyup', '.required', function(e){
          $('.tm-button').prop("disabled", false);
        }
   })
+
+/* otp timer */
+function countDownTimer(hours, minutes, seconds){
+
+const oneSec = 1000,
+container = document.getElementById('countdowntimer');
+
+let dataHours 	= hours,
+dataMinutes = minutes,
+dataSeconds = seconds,
+timerEnd 		= container.getAttribute('data-timer-end'),
+timerOnEndMsg = "data-timer-end";
+
+if (dataHours == '' || dataHours == null || dataHours == NaN) {
+dataHours = "0";
+}
+if (dataMinutes == '' || dataMinutes == null || dataMinutes == NaN) {
+dataMinutes = "0";
+}
+if (dataSeconds == '' || dataSeconds == null || dataSeconds == NaN) {
+dataSeconds = "0";
+}
+
+let hoursSpan = document.createElement('span'),
+minutesSpan = document.createElement('span'),
+secondsSpan = document.createElement('span'),
+separator1 = document.createElement('span'),
+separator2 = document.createElement('span'),
+separatorValue = ":",
+max = 59,
+s = parseInt(dataSeconds) > max ? max : parseInt(dataSeconds),
+m = parseInt(dataMinutes) > max ? max : parseInt(dataMinutes),
+h = parseInt(dataHours);
+
+secondsSpan.classList.add('time');
+minutesSpan.classList.add('time');
+hoursSpan.classList.add('time');
+separator1.classList.add('separator');
+separator1.textContent = separatorValue;
+separator2.classList.add('separator');
+separator2.textContent = separatorValue;
+
+checkValue = (value)=>{
+if (value < 10) {
+return "0" + value;
+} else {
+return value;
+}
+}
+
+hoursSpan.textContent = checkValue(dataHours);
+minutesSpan.textContent = checkValue(dataMinutes);
+secondsSpan.textContent = checkValue(dataSeconds);
+
+timer = (sv,mv,hv)=>{
+
+s = parseInt(sv);
+m = parseInt(mv);
+h = parseInt(hv);
+
+if (s > 0) {
+return s -= 1;
+} else {
+s = max;
+if (m > 0) {
+  return m -= 1;
+} else {
+  m = max;
+  if (h > 0) {
+    return h -= 1;
+  }
+}
+}
+}
+
+finished = ()=>{
+max = 0;
+let timerEnd = container.getAttribute(timerOnEndMsg);
+container.setAttribute(timerOnEndMsg, 'true');
+if (timerEnd == '' || timerEnd == null) {
+$(container).parent('.resend-timer').addClass('success');
+$(container).parent('.resend-timer').attr('onclick', 'resendCode(this)');
+$(container).parent('.resend-timer').find('.resent-text').text('Resend code');
+$(container).parent('.resend-timer').find('.timer').text('');
+} else {
+  console.log("timer end!");
+}
+}
+
+counter = setInterval(()=>{
+
+if (h == 0 && m == 0 && s == 1) {
+clearInterval(counter, finished());
+}
+
+if (s >= 0) {
+timer(s,m,h);
+hoursSpan.textContent   = checkValue(h);
+minutesSpan.textContent = checkValue(m);
+secondsSpan.textContent = checkValue(s);
+}
+}, oneSec);
+
+let children = [minutesSpan, separator2, secondsSpan];
+
+for (child of children) {
+container.appendChild(child);
+}
+}
+
+function resendCode(element){
+  console.log($(element).find('.timer').data('timer-end'));
+  $(element).find('.timer').data('timer-end', false);
+  countDownTimer(0, 0, 5);
+}

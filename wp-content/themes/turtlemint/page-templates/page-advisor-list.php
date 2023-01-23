@@ -4,55 +4,55 @@
   Template Name: Advisor List
  */
 
- $pincode = isset($_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
- $vertical = isset($_GET["vertical"]) ? htmlspecialchars($_GET["vertical"]) : "4-wheeler";
- $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "1";
+$pincode = isset($_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
+$vertical = isset($_GET["vertical"]) ? htmlspecialchars($_GET["vertical"]) : "4-wheeler";
+$offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "1";
 
 get_header('tmhome');
 ?>
 
 <!-- pincode popup -->
 <div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show" : ""; ?>" id="pincodePopup">
-  <div class="tm-popup-dialog" role="document">
-    <div class="tm-popup-content">
-      <div class="tm-popup-header">
-        <button type="button" class="close" onclick="closePopup('pincodePopup')">
-          <span class="icon"></span>
-        </button>
+    <div class="tm-popup-dialog" role="document">
+        <div class="content-wrap">
+            <div class="tm-popup-content">
+                <div class="tm-popup-header">
 
-      </div>
-      <div class="tm-popup-body">
-        <div class="popup-icon">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/location-icon.svg" alt="location">
-        </div>
-        <p class="popup-heading">Find an advisor near you!</p>
-        <p class="popup-subheading">Enter your Pincode or give access to your location so we can show you advisors in your area</p>
-        <form class="tm-form" id="pincodeForm">
-            <div class="form-wrap">
-            <div class="tm-form-group">
-                <label for="pincode">Pin code</label>
-                <div class="pincode-input-group">
-                    <input class="required" autofocus type="text" maxlength="1">
-                    <input class="required" type="text" maxlength="1">
-                    <input class="required" type="text" maxlength="1">
-                    <input class="required" type="text" maxlength="1">
-                    <input class="required" type="text" maxlength="1">
-                    <input class="required" type="text" maxlength="1">
+                </div>
+                <div class="tm-popup-body">
+                    <div class="popup-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/location-icon.svg" alt="location">
+                    </div>
+                    <p class="popup-heading">Find an advisor near you!</p>
+                    <p class="popup-subheading">Enter your Pincode or give access to your location so we can show you advisors in your area</p>
+                    <form class="tm-form" id="pincodeForm">
+                        <div class="form-wrap">
+                            <div class="tm-form-group">
+                                <label for="pincode">Pin code</label>
+                                <div class="single-input-group pincode-input-group">
+                                    <input class="required" autofocus type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                </div>
+                                <p class="error-message"></p>
+                            </div>
+                            <p class="location-name d-none">Navada, Patna, Bihar</p>
+                        </div>
+
+                        <button class="tm-button" disabled>Submit</button>
+                        <p class="or-text">or</p>
+                        <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+                    </form>
+                </div>
+                <div class="tm-popup-footer">
+
                 </div>
             </div>
-            <p class="location-name d-none">Navada, Patna, Bihar</p>
-            </div>
-
-            <button class="tm-button" disabled>Submit</button>
-            <p class="or-text">or</p>
-            <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
-        </form>
-      </div>
-      <div class="tm-popup-footer">
-
-      </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- ======= Navbar End ======= -->
@@ -227,7 +227,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a class="tm-button">Get In Touch
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch
                     </a>
                 </div>
             </div>
@@ -251,7 +251,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a class="tm-button">Get In Touch</a>
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -274,7 +274,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a class="tm-button">Get In Touch</a>
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -496,7 +496,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a class="tm-button">Get In Touch</a>
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -519,7 +519,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a class="tm-button">Get In Touch</a>
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -542,7 +542,7 @@ get_header('tmhome');
                             <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                         </div>
                     </div>
-                    <a class="tm-button">Get In Touch</a>
+                    <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -550,34 +550,152 @@ get_header('tmhome');
 
 </div>
 
+<!-- Advisor List - Empty State  -->
+<div class="container d-none">
+    <div class="tm-emty-list">
+        <div class="image-container">
+            <img height="160" width="160" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/empty-advisor-list.png" alt="No Advisors Found">
+        </div>
+        <p class="tm-h2-bold tm-heading">We are recruiting advisors in your area</p>
+        <p class="tm-subheading">Submit your contact details to get free advise from Turtlemint insurance experts.</p>
+        <a onclick="openPopup('getInTouchPopup')" class="tm-button large">Get in touch</a>
+        <div class="call-details">
+            <p class="title">Call us to get advise</p>
+            <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.svg" alt="call">+91 8962995991</a>
+        </div>
 
-<!-- pincode popup -->
-<!-- <div class="tm-popup" id="pincodePopup">
-  <div class="tm-popup-dialog" role="document">
-    <div class="tm-popup-content">
-      <div class="tm-popup-header">
-        <button type="button" class="close" onclick="closePopup('pincodePopup')">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    </div>
+</div>
 
-            </div>
-            <div class="tm-popup-footer">
+<!-- popup triggers -->
+<div class="container d-none">
+    <button class="tm-button mb-4" onclick="openPopup('tmSuccessPopup')">Success Popup</button>
+    <button class="tm-button mb-4" onclick="openPopup('tmOtpPopup')">OTP Popup</button>
+</div>
 
+<!-- success popup -->
+<div class="tm-popup" id="tmSuccessPopup">
+    <div class="tm-popup-dialog" role="document">
+        <div class="content-wrap">
+            <div class="tm-popup-content">
+                <div class="tm-popup-header">
+                    <button type="button" class="close" onclick="closePopup('tmSuccessPopup')">
+                        <span class="icon"></span>
+                    </button>
+
+                </div>
+                <div class="tm-popup-body">
+                    <div class="popup-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/success-icon.svg" alt="success">
+                    </div>
+                    <p class="popup-heading">Sucess!</p>
+                    <p class="popup-subheading">Our Insurance advisor Kaleen bhaiya will contact you shortly</p>
+                </div>
+                <div class="tm-popup-footer">
+
+                </div>
             </div>
         </div>
     </div>
-  </div>
-</div> -->
+</div>
+
+<!-- get in touch popup -->
+<div class="tm-popup" id="getInTouchPopup">
+    <div class="tm-popup-dialog" role="document">
+        <div class="content-wrap">
+            <div class="tm-popup-content">
+                <div class="tm-popup-header">
+                    <button type="button" class="close" onclick="closePopup('getInTouchPopup')">
+                        <span class="icon"></span>
+                    </button>
+
+                </div>
+                <div class="tm-popup-body">
+                    <div class="popup-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/profile-icon.svg" alt="profile">
+                    </div>
+                    <p class="popup-heading">Just a bit more about you!</p>
+                    <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
+                    <form class="tm-form style2" id="getInTouchForm">
+                        <div class="form-wrap">
+                            <div class="tm-form-group">
+                                <label for="name">Name</label>
+                                <input class="required" name="name" id="name" type="text">
+                            </div>
+                            <div class="tm-form-group">
+                                <label for="mobileNo">Mobile No.</label>
+                                <div class="prefix">
+                                    <span class="input-group-prefix">+91</span>
+                                    <input class="required" type="number" name="mobileNo" id="mobileNo" max="10">
+                                </div>
+                            </div>
+
+                            <button class="tm-button" disabled>Submit</button>
+                            <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="tm-popup-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- OTP popup -->
+<div class="tm-popup" id="tmOtpPopup">
+    <div class="tm-popup-dialog" role="document">
+        <div class="content-wrap">
+            <div class="tm-popup-content">
+                <div class="tm-popup-header">
+                    <button type="button" class="close" onclick="closePopup('tmOtpPopup')">
+                        <span class="icon"></span>
+                    </button>
+
+                </div>
+                <div class="tm-popup-body">
+                    <div class="popup-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/otp-icon.svg" alt="success">
+                    </div>
+                    <p class="popup-heading">OTP Verification</p>
+                    <p class="popup-subheading">We’ve sent a verification code to your mobile<br><b>+91 8962995991</b></p>
+                    <form class="tm-form" id="tmOtpForm">
+                        <div class="form-wrap">
+                            <div class="tm-form-group">
+                                <label for="otp">OTP</label>
+                                <div class="single-input-group otp-input-group">
+                                    <input class="required" autofocus type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                    <input class="required" type="number" max="1">
+                                </div>
+                                <p class="error-message"></p>
+                            </div>
+                            <p class="resend-timer"><span class="resent-text">Resend code in</span> <span class="timer" id="countdowntimer"></span></p>
+                        </div>
+
+                        <button class="tm-button" disabled>Submit</button>
+                    </form>
+                </div>
+                <div class="tm-popup-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php if (isset($pincode) && isset($vertical)) { ?>
     <script type="text/javascript">
         window.addEventListener("load", async (event) => {
             let pincodeData = await getPincodeLocation(<?php echo $pincode ?>)
-            getAdvisorList(pincodeData.latitude, pincodeData.longitude, <?php echo  "'".$vertical."', '".$offset."'" ?>)
+            getAdvisorList(pincodeData.latitude, pincodeData.longitude, <?php echo  "'" . $vertical . "', '" . $offset . "'" ?>)
         });
     </script>
-<?php } ?>    
+<?php } ?>
 
 <?php
 get_footer('tmhome');
