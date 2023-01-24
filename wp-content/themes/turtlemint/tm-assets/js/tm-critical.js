@@ -177,7 +177,7 @@ const DATA = {
           <div class="advisor-card">
               <div class="advisor-card__wraper">
                   <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+advisor.partnerName+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+window.tm_vertical_data+' Insurance advisor in '+advisor.city+'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -202,7 +202,7 @@ const DATA = {
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                          ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+advisor.partnerName+'">' : '' }
+                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+window.tm_vertical_data+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -226,6 +226,12 @@ const DATA = {
       console.log(htmlLastFold)
       firstFoldParent.innerHTML = htmlFirstFold;
       lastFoldParent.innerHTML = data.advisors.length > 3 ? htmlLastFold : '';
+      let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} Insurance Advisors`
+      $('.agent-count-js').text(agentCountText)
+      let url = new URL(window.location);
+      url.searchParams.set('pincode', window.tm_pincode_data.pincode);
+      url.searchParams.set('vertical', window.tm_vertical_data);
+      window.history.pushState(null, '', url.toString());
       $('#pincodeForm .tm-button').removeClass('tm-loader')
       populateVertical()
       closePopup('pincodePopup')
@@ -239,5 +245,9 @@ const DATA = {
       populateVertical()
       closePopup('pincodePopup')
       $('.tm-loading').removeClass('tm-loading')
+  }
+  function filterVertical(){
+    $('.tm-preloader').addClass('tm-loading')
+    getAdvisorList(window.tm_pincode_data, window.tm_vertical_data)
   }
   //render script end

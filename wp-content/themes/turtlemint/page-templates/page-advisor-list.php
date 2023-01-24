@@ -147,7 +147,7 @@ get_header('tmhome');
 <div class="advisor-list-wraper">
 
     <!-- Breadcrumb -->
-    <div class="container tm-loading"><!-- add loading class here -->
+    <div class="container tm-preloader tm-loading"><!-- add loading class here -->
         <div class="row">
             <div class="col-md-12">
                 <!-- breadcrumb-skeleton -->
@@ -169,22 +169,22 @@ get_header('tmhome');
     </div>
 
     <!-- Advisors headings -->
-    <div class="container tm-heading-container tm-loading"> <!-- add loading class here -->
+    <div class="container tm-heading-container tm-preloader tm-loading"> <!-- add loading class here -->
         <!-- skeleton -->
         <p class="tm-h1-regular tm-section-heading heading-skeleton"></p>
         <p class="tm-body tm-grey-text mb-0 tm-section-subheading subheading-skeleton"></p>
         <!-- headings -->
         <span class="hide-md-down ">
-            <h1 class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Insurance Advisors</span> Available Near you</h1>
+            <h1 class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span> Available Near you</h1>
         </span>
         <span class="hide-md-up">
-            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text">45 Insurance Advisors</span><br>Available Near you</h1>
+            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span><br>Available Near you</h1>
         </span>
         <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation with our certified and experienced Turtlemint advisors</p>
     </div>
 
     <!-- advisor cards main container -->
-    <div class="container advisors-list-section tm-loading"><!-- add loading class here -->
+    <div class="container advisors-list-section tm-preloader tm-loading"><!-- add loading class here -->
 
         <!-- cards skeleton -->
         <div class="tm-advisor-list tm-skeleton">
@@ -335,7 +335,7 @@ get_header('tmhome');
 
     </div>
 
-    <div class="advisor-steps-outer tm-loading"><!-- add loading class here -->
+    <div class="advisor-steps-outer tm-preloader tm-loading"><!-- add loading class here -->
         <!-- advice steps skeleton-->
         <div class="container tm-advice-steps-container tm-steps-skeleton">
             <div class="tm-advice-steps-container__wraper">
@@ -453,7 +453,7 @@ get_header('tmhome');
     </div>
 
     <!-- advisor cards main container -->
-    <div class="container advisors-list-section tm-loading"><!-- add loading class here -->
+    <div class="container advisors-list-section tm-preloader tm-loading"><!-- add loading class here -->
 
         <!-- cards skeleton -->
         <div class="tm-advisor-list tm-skeleton">
