@@ -22,7 +22,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
-			<title>Find Experienced Insurance Advisors Near You | Turtlemint</title>
+			<title>Find Experienced Insurance Advisors Near You - Turtlemint</title>
 			<meta name="description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
 			<meta name="keywords" content="insurance advisor near me">
 			<script type="application/ld+json">
