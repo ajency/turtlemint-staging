@@ -1,7 +1,5 @@
 /* dropdown */
 function tmSelectDropdown(element) {
-  if (!$(element).hasClass("selected") && $(element).hasClass("valueTarget")) {
-  }
   $(element).siblings().removeClass("selected");
   $(element).addClass("selected");
   let iconUrl = $(element).data("icon");
@@ -17,6 +15,8 @@ function tmSelectDropdown(element) {
     .parents(".tm-select-dropdown")
     .find(".tm-select-value")
     .removeClass("placeholder");
+
+    window.tm_vertical_data = $(element).data('value');
 }
 
 $(".tm-select-value").click(function () {
@@ -54,10 +54,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function populateVertical(){
-  let selectedVertical = $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option.selected');
-  let defaultVertical = $('.tm-select-dropdown:not(.skeleton-dropdown) .tm-select-value');
+/*   let selectedVertical = $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option.selected');
+  let defaultVertical = $('.tm-select-dropdown:not(.skeleton-dropdown) .tm-select-value'); */
   //console.log("value : ", $(selectedVertical).data('value'));
-  $(defaultVertical).html($(selectedVertical).html());
+  /* $(defaultVertical).html($(selectedVertical).html()); */
+  $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option[data-value='+ window.tm_vertical_data +']').click();
 }
 
 /* pincode form */

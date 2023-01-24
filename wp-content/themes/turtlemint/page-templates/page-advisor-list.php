@@ -48,7 +48,7 @@ get_header('tmhome');
                             </div>
                             <div class="tm-form-group filter-form-group">
                             <div class="tm-select-dropdown">
-                                <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
+                                <div class="tm-select-value" data-value="FW"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4-wheeler" class="icon"> <span class="title">4 Wheeler</span></div>
                                 <div class="tm-select-options">
                                     <div class="tm-select-option <?php echo $vertical=="FW" ? "selected" : ""; ?>" data-value="FW" onclick="tmSelectDropdown(this)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
                                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4-wheeler" class="icon">
@@ -739,6 +739,7 @@ get_header('tmhome');
 </div>
 
 <script type="text/javascript">
+    window.tm_vertical_data = <?php echo !(isset($vertical)) ? "'FW'" : "'".$vertical."'"; ?>;
     window.addEventListener("load", async (event) => {
     <?php if (isset($pincode) && isset($vertical)) { ?>
             let pincodeData = await getPincodeLocation(<?php echo $pincode ?>)
