@@ -20,31 +20,40 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Find Experienced Insurance Advisors Near You | Turtlemint</title>
-		<meta name="description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
-		<meta name="keywords" content="insurance advisor near me">
+
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
+			<title>Find Experienced Insurance Advisors Near You | Turtlemint</title>
+			<meta name="description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
+			<meta name="keywords" content="insurance advisor near me">
+			<script type="application/ld+json">
+				{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "<?php echo home_url() ?>"
+				},{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Insurance Advisor Near Me",
+					"item": "<?php echo get_permalink( get_the_ID() ); ?>"
+				}]
+				}
+			</script>
+		<?php } ?>
+
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<!-- SG test -->
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-favicon.png" type="image/x-icon">
 		<!-- inject:head -->
-		<script type="application/ld+json">
-			{
-			"@context": "https://schema.org",
-			"@type": "BreadcrumbList",
-			"itemListElement": [{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "<?php echo home_url() ?>"
-			},{
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Insurance Advisor Near Me",
-				"item": "<?php echo get_permalink( get_the_ID() ); ?>"
-			}]
-			}
-		</script>
 		<!--Required tags-->
+
+		<!-- critical css -->
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-critical.css" />
+		<!-- critical css end -->
+
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick-theme.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/style.css" />
@@ -64,7 +73,10 @@
         <script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/mn/scripts/vendor/modernizr-min.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/mobilemenu.css"/>
 
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css" />
+		<!-- defered css -->
+		<link rel="preload" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css"></noscript>
+		<!-- defered css end -->
 
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

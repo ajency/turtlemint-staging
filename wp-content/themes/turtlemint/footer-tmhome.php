@@ -532,6 +532,11 @@
 
     <!--Javascript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- critical js -->
+<script async src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/tm-critical.js"></script>
+<!-- critical js end -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 	crossorigin="anonymous"></script>
@@ -541,7 +546,7 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/index.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/verticalLanding.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js"></script>
+
 <script>
 	jQuery('.slider-nav').slick({
 	    slidesToShow: 6,
@@ -861,6 +866,9 @@
 		
 	
     <!-- endinject:foot -->
-	<script src="https://ajency.github.io/Turtlemint/find-advisor-widget/find-advisor-widget.js" type="text/javascript" async="true"></script>
+	<!-- defered js -->
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js" defer></script>
+	<script src="https://ajency.github.io/Turtlemint/find-advisor-widget/find-advisor-widget.js" type="text/javascript" defer></script>
+	<!-- defered js end -->
     </body>
 </html>

@@ -1,3 +1,4 @@
+@import 'tm-mixin';
 @import 'helpers';
 
 body {
@@ -37,6 +38,25 @@ body {
     }
 }
 
+//popup
+.tm-popup{
+    &-body{
+        .resend-timer {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #4D5556;
+            margin-top: 44px;
+            margin-bottom: 0px;
+
+            &.success {
+                color: #00A465;
+                cursor: pointer;
+            }
+        }
+    }
+}
 // locator section
 .locator-section-main {
     @media(max-width:767.98px) {
