@@ -232,6 +232,8 @@ const DATA = {
       url.searchParams.set('pincode', window.tm_pincode_data.pincode);
       url.searchParams.set('vertical', window.tm_vertical_data);
       window.history.pushState(null, '', url.toString());
+      $('.advisor-list-wraper').removeClass('d-none')
+      $('#empty-screen-wrap').addClass('d-none')
       $('#pincodeForm .tm-button').removeClass('tm-loader')
       populateVertical()
       closePopup('pincodePopup')
