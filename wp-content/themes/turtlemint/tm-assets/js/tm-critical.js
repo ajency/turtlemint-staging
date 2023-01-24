@@ -95,20 +95,29 @@ const DATA = {
       }
   ]
   }
-  
+
+//https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io
+const SERVER = 'https://87a98206-a697-427a-8c88-86b06e6d1a56.mock.pstmn.io';
+const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io'
+
   async function getPincodeLocation(pincode){
       try{
           let headersList = {
           "Content-Type": "application/json"
           }
-          let response = await fetch("https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io/api/agent-locator/pin-details/"+pincode, { 
+          let response = await fetch(PINCODE_SERVER+"/api/agent-locator/pin-details/"+pincode, { 
               method: "GET",
               headers: headersList
           });
           let data = await response.json();
           console.log(data)
           if(data.area && data.city && data.city){
-              window.tm_pincode_data = data
+              
+            //TODO
+            //replace hardcoded object with data
+              //window.tm_pincode_data = data
+              window.tm_pincode_data = {id: 110018, pinCode: pincode, area: 'New Delhi', city: 'Delhi', state: 'Delhi'};
+              
               $('#pincode-filter-input').text(pincode)
               return data;
           }
@@ -118,23 +127,14 @@ const DATA = {
           }
       }
       catch(err){
-          // return {
-          //     'error': true,
-          //     'info': 'Pincode not found',
-          //     'data': err
-          // }
-  
-          //TODO replace return
-          $('#pincode-filter-input').text(pincode)
-          window.window.tm_pincode_data= {
-              "pincode": pincode
-          }
+        //   $('#pincode-filter-input').text(pincode)
+        //   window.window.tm_pincode_data= {
+        //       "pinCode": pincode
+        //   }
           return {
-              "id": pincode,
-              "pincode": pincode,
-              "area": "Patto",
-              "city": "Panjim",
-              "state": "Goa"
+              'error': true,
+              'info': 'Pincode not found',
+              'data': err
           }
       }
   }
@@ -148,7 +148,7 @@ const DATA = {
               "pinCode": pincode,
               "vertical": vertical
           });
-          let response = await fetch("https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io/api/agent-locator/advisors?offset=0&limit=10", { 
+          let response = await fetch(SERVER+"/api/agent-locator/advisors?offset=0&limit=10", { 
               method: "POST",
               body: bodyContent,
               headers: headersList
@@ -160,9 +160,7 @@ const DATA = {
       }
       catch(err){
           console.log(err)
-          // TODO render empty screen instead of DATA
-          // renderEmptyScreen()
-          renderContent(DATA)
+          renderEmptyScreen()
       }
   }
   
@@ -229,7 +227,7 @@ const DATA = {
       let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} Insurance Advisors`
       $('.agent-count-js').text(agentCountText)
       let url = new URL(window.location);
-      url.searchParams.set('pincode', window.tm_pincode_data.pincode);
+      url.searchParams.set('pincode', window.tm_pincode_data.pinCode);
       url.searchParams.set('vertical', window.tm_vertical_data);
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').removeClass('d-none')
@@ -241,6 +239,10 @@ const DATA = {
   }
   
   function renderEmptyScreen () {
+      let url = new URL(window.location);
+      url.searchParams.set('pincode', window.tm_pincode_data.pinCode);
+      url.searchParams.set('vertical', window.tm_vertical_data);
+      window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').addClass('d-none')
       $('#empty-screen-wrap').removeClass('d-none')
       $('#pincodeForm .tm-button').removeClass('tm-loader')
