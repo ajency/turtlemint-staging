@@ -11,6 +11,10 @@ function tmSelectDropdown(element, flag) {
     .parents(".tm-select-dropdown")
     .find(".tm-select-value .title")
     .text($(element).text());
+    $(element)
+    .parents(".tm-select-dropdown")
+    .find(".tm-select-value .icon")
+    .attr("alt", $(element).find('.icon').attr("alt"));
   $(element)
     .parents(".tm-select-dropdown")
     .find(".tm-select-value")
@@ -78,6 +82,10 @@ function populateVertical(){
       .parents(".tm-select-dropdown")
       .find(".tm-select-value .title")
       .text($(element).text());
+    $(element)
+    .parents(".tm-select-dropdown")
+    .find(".tm-select-value .icon")
+    .attr("alt", $(element).find('.icon').attr("alt"));
   })
 }
 
