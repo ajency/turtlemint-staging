@@ -97,8 +97,8 @@ const DATA = {
   }
 
 const VERTICAL_JSON = {
-    'TW': '2 Wheeler',
-    'FW': '4 Wheeler',
+    'TW': '2-Wheeler',
+    'FW': '4-Wheeler',
     'Life': 'Life',
     'Health': 'Health'
 }
@@ -230,7 +230,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
       console.log(htmlLastFold)
       firstFoldParent.innerHTML = htmlFirstFold;
       lastFoldParent.innerHTML = data.advisors.length > 3 ? htmlLastFold : '';
-      let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} Insurance Advisors`
+      let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} ${VERTICAL_JSON[window.tm_vertical_data]} Insurance Advisors`
       $('.agent-count-js').text(agentCountText)
       let url = new URL(window.location);
       url.searchParams.set('pincode', window.tm_pincode_data.pinCode);
