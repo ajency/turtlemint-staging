@@ -96,6 +96,12 @@ const DATA = {
   ]
   }
 
+const VERTICAL_JSON = {
+    'TW': '2 Wheeler',
+    'FW': '4 Wheeler',
+    'Life': 'Life',
+    'Health': 'Health'
+}
 //https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io
 const SERVER = 'https://87a98206-a697-427a-8c88-86b06e6d1a56.mock.pstmn.io';
 const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io'
@@ -175,7 +181,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
           <div class="advisor-card">
               <div class="advisor-card__wraper">
                   <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+window.tm_vertical_data+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[window.tm_vertical_data]+' Insurance advisor in '+advisor.city+'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -200,7 +206,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+window.tm_vertical_data+' Insurance advisor in '+advisor.city+'">' : '' }
+                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[window.tm_vertical_data]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
