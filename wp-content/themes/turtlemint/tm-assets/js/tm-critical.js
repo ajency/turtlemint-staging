@@ -108,7 +108,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
               headers: headersList
           });
           let data = await response.json();
-          console.log(data)
+        //   console.log(data)
           if(data.area && data.city && data.city){
               
             //TODO
@@ -120,7 +120,6 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
               return data;
           }
           else{
-              console.log('error')
               throw 'Pincode not found';
           }
       }
@@ -129,6 +128,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
         //   window.window.tm_pincode_data= {
         //       "pinCode": pincode
         //   }
+        console.log('Get Pincode Location error: ', err)
           return {
               'error': true,
               'info': 'Pincode not found',
@@ -152,17 +152,17 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
               headers: headersList
           });
           let data = await response.json();
-          console.log(data)
+        //   console.log(data)
           window.tm_total_advisor_count = DATA.totalEligibleAdvisorCount;//TODO replace DATA with data
           window.tm_added_advisor_count = window.tm_added_advisor_count ? window.tm_added_advisor_count + DATA.advisors.length : DATA.advisors.length;//TODO replace DATA with data
           if(returnData){ 
             return DATA;//TODO replace DATA with data
           }
           //TODO pass data instead of DATA
-          data.advisors.length > 0 ? renderContent(DATA): renderEmptyScreen();
+          data.advisors && data.advisors.length > 0 ? renderContent(DATA): renderEmptyScreen();
       }
       catch(err){
-          console.log(err)
+          console.log('Get Advisor List error:', err)
           if(returnData){ return {"error": true, "info": err } }
           renderEmptyScreen()
       }
@@ -173,7 +173,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
       let lastFoldParent = document.getElementById('lastFoldList');
       let htmlFirstFold = ''
       let htmlLastFold = ''
-      console.log(data.advisors.slice(3))
+    //   console.log(data.advisors.slice(3))
       data.advisors.slice(0, 3).forEach( advisor => {
           htmlFirstFold += `<div class="tm-advisor-wrap">
           <div class="advisor-card">
@@ -224,16 +224,16 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
           </div>`
           });
       }
-      console.log(htmlFirstFold)
-      console.log(htmlLastFold)
+    //   console.log(htmlFirstFold)
+    //   console.log(htmlLastFold)
       firstFoldParent.innerHTML = htmlFirstFold;
       lastFoldParent.innerHTML = data.advisors.length > 3 ? htmlLastFold : '';
       let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} ${VERTICAL_JSON[window.tm_vertical_data]} Insurance Advisors`
       $('.agent-count-js').text(agentCountText)
       let url = new URL(window.location);
-      url.searchParams.set('pincode', window.tm_pincode_data.pinCode);
-      url.searchParams.set('vertical', window.tm_vertical_data);
-      url.searchParams.set('offset', window.tm_offset);
+      window.tm_pincode_data ? url.searchParams.set('pincode', window.tm_pincode_data.pinCode) : '';
+      window.tm_vertical_data ? url.searchParams.set('vertical', window.tm_vertical_data) : '';
+      window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').removeClass('d-none')
       $('#empty-screen-wrap').addClass('d-none')
@@ -241,13 +241,14 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
       populateVertical()
       closePopup('pincodePopup')
       $('.tm-loading').removeClass('tm-loading')
+      window.addEventListener("scroll", handleInfiniteScroll);
   }
   
   function renderEmptyScreen () {
       let url = new URL(window.location);
-      url.searchParams.set('pincode', window.tm_pincode_data.pinCode);
-      url.searchParams.set('vertical', window.tm_vertical_data);
-      url.searchParams.set('offset', window.tm_offset);
+      window.tm_pincode_data ? url.searchParams.set('pincode', window.tm_pincode_data.pinCode) : '';
+      window.tm_vertical_data ? url.searchParams.set('vertical', window.tm_vertical_data) : '';
+      window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').addClass('d-none')
       $('#empty-screen-wrap').removeClass('d-none')
@@ -268,7 +269,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
     $('#paginationLoader').removeClass('d-none')
     window.tm_offset = window.tm_offset + 1;
     let data = await getAdvisorList(window.tm_pincode_data.pinCode,window.tm_vertical_data, window.tm_offset, true)
-    console.log(data)
+    // console.log(data)
     let lastFoldParent = document.getElementById('lastFoldList');
     let html = '';
     if(data.advisors && data.advisors.length > 0){
@@ -298,9 +299,9 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
         });
     }
     let url = new URL(window.location);
-    url.searchParams.set('pincode', window.tm_pincode_data.pinCode);
-    url.searchParams.set('vertical', window.tm_vertical_data);
-    url.searchParams.set('offset', window.tm_offset);
+    window.tm_pincode_data ? url.searchParams.set('pincode', window.tm_pincode_data.pinCode) : '';
+    window.tm_vertical_data ? url.searchParams.set('vertical', window.tm_vertical_data) : '';
+    window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
     window.history.pushState(null, '', url.toString());
     $('#paginationLoader').addClass('d-none')
     lastFoldParent.innerHTML += html;
@@ -313,7 +314,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
       if (endOfPage) {
         removeInfiniteScroll()
         renderNextPage()
-        console.log("page end: Run fetch")
+        // console.log("page end: Run fetch")
       }
   
       if (window.tm_total_advisor_count <= window.tm_added_advisor_count) {
@@ -325,6 +326,4 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
     // loader.remove();
     window.removeEventListener("scroll", handleInfiniteScroll);
   };
-  
-  window.addEventListener("scroll", handleInfiniteScroll);
   //infinite scrolling end

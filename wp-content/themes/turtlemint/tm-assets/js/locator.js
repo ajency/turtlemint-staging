@@ -174,7 +174,7 @@ $(document).on('change keyup', '.required', function(e){
         $('#pincodeForm .tm-form-group').removeClass('tm-error');
     }
     else{
-        console.log($(parent).attr('id'))
+        // console.log($(parent).attr('id'))
         if($(parent).attr('id') == 'pincodePopup'){
             pincodeValidaion()
         }
@@ -298,7 +298,7 @@ async function pincodeValidaion(){
         pincode += $(this).val()
     })
     let pincodeData = await getPincodeLocation(pincode);
-    console.log('pinDara', pincodeData)
+    // console.log('pinDara', pincodeData)
     if(pincodeData.error){
         $('#pincodeForm .error-message').text(pincodeData.info).addClass('d-block')
         $('#pincodeForm .tm-form-group').addClass('tm-error');
@@ -313,7 +313,7 @@ async function pincodeValidaion(){
 document.getElementById('pincodeForm').addEventListener('submit', function(e){
     e.preventDefault();
     $(this).find('.tm-button').addClass('tm-loader')
-    console.log('test',window.tm_pincode_data)
+    // console.log('test',window.tm_pincode_data)
     let vertical = $(this).find('.tm-select-value.selected').data('value')
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(window.tm_pincode_data.pinCode,vertical)
