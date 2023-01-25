@@ -830,7 +830,7 @@ get_header('tmhome');
                                 </div>
                                 <p class="error-message"></p>
                             </div>
-                            <p class="resend-timer"><span class="resend-text">Resend code in</span> <span class="timer" id="countdowntimer"></span></p>
+                            <p class="resend-timer tm-loader-dark"><span class="resend-text">Resend code in</span> <span class="timer" id="countdowntimer"></span></p>
                         </div>
 
                         <button class="tm-button" disabled>Submit</button>
