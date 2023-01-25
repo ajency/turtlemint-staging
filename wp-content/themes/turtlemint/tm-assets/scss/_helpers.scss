@@ -701,6 +701,9 @@
             input{
                 border-color: rgba(255, 59, 48, 1);
             }
+            .prefix{
+                border-color: rgba(255, 59, 48, 1);
+            }
         }
     }
 
@@ -743,6 +746,7 @@
             font-size: 16px;
             line-height: 20px;
             color: #121617;
+            transition: all 0.2s ease-in-out;
         }
 
         .form-wrap {
@@ -781,6 +785,7 @@
             font-size: 16px;
             line-height: 19px;
             color: #A1A6A7;
+            transition: all 0.2s ease-in-out;
 
             input {
                 border: none;

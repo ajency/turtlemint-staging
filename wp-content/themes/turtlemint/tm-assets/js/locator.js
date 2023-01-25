@@ -159,7 +159,7 @@ $(document).on('change keyup', '.required', function(e){
     let Disabled = true;
      $(parent).find(".required").each(function() {
        let value = this.value
-       if ((value)&&(value.trim() !=''))
+       if ((value)&&(value.trim() !='') && $(parent).find('.tm-form-group.tm-error').length < 1)
            {
              Disabled = false
            }else{
@@ -167,7 +167,7 @@ $(document).on('change keyup', '.required', function(e){
              return false
            }
      });
-    
+
     if(Disabled){
         $(parent).find('.tm-button').prop("disabled", true);
         $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
@@ -182,6 +182,7 @@ $(document).on('change keyup', '.required', function(e){
             $(parent).find('.tm-button').prop("disabled", false);
         }
     }
+
   })
 
 /* otp timer */
@@ -317,4 +318,51 @@ document.getElementById('pincodeForm').addEventListener('submit', function(e){
     let vertical = $(this).find('.tm-select-value.selected').data('value')
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(window.tm_pincode_data.pinCode,vertical)
+})
+
+/******* get in touch Form flow ********/
+//forms
+let getInTouchForm = document.getElementById('getInTouchForm');
+
+//patterns
+let phonePattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/im;
+
+//Error Messages
+let phoneinvalidMessage = "Please enter a valid mobile number";
+
+// phone validation
+function phoneValidation(input) {
+  let formElement = $(input).parents('.tm-form')
+  let parentGroup = $(input).parents('.tm-form-group')
+  if (input.value.match(phonePattern)) {
+    $(parentGroup).removeClass('tm-error')
+    $(parentGroup).find('.error-message').text('').slideUp()
+  }else{
+    $(parentGroup).addClass('tm-error')
+    $(parentGroup).find('.error-message').text(phoneinvalidMessage).slideDown()
+  }
+}
+
+// phone
+$(document).on('change keyup', '#tm-mobileNo', function(e){
+    phoneValidation(this);
+
+    let form = $(this).parents('.tm-form');
+    let formErrors = $(form).find('.tm-form-group.tm-error').length
+    console.log("Errors: ", formErrors);
+    if(formErrors > 0 || $(form).find('.required').val()===''){
+      console.log('has Errors');
+      $(form).find('.tm-button').prop("disabled", true);
+    }
+    else{
+      console.log('No Errors');
+      (form).find('.tm-button').prop("disabled", false);
+    }
+    
+});
+
+// contact form
+$(getInTouchForm).submit(function( e ){
+  e.preventDefault();
+  $(this).find('.tm-button').addClass('tm-loader')
 })

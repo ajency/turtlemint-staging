@@ -770,22 +770,23 @@ get_header('tmhome');
                     </div>
                     <p class="popup-heading">Just a bit more about you!</p>
                     <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
-                    <form class="tm-form style2" id="getInTouchForm">
+                    <form class="tm-form style2" id="getInTouchForm" novalidate>
                         <div class="form-wrap">
                             <div class="tm-form-group">
-                                <label for="name">Name</label>
-                                <input class="required" name="name" id="name" type="text">
+                                <label for="tm-name">Name</label>
+                                <input class="required" name="tm-name" id="tm-name" type="text">
+                                <p class="error-message"></p>
                             </div>
                             <div class="tm-form-group">
-                                <label for="mobileNo">Mobile No.</label>
+                                <label for="tm-mobileNo">Mobile No.</label>
                                 <div class="prefix">
                                     <span class="input-group-prefix">+91</span>
-                                    <input class="required" type="number" name="mobileNo" id="mobileNo">
+                                    <input class="required" type="number" name="tm-mobileNo" id="tm-mobileNo">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
 
-                            <button class="tm-button" disabled>Submit</button>
+                            <button class="tm-button" type="submit" disabled>Submit</button>
                             <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
                         </div>
                     </form>
@@ -820,12 +821,12 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="otp">OTP</label>
                                 <div class="single-input-group otp-input-group">
-                                    <input class="required" autofocus type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
-                                    <input class="required" type="number" min="0" max="9" maxlength="1">
+                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
