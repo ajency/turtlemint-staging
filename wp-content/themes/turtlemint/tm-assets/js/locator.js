@@ -67,7 +67,7 @@ function openPopup(popupId) {
   $("#" + popupId).addClass("show");
 
   if(popupId == 'tmOtpPopup'){
-    countDownTimer(0, 0, 5);
+    countDownTimer(0, 0, 30);
   }
 }
 function closePopup(popupId) {
@@ -286,11 +286,19 @@ container.appendChild(child);
 }
 }
 
-function resendCode(element){
-  $(element).removeClass('success');
-  $(element).find('.resend-text').text('Resend code in');
-  $(element).attr('onclick', '');
-  countDownTimer(0, 0, 5);
+//TODO
+async function resendCode(element){
+  try{
+    let response = await fetch('https://pro.turtlemint.com/api/commonverticals/v1/otp/resend?sessionId='+sessionStorage.getItem('tm_user_session_id'));
+    let data = await response.json()
+    $(element).find('.resend-text').text('Code resent successfully. Send again?');
+    $(element).attr('onclick', '');
+    $(element).removeClass('success');
+    countDownTimer(0, 0, 30);
+  }
+  catch(err){
+    console.log(err)
+  }
 }
 async function pincodeValidaion(){
     let pincode = ''
@@ -362,7 +370,68 @@ $(document).on('change keyup', '#tm-mobileNo', function(e){
 });
 
 // contact form
-$(getInTouchForm).submit(function( e ){
+// $(getInTouchForm).submit(function( e ){
+//   e.preventDefault();
+//   $(this).find('.tm-button').addClass('tm-loader')
+// })
+
+//TODO
+document.getElementById('getInTouchForm').addEventListener('submit', async function(e){
   e.preventDefault();
   $(this).find('.tm-button').addClass('tm-loader')
+  const name = $(this).find('#name').val()
+  const phone = $(this).find('#mobileNo').val()
+  try{
+    let response = await fetch('https://pro.turtlemint.com/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=idfcfirstbank&source=PartnerConsent')
+    let data = await response.json()
+    if(data && data.status_code == 200){
+      sessionStorage.setItem('tm_user_name', name)
+      sessionStorage.setItem('tm_user_phone', phone)
+      sessionStorage.setItem('tm_user_session_id', data.session_id)
+      $(this).find('.tm-button').removeClass('tm-loader')
+      closePopup("getInTouchPopup")
+      openPopup("tmOtpPopup");
+    }
+    else{
+      throw 'No Servere Response'
+    }
+  }
+  catch(err){
+    console.log("Error in submiting the details: ", err)
+    //TODO remove 3 lines
+    $(this).find('.tm-button').removeClass('tm-loader')
+      closePopup("getInTouchPopup")
+      openPopup("tmOtpPopup");
+  }
+})
+
+//TODO
+document.getElementById('tmOtpForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  $(this).find('.tm-button').addClass('tm-loader')
+  let otp =  ''
+  $(this).find('.required').each(function(){
+    otp += $(this).val()
+  })
+  try{
+    let response = await fetch('https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io/api/commonverticals/v1/otp/verify?source=PartnerConsent', {
+      'method' : 'POST',
+      'headers': {
+      'Content-Type': 'application/json'
+      },
+      'body': JSON.stringify({
+        "sessionId":sessionStorage.getItem('tm_user_session_id'),
+        "otp": otp
+      })
+    })
+    let data = await response.json()
+  }
+  catch(err){
+    console.log(err)
+  }
+  finally{
+    $(this).find('.tm-button').removeClass('tm-loader')
+    closePopup("tmOtpPopup")
+    openPopup("tmSuccessPopup");
+  }
 })

@@ -4,7 +4,7 @@
   Template Name: Advisor List
  */
 
-$pincode = isset($_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
+$pincode = isset($_GET["pincode"]) && preg_match('/^[0-9]{6}$/', $_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
 $vertical_array = array('FW','TW','Life','Health');
 $vertical = isset($_GET["vertical"]) && in_array($_GET["vertical"], $vertical_array) ? htmlspecialchars($_GET["vertical"]) : NULL ;
 $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "0";

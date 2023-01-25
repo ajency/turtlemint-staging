@@ -94,6 +94,8 @@ const VERTICAL_JSON = {
     'Life': 'Life',
     'Health': 'Health'
 }
+
+const LIMIT = 9;
 //https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io
 const SERVER = 'https://87a98206-a697-427a-8c88-86b06e6d1a56.mock.pstmn.io';
 const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io'
@@ -125,9 +127,11 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
       }
       catch(err){
         //   $('#pincode-filter-input').text(pincode)
-        //   window.window.tm_pincode_data= {
-        //       "pinCode": pincode
-        //   }
+        //TODO comment windoe.tm_pincode
+          window.tm_pincode_data= {
+              "pinCode": pincode
+          }
+
         console.log('Get Pincode Location error: ', err)
           return {
               'error': true,
@@ -146,7 +150,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
               "pinCode": pincode,
               "vertical": vertical
           });
-          let response = await fetch(SERVER+"/api/agent-locator/advisors?offset="+offset+"&limit=9", { 
+          let response = await fetch(SERVER+"/api/agent-locator/advisors?offset="+offset+"&limit="+LIMIT, { 
               method: "POST",
               body: bodyContent,
               headers: headersList
@@ -154,17 +158,20 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
           let data = await response.json();
         //   console.log(data)
           window.tm_total_advisor_count = DATA.totalEligibleAdvisorCount;//TODO replace DATA with data
-          window.tm_added_advisor_count = window.tm_added_advisor_count ? window.tm_added_advisor_count + DATA.advisors.length : DATA.advisors.length;//TODO replace DATA with data
+          window.tm_added_advisor_count = window.tm_added_advisor_count ? window.tm_added_advisor_count + DATA.advisors.length : window.tm_offset * LIMIT + DATA.advisors.length;//TODO replace DATA with data
           if(returnData){ 
             return DATA;//TODO replace DATA with data
           }
           //TODO pass data instead of DATA
-          data.advisors && data.advisors.length > 0 ? renderContent(DATA): renderEmptyScreen();
+          renderContent(DATA)
+        //   data.advisors && data.advisors.length > 0 ? renderContent(DATA): renderEmptyScreen();
       }
       catch(err){
           console.log('Get Advisor List error:', err)
           if(returnData){ return {"error": true, "info": err } }
-          renderEmptyScreen()
+        //   TODO replace renderContent with renderEmptyScreen
+          renderContent(DATA)
+        //   renderEmptyScreen()
       }
   }
   
