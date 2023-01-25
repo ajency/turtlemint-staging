@@ -7,7 +7,7 @@
 $pincode = isset($_GET["pincode"]) ? htmlspecialchars($_GET["pincode"]) : NULL;
 $vertical_array = array('FW','TW','Life','Health');
 $vertical = isset($_GET["vertical"]) && in_array($_GET["vertical"], $vertical_array) ? htmlspecialchars($_GET["vertical"]) : NULL ;
-$offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "1";
+$offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "0";
 
 get_header('tmhome');
 ?>
@@ -605,6 +605,82 @@ get_header('tmhome');
 
 </div>
 
+<!-- Loader -->
+<div class="container advisors-list-section d-none" id="paginationLoader"><!-- add loading class here -->
+    <!-- cards skeleton -->
+    <div class="tm-advisor-list tm-skeleton" style="display: grid;">
+        <!-- skeleton card -->
+        <div class="tm-advisor-wrap">
+            <div class="advisor-card tm-card-skeleton">
+                <div class="advisor-card__wraper">
+                    <div class="advisor-image">
+                        <img src="" alt="">
+                    </div>
+                    <p class="tm-h2-bold advisor-name"></p>
+                    <p class="tm-body tm-grey-text advisor-location"></p>
+                    <div class="row tm-stats">
+                        <div class="col-6 stat">
+                            <p class="tm-h2-regular stat-title"></p>
+                            <p class="tm-body tm-grey-text stat-subtitle"></p>
+                        </div>
+                        <div class="col-6 stat">
+                            <p class="tm-h2-regular stat-title"></p>
+                            <p class="tm-body tm-grey-text stat-subtitle"></p>
+                        </div>
+                    </div>
+                    <a class="tm-button"></a>
+                </div>
+            </div>
+        </div>
+        <!-- skeleton card -->
+        <div class="tm-advisor-wrap">
+            <div class="advisor-card tm-card-skeleton">
+                <div class="advisor-card__wraper">
+                    <div class="advisor-image">
+                        <img src="" alt="">
+                    </div>
+                    <p class="tm-h2-bold advisor-name"></p>
+                    <p class="tm-body tm-grey-text advisor-location"></p>
+                    <div class="row tm-stats">
+                        <div class="col-6 stat">
+                            <p class="tm-h2-regular stat-title"></p>
+                            <p class="tm-body tm-grey-text stat-subtitle"></p>
+                        </div>
+                        <div class="col-6 stat">
+                            <p class="tm-h2-regular stat-title"></p>
+                            <p class="tm-body tm-grey-text stat-subtitle"></p>
+                        </div>
+                    </div>
+                    <a class="tm-button"></a>
+                </div>
+            </div>
+        </div>
+        <!-- skeleton card -->
+        <div class="tm-advisor-wrap">
+            <div class="advisor-card tm-card-skeleton">
+                <div class="advisor-card__wraper">
+                    <div class="advisor-image">
+                        <img src="" alt="">
+                    </div>
+                    <p class="tm-h2-bold advisor-name"></p>
+                    <p class="tm-body tm-grey-text advisor-location"></p>
+                    <div class="row tm-stats">
+                        <div class="col-6 stat">
+                            <p class="tm-h2-regular stat-title"></p>
+                            <p class="tm-body tm-grey-text stat-subtitle"></p>
+                        </div>
+                        <div class="col-6 stat">
+                            <p class="tm-h2-regular stat-title"></p>
+                            <p class="tm-body tm-grey-text stat-subtitle"></p>
+                        </div>
+                    </div>
+                    <a class="tm-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Advisor List - Empty State  -->
 <div class="container d-none" id="empty-screen-wrap">
     <div class="tm-empty-list">
@@ -740,10 +816,11 @@ get_header('tmhome');
 
 <script type="text/javascript">
     window.tm_vertical_data = <?php echo !(isset($vertical)) ? "'FW'" : "'".$vertical."'"; ?>;
+    window.tm_offset = <?php echo $offset ?>;
     window.addEventListener("load", async (event) => {
     <?php if (isset($pincode) && isset($vertical)) { ?>
             let pincodeData = await getPincodeLocation(<?php echo $pincode ?>)
-            getAdvisorList(pincodeData.latitude, pincodeData.longitude, <?php echo  "'" . $vertical . "', '" . $offset . "'" ?>)
+            getAdvisorList(pincodeData.pinCode, <?php echo  "'" . $vertical . "', '" . $offset . "'" ?>)
     <?php } if(isset($vertical)) {  ?>
             populateVertical()
     <?php } if(isset($pincode)) { ?>

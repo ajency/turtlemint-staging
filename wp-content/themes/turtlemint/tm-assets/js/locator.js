@@ -70,7 +70,7 @@ function populateVertical(){
   // $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option[data-value='+ window.tm_vertical_data +']').click();
 
   $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option[data-value='+ window.tm_vertical_data +']').each(function(index, element){
-    console.log(element)
+    // console.log(element)
     $(element).siblings().removeClass("selected");
     $(element).addClass("selected");
     let iconUrl = $(element).data("icon");
