@@ -26,6 +26,27 @@ function tmSelectDropdown(element, flag) {
     filterVertical()
   }
 }
+/* insurance type selection */
+$( document ).ready(function() {
+
+  $(".filter-select-group input[type=radio]").change(function () {
+    // insurance type value
+    window.tm_vertical_data = $(this).val();
+    
+    // type icon colored
+    let typeIconColored = $(this).next('label').find('.icon').attr('icon-colored');
+
+      //update icon
+      $(this).next('label').find('.icon').attr('id', typeIconColored);
+
+      $(".filter-select-group input[type=radio]").not(this).each(function(){
+       // type icon default
+      let typeIconDefault = $(this).next('label').find('.icon').attr('icon-default');
+      //update icon
+       $(this).next('label').find('.icon').attr('id', typeIconDefault);
+      });
+  });
+});
 
 $(".tm-select-value").click(function () {
   $(this).next(".tm-select-options").slideToggle();
@@ -87,6 +108,10 @@ function populateVertical(){
     .find(".tm-select-value .icon")
     .attr("alt", $(element).find('.icon').attr("alt"));
   })
+
+/*   $(".filter-select-group input[type=radio][value="+ window.tm_vertical_data +"]").prop("checked", true);
+  let coloredIcon = $(".filter-select-group input[type=radio][value="+ window.tm_vertical_data +"]").next('label').find('.icon');
+  $(coloredIcon).attr('id', $(coloredIcon).attr('icon-colored')); */
 }
 
 /* pincode form */

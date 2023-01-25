@@ -44,3 +44,29 @@ $tm-blue:#224FD6;
     line-height: 20px;
     font-weight: $weight;
 }
+
+/* icons */
+#health-icon{
+    content: url(../img/icons/health-icon.svg);
+}
+#health2-icon{
+    content: url(../img/icons/health-colored-icon.svg);
+}
+#life-icon{
+    content: url(../img/icons/life-icon.svg);
+}
+#life2-icon{
+    content: url(../img/icons/life-colored-icon.svg);
+}
+#two-wheeler-icon{
+    content: url(../img/icons/2-wheeler-icon.svg);
+}
+#two-wheeler2-icon{
+    content: url(../img/icons/2-wheeler-colored-icon.svg);
+}
+#four-wheeler-icon{
+    content: url(../img/icons/4-wheeler-icon.svg);
+}
+#four-wheeler2-icon{
+    content: url(../img/icons/4-wheeler-colored-icon.svg);
+}
