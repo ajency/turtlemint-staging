@@ -185,8 +185,8 @@ get_header('tmhome');
                     <p></p>
                 </div>
                 <!-- breadcrumb content -->
-                <ul class="tm-breadcrumb breadcrumb">
-                    <li><a href="<?php echo home_url() ?>"><img class="brdcrm-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/homebc.png"></a></li>
+                <ul class="tm-breadcrumb style2 breadcrumb">
+                    <li><a href="<?php echo home_url() ?>">Home</a></li>
                         <?php if(!empty($html_list_of_breadcrumbs)) : ?>
                         <?php echo $html_list_of_breadcrumbs; ?>  
                         <?php else : ?>
