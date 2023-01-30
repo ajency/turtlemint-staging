@@ -330,7 +330,7 @@ async function pincodeValidaion(){
     $('#pincodeForm .location-wraper').removeClass('tm-loading')
 }
 
-document.getElementById('pincodeForm').addEventListener('submit', function(e){
+$('#pincodeForm').submit( function(e){
     e.preventDefault();
     $(this).find('.tm-button').addClass('tm-loader')
     // console.log('test',window.tm_pincode_data)
@@ -387,7 +387,7 @@ $(document).on('change keyup', '#tm-mobileNo', function(e){
 // })
 
 //TODO
-document.getElementById('getInTouchForm').addEventListener('submit', async function(e){
+$('#getInTouchForm').submit( async function(e){
   e.preventDefault();
   $(this).find('.tm-button').addClass('tm-loader')
   const name = $(this).find('#tm-name').val()
@@ -419,7 +419,7 @@ document.getElementById('getInTouchForm').addEventListener('submit', async funct
 })
 
 //TODO
-document.getElementById('tmOtpForm').addEventListener('submit', async function(e){
+$('#tmOtpForm').submit( async function(e){
   e.preventDefault();
   $(this).find('.tm-button').addClass('tm-loader')
   let otp =  ''
