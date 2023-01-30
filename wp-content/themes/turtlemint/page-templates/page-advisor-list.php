@@ -845,8 +845,8 @@ get_header('tmhome');
 </div>
 
 <script type="text/javascript">
-    window.tm_vertical_data = <?php echo !(isset($vertical)) ? "'FW'" : "'".$vertical."'"; ?>;
-    window.tm_offset = <?php echo $offset ?>;
+    sessionStorage.setItem('tm_vertical_data',<?php echo !(isset($vertical)) ? "'FW'" : "'".$vertical."'"; ?>)
+    window.tm_offset = <?php echo $offset; ?>;
     window.addEventListener("load", async (event) => {
     <?php if (isset($pincode) && isset($vertical)) { ?>
             let pincodeData = await getPincodeLocation(<?php echo $pincode ?>)
@@ -854,9 +854,8 @@ get_header('tmhome');
     <?php } if(isset($vertical)) {  ?>
             populateVertical()
     <?php } if(isset($pincode)) { ?>
+        sessionStorage.setItem("tm_pincode_data",JSON.stringify({"pinCode": <?php echo $pincode; } ?>}))
         pincodeValidaion()
-        window.tm_pincode_data = <?php echo $pincode;
-    }?>
     });
 </script>
 

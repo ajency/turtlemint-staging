@@ -20,7 +20,7 @@ function tmSelectDropdown(element, flag) {
     .find(".tm-select-value")
     .removeClass("placeholder");
 
-    window.tm_vertical_data = $(element).data('value');
+    sessionStorage.setItem('tm_vertical_data', $(element).data('value'));
   
   if(flag){
     filterVertical()
@@ -31,7 +31,7 @@ $( document ).ready(function() {
 
   $(".filter-select-group input[type=radio]").change(function () {
     // insurance type value
-    window.tm_vertical_data = $(this).val();
+    sessionStorage.setItem('tm_vertical_data', $(this).val());
     
     // type icon colored
     let typeIconColored = $(this).next('label').find('.icon').attr('icon-colored');
@@ -93,7 +93,7 @@ function populateVertical(){
   //imp
   // $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option[data-value='+ window.tm_vertical_data +']').click();
 
-  $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option[data-value='+ window.tm_vertical_data +']').each(function(index, element){
+  $('.tm-select-dropdown:not(.skeleton-dropdown)').find('.tm-select-options .tm-select-option[data-value='+ sessionStorage.getItem('tm_vertical_data') +']').each(function(index, element){
     // console.log(element)
     $(element).siblings().removeClass("selected");
     $(element).addClass("selected");
@@ -336,7 +336,7 @@ document.getElementById('pincodeForm').addEventListener('submit', function(e){
     // console.log('test',window.tm_pincode_data)
     let vertical = $(this).find('.tm-select-value.selected').data('value')
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
-    getAdvisorList(window.tm_pincode_data.pinCode,vertical)
+    getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
 })
 
 /******* get in touch Form flow ********/

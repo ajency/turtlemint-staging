@@ -116,8 +116,8 @@ const SERVER_3 = 'https://pro.turtlemint.com';
               
             //TODO
             //replace hardcoded object with data
-              //window.tm_pincode_data = data
-              window.tm_pincode_data = {id: 110018, pinCode: pincode, area: 'New Delhi', city: 'Delhi', state: 'Delhi'};
+              //sessionStorage.setItem('tm_pincode_data', JSON.stringify(data))
+              sessionStorage.setItem('tm_pincode_data', JSON.stringify({id: 110018, pinCode: pincode, area: 'New Delhi', city: 'Delhi', state: 'Delhi'}));
               
               $('#pincode-filter-input').text(pincode)
               return data;
@@ -127,16 +127,17 @@ const SERVER_3 = 'https://pro.turtlemint.com';
           }
       }
       catch(err){
-        //   $('#pincode-filter-input').text(pincode)
+        //TODO remove .text() line  
+        $('#pincode-filter-input').text(pincode)
         console.log('Get Pincode Location error: ', err)
 
         //TODO comment window.tm_pincode and remove false return
-          window.tm_pincode_data= {
+          sessionStorage.setItem('tm_pincode_data', JSON.stringify({
               "pinCode": pincode
-          }
+          }));
           return {
             "id": pincode,
-            "pincode": pincode,
+            "pinCode": pincode,
             "area": "New Delhi",
             "city": "West Delhi",
             "state": "Delhi"
@@ -195,7 +196,7 @@ const SERVER_3 = 'https://pro.turtlemint.com';
           <div class="advisor-card">
               <div class="advisor-card__wraper">
                   <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[window.tm_vertical_data]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -220,7 +221,7 @@ const SERVER_3 = 'https://pro.turtlemint.com';
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[window.tm_vertical_data]+' Insurance advisor in '+advisor.city+'">' : '' }
+                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -244,11 +245,11 @@ const SERVER_3 = 'https://pro.turtlemint.com';
     //   console.log(htmlLastFold)
       firstFoldParent.innerHTML = htmlFirstFold;
       lastFoldParent.innerHTML = data.advisors.length > 3 ? htmlLastFold : '';
-      let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} ${VERTICAL_JSON[window.tm_vertical_data]} Insurance Advisors`
+      let agentCountText = `${data.totalEligibleAdvisorCount ? data.totalEligibleAdvisorCount : data.advisors.length} ${VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]} Insurance Advisors`
       $('.agent-count-js').text(agentCountText)
       let url = new URL(window.location);
-      window.tm_pincode_data ? url.searchParams.set('pincode', window.tm_pincode_data.pinCode) : '';
-      window.tm_vertical_data ? url.searchParams.set('vertical', window.tm_vertical_data) : '';
+      sessionStorage.getItem('tm_pincode_data') ? url.searchParams.set('pincode', JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode) : '';
+      sessionStorage.getItem('tm_vertical_data') ? url.searchParams.set('vertical', sessionStorage.getItem('tm_vertical_data')) : '';
       window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').removeClass('d-none')
@@ -262,8 +263,8 @@ const SERVER_3 = 'https://pro.turtlemint.com';
   
   function renderEmptyScreen () {
       let url = new URL(window.location);
-      window.tm_pincode_data ? url.searchParams.set('pincode', window.tm_pincode_data.pinCode) : '';
-      window.tm_vertical_data ? url.searchParams.set('vertical', window.tm_vertical_data) : '';
+      sessionStorage.getItem('tm_pincode_data') ? url.searchParams.set('pincode', JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode) : '';
+      sessionStorage.getItem('tm_vertical_data') ? url.searchParams.set('vertical', sessionStorage.getItem('tm_vertical_data')) : '';
       window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').addClass('d-none')
@@ -275,7 +276,7 @@ const SERVER_3 = 'https://pro.turtlemint.com';
   }
   function filterVertical(){
     $('.tm-preloader').addClass('tm-loading')
-    getAdvisorList(window.tm_pincode_data, window.tm_vertical_data)
+    getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode, sessionStorage.getItem('tm_vertical_data'))
   }
   //render script end
 
@@ -284,7 +285,7 @@ const SERVER_3 = 'https://pro.turtlemint.com';
   async function renderNextPage(){
     $('#paginationLoader').removeClass('d-none')
     window.tm_offset = window.tm_offset + 1;
-    let data = await getAdvisorList(window.tm_pincode_data.pinCode,window.tm_vertical_data, window.tm_offset, true)
+    let data = await getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode, sessionStorage.getItem('tm_vertical_data'), window.tm_offset, true)
     // console.log(data)
     let lastFoldParent = document.getElementById('lastFoldList');
     let html = '';
@@ -294,7 +295,7 @@ const SERVER_3 = 'https://pro.turtlemint.com';
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[window.tm_vertical_data]+' Insurance advisor in '+advisor.city+'">' : '' }
+                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -315,8 +316,8 @@ const SERVER_3 = 'https://pro.turtlemint.com';
         });
     }
     let url = new URL(window.location);
-    window.tm_pincode_data ? url.searchParams.set('pincode', window.tm_pincode_data.pinCode) : '';
-    window.tm_vertical_data ? url.searchParams.set('vertical', window.tm_vertical_data) : '';
+    sessionStorage.getItem('tm_pincode_data') ? url.searchParams.set('pincode', JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode) : '';
+    sessionStorage.getItem('tm_vertical_data') ? url.searchParams.set('vertical', sessionStorage.getItem('tm_vertical_data')) : '';
     window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
     window.history.pushState(null, '', url.toString());
     $('#paginationLoader').addClass('d-none')
