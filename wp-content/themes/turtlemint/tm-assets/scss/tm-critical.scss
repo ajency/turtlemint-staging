@@ -326,6 +326,10 @@
 // Find advisor section
 .tm-gradient-bg {
     padding-top: 30px;
+    background-image: url(../img/tm-img/blurCircles.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
 
     @media(max-width:767.98px) {
         padding-top: 10px;
@@ -336,7 +340,9 @@
     display: flex;
     gap: 20px;
     margin-bottom: 11px;
-    padding: 0px !important;
+    .tm-checklist{
+        margin-bottom: 0px;
+    }
 
     #pincodePopup {
         background: #FFFFFF;

@@ -868,7 +868,7 @@
     <!-- endinject:foot -->
 	<!-- defered js -->
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js?t=<?php echo time(); ?>" defer></script>
-	<script src="https://ajency.github.io/Turtlemint/find-advisor-widget/find-advisor-widget.js" type="text/javascript" defer></script>
+	<script src="https://turtlemint-stage.dreamhosters.com/find-advisor-widget/find-advisor-widget.js" type="text/javascript" defer></script>
 	<!-- defered js end -->
     </body>
 </html>

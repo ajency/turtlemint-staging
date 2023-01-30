@@ -478,3 +478,8 @@ $('#tmOtpForm').submit( async function(e){
     openPopup("tmSuccessPopup");
   }
 })
+
+$('.tm-testimonial-slider').slick({
+  arrows:false,
+  dots: true
+});
