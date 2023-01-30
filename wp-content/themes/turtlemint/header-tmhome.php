@@ -66,7 +66,7 @@
 		<!--Required tags-->
 
 		<!-- critical css -->
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-critical.css" />
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-critical.css?t=<?php echo time(); ?>" />
 		<!-- critical css end -->
 
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick.css" />
@@ -89,8 +89,8 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/mobilemenu.css"/>
 
 		<!-- defered css -->
-		<link rel="preload" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-		<noscript><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css"></noscript>
+		<link rel="preload" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css?t=<?php echo time(); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css?t=<?php echo time(); ?>"></noscript>
 		<!-- defered css end -->
 
 		<!-- Google Tag Manager -->

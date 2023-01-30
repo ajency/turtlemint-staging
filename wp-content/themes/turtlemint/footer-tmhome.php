@@ -534,7 +534,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- critical js -->
-<script async src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/tm-critical.js"></script>
+<script async src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/tm-critical.js?t=<?php echo time(); ?>"></script>
 <!-- critical js end -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -867,7 +867,7 @@
 	
     <!-- endinject:foot -->
 	<!-- defered js -->
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js" defer></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js?t=<?php echo time(); ?>" defer></script>
 	<script src="https://ajency.github.io/Turtlemint/find-advisor-widget/find-advisor-widget.js" type="text/javascript" defer></script>
 	<!-- defered js end -->
     </body>

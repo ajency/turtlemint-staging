@@ -201,7 +201,7 @@ function get_hansel_and_gretel_breadcrumbs()
     $link_before      = '<li>';
     $link_after       = '</li>';
     $link_attr        = ' rel="v:url" property="v:title" class="breadcrum-style"';
-    $link             = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
+    $link             = $link_before . '<a' . $link_attr . ' href="%1$s"></a>' . $link_after;
     $delimiter        = ''; //' &raquo; ';              // Delimiter between crumbs
     $before           = '<li><a class="breadcrum-text">'; //'<span class="current">'; // Tag before the current crumb
     $after            = '</a></li>'; //'</span>';                // Tag after the current crumb
