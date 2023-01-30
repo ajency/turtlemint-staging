@@ -98,14 +98,15 @@ const VERTICAL_JSON = {
 const LIMIT = 9;
 //https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io
 const SERVER = 'https://87a98206-a697-427a-8c88-86b06e6d1a56.mock.pstmn.io';
-const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io'
+const SERVER_2 = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io';
+const SERVER_3 = 'https://pro.turtlemint.com';
 
   async function getPincodeLocation(pincode){
       try{
           let headersList = {
           "Content-Type": "application/json"
           }
-          let response = await fetch(PINCODE_SERVER+"/api/agent-locator/pin-details/"+pincode, { 
+          let response = await fetch(SERVER_2+"/api/agent-locator/pin-details/"+pincode, { 
               method: "GET",
               headers: headersList
           });
@@ -127,12 +128,20 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
       }
       catch(err){
         //   $('#pincode-filter-input').text(pincode)
-        //TODO comment windoe.tm_pincode
+        console.log('Get Pincode Location error: ', err)
+
+        //TODO comment window.tm_pincode and remove false return
           window.tm_pincode_data= {
               "pinCode": pincode
           }
+          return {
+            "id": pincode,
+            "pincode": pincode,
+            "area": "New Delhi",
+            "city": "West Delhi",
+            "state": "Delhi"
+         }
 
-        console.log('Get Pincode Location error: ', err)
           return {
               'error': true,
               'info': 'Pincode not found',
@@ -200,7 +209,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
                           <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                       </div>
                   </div>
-                  <a onclick="openPopup('getInTouchPopup')" class="tm-button">Get In Touch</a>
+                  <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}')" class="tm-button">Get In Touch</a>
               </div>
           </div>
       </div>`
@@ -225,7 +234,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
                               <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                           </div>
                       </div>
-                      <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                      <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}')" class="tm-button">Get In Touch</a>
                   </div>
               </div>
           </div>`
@@ -299,7 +308,7 @@ const PINCODE_SERVER = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.
                               <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                           </div>
                       </div>
-                      <a class="tm-button" onclick="openPopup('getInTouchPopup')">Get In Touch</a>
+                      <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}')" class="tm-button">Get In Touch</a>
                   </div>
               </div>
           </div>`

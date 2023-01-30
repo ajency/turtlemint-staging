@@ -63,11 +63,14 @@ $(".tm-select-option").click(function () {
 // });
 
 /* popup */
-function openPopup(popupId) {
+function openPopup(popupId, advisorName) {
   $("#" + popupId).addClass("show");
 
   if(popupId == 'tmOtpPopup'){
     countDownTimer(0, 0, 30);
+  }
+  if(advisorName){
+    window.tm_advisor_name = advisorName;
   }
 }
 function closePopup(popupId) {
@@ -172,6 +175,8 @@ $(document).on('change keyup', '.required', function(e){
         $(parent).find('.tm-button').prop("disabled", true);
         $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
         $('#pincodeForm .tm-form-group').removeClass('tm-error');
+        $('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
+        $('#tmOtpForm .tm-form-group').removeClass('tm-error');
     }
     else{
         // console.log($(parent).attr('id'))
@@ -289,7 +294,8 @@ container.appendChild(child);
 //TODO
 async function resendCode(element){
   try{
-    let response = await fetch('https://pro.turtlemint.com/api/commonverticals/v1/otp/resend?sessionId='+sessionStorage.getItem('tm_user_session_id'));
+    $(element).addClass('tm-loader-dark')
+    let response = await fetch(SERVER_3+'/api/commonverticals/v1/otp/resend?sessionId='+sessionStorage.getItem('tm_user_session_id'));
     let data = await response.json()
     $(element).find('.resend-text').text('Code resent successfully. Send again?');
     $(element).attr('onclick', '');
@@ -297,7 +303,12 @@ async function resendCode(element){
     countDownTimer(0, 0, 30);
   }
   catch(err){
-    console.log(err)
+    console.log("Resend code error: ",err)
+    $(element).find('.resend-text').text('Error in sending code. Please try again later.');
+    $(element).removeClass('success');
+  }
+  finally{
+    $(element).removeClass('tm-loader-dark')
   }
 }
 async function pincodeValidaion(){
@@ -357,13 +368,13 @@ $(document).on('change keyup', '#tm-mobileNo', function(e){
 
     let form = $(this).parents('.tm-form');
     let formErrors = $(form).find('.tm-form-group.tm-error').length
-    console.log("Errors: ", formErrors);
+    // console.log("Errors: ", formErrors);
     if(formErrors > 0 || $(form).find('.required').val()===''){
-      console.log('has Errors');
+      // console.log('has Errors');
       $(form).find('.tm-button').prop("disabled", true);
     }
     else{
-      console.log('No Errors');
+      // console.log('No Errors');
       (form).find('.tm-button').prop("disabled", false);
     }
     
@@ -379,15 +390,16 @@ $(document).on('change keyup', '#tm-mobileNo', function(e){
 document.getElementById('getInTouchForm').addEventListener('submit', async function(e){
   e.preventDefault();
   $(this).find('.tm-button').addClass('tm-loader')
-  const name = $(this).find('#name').val()
-  const phone = $(this).find('#mobileNo').val()
+  const name = $(this).find('#tm-name').val()
+  const phone = $(this).find('#tm-mobileNo').val()
   try{
-    let response = await fetch('https://pro.turtlemint.com/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=idfcfirstbank&source=PartnerConsent')
+    let response = await fetch(SERVER_3+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=idfcfirstbank&source=PartnerConsent')
     let data = await response.json()
     if(data && data.status_code == 200){
       sessionStorage.setItem('tm_user_name', name)
       sessionStorage.setItem('tm_user_phone', phone)
       sessionStorage.setItem('tm_user_session_id', data.session_id)
+      $('#otpPhone').text('+91 '+phone)
       $(this).find('.tm-button').removeClass('tm-loader')
       closePopup("getInTouchPopup")
       openPopup("tmOtpPopup");
@@ -398,7 +410,8 @@ document.getElementById('getInTouchForm').addEventListener('submit', async funct
   }
   catch(err){
     console.log("Error in submiting the details: ", err)
-    //TODO remove 3 lines
+    //TODO remove 4 lines
+    $('#otpPhone').text('+91 '+phone)
     $(this).find('.tm-button').removeClass('tm-loader')
       closePopup("getInTouchPopup")
       openPopup("tmOtpPopup");
@@ -414,7 +427,7 @@ document.getElementById('tmOtpForm').addEventListener('submit', async function(e
     otp += $(this).val()
   })
   try{
-    let response = await fetch('https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io/api/commonverticals/v1/otp/verify?source=PartnerConsent', {
+    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/verify?source=PartnerConsent', {
       'method' : 'POST',
       'headers': {
       'Content-Type': 'application/json'
@@ -425,12 +438,42 @@ document.getElementById('tmOtpForm').addEventListener('submit', async function(e
       })
     })
     let data = await response.json()
+    if(data.statusCode && data.statusCode === 200){
+      //save data       
+      let save_data_response = await fetch(SERVER_3+"/api/commonverticals/v1/customerDetails", { 
+        method: "POST",
+        body: JSON.stringify({
+          "fullName": sessionStorage.getItem('tm_user_name'),
+          "mobileNumber": sessionStorage.getItem('tm_user_phone'),
+          "customerId": sessionStorage.getItem('tm_user_phone')
+        }),
+        headers: {
+        "broker": "turtlemint",
+        "Content-Type": "application/json"
+        }
+      });
+      let save_data = await save_data_response.json();
+      // console.log(save_data);
+      $('#tm_advisor_name').text(window.tm_advisor_name)
+      closePopup("tmOtpPopup")
+      openPopup("tmSuccessPopup");
+    }
+    else if (data.statusCode){
+      throw data.message;
+    }
+    else{
+      throw "OTP verification error. Please try again, or resend OTP";
+    }
   }
   catch(err){
-    console.log(err)
+    console.log("Error in submitting otp: ", err)
+    $('#tmOtpForm .error-message').text(err).addClass('d-block')
+    $('#tmOtpForm .tm-form-group').addClass('tm-error');
   }
   finally{
     $(this).find('.tm-button').removeClass('tm-loader')
+    //TODO remove 3 lines
+    $('#tm_advisor_name').text(window.tm_advisor_name)
     closePopup("tmOtpPopup")
     openPopup("tmSuccessPopup");
   }

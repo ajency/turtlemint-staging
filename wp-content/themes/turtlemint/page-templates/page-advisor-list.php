@@ -743,7 +743,7 @@ get_header('tmhome');
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/success-icon.svg" alt="success">
                     </div>
                     <p class="popup-heading">Sucess!</p>
-                    <p class="popup-subheading">Our Insurance advisor Kaleen bhaiya will contact you shortly</p>
+                    <p class="popup-subheading">Our Insurance advisor <span id="tm_advisor_name">Kaleen bhaiya</span> will contact you shortly</p>
                 </div>
                 <div class="tm-popup-footer">
 
@@ -815,7 +815,7 @@ get_header('tmhome');
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/otp-icon.svg" alt="success">
                     </div>
                     <p class="popup-heading">OTP Verification</p>
-                    <p class="popup-subheading">We’ve sent a verification code to your mobile<br><b>+91 8962995991</b></p>
+                    <p class="popup-subheading">We’ve sent a verification code to your mobile<br><b id='otpPhone'>+91 8962995991</b></p>
                     <form class="tm-form" id="tmOtpForm">
                         <div class="form-wrap">
                             <div class="tm-form-group">
