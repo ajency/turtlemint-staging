@@ -250,8 +250,9 @@
                     color: #009F69;
                 }
             }
-            &:last-child{
-                a.breadcrum-text{
+
+            &:last-child {
+                a.breadcrum-text {
                     font-weight: 600;
                 }
             }
@@ -269,6 +270,7 @@
             width: 30px;
         }
     }
+
     &.style2 {
         li {
             a {
@@ -359,7 +361,8 @@
                 width: 24px;
                 height: 24px;
             }
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-bottom: 8px;
             }
         }
@@ -367,23 +370,48 @@
 }
 
 // Find advisor section
-.tm-gradient-bg {
-    padding-top: 30px;
-    background-image: url(../img/tm-img/blurCircles.svg);
+.tm-gradient-bg,
+.tm-gradient-bg2 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right top;
+}
+
+.tm-gradient-bg {
+    padding-top: 30px;
+    background-image: url(../img/tm-img/blurCircles.svg);
 
     @media(max-width:767.98px) {
         padding-top: 10px;
     }
 }
 
+.tm-gradient-bg2 {
+    width: 557px;
+    height: 550px;
+    background: rgba(20, 170, 161, 0.1);
+    mix-blend-mode: normal;
+    filter: blur(179px);
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 700px;
+    border-radius: 100%;
+
+    @media(max-width:767.98px) {
+        width: 358px;
+        height: 353px;
+        top: 445px;
+    }
+}
+
+
 .find-advisor-section {
     display: flex;
     gap: 20px;
     margin-bottom: 11px;
-    .tm-checklist{
+
+    .tm-checklist {
         margin-bottom: 0px;
     }
 

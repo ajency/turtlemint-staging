@@ -31,75 +31,77 @@ get_header('tmhome');
     </div>
 
     <!-- find advisor section -->
-    <div class="container find-advisor-section">
-        <div class="left-side">
-            <p class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance advisor</span></p>
-            <p class="h1-heading hide-md-up">Find an<br><span class="tm-highlight-text">Insurance advisor</span></p>
-            <p class="tm-desc">Turtlemint insurance advisors are intermediaries who bridge the gap between insurance companies and policyholders.</p>
-            <ul class="tm-checklist">
-                <li>Our advisors are best in the industry & Present all across India</li>
-                <li>Certified & IRDAI approved</li>
-                <li>Gives best advice & service to customer</li>
-            </ul>
-        </div>
-        <div class="right-side d-none">
-            <div id="pincodePopup">
-                <div class="tm-popup-dialog">
-                    <div class="content-wrap">
-                        <div class="tm-popup-content">
-                            <div class="tm-popup-body">
-                                <form class="tm-form" id="pincodeForm">
-                                    <div class="form-wrap">
-                                        <div class="tm-form-group filter-form-group">
-                                            <label for="pincode">Select Insurance Type</label>
-                                            <ul class="filter-select-group">
-                                                <li>
-                                                    <input type="radio" name="tm-insurance-type" id="tm-health-insurance" value="Health">
-                                                    <label for="tm-health-insurance">
-                                                        <span class="icon" id="health-icon" icon-colored="health2-icon" icon-default="health-icon"></span>Health
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" name="tm-insurance-type" id="tm-life-insurance" value="Life">
-                                                    <label for="tm-life-insurance">
-                                                        <span class="icon" id="life-icon" icon-colored="life2-icon" icon-default="life-icon"></span>Life
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" name="tm-insurance-type" id="tm-2-wheeler-insurance" value="TW">
-                                                    <label for="tm-2-wheeler-insurance">
-                                                        <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" name="tm-insurance-type" id="tm-4-wheeler-insurance" value="FW">
-                                                    <label for="tm-4-wheeler-insurance">
-                                                        <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <p class="error-message">Please select type of insurance to proceed to the next step</p>
-                                        </div>
-                                        <div class="tm-form-group">
-                                            <label for="pincode">Enter Pin code</label>
-                                            <div class="single-input-group pincode-input-group">
-                                                <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+    <div class="container">
+        <div class="find-advisor-section">
+            <div class="left-side">
+                <p class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance advisor</span></p>
+                <p class="h1-heading hide-md-up">Find an<br><span class="tm-highlight-text">Insurance advisor</span></p>
+                <p class="tm-desc">Turtlemint insurance advisors are intermediaries who bridge the gap between insurance companies and policyholders.</p>
+                <ul class="tm-checklist">
+                    <li>Our advisors are best in the industry & Present all across India</li>
+                    <li>Certified & IRDAI approved</li>
+                    <li>Gives best advice & service to customer</li>
+                </ul>
+            </div>
+            <div class="right-side d-none">
+                <div id="pincodePopup">
+                    <div class="tm-popup-dialog">
+                        <div class="content-wrap">
+                            <div class="tm-popup-content">
+                                <div class="tm-popup-body">
+                                    <form class="tm-form" id="pincodeForm">
+                                        <div class="form-wrap">
+                                            <div class="tm-form-group filter-form-group">
+                                                <label for="pincode">Select Insurance Type</label>
+                                                <ul class="filter-select-group">
+                                                    <li>
+                                                        <input type="radio" name="tm-insurance-type" id="tm-health-insurance" value="Health">
+                                                        <label for="tm-health-insurance">
+                                                            <span class="icon" id="health-icon" icon-colored="health2-icon" icon-default="health-icon"></span>Health
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="tm-insurance-type" id="tm-life-insurance" value="Life">
+                                                        <label for="tm-life-insurance">
+                                                            <span class="icon" id="life-icon" icon-colored="life2-icon" icon-default="life-icon"></span>Life
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="tm-insurance-type" id="tm-2-wheeler-insurance" value="TW">
+                                                        <label for="tm-2-wheeler-insurance">
+                                                            <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="tm-insurance-type" id="tm-4-wheeler-insurance" value="FW">
+                                                        <label for="tm-4-wheeler-insurance">
+                                                            <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <p class="error-message">Please select type of insurance to proceed to the next step</p>
                                             </div>
-                                            <p class="error-message">Please select type of insurance to proceed to the next step</p>
+                                            <div class="tm-form-group">
+                                                <label for="pincode">Enter Pin code</label>
+                                                <div class="single-input-group pincode-input-group">
+                                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
+                                                </div>
+                                                <p class="error-message">Please select type of insurance to proceed to the next step</p>
+                                            </div>
+                                            <div class="location-wraper"> <!-- add loading class here -->
+                                                <p class="location-name location-name-skeleton"></p>
+                                                <p class="location-name d-none">Navada, Patna, Bihar</p>
+                                            </div>
                                         </div>
-                                        <div class="location-wraper"> <!-- add loading class here -->
-                                            <p class="location-name location-name-skeleton"></p>
-                                            <p class="location-name d-none">Navada, Patna, Bihar</p>
-                                        </div>
-                                    </div>
 
-                                    <button class="tm-button" disabled>Find Advisor</button>
-                                </form>
+                                        <button class="tm-button" disabled>Find Advisor</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -107,8 +109,10 @@ get_header('tmhome');
             </div>
         </div>
     </div>
-
 </div>
+
+<!-- gradient circle -->
+<div class="tm-gradient-bg2"></div>
 
 <!-- statistics section -->
 <div class="container tm-advisor-stats-section">
