@@ -112,114 +112,118 @@ get_header('tmhome');
 </div>
 
 <!-- gradient circle -->
-<div class="tm-gradient-bg2"></div>
+<div class="tm-bg-wraper">
 
-<!-- statistics section -->
-<div class="container tm-advisor-stats-section">
-    <div class="left-side">
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country" class="banner-image hide-md-down">
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country" class="banner-image hide-md-up">
-        <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
-    </div>
-    <div class="right-side">
-        <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
-        <div class="hide-md-down">
-            <div class="stats-section">
-                <div class="stat">
-                    <p class="number">3.5M+</p>
-                    <p class="title">Happy Customers</p>
-                </div>
-                <div class="stat">
-                    <p class="number">240K+</p>
-                    <p class="title">Advisors</p>
-                </div>
-                <div class="stat">
-                    <p class="number">45+</p>
-                    <p class="title">Insurance Partners</p>
+    <!-- statistics section -->
+    <div class="container tm-advisor-stats-section">
+        <div class="left-side">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country" class="banner-image hide-md-down">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country" class="banner-image hide-md-up">
+            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
+        </div>
+        <div class="right-side">
+            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
+            <div class="hide-md-down">
+                <div class="stats-section">
+                    <div class="stat">
+                        <p class="number">3.5M+</p>
+                        <p class="title">Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <p class="number">240K+</p>
+                        <p class="title">Advisors</p>
+                    </div>
+                    <div class="stat">
+                        <p class="number">45+</p>
+                        <p class="title">Insurance Partners</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hide-md-up">
-            <div class="stats-section ">
-                <div class="stat">
-                    <p class="number">3.5M+</p>
-                    <p class="title">Customers</p>
-                </div>
-                <div class="stat">
-                    <p class="number">240K+</p>
-                    <p class="title">Advisors</p>
-                </div>
-                <div class="stat">
-                    <p class="number">45+</p>
-                    <p class="title">Insurers</p>
+            <div class="hide-md-up">
+                <div class="stats-section ">
+                    <div class="stat">
+                        <p class="number">3.5M+</p>
+                        <p class="title">Customers</p>
+                    </div>
+                    <div class="stat">
+                        <p class="number">240K+</p>
+                        <p class="title">Advisors</p>
+                    </div>
+                    <div class="stat">
+                        <p class="number">45+</p>
+                        <p class="title">Insurers</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-</div>
-
-<!-- Advisors help section -->
-<div class="advisor-help-section">
-    <div class="container">
-        <p class="h1-heading">How <span class="tm-highlight-text">insurance advisors</span> help customers</p>
-        <div class="help-section">
-            <div class="image-container">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/unbiased-advise.png" alt="Unbiased Advice" class="banner-image hide-md-down">
-            </div>
-            <div class="content">
-                <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/unbiased-advise-icon.svg" alt="Unbiased Advice" class="icon hide-md-up">Unbiased Advice</p>
-                <p class="desc">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the</p>
-                <ul class="tm-checklist">
-                    <li>Leverage automation to move fast</li>
-                    <li>Always give customers a human to chat to</li>
-                    <li>Automate customer support and close leads faster</li>
-                </ul>
-            </div>
-        </div>
-        <div class="help-section">
-            <div class="content">
-                <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/certified-icon.svg" alt="Certified Industry Expert" class="icon hide-md-up">Certified Industry Expert</p>
-                <p class="desc">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
-                <ul class="tm-checklist">
-                    <li>Keep your customers in the loop with live chat</li>
-                    <li>Embed help articles right on your website</li>
-                    <li>Customers never have to leave the page to find an answer</li>
-                </ul>
-            </div>
-            <div class="image-container">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/certified-industry-expert.png" alt="Certified Industry Expert" class="banner-image hide-md-down">
-            </div>
-        </div>
-        <div class="help-section">
-            <div class="image-container">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/renewal-n-claim-support.png" alt="Renewal & Claim Support" class="banner-image hide-md-down">
-            </div>
-            <div class="content">
-                <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/renewal-support-icon.svg" alt="Renewal & Claim Support" class="icon hide-md-up">Renewal & Claim Support</p>
-                <p class="desc">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the</p>
-                <ul class="tm-checklist">
-                    <li>Leverage automation to move fast</li>
-                    <li>Always give customers a human to chat to</li>
-                    <li>Automate customer support and close leads faster</li>
-                </ul>
-            </div>
-        </div>
-        <div class="help-section">
-            <div class="content">
-                <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/quick-digital-support-icon.svg" alt="Quick Digital SupportUnbiased Advice" class="icon hide-md-up">Quick Digital Support</p>
-                <p class="desc">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
-                <ul class="tm-checklist">
-                    <li>Keep your customers in the loop with live chat</li>
-                    <li>Embed help articles right on your website</li>
-                    <li>Customers never have to leave the page to find an answer</li>
-                </ul>
-            </div>
-            <div class="image-container">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/quick-digital-support.png" alt="Quick Digital Support" class="banner-image hide-md-down">
-            </div>
         </div>
     </div>
+
+    <div class="tm-gradient-bg2"></div>
+
+    <!-- Advisors help section -->
+    <div class="advisor-help-section">
+        <div class="container">
+            <p class="h1-heading">How <span class="tm-highlight-text">insurance advisors</span> help customers</p>
+            <div class="help-section">
+                <div class="image-container">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/unbiased-advise.png" alt="Unbiased Advice" class="banner-image hide-md-down">
+                </div>
+                <div class="content">
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/unbiased-advise-icon.svg" alt="Unbiased Advice" class="icon hide-md-up">Unbiased Advice</p>
+                    <p class="desc">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the</p>
+                    <ul class="tm-checklist">
+                        <li>Leverage automation to move fast</li>
+                        <li>Always give customers a human to chat to</li>
+                        <li>Automate customer support and close leads faster</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-section">
+                <div class="content">
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/certified-icon.svg" alt="Certified Industry Expert" class="icon hide-md-up">Certified Industry Expert</p>
+                    <p class="desc">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
+                    <ul class="tm-checklist">
+                        <li>Keep your customers in the loop with live chat</li>
+                        <li>Embed help articles right on your website</li>
+                        <li>Customers never have to leave the page to find an answer</li>
+                    </ul>
+                </div>
+                <div class="image-container">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/certified-industry-expert.png" alt="Certified Industry Expert" class="banner-image hide-md-down">
+                </div>
+            </div>
+            <div class="help-section">
+                <div class="image-container">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/renewal-n-claim-support.png" alt="Renewal & Claim Support" class="banner-image hide-md-down">
+                </div>
+                <div class="content">
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/renewal-support-icon.svg" alt="Renewal & Claim Support" class="icon hide-md-up">Renewal & Claim Support</p>
+                    <p class="desc">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the</p>
+                    <ul class="tm-checklist">
+                        <li>Leverage automation to move fast</li>
+                        <li>Always give customers a human to chat to</li>
+                        <li>Automate customer support and close leads faster</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-section">
+                <div class="content">
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/quick-digital-support-icon.svg" alt="Quick Digital SupportUnbiased Advice" class="icon hide-md-up">Quick Digital Support</p>
+                    <p class="desc">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
+                    <ul class="tm-checklist">
+                        <li>Keep your customers in the loop with live chat</li>
+                        <li>Embed help articles right on your website</li>
+                        <li>Customers never have to leave the page to find an answer</li>
+                    </ul>
+                </div>
+                <div class="image-container">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/quick-digital-support.png" alt="Quick Digital Support" class="banner-image hide-md-down">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!-- testimonial section -->

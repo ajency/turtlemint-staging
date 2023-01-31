@@ -385,25 +385,58 @@
         padding-top: 10px;
     }
 }
-
+.tm-bg-wraper{
+    position: relative;
+    
+}
 .tm-gradient-bg2 {
     width: 557px;
     height: 550px;
-    background: rgba(20, 170, 161, 0.1);
-    mix-blend-mode: normal;
-    filter: blur(179px);
     position: absolute;
     z-index: -1;
     right: 0px;
-    top: 700px;
-    border-radius: 100%;
+    top: 275px;
+    overflow: hidden;
+    &:before{
+        content: '';
+        background-image: url(../img/tm-img/blurCircles2.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        display: block;
+        background-position: right top;
+    }
 
     @media(max-width:767.98px) {
         width: 358px;
         height: 353px;
-        top: 445px;
+        top: -74px;
     }
 }
+
+/* .tm-advisor-stats-section{
+    position: relative;
+    &:after{
+        content: '';
+        width: 557px;
+        height: 550px;
+        background: rgba(20, 170, 161, 0.1);
+        mix-blend-mode: normal;
+        filter: blur(179px);
+        position: absolute;
+        z-index: -1;
+        right: 0px;
+        top: 275px;
+        border-radius: 100%;
+    
+        @media(max-width:767.98px) {
+            width: 358px;
+            height: 353px;
+            top: 445px;
+        }
+    }
+} */
 
 
 .find-advisor-section {
