@@ -949,6 +949,9 @@ body {
 
     .tm-testimonial {
         text-align: left;
+        &:not(:first-child){
+            display: none;
+        }
 
         &__wraper {
             max-width: 900px;
@@ -1033,6 +1036,13 @@ body {
             }
         }
     }
+
+    &.slick-initialized{
+        .tm-testimonial{
+            display: block;
+        }
+    }
+
 
     .slick-dots {
         position: inherit;

@@ -119,7 +119,7 @@ function populateVertical(){
 
 /* pincode form */
 const inputs = document.querySelectorAll('.single-input-group input');
-inputs[0].focus();
+inputs[0] ? inputs[0].focus() : '';
 for (elem of inputs) {
   elem.addEventListener('input', function() {
     const value = this.value;
@@ -504,7 +504,17 @@ function clearOTP(){
   $('#tmOtpForm input.required').val('').change()
 }
 
-/* banner image skeleton */
-setTimeout(() => {
-  $('.banner-image.tm-image-skeleton').parents('.tm-loading').removeClass('tm-loading');
-}, 1000);
+/* advisor intro page - find advisor form */
+$('#tmFindAdvisorForm').submit( function(e){
+  e.preventDefault();
+  let vertical = $(this).find('.filter-select-group input[type=radio]:checked').val();
+  if(vertical){
+    $(this).find('.filter-form-group').removeClass('tm-error')
+    $(this).find('.filter-form-group .error-message').slideUp()
+    $(this).find('.tm-button').addClass('tm-loader')
+    $(this).unbind().submit()
+  }else{
+    $(this).find('.filter-form-group').addClass('tm-error')
+    $(this).find('.filter-form-group .error-message').slideDown()
+  }
+})

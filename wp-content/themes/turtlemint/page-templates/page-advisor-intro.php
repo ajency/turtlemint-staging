@@ -12,6 +12,13 @@ $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "0";
 get_header('tmhome');
 ?>
 
+<script>
+    /* banner image skeleton */
+  function imageSkeletons(element){
+    $(element).parents('.tm-loading').removeClass('tm-loading');
+  }
+</script>
+
 <div class="tm-gradient-bg">
     <!-- Breadcrumb -->
     <div class="container"><!-- add loading class here -->
@@ -43,72 +50,51 @@ get_header('tmhome');
                     <li>Gives best advice & service to customer</li>
                 </ul>
             </div>
-            <div class="right-side d-none">
-                <div id="pincodePopup">
-                    <div class="tm-popup-dialog">
-                        <div class="content-wrap">
-                            <div class="tm-popup-content">
-                                <div class="tm-popup-body">
-                                    <form class="tm-form" id="pincodeForm">
-                                        <div class="form-wrap">
-                                            <div class="tm-form-group filter-form-group">
-                                                <label for="pincode">Select Insurance Type</label>
-                                                <ul class="filter-select-group">
-                                                    <li>
-                                                        <input type="radio" name="tm-insurance-type" id="tm-health-insurance" value="Health">
-                                                        <label for="tm-health-insurance">
-                                                            <span class="icon" id="health-icon" icon-colored="health2-icon" icon-default="health-icon"></span>Health
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="tm-insurance-type" id="tm-life-insurance" value="Life">
-                                                        <label for="tm-life-insurance">
-                                                            <span class="icon" id="life-icon" icon-colored="life2-icon" icon-default="life-icon"></span>Life
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="tm-insurance-type" id="tm-2-wheeler-insurance" value="TW">
-                                                        <label for="tm-2-wheeler-insurance">
-                                                            <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="tm-insurance-type" id="tm-4-wheeler-insurance" value="FW">
-                                                        <label for="tm-4-wheeler-insurance">
-                                                            <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                                <p class="error-message">Please select type of insurance to proceed to the next step</p>
-                                            </div>
-                                            <div class="tm-form-group">
-                                                <label for="pincode">Enter Pin code</label>
-                                                <div class="single-input-group pincode-input-group">
-                                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="">
-                                                </div>
-                                                <p class="error-message">Please select type of insurance to proceed to the next step</p>
-                                            </div>
-                                            <div class="location-wraper"> <!-- add loading class here -->
-                                                <p class="location-name location-name-skeleton"></p>
-                                                <p class="location-name d-none">Navada, Patna, Bihar</p>
-                                            </div>
-                                        </div>
-
-                                        <button class="tm-button" disabled>Find Advisor</button>
-                                    </form>
+            <div class="right-side">
+                <div class="tm-find-advisor-form">
+                    <div class="tm-find-advisor-form__wraper">
+                        <form class="tm-form" method="GET" action="<?php echo site_url() ?>/insurance-advisor-near-me" id="tmFindAdvisorForm" novalidate>
+                            <div class="form-wrap">
+                                <div class="tm-form-group filter-form-group">
+                                    <label>Select Insurance Type</label>
+                                    <ul class="filter-select-group">
+                                        <li>
+                                            <input type="radio" name="vertical" id="tm-health-insurance" value="Health" required>
+                                            <label for="tm-health-insurance">
+                                                <span class="icon" id="health-icon" icon-colored="health2-icon" icon-default="health-icon"></span>Health
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="vertical" id="tm-life-insurance" value="Life">
+                                            <label for="tm-life-insurance">
+                                                <span class="icon" id="life-icon" icon-colored="life2-icon" icon-default="life-icon"></span>Life
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW">
+                                            <label for="tm-2-wheeler-insurance">
+                                                <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW">
+                                            <label for="tm-4-wheeler-insurance">
+                                                <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <p class="error-message">Please select type of insurance to proceed to the next step</p>
                                 </div>
                             </div>
-                        </div>
+
+                            <button class="tm-button">Find Advisor</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- gradient circle -->
@@ -119,10 +105,10 @@ get_header('tmhome');
         <div class="left-side tm-loading">
             <div class="banner-image tm-image-skeleton"></div>
             <div class="banner-image hide-md-down">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country">
+                <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country">
             </div>
             <div class="banner-image hide-md-up">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
+                <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
             </div>
             <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
         </div>
