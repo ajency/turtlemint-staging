@@ -494,6 +494,7 @@ $('#tmOtpForm').submit( async function(e){
   }
 })
 
+/* testimonial slider */
 $('.tm-testimonial-slider').slick({
   arrows:false,
   dots: true
@@ -502,3 +503,8 @@ $('.tm-testimonial-slider').slick({
 function clearOTP(){
   $('#tmOtpForm input.required').val('').change()
 }
+
+/* banner image skeleton */
+setTimeout(() => {
+  $('.banner-image.tm-image-skeleton').parents('.tm-loading').removeClass('tm-loading');
+}, 1000);

@@ -116,9 +116,14 @@ get_header('tmhome');
 
     <!-- statistics section -->
     <div class="container tm-advisor-stats-section">
-        <div class="left-side">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country" class="banner-image hide-md-down">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country" class="banner-image hide-md-up">
+        <div class="left-side tm-loading">
+            <div class="banner-image tm-image-skeleton"></div>
+            <div class="banner-image hide-md-down">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country">
+            </div>
+            <div class="banner-image hide-md-up">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
+            </div>
             <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
         </div>
         <div class="right-side">

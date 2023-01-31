@@ -721,6 +721,15 @@ body {
     .h1-heading {
         margin-bottom: 64px;
     }
+    .banner-image{
+        height: 580.18px;
+        width: auto;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 
     .stats-section {
         display: flex;
@@ -768,6 +777,7 @@ body {
         }
 
         .banner-image {
+            height: 227.52px;
             width: 100%;
         }
 
