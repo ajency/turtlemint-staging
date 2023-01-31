@@ -854,8 +854,9 @@ get_header('tmhome');
     <?php } if(isset($vertical)) {  ?>
             populateVertical()
     <?php } if(isset($pincode)) { ?>
-        sessionStorage.setItem("tm_pincode_data",JSON.stringify({"pinCode": <?php echo $pincode; } ?>}))
+        sessionStorage.setItem("tm_pincode_data",JSON.stringify({"pinCode": <?php echo $pincode; ?>}))
         pincodeValidaion()
+    <?php } ?>
     });
 </script>
 
