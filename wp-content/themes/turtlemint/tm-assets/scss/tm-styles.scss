@@ -851,7 +851,7 @@ body {
         background: #F7F7F7;
         padding-top: 44px;
         padding-bottom: 44px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
 
         .h1-heading {
             margin-bottom: 14px;
@@ -872,6 +872,8 @@ body {
                 font-size: 22px;
                 line-height: 30px;
                 margin-bottom: 17px;
+                display: flex;
+                align-items: center;
 
                 .icon {
                     width: 52px;
@@ -911,25 +913,30 @@ body {
 }
 
 .tm-testimonial-section {
-    margin-bottom: 188px;
+    margin-bottom: 100px;
 
     .h1-heading {
         margin-bottom: 80px;
     }
 
     @media(max-width:767.98px) {
-        margin-bottom: 112px;
+        margin-bottom: 60px;
+
+        .h1-heading {
+            margin-bottom: 15px;
+        }
     }
 
     @media(max-width:575.98px) {
         .h1-heading {
             max-width: 300px;
-            margin-bottom: 20px;
         }
     }
 }
 
 .tm-testimonial-slider {
+    margin-bottom: 0px !important;
+
     .tm-testimonial {
         text-align: left;
 
@@ -1016,14 +1023,22 @@ body {
             }
         }
     }
+
     .slick-dots {
-        bottom: -88px;
-        li{
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        bottom: 0px;
+        margin-top: 60px;
+
+        li {
             display: inline-flex !important;
             align-items: center;
             width: auto;
             margin: 0px 8px;
-            button{
+            height: auto;
+
+            button {
                 width: 16px;
                 height: 16px;
                 padding: 0px;
@@ -1031,7 +1046,10 @@ body {
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                &:before{
+
+                &:before {
+                    width: 16px;
+                    height: 16px;
                     color: #D9D9D9;
                     opacity: 1;
                     font-size: 16px;
@@ -1039,16 +1057,18 @@ body {
                     left: inherit;
                 }
             }
-            &:hover{
-                button{
-                    &:before{
+
+            &:hover {
+                button {
+                    &:before {
                         color: #029069;
                     }
                 }
             }
-            &.slick-active{
-                button{
-                    &:before{
+
+            &.slick-active {
+                button {
+                    &:before {
                         opacity: 1;
                         color: #029069;
                     }
@@ -1061,9 +1081,9 @@ body {
         .tm-testimonial {
             &__wraper {
                 .content {
-                    padding-left: 0px;
-                    padding-right: 0px;
-                    padding-top: 61px;
+                    padding-left: 45px;
+                    padding-right: 57px;
+                    padding-top: 15px;
                     font-size: 14px;
                     line-height: 145%;
 
@@ -1076,12 +1096,14 @@ body {
                     &:before {
                         left: 0px;
                         top: 0px;
+                        width: 35px;
+                        background-position: right top;
                     }
 
                     &:after {
                         top: inherit;
                         right: 0px;
-                        bottom: -60px;
+                        bottom: -20px;
                     }
                 }
 
@@ -1112,19 +1134,65 @@ body {
                 }
             }
         }
+
         .slick-dots {
-            bottom: -52px;
-            li{
+            margin-top: 25px;
+
+            li {
                 width: auto;
                 margin: 0px 5px;
-                button{
+
+                button {
                     height: 10px;
                     width: 10px;
-                    &:before{
+
+                    &:before {
+                        height: 10px;
+                        width: 10px;
                         font-size: 10px;
+                        display: flex;
+                        align-items: center;
                     }
                 }
             }
+        }
+    }
+}
+
+.tm-content {
+    margin-bottom: 60px;
+
+    p {
+        margin-bottom: 0px;
+    }
+
+    .heading {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 38px;
+        color: #101828;
+        margin-bottom: 20px;
+    }
+
+    .body {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #475467;
+    }
+
+    @media(max-width:767.98px) {
+        margin-bottom: 48px;
+
+        .heading {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 9px;
+        }
+
+        .body {
+            font-size: 14px;
+            line-height: 22px;
         }
     }
 }

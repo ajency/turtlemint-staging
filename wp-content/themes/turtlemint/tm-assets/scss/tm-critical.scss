@@ -225,7 +225,50 @@
     }
 }
 
+/* breadcrumb */
 .tm-breadcrumb {
+    &.breadcrumb {
+        padding: 10px 0;
+        list-style: none;
+        background-color: transparent;
+        margin-bottom: -8px;
+        margin-top: 0px;
+        align-items: center;
+
+        li {
+            display: inline-flex;
+            align-items: center;
+            font-size: 20px;
+            font-family: 'Montserrat';
+
+            a.breadcrum-text {
+                color: #3B3B3B;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+
+                &:link:hover {
+                    color: #009F69;
+                }
+            }
+            &:last-child{
+                a.breadcrum-text{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: ">";
+        }
+
+        img.brdcrm-img {
+            padding-bottom: 4px;
+            padding-right: 10px;
+            width: 30px;
+        }
+    }
     &.style2 {
         li {
             a {

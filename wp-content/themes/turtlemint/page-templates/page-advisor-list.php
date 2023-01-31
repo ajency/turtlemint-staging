@@ -721,7 +721,7 @@ get_header('tmhome');
         <a onclick="openPopup('getInTouchPopup')" class="tm-button large">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
-            <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.svg" alt="call">+91 8962995991</a>
+            <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">+91 8962995991</a>
         </div>
 
     </div>

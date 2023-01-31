@@ -30,6 +30,7 @@ get_header('tmhome');
         </div>
     </div>
 
+    <!-- find advisor section -->
     <div class="container find-advisor-section">
         <div class="left-side">
             <p class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance advisor</span></p>
@@ -109,6 +110,7 @@ get_header('tmhome');
 
 </div>
 
+<!-- statistics section -->
 <div class="container tm-advisor-stats-section">
     <div class="left-side">
         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country" class="banner-image hide-md-down">
@@ -153,6 +155,7 @@ get_header('tmhome');
     </div>
 </div>
 
+<!-- Advisors help section -->
 <div class="advisor-help-section">
     <div class="container">
         <p class="h1-heading">How <span class="tm-highlight-text">insurance advisors</span> help customers</p>
@@ -215,6 +218,7 @@ get_header('tmhome');
     </div>
 </div>
 
+<!-- testimonial section -->
 <div class="container">
     <div class="tm-testimonial-section">
         <p class="h1-heading">Best place for any <span class="tm-highlight-text">Insurance related issue</span></p>
@@ -296,6 +300,56 @@ get_header('tmhome');
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- text sections -->
+<div class="container">
+    <div class="tm-content">
+        <p class="heading">What information do we collect?</p>
+        <p class="body">Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
+            <br><br>
+            Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
+            <br><br>
+            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
+        </p>
+    </div>
+    <div class="tm-content">
+        <p class="heading">How do we use your information?</p>
+        <p class="body">Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
+            <br><br>
+            Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
+            <br><br>
+            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
+        </p>
+    </div>
+    <div class="tm-content">
+        <p class="heading">Do we use cookies and other tracking technologies?</p>
+        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
+        </p>
+    </div>
+    <div class="tm-content">
+        <p class="heading">How long do we keep your information?</p>
+        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
+        </p>
+    </div>
+    <div class="tm-content">
+        <p class="heading">How do we keep your information safe?</p>
+        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
+        </p>
+    </div>
+    <div class="tm-content">
+        <p class="heading">What are your privacy rights?</p>
+        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
+        </p>
+    </div>
+    <div class="tm-content">
+        <p class="heading">How can you contact us about this policy?</p>
+        <p class="body">Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget diam curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.
+            Lectus id duis vitae porttitor enim gravida morbi.
+            Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.
+            Suspendisse maecenas ac donec scelerisque diam sed est duis purus.
+        </p>
     </div>
 </div>
 
