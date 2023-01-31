@@ -300,6 +300,7 @@ async function resendCode(element){
     $(element).find('.resend-text').text('Code resent successfully. Send again?');
     $(element).attr('onclick', '');
     $(element).removeClass('success');
+    clearOTP()
     countDownTimer(0, 0, 30);
   }
   catch(err){
@@ -454,6 +455,13 @@ $('#tmOtpForm').submit( async function(e){
       });
       let save_data = await save_data_response.json();
       // console.log(save_data);
+      clearOTP()
+      $('#tmOtpForm').find('.resend-text').text('Resend code in')
+      $('#tmOtpForm').find('.timer').text('')
+      // $('#tmOtpForm').find('.resend-timer').removeClass('success')
+      // $('#tmOtpForm').find('.error-message').addClass('d-none').removeClass('d-block')
+      // $('#tmOtpForm').find('.tm-form-group').removeClass('tm-error')
+      clearInterval(counter);
       $('#tm_advisor_name').text(window.tm_advisor_name)
       closePopup("tmOtpPopup")
       openPopup("tmSuccessPopup");
@@ -472,7 +480,14 @@ $('#tmOtpForm').submit( async function(e){
   }
   finally{
     $(this).find('.tm-button').removeClass('tm-loader')
-    //TODO remove 3 lines
+    //TODO remove 10 lines
+    clearOTP()
+    $('#tmOtpForm').find('.resend-text').text('Resend code in')
+    $('#tmOtpForm').find('.timer').text('')
+    // $('#tmOtpForm').find('.resend-timer').removeClass('success')
+    // $('#tmOtpForm').find('.error-message').addClass('d-none').removeClass('d-block')
+    // $('#tmOtpForm').find('.tm-form-group').removeClass('tm-error')
+    clearInterval(counter);
     $('#tm_advisor_name').text(window.tm_advisor_name)
     closePopup("tmOtpPopup")
     openPopup("tmSuccessPopup");
@@ -483,3 +498,7 @@ $('.tm-testimonial-slider').slick({
   arrows:false,
   dots: true
 });
+
+function clearOTP(){
+  $('#tmOtpForm input.required').val('').change()
+}

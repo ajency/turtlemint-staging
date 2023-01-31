@@ -858,6 +858,9 @@ get_header('tmhome');
         pincodeValidaion()
     <?php } ?>
     });
+    sessionStorage.getItem('tm_user_name') ? document.getElementById('tm-name').value = sessionStorage.getItem('tm_user_name') : '';
+    sessionStorage.getItem('tm_user_phone') ? document.getElementById('tm-mobileNo').value = sessionStorage.getItem('tm_user_phone') : '';
+    sessionStorage.getItem('tm_user_name') && sessionStorage.getItem('tm_user_phone') ? $('#getInTouchForm [type=submit]').removeAttr('disabled') : '';
 </script>
 
 <?php
