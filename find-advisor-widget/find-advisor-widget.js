@@ -105,8 +105,10 @@ async function redirect(){
         if(data.length > 0){
             // let matchURL = data.find(e=>e.source == sourceURL)
             let matchURL = data.find(e => {
-                let formatedSubUrl = e.source.replace(/[\/.*+?^${}()|[\]\\]/g, '\\$&')
-                let formatedUrl = `^${formatedSubUrl}.*$`
+                // let formatedSubUrl = e.source.replace(/[\/.*+?^${}()|[\]\\]/g, '\\$&')
+                // let formatedUrl = `^${formatedSubUrl}.*$`
+                let formatedSubUrl = e.source.replace(/[\/.+?^${}()|[\]\\]/g, '\\$&').replaceAll('*','.*')
+                let formatedUrl = `^${formatedSubUrl}$`
                 let regExp = new RegExp(formatedUrl)
                 // console.log(sourceURL,"\n",formatedSubUrl,"\n",formatedUrl,"\n",regExp,"\n",regExp.test(sourceURL))
                 return regExp.test(sourceURL)

@@ -1,18 +1,18 @@
 [
     {
-        "source": "https://app.turtlemint.com/life-insurance/",
+        "source": "https://*/life-insurance/*",
         "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=Life"
     },
     {
-        "source": "https://app.turtlemint.com/car-insurance/",
+        "source": "https://*/car-insurance/*",
         "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=FW"
     },
     {
-        "source": "https://app.turtlemint.com/two-wheeler-insurance/",
+        "source": "https://*/two-wheeler-insurance/*",
         "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=TW"
     },
     {
-        "source": "https://app.turtlemint.com/health-insurance/",
+        "source": "https://*/health-insurance/*",
         "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=Health"
     }
 ]
