@@ -131,6 +131,7 @@
         //alert("Vertical: "+vertical+" | Reg:"+regNumber);
         if (!regNumber) {
             $('#errMsg').html('Please enter complete registration number');
+            $('.contact-input-quote').addClass('error');
             return;
         }
         if (_isValidRegNo(regNumber)) {
@@ -165,6 +166,7 @@
             /*DataLayer 20210325 - end*/
             
             $('#errMsg').html('Enter valid registration number');
+            $('.contact-input-quote').addClass('error');
         }
     }
     function _isValidRegNo(registrationNo) {

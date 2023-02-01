@@ -1,0 +1,345 @@
+.first-fold-banner {
+	background: url(../img/bike-bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 670px;
+	align-items: center;
+	display: flex;
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	padding-top: 15px;
+}
+
+.first-column {padding: 0 20px !important;}
+
+
+.main-banner-txt-new-23 {
+	padding-bottom: 7%;
+	padding-top: 14%;
+}
+
+.main-banner-txt-new-23 h2 {
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 44px;
+	color: #000;
+}
+
+.primary-input {
+	max-width: 100%;
+}
+
+.contact-question a{
+	color: #00A364;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contact-question a:hover {color: #00A364 !important;}
+
+input::placeholder {
+	color: #22222291;
+	opacity: 1;
+	line-height: 24px;
+	font-weight:400 !important;
+}
+
+
+.contact-input-quote {
+	position: relative;
+	width: 536px;
+	height: 80px;
+	display: inline-block;
+	background: #ffffff;
+	padding: 22px;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 30px 0 0 0;
+	line-height: 2;
+
+}
+
+.contact-input-adviser {
+	position: relative;
+	width: 536px;
+	height: 80px;
+	display: inline-block;
+	background: #ffffff;
+	padding: 22px;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 10px 0 0 0;
+	line-height: 2;
+}
+
+.contact-input-quote input {
+	border: none;
+	background: none;
+	width: 315px;
+	font-weight:600;
+	font-family: Montserrat;
+	letter-spacing: 0.01em;
+}
+
+.contact-input-adviser input {
+	border: none;
+	background: none;
+	width: 315px;
+	font-weight:600;
+	font-family: Montserrat;
+	letter-spacing: 0.01em;
+}
+
+.contact-input-quote button {
+	border: none;
+	background: #F4C061;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	border-radius: 8px;
+	top: 0;
+	height: 56px;
+	position: absolute;
+	bottom: 0;
+	margin: 6.5px;
+	right: 0;
+	width: 156px;
+	margin: auto 10px;
+}
+
+.contact-input-adviser button {
+	border: none;
+	background: #00A364;
+	font-family: Montserrat;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 8px;
+	top: 0;
+	height: 56px;
+	position: absolute;
+	bottom: 0;
+	margin: 6.5px;
+	right: 0;
+	width: 156px;
+	margin: auto 10px;
+}
+
+
+button span {
+	font-family: Montserrat;
+	line-height: 19.5px;
+}
+
+*:focus {
+	outline: none;
+}
+
+.btn:focus,
+.btn.focus {
+	outline: 0;
+	box-shadow: none !important;
+}
+
+.or {
+	margin: 20px 0;
+	
+}
+
+.or p {
+
+	display: flex;
+	width: 246px;
+	margin: 0 auto;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	color: #444444;
+}
+
+
+.or p:before,
+.or p:after {
+
+	content: '';
+	flex: 1;
+	border-bottom: solid 1px #000000;
+    margin: auto 20px;
+    opacity: 0.15;
+
+}
+
+
+.contact-advisor {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 28px;
+	letter-spacing: 0.01em;
+	color: #222222;
+}
+
+.tm-advisor-usp span {
+	font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.01em;
+color: #333333;
+	
+}
+
+p.tm-advisor-usp {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.01em;
+color: #333333;	
+}
+
+
+
+.car-banner img.desktop{}
+.car-banner img.mobile{display:none}
+
+@media only screen and (min-width:500px) and (max-width:821px) {
+	.contact-input-quote, .contact-input-adviser {width: 100%;}
+	
+	.main-banner-txt-new-23 h2 {font-size: 30px;}
+	
+	.contact-advisor {font-size: 20px;}
+    
+    .main-banner-txt-new-23 {padding-bottom: 0;padding-top: 0;}
+	
+	.car-banner {margin:10% 0}
+}
+
+@media only screen and (max-width: 450px) {
+	
+	
+	.contact-question a{
+	
+	font-size: 12px;
+	
+}
+	
+	.or p:before, .or p:after {
+
+	
+    margin: auto 30px;
+   
+
+}
+
+	
+	input::placeholder {
+    font-size: 14px;
+	font-weight:400;
+}
+	
+	.main-banner-txt-new-23 {
+	padding-bottom: 5%;
+	padding-top: 3%;
+}
+	
+	.or p {font-size: 12px}
+	
+	.car-banner img.desktop{display:none}
+	.car-banner img.mobile{display:block; width: 75%;margin: 0 auto;}
+	
+	.car-banner:after {
+    content: "";
+	background: url("https://www.stagingtech.in/tmhtml/assets/img/shadow.svg") 0 0 no-repeat;
+    
+   display: block;
+    position: absolute;
+    width: 90%;
+    height: 60px;
+    background-size: 100%;
+    left: 15;
+    
+}
+	
+	
+	
+	.main-banner-txt-new-23 h2 {
+
+		font-size: 22px !important;
+		font-style: normal;
+		font-weight: 700;
+		width:80%;
+		line-height: 30px;
+
+	}
+
+	.contact-input-quote input {
+		width: 210px;
+		font-weight:600;
+		font-size: 14px;
+		letter-spacing: 0.01em;
+	}
+
+	.contact-input-adviser input {
+		width: 210px;
+		font-weight:600;
+		font-size: 14px;
+		letter-spacing: 0.01em;
+	}
+
+	.contact-input-quote {
+		width: 100%;
+		height: 64px;
+		line-height: 0;
+		margin: 15px 0 0 0;
+	}
+	.contact-input-quote button,.contact-input-adviser button{
+		width: 123px;
+		height: 40px;
+		
+	}
+	p.tm-advisor-usp, .tm-advisor-usp span{font-size: 12px;}
+	
+	button span {    
+    font-weight: 600;
+    font-size: 14px;
+	}
+	.contact-advisor{
+    letter-spacing: 0.01em;
+    font-size: 16px;
+	}
+
+	.contact-input-adviser {
+		width: 100%;
+		height: 64px;
+		line-height: 0;
+	}
+
+	.first-fold-banner {
+		height: auto;
+	padding-bottom: 0px;
+	background: url(../img/mobile-bike-bg.svg);
+	background-size: cover;
+	}
+	.contact-question {font-size: 12px;
+    font-weight: 600;}
+
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+

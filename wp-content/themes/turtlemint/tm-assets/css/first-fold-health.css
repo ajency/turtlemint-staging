@@ -1,0 +1,399 @@
+.desk-hide{display: none;}
+.pt2rem{padding-top: 2rem;}
+.pt3rem{padding-top: 3rem;}
+.pt4rem{padding-top: 4rem;}
+.cta-banner-yellow,.cta-banner-green{
+	border-radius: 8px !important; 
+	margin-bottom: 0.9rem;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	padding: 1rem 3rem !important;
+}
+.cta-banner-yellow{background: #F4C061;color: #333333; }
+.cta-banner-green{background: #00A364;color: #FFFFFF;}
+.cta-separator{
+	font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 15px;
+    color: #000000;
+    padding: 1rem;
+}
+.cta-banner-subtext{
+	font-family: 'Montserrat';font-style: normal;font-size: 16px;line-height: 24px;letter-spacing: 0.01em; font-weight: 500;color: #222222;
+}
+.first-fold-health-banner{font-family: Montserrat;}
+.health-banner-p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 0.9rem;  
+  color: black;
+}
+.tick-img{margin-right: 8px; width: 32pm; height: 32px;}
+.row-mid-new{display: flex;}
+
+.first-fold-car-banner {
+	background: url(../img/Bg-health-desk.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 670px;
+	align-items: center;
+	display: flex;
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	/* padding-top: 15px; */
+  }
+  
+  .bike-main-banner-txt {
+	padding-bottom: 7%;
+	padding-top: 19%;
+  }
+  
+  .bike-main-banner-txt h2 {
+	font-family: Montserrat-Bold;
+	font-size: 44px;
+	color: #000;
+	padding-bottom: 1rem;
+  }
+  
+  .primary-input {
+	max-width: 100%;
+  }
+  
+  .contact-question {
+	color: #00a364;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-weight: 600;
+  }
+  
+  input::placeholder {
+	color: #22222291;
+	opacity: 1;
+	line-height: 24px;
+  }
+  
+  .contact-input-quote {
+	position: relative;
+	width: 536px;
+	height: 80px;
+	display: inline-block;
+	background: #ffffff;
+	padding: 22px;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 30px 0 0 0;
+	line-height: 2;
+  }
+  
+  .contact-input-adviser {
+	position: relative;
+	width: 536px;
+	height: 80px;
+	display: inline-block;
+	background: #ffffff;
+	padding: 22px;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 10px 0 0 0;
+	line-height: 2;
+  }
+  
+  .contact-input-quote input {
+	border: none;
+	background: none;
+	width: 315px;
+  
+	font-family: Montserrat;
+  }
+  
+  .contact-input-adviser input {
+	border: none;
+	background: none;
+	width: 315px;
+  
+	font-family: Montserrat;
+  }
+  
+  .contact-input-quote button {
+	border: none;
+	background: #f4c061;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	border-radius: 8px;
+	top: 0;
+	height: 56px;
+	position: absolute;
+	bottom: 0;
+	margin: 6.5px;
+	right: 0;
+	width: 156px;
+	margin: auto 10px;
+  }
+  
+  .contact-input-adviser button {
+	border: none;
+	background: #00a364;
+	font-family: Montserrat;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 8px;
+	top: 0;
+	height: 56px;
+	position: absolute;
+	bottom: 0;
+	margin: 6.5px;
+	right: 0;
+	width: 156px;
+	margin: auto 10px;
+  }
+  
+  button span {
+	font-family: Montserrat;
+	line-height: 19.5px;
+  }
+  
+  *:focus {
+	outline: none;
+  }
+  
+  .btn:focus,
+  .btn.focus {
+	outline: 0;
+	box-shadow: none !important;
+  }
+  
+  .or {
+	margin: 20px 0;
+  }
+  
+  .or p {
+	display: flex;
+	width: 246px;
+	margin: 0 auto;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+  }
+  
+  .or p:before,
+  .or p:after {
+	content: "";
+	flex: 1;
+	border-bottom: solid 1px #000000;
+	margin: auto 20px;
+	opacity: 0.15;
+  }
+  
+  .contact-advisor {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 28px;
+	letter-spacing: 0.01em;
+	color: #222222;
+  }
+  
+  .tm-advisor-usp span {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.01em;
+	color: #333333;
+  }
+  
+  p.tm-advisor-usp {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.01em;
+	color: #333333;
+  }
+  
+  .car-banner img.desktop {
+  }
+  .car-banner img.mobile {
+	display: none;
+  }
+  
+  @media only screen and (min-width: 500px) and (max-width: 821px) {
+	.contact-input-quote,
+	.contact-input-adviser {
+	  width: 100%;
+	}
+  
+	.bike-main-banner-txt h2 {
+	  font-size: 30px;
+	}
+  
+	.contact-advisor {
+	  font-size: 20px;
+	}
+  
+	.bike-main-banner-txt {
+	  padding-bottom: 0;
+	  padding-top: 0;
+	}
+  
+	.car-banner {
+	  margin: 10% 0;
+	}
+  }
+  
+  /*Mobile*/
+  	@media only screen and (max-width: 385px) {
+		.cta-banner-yellow, .cta-banner-green{
+			padding: 10% 19% !important;
+		}
+	}
+	@media only screen and (min-width: 386px) and (max-width:450px){
+		.cta-banner-yellow{
+			padding: 10% 22% !important;
+		}
+		.cta-banner-green{
+			padding: 10% 19% !important;
+		}
+	}
+  
+  @media only screen and (max-width: 450px) {
+	.first-fold-health-banner .first-column{padding-left: 20px;padding-right: 20px;}
+	.mob-pt1rem{padding-top: 1rem !important;}
+	.desk-hide{display: block;}
+	.tick-img{width: 20px; height: 20px;}
+	.health-banner-p {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		margin-bottom: 0.7rem;
+	  }
+	.bike-main-banner-txt{padding-top: 0; padding-bottom: 3%;}
+	.cta-banner-yellow, .cta-banner-green{
+		/* padding: 1rem 1.9rem !important; */
+		/* padding: 4vw 7vw !important; */
+		/*padding: 10% 19% !important;*//*mixed works*/
+		line-height: 17px !important;
+		font-size: 14px !important;
+	}
+	.cta-separator{
+		/* padding: 3vw;  */
+		padding: 14%; 
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;}
+	.cta-banner-subtext{
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 0.01em;
+	}
+	img.health-banner-mob{width: 75%; margin: 0 auto;}
+	.row-mid-new{display: block;}
+	.btns-mid {width: 46%;display: inline-block;}
+	.btns-mid-separator{    
+		line-height: 3.5rem;
+		width: 5%;
+		vertical-align: text-bottom;
+		padding-bottom: 2.9rem;/*2.5rem*/
+		padding-right: 4%;
+	}
+
+	.car-banner img.desktop {
+	  display: none;
+	}
+	.car-banner img.mobile {
+	  display: block;
+	}	
+  
+	.car-banner:after {
+	  content: "";
+	  background: url("https://www.stagingtech.in/tmhtml/assets/img/shadow.png") 0
+		0 no-repeat;
+  
+	  display: block;
+	  position: absolute;
+	  width: 90%;
+	  height: 60px;
+	  background-size: 100%;
+	  left: 15;
+	}
+  
+	.bike-main-banner-txt h2 {
+	  font-size: 22px !important;
+	  font-style: normal;
+	  font-weight: 700;
+	  width: 80%;
+	  line-height: 30px;
+	  padding-top: 1.5rem;
+	  /* padding-left: .5rem; */
+	  padding-bottom: 0;
+	}
+  
+	.contact-input-quote input {
+	  width: 210px;
+	}
+  
+	.contact-input-adviser input {
+	  width: 210px;
+	}
+  
+	.contact-input-quote {
+	  width: 100%;
+	  height: 64px;
+	  line-height: 0;
+	  margin: 15px 0 0 0;
+	}
+	.contact-input-quote button,
+	.contact-input-adviser button {
+	  width: 123px;
+	  height: 40px;
+	}
+	p.tm-advisor-usp,
+	.tm-advisor-usp span {
+	  font-size: 12px;
+	}
+  
+	button span {
+	  font-weight: 600;
+	  font-size: 14px;
+	}
+	.contact-advisor {
+	  letter-spacing: 0.01em;
+	  font-size: 16px;
+	}
+  
+	.contact-input-adviser {
+	  width: 100%;
+	  height: 64px;
+	  line-height: 0;
+	}
+  
+	.first-fold-car-banner {
+	  height: auto;
+	  padding-bottom: 0px;
+	  background: url(../img/Bg-health-mob.svg);
+	  background-size: cover;
+	}
+	
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+  }
+  
