@@ -96,17 +96,17 @@ const VERTICAL_JSON = {
 }
 
 const LIMIT = 9;
-//https://f57dcbf8-35f1-49ea-8ed8-3e8e74f6432a.mock.pstmn.io
-const SERVER = 'https://87a98206-a697-427a-8c88-86b06e6d1a56.mock.pstmn.io';
-const SERVER_2 = 'https://857eb4d1-3ba3-4f66-b7fb-3bca810824a3.mock.pstmn.io';
-const SERVER_3 = 'https://pro.turtlemint.com';
+const SERVER = 'https://app.parasite.turtle-feature.com';
+const SERVER_2 = 'https://pro.parasite.turtle-feature.com';
+const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
 
   async function getPincodeLocation(pincode){
       try{
           let headersList = {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "APIkey": API_KEY
           }
-          let response = await fetch(SERVER_2+"/api/agent-locator/pin-details/"+pincode, { 
+          let response = await fetch(SERVER+"/api/agent-locator/pin-details/"+pincode, { 
               method: "GET",
               headers: headersList
           });
@@ -154,7 +154,8 @@ const SERVER_3 = 'https://pro.turtlemint.com';
   async function getAdvisorList(pincode, vertical, offset=0, returnData=false) {
       try{
           let headersList = {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "APIkey": API_KEY
           }
           let bodyContent = JSON.stringify({
               "pinCode": pincode,
@@ -210,7 +211,7 @@ const SERVER_3 = 'https://pro.turtlemint.com';
                           <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                       </div>
                   </div>
-                  <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}')" class="tm-button">Get In Touch</a>
+                  <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
               </div>
           </div>
       </div>`

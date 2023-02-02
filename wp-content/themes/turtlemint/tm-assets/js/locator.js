@@ -63,7 +63,7 @@ $(".tm-select-option").click(function () {
 // });
 
 /* popup */
-function openPopup(popupId, advisorName) {
+function openPopup(popupId, advisorName, advisorId) {
   $("#" + popupId).addClass("show");
 
   if(popupId == 'tmOtpPopup'){
@@ -71,6 +71,9 @@ function openPopup(popupId, advisorName) {
   }
   if(advisorName){
     window.tm_advisor_name = advisorName;
+  }
+  if(advisorId){
+    window.tm_advisor_id = advisorId;
   }
 }
 function closePopup(popupId) {
@@ -297,7 +300,13 @@ container.appendChild(child);
 async function resendCode(element){
   try{
     $(element).addClass('tm-loader-dark')
-    let response = await fetch(SERVER_3+'/api/commonverticals/v1/otp/resend?sessionId='+sessionStorage.getItem('tm_user_session_id'));
+    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/resend?sessionId='+sessionStorage.getItem('tm_user_session_id'), {
+        'method' : 'GET',
+        'headers': {
+          'Content-Type': 'application/json',
+          "APIkey": API_KEY
+        }
+    });
     let data = await response.json()
     $(element).find('.resend-text').text('Code resent successfully. Send again?');
     $(element).attr('onclick', '');
@@ -397,7 +406,13 @@ $('#getInTouchForm').submit( async function(e){
   const name = $(this).find('#tm-name').val()
   const phone = $(this).find('#tm-mobileNo').val()
   try{
-    let response = await fetch(SERVER_3+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=idfcfirstbank&source=PartnerConsent')
+    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=idfcfirstbank&source=PartnerConsent', {
+      'method' : 'GET',
+      'headers': {
+        'Content-Type': 'application/json',
+        "APIkey": API_KEY
+      }
+    });
     let data = await response.json()
     if(data && data.status_code == 200){
       sessionStorage.setItem('tm_user_name', name)
@@ -434,7 +449,8 @@ $('#tmOtpForm').submit( async function(e){
     let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/verify?source=PartnerConsent', {
       'method' : 'POST',
       'headers': {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      "APIkey": API_KEY
       },
       'body': JSON.stringify({
         "sessionId":sessionStorage.getItem('tm_user_session_id'),
@@ -444,20 +460,22 @@ $('#tmOtpForm').submit( async function(e){
     let data = await response.json()
     if(data.statusCode && data.statusCode === 200){
       //save data       
-      let save_data_response = await fetch(SERVER_3+"/api/commonverticals/v1/customerDetails", { 
+      let save_data_response = await fetch(SERVER+"/api/leads/consumer-lead-gen/webhook/"+window.tm_advisor_id+"?vertical="+sessionStorage.getItem('tm_vertical_data'), { 
         method: "POST",
         body: JSON.stringify({
-          "fullName": sessionStorage.getItem('tm_user_name'),
-          "mobileNumber": sessionStorage.getItem('tm_user_phone'),
-          "customerId": sessionStorage.getItem('tm_user_phone')
+          "email": null,
+          "name": sessionStorage.getItem('tm_user_name'),
+          "phone": sessionStorage.getItem('tm_user_phone'),
+          "url": SERVER+"/leadforms?partnerId="+window.tm_advisor_id
         }),
         headers: {
         "broker": "turtlemint",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "APIkey": API_KEY
         }
       });
       let save_data = await save_data_response.json();
-      // console.log(save_data);
+      console.log(save_data);
       clearOTP()
       $('#tmOtpForm').find('.resend-text').text('Resend code in')
       $('#tmOtpForm').find('.timer').text('')
