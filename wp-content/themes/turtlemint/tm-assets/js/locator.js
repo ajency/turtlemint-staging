@@ -74,7 +74,9 @@ function openPopup(popupId, advisorName) {
   }
 }
 function closePopup(popupId) {
-  $("#" + popupId).removeClass("show");
+  if(!$("#" + popupId).hasClass('restrict-event')){
+    $("#" + popupId).removeClass("show");
+  }
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -333,6 +335,7 @@ async function pincodeValidaion(){
 
 $('#pincodeForm').submit( function(e){
     e.preventDefault();
+    $('#pincodePopup').removeClass('restrict-event')
     $(this).find('.tm-button').addClass('tm-loader')
     // console.log('test',window.tm_pincode_data)
     let vertical = $(this).find('.tm-select-value.selected').data('value')

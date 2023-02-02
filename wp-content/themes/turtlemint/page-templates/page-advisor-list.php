@@ -13,7 +13,7 @@ get_header('tmhome');
 ?>
 
 <!-- pincode popup -->
-<div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show" : ""; ?>" id="pincodePopup">
+<div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show restrict-event" : ""; ?>" id="pincodePopup">
     <div class="tm-popup-dialog" role="document">
         <div class="content-wrap">
             <div class="tm-popup-content">
