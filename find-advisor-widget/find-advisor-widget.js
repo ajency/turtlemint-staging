@@ -16,7 +16,7 @@ const REDIRECT_CONFIG = [
         "source": "https://*/health-insurance/*",
         "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=Health"
     }
-]
+];
 
 (function() {
     const style = document.createElement("style")
