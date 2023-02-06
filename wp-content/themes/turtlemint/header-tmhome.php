@@ -59,6 +59,23 @@
 			</script>
 		<?php } ?>
 
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php' ) ) ) { ?>
+			<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-PCZGBP');</script>
+			<!-- End Google Tag Manager -->
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'UA-61873031-16');
+			</script>
+		<?php } ?>
+
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<!-- SG test -->
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-favicon.png" type="image/x-icon">
@@ -217,6 +234,14 @@
 		<?php wp_head(); ?>	
 	</head>
 	<body <?php body_class();  ?>>
+	
+	<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php' ) ) ) { ?>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCZGBP"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	<?php } ?>
+
 	<div class="mobile-nav"></div>
 	<!--mobile menu-->
 	<div class="canvas-container mobile-nav">

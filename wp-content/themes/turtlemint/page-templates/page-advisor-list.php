@@ -711,14 +711,14 @@ get_header('tmhome');
 </div>
 
 <!-- Advisor List - Empty State  -->
-<div class="container d-none" id="empty-screen-wrap">
+<div class="container" id="empty-screen-wrap">
     <div class="tm-empty-list">
         <div class="image-container">
             <img height="160" width="160" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/empty-advisor-list.png" alt="No Advisors Found">
         </div>
         <p class="tm-h2-bold tm-heading">We are recruiting advisors in your area</p>
         <p class="tm-subheading">Submit your contact details to get free advise from Turtlemint insurance experts.</p>
-        <a onclick="openPopup('getInTouchPopup')" class="tm-button large">Get in touch</a>
+        <a class="tm-button large">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
             <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">+91 8962995991</a>

@@ -526,16 +526,24 @@ function clearOTP(){
 }
 
 /* advisor intro page - find advisor form */
+let findAdvisorError = "Please select type of insurance to proceed to the next step"
 $('#tmFindAdvisorForm').submit( function(e){
   e.preventDefault();
   let vertical = $(this).find('.filter-select-group input[type=radio]:checked').val();
   if(vertical){
+    /* success */
+    let selectedInsurance = $(this).find('.filter-select-group input[type=radio]:checked').data('value')
     $(this).find('.filter-form-group').removeClass('tm-error')
     $(this).find('.filter-form-group .error-message').slideUp()
+    $(this).find('.filter-form-group .error-message').text('')
     $(this).find('.tm-button').addClass('tm-loader')
+    ga('send', 'event', 'DP_Intro-Buttons', 'Btn_click-'+selectedInsurance+'-Find_Advisor', 'Find Advisor')
     $(this).unbind().submit()
   }else{
+    /* failed */
     $(this).find('.filter-form-group').addClass('tm-error')
+    $(this).find('.filter-form-group .error-message').text(findAdvisorError)
     $(this).find('.filter-form-group .error-message').slideDown()
+    ga('send', 'event', 'DP_Intro_Error', 'DP_Intro-Message-Not_selected', findAdvisorError)
   }
 })

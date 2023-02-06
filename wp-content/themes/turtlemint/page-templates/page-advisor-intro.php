@@ -59,31 +59,31 @@ get_header('tmhome');
                                     <label>Select Insurance Type</label>
                                     <ul class="filter-select-group">
                                         <li>
-                                            <input type="radio" name="vertical" id="tm-health-insurance" value="Health" required>
+                                            <input type="radio" name="vertical" id="tm-health-insurance" value="Health" data-value="Health" required>
                                             <label for="tm-health-insurance">
                                                 <span class="icon" id="health-icon" icon-colored="health2-icon" icon-default="health-icon"></span>Health
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="radio" name="vertical" id="tm-life-insurance" value="Life">
+                                            <input type="radio" name="vertical" id="tm-life-insurance" value="Life" data-value="Life">
                                             <label for="tm-life-insurance">
                                                 <span class="icon" id="life-icon" icon-colored="life2-icon" icon-default="life-icon"></span>Life
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW">
+                                            <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW" data-value="2_Wheeler">
                                             <label for="tm-2-wheeler-insurance">
                                                 <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW">
+                                            <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW" data-value="4_Wheeler">
                                             <label for="tm-4-wheeler-insurance">
                                                 <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
                                             </label>
                                         </li>
                                     </ul>
-                                    <p class="error-message">Please select type of insurance to proceed to the next step</p>
+                                    <p class="error-message"></p>
                                 </div>
                             </div>
 
