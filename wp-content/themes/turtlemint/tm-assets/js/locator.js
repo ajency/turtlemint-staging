@@ -537,13 +537,22 @@ $('#tmFindAdvisorForm').submit( function(e){
     $(this).find('.filter-form-group .error-message').slideUp()
     $(this).find('.filter-form-group .error-message').text('')
     $(this).find('.tm-button').addClass('tm-loader')
-    ga('send', 'event', 'DP_Intro-Buttons', 'Btn_click-'+selectedInsurance+'-Find_Advisor', 'Find Advisor')
+
+    gtag('event', 'Btn_click-'+selectedInsurance+'-Find_Advisor', {
+      'event_category': 'DP_Intro-Buttons',
+      'event_label': 'Find Advisor'
+    });
+
     $(this).unbind().submit()
   }else{
     /* failed */
     $(this).find('.filter-form-group').addClass('tm-error')
     $(this).find('.filter-form-group .error-message').text(findAdvisorError)
     $(this).find('.filter-form-group .error-message').slideDown()
-    ga('send', 'event', 'DP_Intro_Error', 'DP_Intro-Message-Not_selected', findAdvisorError)
+
+    gtag('event', 'DP_Intro-Message-Not_selected', {
+      'event_category': 'DP_Intro_Error',
+      'event_label': findAdvisorError
+    });
   }
 })
