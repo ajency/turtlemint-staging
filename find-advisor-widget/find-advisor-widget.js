@@ -22,6 +22,7 @@ const REDIRECT_CONFIG = [
     const style = document.createElement("style")
     style.innerHTML = `
     #advisor__widget{
+        display: none;
         position: fixed;
         right: 20px;
         bottom: 20px;
@@ -66,7 +67,7 @@ const REDIRECT_CONFIG = [
     @media (max-width: 767.98px){
         #advisor__widget{
             right: 20px;
-            bottom: 30px;
+            bottom: 60px;
         }
         #advisor__widget img{
             width: 72px;
@@ -111,7 +112,7 @@ const REDIRECT_CONFIG = [
     const widget = document.createElement("div");
     widget.setAttribute("id", "advisor__widget");
     widget.setAttribute("onclick", "redirect()");
-    widget.innerHTML=`<img src="https://turtlemint-stage.dreamhosters.com/find-advisor-widget/advisor-widget.png" alt="Advisor wiget avatar"><p>Get Free Advice<span></span></p>`;
+    widget.innerHTML=`<img src="https://www.turtlemint.com/wp-content/uploads/2023/02/advisor-widget.png" alt="Advisor wiget avatar"><p>Get Free Advice<span></span></p>`;
     document.body.append(style,widget) ;
 })();
 
