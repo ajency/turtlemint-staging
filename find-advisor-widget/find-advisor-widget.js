@@ -22,7 +22,6 @@ const REDIRECT_CONFIG = [
     const style = document.createElement("style")
     style.innerHTML = `
     #advisor__widget{
-        display: none;
         position: fixed;
         right: 20px;
         bottom: 20px;
@@ -35,6 +34,7 @@ const REDIRECT_CONFIG = [
         transform: scale(0);
         animation: popout 0.5s cubic-bezier(0.35, 0.23, 1, 1.34) forwards;
         width: auto;
+        display: none;
     }
     #advisor__widget p{
         font-weight: 600;
