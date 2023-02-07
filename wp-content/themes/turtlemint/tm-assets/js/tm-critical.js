@@ -328,12 +328,12 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
     window.addEventListener("scroll", handleInfiniteScroll);
   }
   
-  function handleInfiniteScroll() {
+  async function handleInfiniteScroll() {
       const endOfPage = window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
   
       if (endOfPage) {
         removeInfiniteScroll()
-        renderNextPage()
+        await renderNextPage()
         // console.log("page end: Run fetch")
       }
   
