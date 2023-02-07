@@ -4,7 +4,7 @@ const DATA = {
   "totalEligibleAdvisorCount": 45,
   "advisors": [
       {
-      "partnerId": "56cdef",
+      "partnerId": "60e54bb16bded50001ed8120",
       "partnerName": "Munna Bhaiya",
       "area": "Andheri West",
       "city": "Mumbai",
@@ -14,7 +14,7 @@ const DATA = {
       "profilePicUrl": "https://turtlemint-stage.dreamhosters.com/wp-content/themes/turtlemint/tm-assets/img/tm-img/kaleen.png"
       },
       {
-      "partnerId": "56cdef",
+      "partnerId": "60e54bb16bded50001ed8120",
       "partnerName": "Munna Bhaiya",
       "area": "Andheri West",
       "city": "Mumbai",
@@ -23,7 +23,7 @@ const DATA = {
       "customersServed": 200
       },
       {
-      "partnerId": "56cdef",
+      "partnerId": "60e54bb16bded50001ed8120",
       "partnerName": "Munna Bhaiya",
       "area": "Andheri West",
       "city": "Mumbai",
@@ -32,7 +32,7 @@ const DATA = {
       "customersServed": 300
       },
       {
-      "partnerId": "56cdef",
+      "partnerId": "60e54bb16bded50001ed8120",
       "partnerName": "Munna Bhaiya",
       "area": "Andheri West",
       "city": "Mumbai",
@@ -116,8 +116,8 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               
             //TODO
             //replace hardcoded object with data
-              //sessionStorage.setItem('tm_pincode_data', JSON.stringify(data))
-              sessionStorage.setItem('tm_pincode_data', JSON.stringify({id: 110018, pinCode: pincode, area: 'New Delhi', city: 'Delhi', state: 'Delhi'}));
+              sessionStorage.setItem('tm_pincode_data', JSON.stringify(data))
+            //   sessionStorage.setItem('tm_pincode_data', JSON.stringify({id: 110018, pinCode: pincode, area: 'New Delhi', city: 'Delhi', state: 'Delhi'}));
               
               $('#pincode-filter-input').text(pincode)
               return data;
@@ -128,20 +128,20 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       }
       catch(err){
         //TODO remove .text() line  
-        $('#pincode-filter-input').text(pincode)
+        // $('#pincode-filter-input').text(pincode)
         console.log('Get Pincode Location error: ', err)
 
         //TODO comment window.tm_pincode and remove false return
-          sessionStorage.setItem('tm_pincode_data', JSON.stringify({
-              "pinCode": pincode
-          }));
-          return {
-            "id": pincode,
-            "pinCode": pincode,
-            "area": "New Delhi",
-            "city": "West Delhi",
-            "state": "Delhi"
-         }
+        //   sessionStorage.setItem('tm_pincode_data', JSON.stringify({
+        //       "pinCode": pincode
+        //   }));
+        //   return {
+        //     "id": pincode,
+        //     "pinCode": pincode,
+        //     "area": "New Delhi",
+        //     "city": "West Delhi",
+        //     "state": "Delhi"
+        //  }
 
           return {
               'error': true,
@@ -153,6 +153,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
   
   async function getAdvisorList(pincode, vertical, offset=0, returnData=false) {
       try{
+          parseInt(offset) == 0 ? window.tm_offset = 0: '';
           let headersList = {
           "Content-Type": "application/json",
           "APIkey": API_KEY
@@ -168,21 +169,21 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
           });
           let data = await response.json();
         //   console.log(data)
-          window.tm_total_advisor_count = DATA.totalEligibleAdvisorCount;//TODO replace DATA with data
-          window.tm_added_advisor_count = window.tm_added_advisor_count ? window.tm_added_advisor_count + DATA.advisors.length : window.tm_offset * LIMIT + DATA.advisors.length;//TODO replace DATA with data
+          window.tm_total_advisor_count = data.totalEligibleAdvisorCount;//TODO replace DATA with data
+          window.tm_added_advisor_count = window.tm_added_advisor_count ? window.tm_added_advisor_count + data.advisors.length : window.tm_offset * LIMIT + data.advisors.length;//TODO replace DATA with data
           if(returnData){ 
-            return DATA;//TODO replace DATA with data
+            return data;//TODO replace DATA with data
           }
           //TODO pass data instead of DATA
-          renderContent(DATA)
-        //   data.advisors && data.advisors.length > 0 ? renderContent(DATA): renderEmptyScreen();
+        //   renderContent(data)
+          data.advisors && data.advisors.length > 0 ? renderContent(data): renderEmptyScreen();
       }
       catch(err){
           console.log('Get Advisor List error:', err)
           if(returnData){ return {"error": true, "info": err } }
         //   TODO replace renderContent with renderEmptyScreen
-          renderContent(DATA)
-        //   renderEmptyScreen()
+        //   renderContent(data)
+          renderEmptyScreen()
       }
   }
   
@@ -197,7 +198,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
           <div class="advisor-card">
               <div class="advisor-card__wraper">
                   <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="https://pro.parasite.turtle-feature.com/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -222,7 +223,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="https://pro.parasite.turtle-feature.com/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -236,7 +237,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                               <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                           </div>
                       </div>
-                      <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}')" class="tm-button">Get In Touch</a>
+                      <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
                   </div>
               </div>
           </div>`
@@ -251,7 +252,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       let url = new URL(window.location);
       sessionStorage.getItem('tm_pincode_data') ? url.searchParams.set('pincode', JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode) : '';
       sessionStorage.getItem('tm_vertical_data') ? url.searchParams.set('vertical', sessionStorage.getItem('tm_vertical_data')) : '';
-      window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
+      window.tm_offset || window.tm_offset === 0 ? url.searchParams.set('offset', window.tm_offset): '';
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').removeClass('d-none')
       $('#empty-screen-wrap').addClass('d-none')
@@ -266,7 +267,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       let url = new URL(window.location);
       sessionStorage.getItem('tm_pincode_data') ? url.searchParams.set('pincode', JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode) : '';
       sessionStorage.getItem('tm_vertical_data') ? url.searchParams.set('vertical', sessionStorage.getItem('tm_vertical_data')) : '';
-      window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
+      window.tm_offset || window.tm_offset === 0 ? url.searchParams.set('offset', window.tm_offset): '';
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').addClass('d-none')
       $('#empty-screen-wrap').removeClass('d-none')
@@ -296,7 +297,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                        ${ advisor.profilePicUrl ? '<img src="'+advisor.profilePicUrl+'" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="https://pro.parasite.turtle-feature.com/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -310,7 +311,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                               <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                           </div>
                       </div>
-                      <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}')" class="tm-button">Get In Touch</a>
+                      <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
                   </div>
               </div>
           </div>`
@@ -319,7 +320,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
     let url = new URL(window.location);
     sessionStorage.getItem('tm_pincode_data') ? url.searchParams.set('pincode', JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode) : '';
     sessionStorage.getItem('tm_vertical_data') ? url.searchParams.set('vertical', sessionStorage.getItem('tm_vertical_data')) : '';
-    window.tm_offset ? url.searchParams.set('offset', window.tm_offset): '';
+    window.tm_offset || window.tm_offset === 0 ? url.searchParams.set('offset', window.tm_offset): '';
     window.history.pushState(null, '', url.toString());
     $('#paginationLoader').addClass('d-none')
     lastFoldParent.innerHTML += html;

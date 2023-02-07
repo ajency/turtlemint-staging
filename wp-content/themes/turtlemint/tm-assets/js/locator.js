@@ -300,7 +300,7 @@ container.appendChild(child);
 async function resendCode(element){
   try{
     $(element).addClass('tm-loader-dark')
-    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/resend?sessionId='+sessionStorage.getItem('tm_user_session_id'), {
+    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/resend?broker=turtlemint&source=Consumer&sessionId='+sessionStorage.getItem('tm_user_session_id'), {
         'method' : 'GET',
         'headers': {
           'Content-Type': 'application/json',
@@ -406,7 +406,7 @@ $('#getInTouchForm').submit( async function(e){
   const name = $(this).find('#tm-name').val()
   const phone = $(this).find('#tm-mobileNo').val()
   try{
-    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=idfcfirstbank&source=PartnerConsent', {
+    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=turtlemint&source=Consumer', {
       'method' : 'GET',
       'headers': {
         'Content-Type': 'application/json',
@@ -430,10 +430,10 @@ $('#getInTouchForm').submit( async function(e){
   catch(err){
     console.log("Error in submiting the details: ", err)
     //TODO remove 4 lines
-    $('#otpPhone').text('+91 '+phone)
-    $(this).find('.tm-button').removeClass('tm-loader')
-      closePopup("getInTouchPopup")
-      openPopup("tmOtpPopup");
+    // $('#otpPhone').text('+91 '+phone)
+    // $(this).find('.tm-button').removeClass('tm-loader')
+    //   closePopup("getInTouchPopup")
+    //   openPopup("tmOtpPopup");
   }
 })
 
@@ -446,7 +446,7 @@ $('#tmOtpForm').submit( async function(e){
     otp += $(this).val()
   })
   try{
-    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/verify?source=PartnerConsent', {
+    let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/verify?&broker=turtlemint&source=Consumer', {
       'method' : 'POST',
       'headers': {
       'Content-Type': 'application/json',
@@ -502,16 +502,16 @@ $('#tmOtpForm').submit( async function(e){
   finally{
     $(this).find('.tm-button').removeClass('tm-loader')
     //TODO remove 10 lines
-    clearOTP()
-    $('#tmOtpForm').find('.resend-text').text('Resend code in')
-    $('#tmOtpForm').find('.timer').text('')
-    // $('#tmOtpForm').find('.resend-timer').removeClass('success')
-    // $('#tmOtpForm').find('.error-message').addClass('d-none').removeClass('d-block')
-    // $('#tmOtpForm').find('.tm-form-group').removeClass('tm-error')
-    clearInterval(counter);
-    $('#tm_advisor_name').text(window.tm_advisor_name)
-    closePopup("tmOtpPopup")
-    openPopup("tmSuccessPopup");
+    // clearOTP()
+    // $('#tmOtpForm').find('.resend-text').text('Resend code in')
+    // $('#tmOtpForm').find('.timer').text('')
+    // // $('#tmOtpForm').find('.resend-timer').removeClass('success')
+    // // $('#tmOtpForm').find('.error-message').addClass('d-none').removeClass('d-block')
+    // // $('#tmOtpForm').find('.tm-form-group').removeClass('tm-error')
+    // clearInterval(counter);
+    // $('#tm_advisor_name').text(window.tm_advisor_name)
+    // closePopup("tmOtpPopup")
+    // openPopup("tmSuccessPopup");
   }
 })
 
