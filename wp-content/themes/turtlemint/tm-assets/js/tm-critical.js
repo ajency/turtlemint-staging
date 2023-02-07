@@ -259,6 +259,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       $('#pincodeForm .tm-button').removeClass('tm-loader')
       populateVertical()
       closePopup('pincodePopup')
+      $('#pincodeForm .filter-form-group').addClass('d-none')
       $('.tm-loading').removeClass('tm-loading')
       window.addEventListener("scroll", handleInfiniteScroll);
   }
