@@ -2,19 +2,19 @@
 const REDIRECT_CONFIG = [
     {
         "source": "https://*/life-insurance/*",
-        "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=Life"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Life"
     },
     {
         "source": "https://*/car-insurance/*",
-        "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=FW"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=FW"
     },
     {
         "source": "https://*/two-wheeler-insurance/*",
-        "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=TW"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=TW"
     },
     {
         "source": "https://*/health-insurance/*",
-        "target": "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/?vertical=Health"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Health"
     }
 ];
 
@@ -118,9 +118,9 @@ const REDIRECT_CONFIG = [
 
 async function redirect(){
     const sourceURL = window.location.href;
-    let targetURL = "https://turtlemint-stage.dreamhosters.com/insurance-advisor-near-me/"
+    let targetURL = "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/"
     try{
-        // let response = await fetch('https://turtlemint-stage.dreamhosters.com/find-advisor-widget/redirect-config.json');
+        // let response = await fetch('https://turtlemint.parasite.turtle-feature.com/find-advisor-widget/redirect-config.json');
         // let data = await response.json();
         let data = REDIRECT_CONFIG;
         if(data.length > 0){
