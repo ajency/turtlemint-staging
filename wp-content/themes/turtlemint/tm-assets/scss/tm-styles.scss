@@ -362,6 +362,7 @@ body {
 
         .advisor-name {
             margin-bottom: 8px;
+            text-transform: capitalize;
         }
 
         .advisor-location {
@@ -1215,4 +1216,8 @@ body {
             line-height: 22px;
         }
     }
+}
+
+#tm_advisor_name{
+    text-transform: capitalize;
 }
