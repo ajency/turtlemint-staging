@@ -41,7 +41,7 @@ get_header('tmhome');
     <div class="container">
         <div class="find-advisor-section">
             <div class="left-side">
-                <p class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance advisor</span></p>
+                <h1 class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance advisor</span></h1>
                 <p class="h1-heading hide-md-up">Find an<br><span class="tm-highlight-text">Insurance advisor</span></p>
                 <p class="tm-desc">Turtlemint insurance advisors are intermediaries who bridge the gap between insurance companies and policyholders.</p>
                 <ul class="tm-checklist">
@@ -155,7 +155,7 @@ get_header('tmhome');
     <!-- Advisors help section -->
     <div class="advisor-help-section">
         <div class="container">
-            <p class="h1-heading">How <span class="tm-highlight-text">insurance advisors</span> help customers</p>
+            <h2 class="h1-heading">How <span class="tm-highlight-text">insurance advisors</span> help customers</h2>
             <div class="help-section">
                 <div class="image-container">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/unbiased-advise.png" alt="Unbiased Advice" class="banner-image hide-md-down">
