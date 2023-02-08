@@ -80,6 +80,12 @@ function closePopup(popupId) {
   if(!$("#" + popupId).hasClass('restrict-event')){
     $("#" + popupId).removeClass("show");
   }
+  if(popupId == 'tmOtpPopup'){
+    clearOTP()
+      $('#tmOtpForm').find('.resend-text').text('Resend code in')
+      $('#tmOtpForm').find('.timer').text('')
+      clearInterval(counter);
+  }
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {

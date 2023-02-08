@@ -279,6 +279,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
   }
   function filterVertical(){
     $('.tm-preloader').addClass('tm-loading')
+    window.tm_added_advisor_count = 0;
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode, sessionStorage.getItem('tm_vertical_data'))
   }
   //render script end
