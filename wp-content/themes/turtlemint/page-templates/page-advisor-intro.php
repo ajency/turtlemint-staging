@@ -73,13 +73,13 @@ get_header('tmhome');
                                         <li>
                                             <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW" data-value="2_Wheeler">
                                             <label for="tm-2-wheeler-insurance">
-                                                <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
+                                                <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>Bike
                                             </label>
                                         </li>
                                         <li>
                                             <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW" data-value="4_Wheeler">
                                             <label for="tm-4-wheeler-insurance">
-                                                <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
+                                                <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>Car
                                             </label>
                                         </li>
                                     </ul>
