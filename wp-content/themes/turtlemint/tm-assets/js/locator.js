@@ -543,7 +543,7 @@ $('#tmFindAdvisorForm').submit( function(e){
     $(this).find('.filter-form-group').removeClass('tm-error')
     $(this).find('.filter-form-group .error-message').slideUp()
     $(this).find('.filter-form-group .error-message').text('')
-    $(this).find('.tm-button').addClass('tm-loader')
+    // $(this).find('.tm-button').addClass('tm-loader')
 
     gtag('event', 'Btn_click-'+selectedInsurance+'-Find_Advisor', {
       'event_category': 'DP_Intro-Buttons',
