@@ -48,13 +48,13 @@ get_header('tmhome');
                                     <li>
                                         <input type="radio" name="tm-insurance-type" id="tm-2-wheeler-insurance" <?php echo $vertical=="TW" ? "checked" : ""; ?> value="TW">
                                         <label for="tm-2-wheeler-insurance">
-                                            <span class="icon" id="<?php echo $vertical=="TW" ? "two-wheeler2-icon" : "two-wheeler-icon"; ?>" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>2 Wheeler
+                                            <span class="icon" id="<?php echo $vertical=="TW" ? "two-wheeler2-icon" : "two-wheeler-icon"; ?>" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>Bike
                                         </label>
                                     </li>
                                     <li>
                                         <input type="radio" name="tm-insurance-type" id="tm-4-wheeler-insurance" <?php echo $vertical=="FW" ? "checked" : ""; ?> <?php echo $vertical== null ? "checked" : ""; ?> value="FW">
                                         <label for="tm-4-wheeler-insurance">
-                                            <span class="icon" id="<?php if($vertical=="FW"){echo "four-wheeler2-icon";} elseif($vertical== null){echo "four-wheeler2-icon";} else{echo "four-wheeler-icon";} ?>" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>4 Wheeler
+                                            <span class="icon" id="<?php if($vertical=="FW"){echo "four-wheeler2-icon";} elseif($vertical== null){echo "four-wheeler2-icon";} else{echo "four-wheeler-icon";} ?>" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>Car
                                         </label>
                                     </li>
                                 </ul>
@@ -140,15 +140,15 @@ get_header('tmhome');
             <div class="row locator-section">
                 <div class="left-side">
                     <div class="tm-select-dropdown">
-                        <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4 Wheeler Insurance" class="icon"> <span class="title">4 Wheeler</span></div>
+                        <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4 Wheeler Insurance" class="icon"> <span class="title">Car</span></div>
                         <div class="tm-select-options">
                             <div title="4 Wheeler Insurance" class="tm-select-option <?php echo $vertical=="FW" ? "selected" : ""; ?>" data-value="FW" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4 Wheeler Insurance" class="icon">
-                                <span class="title">4 Wheeler</span>
+                                <span class="title">Car</span>
                             </div>
                             <div title="2 Wheeler Insurance" class="tm-select-option <?php echo $vertical=="TW" ? "selected" : ""; ?>" data-value="TW" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg" alt="2 Wheeler Insurance" class="icon">
-                                <span class="title">2 Wheeler</span>
+                                <span class="title">Bike</span>
                             </div>
                             <div title="Life Insurance" class="tm-select-option <?php echo $vertical=="Life" ? "selected" : ""; ?>" data-value="Life" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg" alt="Life Insurance" class="icon">
@@ -742,7 +742,7 @@ get_header('tmhome');
                     <div class="popup-icon">
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/success-icon.svg" alt="success">
                     </div>
-                    <p class="popup-heading">Sucess!</p>
+                    <p class="popup-heading">Success!</p>
                     <p class="popup-subheading">Our Insurance advisor <span id="tm_advisor_name">Kaleen bhaiya</span> will contact you shortly</p>
                 </div>
                 <div class="tm-popup-footer">

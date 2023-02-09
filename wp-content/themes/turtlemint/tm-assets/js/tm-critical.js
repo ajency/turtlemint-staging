@@ -89,8 +89,8 @@ const DATA = {
   }
 
 const VERTICAL_JSON = {
-    'TW': '2-Wheeler',
-    'FW': '4-Wheeler',
+    'TW': 'Bike',
+    'FW': 'Car',
     'Life': 'Life',
     'Health': 'Health'
 }
