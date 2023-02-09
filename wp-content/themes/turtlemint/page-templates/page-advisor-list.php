@@ -718,7 +718,7 @@ get_header('tmhome');
         </div>
         <p class="tm-h2-bold tm-heading">We are recruiting advisors in your area</p>
         <p class="tm-subheading">Submit your contact details to get free advise from Turtlemint insurance experts.</p>
-        <a class="tm-button large">Get in touch</a>
+        <a class="tm-button large" onclick="openPopup('getInTouchPopupEmptyScreen')">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
             <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">+91 8962995991</a>
@@ -835,6 +835,34 @@ get_header('tmhome');
 
                         <button class="tm-button" disabled>Submit</button>
                     </form>
+                </div>
+                <div class="tm-popup-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Empty screen get in touch popup -->
+<div class="tm-popup" id="getInTouchPopupEmptyScreen">
+    <div class="tm-popup-dialog" role="document">
+        <div class="content-wrap">
+            <div class="tm-popup-content">
+                <div class="tm-popup-header">
+                    <button type="button" class="close" onclick="closePopup('getInTouchPopupEmptyScreen')">
+                        <span class="icon"></span>
+                    </button>
+
+                </div>
+                <div class="tm-popup-body">
+                    <div class="popup-icon">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/profile-icon.svg" alt="profile">
+                    </div>
+                    <p class="popup-heading">Just a bit more about you!</p>
+                    <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
+                    <?php echo do_shortcode( '[contact-form-7 id="15" title="customer details"]'); ?>
+                    <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
                 </div>
                 <div class="tm-popup-footer">
 

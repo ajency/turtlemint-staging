@@ -169,6 +169,14 @@
             position: absolute;
             bottom: 0px;
             border-radius: 16px 16px 0px 0px;
+            left: 0;
+        }
+        &-dialog {
+            width: 100%;
+            margin: auto;
+            position: absolute;
+            bottom: 0px;
+            border-radius: 16px 16px 0px 0px;
         }
 
         .close {
