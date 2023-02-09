@@ -1221,3 +1221,16 @@ body {
 #tm_advisor_name{
     text-transform: capitalize;
 }
+
+.tm-google-form{
+    input[type=tel]{
+        margin-top: 32px;
+    }
+    .tm-button{
+        background: #00A465;
+        border-radius: 8px;
+    }
+    .tm-form.style2 input{
+        width: 100%;
+    }
+}

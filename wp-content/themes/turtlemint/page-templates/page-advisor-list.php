@@ -861,7 +861,9 @@ get_header('tmhome');
                     </div>
                     <p class="popup-heading">Just a bit more about you!</p>
                     <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
-                    <?php echo do_shortcode( '[contact-form-7 id="86" title="customer details"]'); ?>
+                    <div class="tm-form style2 tm-google-form">
+                        <?php echo do_shortcode( '[contact-form-7 id="23306" title="customer details"]'); ?>
+                    </div>
                     <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
                 </div>
                 <div class="tm-popup-footer">
