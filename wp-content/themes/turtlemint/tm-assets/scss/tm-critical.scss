@@ -138,14 +138,9 @@
             text-align: left;
         }
     }
-    &.restrict-event{
+    &.restrict-event, &.disableCloseBtn{
         .close{
             display: none;
-        }
-        &.disableCloseBtn{
-            .close{
-                display: none;
-            }
         }
     }
 
