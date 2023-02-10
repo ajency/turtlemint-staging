@@ -428,8 +428,8 @@ get_header('tmhomereskin');
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="organize-img mt5rem">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/organize-view.png" />
+                    <div class="organize-img mt5rem text-center">
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/organize-view.gif" style="padding: 35px;    max-height: 557px; width: auto;" class="home-organize-view" />
                     </div>
                 </div>
 

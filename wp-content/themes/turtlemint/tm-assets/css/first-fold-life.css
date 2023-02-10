@@ -59,6 +59,7 @@
 	line-height: 15px;
 	text-align: center;
 	color: #333333;
+	overflow-wrap: inherit;
 }
 .life-banner-img label{
 	display: block !important;

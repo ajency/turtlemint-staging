@@ -201,7 +201,7 @@ function get_hansel_and_gretel_breadcrumbs()
     $link_before      = '<li>';
     $link_after       = '</li>';
     $link_attr        = ' rel="v:url" property="v:title" class="breadcrum-style"';
-    $link             = $link_before . '<a' . $link_attr . ' href="%1$s"></a>' . $link_after;
+    $link             = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
     $delimiter        = ''; //' &raquo; ';              // Delimiter between crumbs
     $before           = '<li><a class="breadcrum-text">'; //'<span class="current">'; // Tag before the current crumb
     $after            = '</a></li>'; //'</span>';                // Tag after the current crumb
@@ -762,8 +762,8 @@ add_filter( 'wp_mail_from_name', 'wpb_sender_name' );
 /**
  * Blog Template for PR 20210823
  ***/
-//define(SINGLE_PATH, TEMPLATEPATH);
-$templatePath = get_stylesheet_directory_uri();
+/*define(SINGLE_PATH, TEMPLATEPATH); error in php8 */
+define('SINGLE_PATH', get_template_directory());
 /** Filter the single_template with our custom function */
 add_filter('single_template', 'company_updates_single_template');
  
@@ -776,11 +776,13 @@ global $wp_query, $post;
 */
 foreach((array)get_the_category() as $cat) :
 
-if(file_exists($templatePath . '/single-cat-' . $cat->slug . '.php'))
-return $templatePath . '/single-cat-' . $cat->slug . '.php';
+if(file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
+return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
     
 else
-return $templatePath . '/single.php';
+return TEMPLATEPATH . '/single.php';
 
 endforeach;
 }
+
+add_filter('jpeg_quality', function($arg){return 100;});
