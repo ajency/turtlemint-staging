@@ -78,13 +78,16 @@ function openPopup(popupId, advisorName, advisorId) {
 }
 function closePopup(popupId) {
   if(!$("#" + popupId).hasClass('restrict-event')){
-    $("#" + popupId).removeClass("show");
+    $("#" + popupId).removeClass("show disableCloseBtn");
   }
   if(popupId == 'tmOtpPopup'){
     clearOTP()
       $('#tmOtpForm').find('.resend-text').text('Resend code in')
       $('#tmOtpForm').find('.timer').text('')
       clearInterval(counter);
+  }
+  if(popupId=="getInTouchPopup"){
+    $('#maxLimitMsg').removeClass('d-block')
   }
 }
 
@@ -350,15 +353,13 @@ async function pincodeValidaion(){
 
 $('#pincodeForm').submit( function(e){
     e.preventDefault();
+    $('#pincodePopup').removeClass('restrict-event')
     $(this).find('.tm-button').addClass('tm-loader')
     // console.log('test',window.tm_pincode_data)
     // let vertical = $(this).find('.tm-select-value.selected').data('value')
     let vertical = $(this).find('input[name=tm-insurance-type]:checked').val()
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
-    // setTimeout(function(){
-      $('#pincodePopup').removeClass('restrict-event')
-    // },2000)
 })
 
 /******* get in touch Form flow ********/
@@ -428,6 +429,7 @@ $('#getInTouchForm').submit( async function(e){
       sessionStorage.setItem('tm_user_phone', phone)
       sessionStorage.setItem('tm_user_session_id', data.session_id)
       $('#otpPhone').text('+91 '+phone)
+      $('#maxLimitMsg').removeClass('d-block')
       $(this).find('.tm-button').removeClass('tm-loader')
       closePopup("getInTouchPopup")
       openPopup("tmOtpPopup");
@@ -438,6 +440,9 @@ $('#getInTouchForm').submit( async function(e){
   }
   catch(err){
     console.log("Error in submiting the details: ", err)
+    $('#maxLimitMsg').addClass('d-block');
+    $(this).find('.tm-button').removeClass('tm-loader')
+
     //TODO remove 4 lines
     // $('#otpPhone').text('+91 '+phone)
     // $(this).find('.tm-button').removeClass('tm-loader')

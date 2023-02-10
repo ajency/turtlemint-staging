@@ -13,7 +13,7 @@ get_header('tmhome');
 ?>
 
 <!-- pincode popup -->
-<div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show restrict-event" : ""; ?>" id="pincodePopup">
+<div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show restrict-event disableCloseBtn" : ""; ?>" id="pincodePopup">
     <div class="tm-popup-dialog" role="document">
         <div class="content-wrap">
             <div class="tm-popup-content">
@@ -786,6 +786,7 @@ get_header('tmhome');
                                 <p class="error-message"></p>
                             </div>
 
+                            <p class="error-message text-center" id="maxLimitMsg">You have exceeded the maximum limit for submitting the form. Try again after 30 minutes.</p>
                             <button class="tm-button" type="submit" disabled>Submit</button>
                             <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
                         </div>
