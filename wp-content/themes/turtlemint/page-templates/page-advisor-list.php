@@ -862,6 +862,15 @@ get_header('tmhome');
     sessionStorage.getItem('tm_user_name') ? document.getElementById('tm-name').value = sessionStorage.getItem('tm_user_name') : '';
     sessionStorage.getItem('tm_user_phone') ? document.getElementById('tm-mobileNo').value = sessionStorage.getItem('tm_user_phone') : '';
     sessionStorage.getItem('tm_user_name') && sessionStorage.getItem('tm_user_phone') ? $('#getInTouchForm [type=submit]').removeAttr('disabled') : '';
+
+    <?php if (!(isset($pincode) && isset($vertical)) ){ ?>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        gtag('event', 'Popup', {
+            'event_category': 'DPL_Popup',
+            'event_label': 'Pincode_Popup'
+        });
+    });
+    <?php } ?>
 </script>
 
 <?php

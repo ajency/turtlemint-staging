@@ -75,6 +75,27 @@ function openPopup(popupId, advisorName, advisorId) {
   if(advisorId){
     window.tm_advisor_id = advisorId;
   }
+
+  switch(popupId){
+    case "pincodePopup": 
+      gtag('event', 'Popup', {
+        'event_category': 'DPL_Popup',
+        'event_label': 'Pincode_Popup'
+      });
+      break;
+
+    case "getInTouchPopup":
+      gtag('event', 'GIT-Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Get-In-Touch', {
+        'event_category': 'DPL_Buttons',
+        'event_label': 'GIT-'+window.tm_advisor_name
+      });
+      break;
+    
+    default:
+      break;
+      
+  }
+
 }
 function closePopup(popupId) {
   if(!$("#" + popupId).hasClass('restrict-event')){
@@ -360,6 +381,10 @@ $('#pincodeForm').submit( function(e){
     let vertical = $(this).find('input[name=tm-insurance-type]:checked').val()
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
+    gtag('event', 'Btn_click-Submit', {
+      'event_category': 'DPL_Popup',
+      'event_label': 'Submit'
+    });
 })
 
 /******* get in touch Form flow ********/
@@ -433,6 +458,10 @@ $('#getInTouchForm').submit( async function(e){
       $(this).find('.tm-button').removeClass('tm-loader')
       closePopup("getInTouchPopup")
       openPopup("tmOtpPopup");
+      gtag('event', 'LF-Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Submit', {
+        'event_category': 'DPL_Buttons',
+        'event_label': 'LF-'+window.tm_advisor_name
+      });
     }
     else{
       throw 'No Servere Response'
@@ -473,6 +502,10 @@ $('#tmOtpForm').submit( async function(e){
     })
     let data = await response.json()
     if(data.statusCode && data.statusCode === 200){
+      gtag('event', 'OTP-Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Submit', {
+        'event_category': 'DPL_Buttons',
+        'event_label': 'OTP-'+window.tm_advisor_name
+      });
       //save data       
       let save_data_response = await fetch(SERVER+"/api/leads/consumer-lead-gen/webhook/"+window.tm_advisor_id+"?vertical="+sessionStorage.getItem('tm_vertical_data'), { 
         method: "POST",
@@ -500,6 +533,10 @@ $('#tmOtpForm').submit( async function(e){
       $('#tm_advisor_name').text(window.tm_advisor_name)
       closePopup("tmOtpPopup")
       openPopup("tmSuccessPopup");
+      gtag('event', 'Lead_submitted_successfull', {
+        'event_category': 'DPL_Leads',
+        'event_label': sessionStorage.getItem('tm_vertical_data')+'-'+window.tm_advisor_name
+      });
     }
     else if (data.statusCode){
       throw data.message;
