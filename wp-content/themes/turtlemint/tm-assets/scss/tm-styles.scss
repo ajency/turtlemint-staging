@@ -71,7 +71,8 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 618px;
+    // max-width: 618px;
+    max-width: 520px;
     margin: auto;
     padding: 20px 0px;
 
@@ -102,7 +103,7 @@ body {
     .right-side {
         width: 55%;
         gap: 12px 30px;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 
     .pincode-title {
@@ -1227,10 +1228,22 @@ body {
         margin-top: 32px;
     }
     .tm-button{
-        background: #00A465;
-        border-radius: 8px;
+        background: #00A465 !important;
+        border-radius: 8px !important;
     }
-    .tm-form.style2 input{
-        width: 100%;
+    &.tm-form.style2 input{
+        width: 100% !important;
+    }
+    form br{
+        display: none;
+    }
+    .wpcf7-spinner{
+        top: 15px;
+    }
+    .wpcf7 form .wpcf7-response-output{
+        margin: -20px 0 20px;
+    }
+    .wpcf7-not-valid-tip{
+        margin-top: 10px;
     }
 }

@@ -85,12 +85,12 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="pincode">Enter Pin code</label>
                                 <div class="single-input-group pincode-input-group">
-                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[0]?>">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[1]?>">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[2]?>">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[3]?>">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[4]?>">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="<?php echo $pincode[5]?>">
+                                    <input class="required" autofocus type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]" value="<?php echo $pincode[0]?>">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]" value="<?php echo $pincode[1]?>">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]" value="<?php echo $pincode[2]?>">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]" value="<?php echo $pincode[3]?>">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]" value="<?php echo $pincode[4]?>">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]" value="<?php echo $pincode[5]?>">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
@@ -101,8 +101,8 @@ get_header('tmhome');
                         </div>
 
                         <button class="tm-button" <?php echo !(isset($pincode)) ? 'disabled':''; ?> >Submit</button>
-                        <p class="or-text">or</p>
-                        <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+                        <!-- <p class="or-text">or</p> -->
+                        <!-- <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a> -->
                     </form>
                 </div>
                 <div class="tm-popup-footer">
@@ -166,7 +166,7 @@ get_header('tmhome');
                         <p class="pincode-title">Pincode</p>
                         <a class="pincode tm-arrow-right" id="pincode-filter-input" onclick="openPopup('pincodePopup')"><?php echo $pincode ?></a>
                     </div>
-                    <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a>
+                    <!-- <a class="locate-me-link"><img class="icon" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/locate-icon.svg" alt="locate me"><span>Locate Me</span></a> -->
                 </div>
             </div>
         </div>
@@ -718,7 +718,7 @@ get_header('tmhome');
         </div>
         <p class="tm-h2-bold tm-heading">We are recruiting advisors in your area</p>
         <p class="tm-subheading">Submit your contact details to get free advise from Turtlemint insurance experts.</p>
-        <a class="tm-button large" onclick="openPopup('getInTouchPopupEmptyScreen')">Get in touch</a>
+        <a class="tm-button large">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
             <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">+91 8962995991</a>
@@ -821,12 +821,12 @@ get_header('tmhome');
                             <div class="tm-form-group">
                                 <label for="otp">OTP</label>
                                 <div class="single-input-group otp-input-group">
-                                    <input class="required" autofocus type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input class="required" type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input class="required" autofocus type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]">
+                                    <input class="required" type="number" min="0" max="9" maxlength="1" oninput="this.value=this.value.toString()[0]">
                                 </div>
                                 <p class="error-message"></p>
                             </div>
@@ -835,36 +835,6 @@ get_header('tmhome');
 
                         <button class="tm-button" disabled>Submit</button>
                     </form>
-                </div>
-                <div class="tm-popup-footer">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Empty screen get in touch popup -->
-<div class="tm-popup" id="getInTouchPopupEmptyScreen">
-    <div class="tm-popup-dialog" role="document">
-        <div class="content-wrap">
-            <div class="tm-popup-content">
-                <div class="tm-popup-header">
-                    <button type="button" class="close" onclick="closePopup('getInTouchPopupEmptyScreen')">
-                        <span class="icon"></span>
-                    </button>
-
-                </div>
-                <div class="tm-popup-body">
-                    <div class="popup-icon">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/profile-icon.svg" alt="profile">
-                    </div>
-                    <p class="popup-heading">Just a bit more about you!</p>
-                    <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
-                    <div class="tm-form style2 tm-google-form">
-                        <?php echo do_shortcode( '[contact-form-7 id="23306" title="customer details"]'); ?>
-                    </div>
-                    <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
                 </div>
                 <div class="tm-popup-footer">
 

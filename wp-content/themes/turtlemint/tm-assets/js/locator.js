@@ -350,13 +350,15 @@ async function pincodeValidaion(){
 
 $('#pincodeForm').submit( function(e){
     e.preventDefault();
-    $('#pincodePopup').removeClass('restrict-event')
     $(this).find('.tm-button').addClass('tm-loader')
     // console.log('test',window.tm_pincode_data)
     // let vertical = $(this).find('.tm-select-value.selected').data('value')
     let vertical = $(this).find('input[name=tm-insurance-type]:checked').val()
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
+    setTimeout(function(){
+      $('#pincodePopup').removeClass('restrict-event')
+    },2000)
 })
 
 /******* get in touch Form flow ********/
