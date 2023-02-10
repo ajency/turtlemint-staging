@@ -356,9 +356,9 @@ $('#pincodeForm').submit( function(e){
     let vertical = $(this).find('input[name=tm-insurance-type]:checked').val()
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
-    setTimeout(function(){
+    // setTimeout(function(){
       $('#pincodePopup').removeClass('restrict-event')
-    },2000)
+    // },2000)
 })
 
 /******* get in touch Form flow ********/
