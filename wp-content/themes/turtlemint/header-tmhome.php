@@ -59,7 +59,7 @@
 			</script>
 		<?php } ?>
 
-		<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php' ) ) ) { ?>
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php', 'page-templates/page-advisor-list.php' ) ) ) { ?>
 			<!-- Google Tag Manager -->
 			<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
