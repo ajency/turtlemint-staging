@@ -507,7 +507,7 @@ $('#tmOtpForm').submit( async function(e){
         'event_label': 'OTP-'+window.tm_advisor_name
       });
       //save data       
-      let save_data_response = await fetch(SERVER+"/api/leads/consumer-lead-gen/webhook/"+window.tm_advisor_id+"?vertical="+sessionStorage.getItem('tm_vertical_data'), { 
+      let save_data_response = await fetch(SERVER+"/api/agent-locator/consumer-lead-gen/webhook/"+window.tm_advisor_id+"?vertical="+sessionStorage.getItem('tm_vertical_data'), { 
         method: "POST",
         body: JSON.stringify({
           "email": null,
