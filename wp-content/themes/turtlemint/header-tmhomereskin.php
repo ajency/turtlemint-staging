@@ -44,14 +44,23 @@
         <script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/mn/scripts/vendor/modernizr-min.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/mobilemenu-reskin.css"/>
 		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
 			;
 			})(window,document,'script','dataLayer','GTM-PCZGBP');
-		</script>
+		</script> -->
 		<!-- End Google Tag Manager -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61873031-16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-61873031-16');
+		</script>
         <script>
             function addGTM(url)
             {
@@ -190,7 +199,7 @@
 						<div class="hamburger"></div>
 					</a>
 					<!--<a href="#" class="button mmm quick-links-toggle">Quick Links</a>-->
-					<div class="submenu-b"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div>
+					<div class="submenu-b"><a onclick="gtag('event','Btn_click-Become a PoSP with us',{event_category:'HP-Buttons',event_label:'Become a PoSP with us'});" class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div>
 					<div style="clear:both"></div>
 				</div>
 			</div>
@@ -402,7 +411,7 @@
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/logo.png" alt class="logo logo-tb">
 			</a>
 			<!-- <a style="float: right;" class="btno" href="/raise-claim/">Raise a Claim</a> -->
-			<a style="float: right;" class="btno" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a>
+			<a onclick="gtag('event','Btn_click-Become a PoSP with us',{event_category:'HP-Buttons',event_label:'Become a PoSP with us'});" style="float: right;" class="btno" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a>
 			<div class="1" style="float: right;">
 				<div class="dropdowno">
 					<button class="dropbtn <?php if ( is_page( array( 'car-insurance' ) )){echo "tmactive"; } ?>" id="CarDropdownMenuDesk">Car

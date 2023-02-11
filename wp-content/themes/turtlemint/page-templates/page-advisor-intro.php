@@ -41,13 +41,13 @@ get_header('tmhome');
     <div class="container">
         <div class="find-advisor-section">
             <div class="left-side">
-                <h1 class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance advisor</span></h1>
-                <p class="h1-heading hide-md-up">Find an<br><span class="tm-highlight-text">Insurance advisor</span></p>
-                <p class="tm-desc">Turtlemint insurance advisors are intermediaries who bridge the gap between insurance companies and policyholders.</p>
+                <h1 class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance Advisor</span></h1>
+                <p class="h1-heading hide-md-up">Find an<br><span class="tm-highlight-text">Insurance Advisor</span></p>
+                <p class="tm-desc">Turtlemint <b>Insurance Advisors</b> provide expert assistance for all your insurance needs <b>anywhere, anytime</b>.</p>
                 <ul class="tm-checklist">
-                    <li>Our advisors are best in the industry & Present all across India</li>
-                    <li>Certified & IRDAI approved</li>
-                    <li>Gives best advice & service to customer</li>
+                    <li>Expert Advice You Can Count On</li>
+                    <li>Trained & Certified Insurance Advisor</li>
+                    <li>Active claim support for any policy, any insurer</li>
                 </ul>
             </div>
             <div class="right-side">
@@ -110,39 +110,39 @@ get_header('tmhome');
             <div class="banner-image hide-md-up">
                 <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
             </div>
-            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
+            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across The Country.</p>
         </div>
         <div class="right-side">
-            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">customers</span> and <span class="tm-highlight-text">advisors</span> across the country.</p>
+            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across The Country.</p>
             <div class="hide-md-down">
                 <div class="stats-section">
                     <div class="stat">
-                        <p class="number">3.5M+</p>
-                        <p class="title">Happy Customers</p>
+                        <p class="number">270K+</p>
+                        <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
-                        <p class="number">240K+</p>
-                        <p class="title">Advisors</p>
+                        <p class="number">17K+</p>
+                        <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">45+</p>
-                        <p class="title">Insurance Partners</p>
+                        <p class="number">74L<span class="d-md-none d-lg-inline-block">acs</span>+</p>
+                        <p class="title">Policies Sold</p>
                     </div>
                 </div>
             </div>
             <div class="hide-md-up">
                 <div class="stats-section ">
                     <div class="stat">
-                        <p class="number">3.5M+</p>
-                        <p class="title">Customers</p>
+                        <p class="number">270K+</p>
+                        <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
-                        <p class="number">240K+</p>
-                        <p class="title">Advisors</p>
+                        <p class="number">17K+</p>
+                        <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">45+</p>
-                        <p class="title">Insurers</p>
+                        <p class="number">74Lacs+</p>
+                        <p class="title">Policies Sold</p>
                     </div>
                 </div>
             </div>
@@ -155,29 +155,29 @@ get_header('tmhome');
     <!-- Advisors help section -->
     <div class="advisor-help-section">
         <div class="container">
-            <h2 class="h1-heading">How <span class="tm-highlight-text">insurance advisors</span> help customers</h2>
+            <h2 class="h1-heading">How does a Turtlemint <span class="tm-highlight-text">Insurance Advisor</span> help you</h2>
             <div class="help-section">
                 <div class="image-container">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/unbiased-advise.png" alt="Unbiased Advice" class="banner-image hide-md-down">
                 </div>
                 <div class="content">
-                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/unbiased-advise-icon.svg" alt="Unbiased Advice" class="icon hide-md-up">Unbiased Advice</p>
-                    <p class="desc">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the</p>
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/unbiased-advise-icon.svg" alt="Unbiased Advice" class="icon hide-md-up">Digitally Empowered Advisors</p>
+                    <p class="desc">Access to a wide network of <b>insurance advisors</b> near you to protect what’s important to you</p>
                     <ul class="tm-checklist">
-                        <li>Leverage automation to move fast</li>
-                        <li>Always give customers a human to chat to</li>
-                        <li>Automate customer support and close leads faster</li>
+                        <li>Continuous training and upskilling</li>
+                        <li>Well-experienced & equipped with latest products</li>
+                        <li>Digitally enabled expert insurance advisors</li>
                     </ul>
                 </div>
             </div>
             <div class="help-section">
                 <div class="content">
-                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/certified-icon.svg" alt="Certified Industry Expert" class="icon hide-md-up">Certified Industry Expert</p>
-                    <p class="desc">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/certified-icon.svg" alt="Certified Industry Expert" class="icon hide-md-up">Advice That Puts You First</p>
+                    <p class="desc">Unbiased & quality advice from our trusted advisor can get you the right insurance</p>
                     <ul class="tm-checklist">
-                        <li>Keep your customers in the loop with live chat</li>
-                        <li>Embed help articles right on your website</li>
-                        <li>Customers never have to leave the page to find an answer</li>
+                        <li>Leverage technology for right advice</li>
+                        <li>Customer-first approach</li>
+                        <li>Instant quotes tailored to your needs</li>
                     </ul>
                 </div>
                 <div class="image-container">
@@ -189,23 +189,23 @@ get_header('tmhome');
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/renewal-n-claim-support.png" alt="Renewal & Claim Support" class="banner-image hide-md-down">
                 </div>
                 <div class="content">
-                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/renewal-support-icon.svg" alt="Renewal & Claim Support" class="icon hide-md-up">Renewal & Claim Support</p>
-                    <p class="desc">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the</p>
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/renewal-support-icon.svg" alt="Renewal & Claim Support" class="icon hide-md-up">Hassle-Free Claim Assistance</p>
+                    <p class="desc">Complete paperwork and 24x7 claim assistance from our advisors</p>
                     <ul class="tm-checklist">
-                        <li>Leverage automation to move fast</li>
-                        <li>Always give customers a human to chat to</li>
-                        <li>Automate customer support and close leads faster</li>
+                        <li>Get your claim in short time</li>
+                        <li>Avoid claim rejections</li>
+                        <li>Get maximum assured claim amount</li>
                     </ul>
                 </div>
             </div>
             <div class="help-section">
                 <div class="content">
-                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/quick-digital-support-icon.svg" alt="Quick Digital SupportUnbiased Advice" class="icon hide-md-up">Quick Digital Support</p>
-                    <p class="desc">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/quick-digital-support-icon.svg" alt="Quick Digital SupportUnbiased Advice" class="icon hide-md-up">Personalized Insurance Plans</p>
+                    <p class="desc">Making insurance buying process simple with instant quotes from our certified experts</p>
                     <ul class="tm-checklist">
-                        <li>Keep your customers in the loop with live chat</li>
-                        <li>Embed help articles right on your website</li>
-                        <li>Customers never have to leave the page to find an answer</li>
+                        <li>Option to choose from 45+ top insurers</li>
+                        <li>Expert Advisor at your doorstep</li>
+                        <li>100% digital and paperless process</li>
                     </ul>
                 </div>
                 <div class="image-container">
@@ -220,13 +220,13 @@ get_header('tmhome');
 <!-- testimonial section -->
 <div class="container">
     <div class="tm-testimonial-section">
-        <p class="h1-heading">Best place for any <span class="tm-highlight-text">Insurance related issue</span></p>
+        <p class="h1-heading">Our Customers Love Us!</p>
         <div class="tm-testimonial-slider">
             <div class="tm-testimonial">
                 <div class="tm-testimonial__wraper">
-                    <p class="content">reat results. Enjoyable to work with, and most importantly, enabled us to have the presence on the web we needed to conduct business in today's market.</p>
+                    <p class="content">Turtlemint’s personalised assistance helped me solve my doubts and find the most suitable policy. Thank you Turtlemint for simplifying insurance</p>
                     <div class="author">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/testimonial-profile1.png" alt="Renewal & Claim Support" class="profile-image">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/mihir.png" alt="Renewal & Claim Support" class="profile-image">
                         <div class="right-side">
                             <div class="review">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
@@ -235,17 +235,17 @@ get_header('tmhome');
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                             </div>
-                            <p class="author-name">Ronald A. Webb</p>
-                            <p class="author-position">Co-founder</p>
+                            <p class="author-name">Mihir</p>
+                            <!-- <p class="author-position">Co-founder</p> -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tm-testimonial">
                 <div class="tm-testimonial__wraper">
-                    <p class="content">reat results. Enjoyable to work with, and most importantly, enabled us to have the presence on the web we needed to conduct business in today's market.</p>
+                    <p class="content">One platform, multiple insurers. Thank you Turtlemint for allowing me to compare the best plans to buy the most suitable policy with ease</p>
                     <div class="author">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/testimonial-profile1.png" alt="Renewal & Claim Support" class="profile-image">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/anupama.png" alt="Renewal & Claim Support" class="profile-image">
                         <div class="right-side">
                             <div class="review">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
@@ -254,17 +254,17 @@ get_header('tmhome');
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                             </div>
-                            <p class="author-name">Ronald A. Webb</p>
-                            <p class="author-position">Co-founder</p>
+                            <p class="author-name">Anupama</p>
+                            <!-- <p class="author-position">Co-founder</p> -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tm-testimonial">
                 <div class="tm-testimonial__wraper">
-                    <p class="content">reat results. Enjoyable to work with, and most importantly, enabled us to have the presence on the web we needed to conduct business in today's market.</p>
+                    <p class="content">Thanks to Turtlemint’s online platform buying insurance has become simple. I bought and renewed my policies hassle-free through Turtlemint within minutes</p>
                     <div class="author">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/testimonial-profile1.png" alt="Renewal & Claim Support" class="profile-image">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/ajay.png" alt="Renewal & Claim Support" class="profile-image">
                         <div class="right-side">
                             <div class="review">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
@@ -273,17 +273,17 @@ get_header('tmhome');
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                             </div>
-                            <p class="author-name">Ronald A. Webb</p>
-                            <p class="author-position">Co-founder</p>
+                            <p class="author-name">Ajay</p>
+                            <!-- <p class="author-position">Co-founder</p> -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tm-testimonial">
                 <div class="tm-testimonial__wraper">
-                    <p class="content">reat results. Enjoyable to work with, and most importantly, enabled us to have the presence on the web we needed to conduct business in today's market.</p>
+                    <p class="content">I never knew making insurance claims would be so simple. I thank the Turtlemint team for their excellent assistance in claim settlement</p>
                     <div class="author">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/testimonial-profile1.png" alt="Renewal & Claim Support" class="profile-image">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/abdul.png" alt="Renewal & Claim Support" class="profile-image">
                         <div class="right-side">
                             <div class="review">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
@@ -292,8 +292,8 @@ get_header('tmhome');
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/star-icon.svg">
                             </div>
-                            <p class="author-name">Ronald A. Webb</p>
-                            <p class="author-position">Co-founder</p>
+                            <p class="author-name">Abdul</p>
+                            <!-- <p class="author-position">Co-founder</p> -->
                         </div>
                     </div>
                 </div>
@@ -305,50 +305,32 @@ get_header('tmhome');
 <!-- text sections -->
 <div class="container">
     <div class="tm-content">
-        <p class="heading">What information do we collect?</p>
-        <p class="body">Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
-            <br><br>
-            Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
-            <br><br>
-            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
-        </p>
+        <p class="heading">What kind of insurance policies does Turtlemint offer?</p>
+        <p class="body">Turtlemint offers Car, Bike, Health as well as Life Insurance plans from various top insurers all under one roof through our digitally enabled & certified advisors.</p>
     </div>
     <div class="tm-content">
-        <p class="heading">How do we use your information?</p>
-        <p class="body">Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
-            <br><br>
-            Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
-            <br><br>
-            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
-        </p>
+        <p class="heading">Who are Turtlemint Advisors?</p>
+        <p class="body">Turtlemint Insurance Advisors <b>(POSP)</b> offer expert advice to provide the right insurance plan from 45+ insurers based on your needs for health, life, car and bike insurance.</p>
     </div>
     <div class="tm-content">
-        <p class="heading">Do we use cookies and other tracking technologies?</p>
-        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
-        </p>
+        <p class="heading">Are Turtlemint Advisors certified and licensed?</p>
+        <p class="body">Yes, Turtlemint Insurance Advisors are certified experts and recognized by IRDAI.</p>
     </div>
     <div class="tm-content">
-        <p class="heading">How long do we keep your information?</p>
-        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
-        </p>
+        <p class="heading">How many locations are these Advisors present in?</p>
+        <p class="body">Turtlemint Advisors are currently present in 17,000+ Pin Codes in India… and growing.</p>
     </div>
     <div class="tm-content">
-        <p class="heading">How do we keep your information safe?</p>
-        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
-        </p>
+        <p class="heading">Will the advisors help at all steps of the insurance buying process?</p>
+        <p class="body">Our experts will advise and guide you right from the policy selection process, complete documentation to quick claim settlement assistance.</p>
     </div>
     <div class="tm-content">
-        <p class="heading">What are your privacy rights?</p>
-        <p class="body">Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac pellentesque ac.
-        </p>
+        <p class="heading">Is there any support for claims?</p>
+        <p class="body">There is full claim support from Turtlemint PoSP Advisor for any policy, any insurer whether bought from Turtlemint. You can raise a claim by calling <a class="tm-highlight-text" href="tel:18002660101"><b>1800 266 0101</b></a> or emailing at <a class="tm-highlight-text" href="mailto:claims@turtlemint.com"><b>claims@turtlemint.com</b></a> and submit documents as advised by our claims expert.</p>
     </div>
     <div class="tm-content">
-        <p class="heading">How can you contact us about this policy?</p>
-        <p class="body">Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget diam curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.
-            Lectus id duis vitae porttitor enim gravida morbi.
-            Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.
-            Suspendisse maecenas ac donec scelerisque diam sed est duis purus.
-        </p>
+        <p class="heading">Is home visit service available?</p>
+        <p class="body">Yes, you can request a face-to-face consultation with our expert advisors.</p>
     </div>
 </div>
 

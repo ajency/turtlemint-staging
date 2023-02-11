@@ -27,14 +27,14 @@
                             <div class="d-lg-block d-sm-block d-md-block pt2rem mob-pt1rem">
                                 <div class="row-mid-new">
                                 <div class="btns-mid ">
-                                    <button onclick="window.open('//app.turtlemint.com/health-insurance/health-profile/profile-gender','_blank');" type="button" class="btn  btn-lg cta-banner-yellow" >Get a Quote</button>
+                                    <button onclick="gtag('event','Btn_click-Get a Quote',{event_category:'Health_VP-Buttons',event_label:'Get a Quote'});window.open('//app.turtlemint.com/health-insurance/health-profile/profile-gender','_blank');" type="button" class="btn  btn-lg cta-banner-yellow" >Get a Quote</button>
                                     <p class="cta-banner-subtext"><span>Connect with nearby </span><br><span style="font-weight: 700;">Turtlemint advisor</span></p>
                                 </div>
                                 <div class="btns-mid btns-mid-separator" style="line-height: 3.5rem;">
                                     <span class="cta-separator">or</span>
                                 </div>
                                 <div class="btns-mid ">
-                                    <button onclick="location.href='/insurance-advisor-near-me/?vertical=Health'" type="button" class="btn  btn-lg cta-banner-green" style="">Find Advisor</button>
+                                    <button onclick="gtag('event','Btn_click-Find Advisor',{event_category:'Health_VP-Buttons',event_label:'Find Advisor'});location.href='/insurance-advisor-near-me/?vertical=Health';" type="button" class="btn  btn-lg cta-banner-green" style="">Find Advisor</button>
                                     <p style="" class="cta-banner-subtext"><span>Check health insurance </span><br><span>quotes of </span><span style="font-weight: 700;">15+ insurers</span></p>
                                 </div>
                                 </div>

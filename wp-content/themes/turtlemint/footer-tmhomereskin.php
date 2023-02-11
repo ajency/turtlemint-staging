@@ -945,6 +945,7 @@
 			if(value == 'redirect'){
 				window.dataLayer.push({ 'event': 'button_click' ,'click_text': 'getquotes', 'button_location': 'banner', });
 			}
+			gtag('event','HP-Message-Not_selected',{event_category:'HP-Error',event_label:'Please select type of insurance to proceed to the next step'});
 		}
 		else{
 			jQuery('.error-msg').css('visibility','hidden');
@@ -967,6 +968,11 @@
 						var redirect_url = location.protocol+"//"+location.hostname+"/insurance-advisor-near-me/?vertical=Health";
 						window.dataLayer.push({ 'event': 'button_click' ,'click_text': 'findadvisorhealth', 'button_location': 'banner', });
 					}
+
+					//GA EVENT START
+					gtag('event','Btn_click-'+img_pressed+'-Find Advisor',{event_category:'HP-Buttons',event_label:'Find Advisor'});
+					//GA EVENT END
+
 					window.location.href = redirect_url;		
 				}
 				
@@ -992,6 +998,11 @@
 						var redirect_url = "https://app.turtlemint.com/health-insurance/health-profile/profile-gender";
 						window.dataLayer.push({ 'event': 'button_click' ,'click_text': 'getquoteshealth', 'button_location': 'banner', });
 					}
+
+					//GA EVENT START
+					gtag('event','Btn_click-'+img_pressed+'-Get a Quote',{event_category:'HP-Buttons',event_label:'Get a Quote'});
+					//GA EVENT END
+
 					window.location.href = redirect_url;				
 				}
 			}

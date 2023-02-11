@@ -26,7 +26,7 @@
                             <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
                             <div class="life-bannercrd-img">
 								<div class="life-banner-img life-icon">
-									<label onclick="location.href='https://app.turtlemint.com/life-insurance/profile/term/about-insured';">
+									<label onclick="gtag('event','Btn_click-Term Life Plans',{event_category:'Life_VP-Buttons',event_label:'Term Life Plans'});location.href='https://app.turtlemint.com/life-insurance/profile/term/about-insured';">
 									<input class="radio-grp" type="radio" name="radio-btns" value="">
 									<img class="desktop" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-desk-01.svg" >
 									<img class="mobile" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-mob-01.svg" >											
@@ -36,7 +36,7 @@
                             </div>
                             <div class="life-bannercrd-img">
                             <div class="life-banner-img life-icon" >
-                                <label onclick="location.href='https://app.turtlemint.com/life-insurance/profile/investment-planning/about-insured';">
+                                <label onclick="gtag('event','Btn_click-Investment & Tax Planning',{event_category:'Life_VP-Buttons',event_label:'Investment & Tax Planning'});location.href='https://app.turtlemint.com/life-insurance/profile/investment-planning/about-insured';">
                                 <input class="radio-grp" type="radio" name="radio-btns" value="">
                                 <img class="desktop" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-desk-02.svg" >	
                                 <img class="mobile" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-mob-02.svg" >
@@ -46,7 +46,7 @@
                             </div>
                             <div class="life-bannercrd-img" >
                             <div class="life-banner-img life-icon">
-                                <label onclick="location.href='https://app.turtlemint.com/life-insurance/profile/saving-for-child/about-insured';">
+                                <label onclick="gtag('event','Btn_click-Saving For Child',{event_category:'Life_VP-Buttons',event_label:'Saving For Child'});location.href='https://app.turtlemint.com/life-insurance/profile/saving-for-child/about-insured';">
                                 <input class="radio-grp" type="radio" name="radio-btns" value="">
                                 <img class="desktop" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-desk-03.svg" >
                                 <img class="mobile" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-mob-03.svg" >
@@ -56,7 +56,7 @@
                             </div>
                             <div class="life-bannercrd-img">
                             <div class="life-banner-img life-icon">
-                                <label onclick="location.href='https://app.turtlemint.com/life-insurance/profile/retirement/about-insured';">
+                                <label onclick="gtag('event','Btn_click-Pension & Retirement',{event_category:'Life_VP-Buttons',event_label:'Pension & Retirement'});location.href='https://app.turtlemint.com/life-insurance/profile/retirement/about-insured';">
                                 <input class="radio-grp" type="radio" name="radio-btns" value="">
                                 <img class="desktop" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-desk-04.svg">
                                 <img class="mobile" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/life-icon-mob-04.svg" >

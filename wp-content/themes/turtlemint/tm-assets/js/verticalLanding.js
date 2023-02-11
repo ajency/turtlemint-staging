@@ -132,6 +132,14 @@
         if (!regNumber) {
             $('#errMsg').html('Please enter complete registration number');
             $('.contact-input-quote').addClass('error');
+
+            //GA EVENT START
+            gtag('event', vertical+'-Message-No_Input-RN', {
+                'event_category': vertical+'_VP-error',
+                'event_label': 'Please enter complete registration number'
+            });
+            //GA EVENT END
+
             return;
         }
         if (_isValidRegNo(regNumber)) {
@@ -150,6 +158,13 @@
                 
             }
             /*DataLayer 20210325 - end*/
+
+            //GA EVENT START
+            gtag('event', 'Btn_click-Get a Quote', {
+                'event_category': vertical+'_VP-Buttons',
+                'event_label': 'Get a Quote'
+            });
+            //GA EVENT END
             
             _goToProfile(vertical, true);
         } else {
@@ -167,6 +182,13 @@
             
             $('#errMsg').html('Enter valid registration number');
             $('.contact-input-quote').addClass('error');
+
+            //GA EVENT START
+            gtag('event', vertical+'-Message-No_Input-RN', {
+                'event_category': vertical+'_VP-error',
+                'event_label': 'Enter valid registration number'
+            });
+            //GA EVENT END
         }
     }
     function _isValidRegNo(registrationNo) {
