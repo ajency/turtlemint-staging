@@ -774,7 +774,8 @@ get_header('tmhome');
                         <div class="form-wrap">
                             <div class="tm-form-group">
                                 <label for="tm-name">Name</label>
-                                <input class="required" name="tm-name" id="tm-name" type="text" onkeydown="return /[a-z ]/i.test(event.key)">
+                                <input class="required" name="tm-name" id="tm-name" type="text" oninput="this.value=this.value.replace(/[^a-zA-Z ]/g,'')">
+                                <!-- onkeydown="return /[a-z ]/i.test(event.key) -->
                                 <p class="error-message"></p>
                             </div>
                             <div class="tm-form-group">
