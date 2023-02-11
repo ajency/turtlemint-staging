@@ -11,7 +11,7 @@
                <div class="row lg-device">
                   <div class="col-lg-6 col-md-6 first-column" style="z-index: 1;">
                      <div class="bike-main-banner-txt">
-                        <h2 class="main-banner-txt-header1" ><span  style="color:#009F69">Health Insurance</span> starting from ₹5000</span></h2>
+                        <h2 class="main-banner-txt-header1" >Right <span  style="color:#009F69">Health Insurance Plans</span> For Your Future</span></h2>
                         <!-- just for aligning -->
                         <!-- just for aligning -->
                         <div class="content justify-content-center">
@@ -19,9 +19,9 @@
                            <div class="primary-input">
                               <div class="mb-3 ps-4 ps-xl-6">                                 
                               </div>
-                              <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Instant claim support available</p>
-                              <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />All Covid-19 Treatments covered</p>
-                              <p class="text-300 ps-4 ps-xl-6 health-banner-p d-flex"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Tax Benefits upto ₹75,000 under<br class="desk-hide"> Sec. 80D</p>
+                              <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Instant Policy Issuance</p>
+                              <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Tax Benefits under section 80D</p>
+                              <p class="text-300 ps-4 ps-xl-6 health-banner-p d-flex"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Claim Support From Experts<br class="desk-hide"></p>
                            </div>
                            <!-- Buttons -->
                             <div class="d-lg-block d-sm-block d-md-block pt2rem mob-pt1rem">

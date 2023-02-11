@@ -635,6 +635,105 @@
 			};
 	}
 </script>
+<!-- New Implementation for Pincode not found 20230211-->
+<!-- <script async src="tm-critical.js?t=<?php /*echo time();*/ ?>"></script> -->
+<script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/tm-critical.js"></script>
+<script type="text/javascript">
+    /*If API Offline
+	async function getPincodeLocation(pincode){
+      try{
+          if(pincode==400706){              
+            return {
+                "id": pincode,
+                "pinCode": pincode,
+                "area": "New Delhi",
+                "city": "West Delhi",
+                "state": "Delhi"
+            }
+          }
+          else{
+              throw 'Pincode not found';
+          }
+      }
+      catch(err){
+        console.log('Get Pincode Location error: ', err);
+
+          return {
+              'error': true,
+              'info': 'Pincode not found',
+              'data': err
+          }
+      }
+  	}*/
+   /*window.addEventListener("load", async (event) => {    
+        let pincodeData = await getPincodeLocation(400701);
+        if (pincodeData.error) {
+            alert(pincodeData.info);
+        } else {
+            alert(pincodeData.pinCode + "-" + pincodeData.area + "-" + pincodeData.city);
+        }
+    });*/
+	
+</script>
+<script type="text/javascript">
+	window.addEventListener("load", async (event) => {
+		let pincode;
+		<?php if( is_page( array( 'car-insurance') )) { ?>
+		/*Car*/
+		document.getElementById("popupadvisorcarform").addEventListener("submit", async (event) => {
+			event.preventDefault();
+
+			pincode = document.getElementById("pincodeadvisorcar").value;
+			let pincodeData = await getPincodeLocation(pincode);
+			if (pincodeData.error) {
+				document.getElementById("errMsgPincode").innerHTML = pincodeData.info;
+				jQuery(".contact-input-adviser.vertical-input-label").addClass('error');
+				gtag("event","FW-Message-No_Input-Pincode",{event_category:  "FW_VP-error",event_label:"No pincode found"});
+			} else {
+				gtag("event","Btn_click-Find Advisor",{event_category: "FW_VP-Buttons",event_label:"Find Advisor"});
+				document.getElementById("errMsgPincode").innerHTML = "";
+				document.getElementById("popupadvisorcarform").submit();
+			}
+		});
+		<?php } ?>
+		<?php if( is_page( array( 'two-wheeler-insurance') )) { ?>
+		/*Bike */
+		document.getElementById("popupadvisorbikeform").addEventListener("submit", async (event) => {
+			event.preventDefault();
+
+			pincode = document.getElementById("pincodeadvisorbike").value;
+			let pincodeData = await getPincodeLocation(pincode);
+			if (pincodeData.error) {
+				document.getElementById("errMsgPincode").innerHTML = pincodeData.info;
+				jQuery(".contact-input-adviser.vertical-input-label").addClass('error');
+				gtag("event","TW-Message-No_Input-Pincode",{event_category:  "TW_VP-error",event_label:"No pincode found"});
+			} else {
+				gtag("event","Btn_click-Find Advisor",{event_category: "TW_VP-Buttons",event_label:"Find Advisor"});
+				document.getElementById("errMsgPincode").innerHTML = "";
+				document.getElementById("popupadvisorbikeform").submit();
+			}
+		});
+		<?php } ?>
+		<?php if( is_page( array( 'life-insurance') )) { ?>
+		/*Life */
+		document.getElementById("popupadvisorlifeform").addEventListener("submit", async (event) => {
+			event.preventDefault();
+
+			pincode = document.getElementById("pincodeadvisorlife").value;
+			let pincodeData = await getPincodeLocation(pincode);
+			if (pincodeData.error) {
+				document.getElementById("errMsgPincode").innerHTML = pincodeData.info;
+				jQuery(".contact-input-adviser.vertical-input-label").addClass('error');
+				gtag("event","Life-Message-No_Input-Pincode",{event_category:  "Life_VP-error",event_label:"No pincode found"});
+			} else {
+				gtag("event","Btn_click-Find Advisor",{event_category: "Life_VP-Buttons",event_label:"Find Advisor"});
+				document.getElementById("errMsgPincode").innerHTML = "";
+				document.getElementById("popupadvisorlifeform").submit();
+			}
+		});
+		<?php } ?>
+	});
+</script>
 <style>
 	@media (min-width: 1024px){
 		body.home .custom-video-crd h5 {
@@ -648,14 +747,14 @@
 		}
 	}
 	/*Vertical Form Validation */
-	div#errMsg {
+	div#errMsg,.errtext {
 		color: red;
 		font-family: 'Montserrat-Regular';
 		font-size: .9rem;
 		padding-left: 5px;
     	padding-top: 0.5rem;
 	}
-	.contact-input-quote.error{border: 1px solid rgba(255, 59, 48, 0.4);}
+	.contact-input-quote.error,.vertical-input-label.error{border: 1px solid rgba(255, 59, 48, 0.4);}
 	/*Slider fix 20230128*/
 	@media (max-width: 786px){
 		.customer-row{width: 100% !important;}

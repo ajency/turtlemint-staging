@@ -82,8 +82,8 @@
                     
                     <div class="or"><p>OR</p></div>
                 <div class="primary-input">
-					<p class="text-300 mb-1 ps-4 ps-xl-6 contact-advisor">Find nearby Turtlemint advisor</p>
-					<div class="mb-2 ps-4 ps-xl-6">
+					<p class="text-300 mb-1 ps-4 ps-xl-6 contact-advisor">Find a Turtlemint Advisor Near You</p>
+					<div class="mb-1 ps-4 ps-xl-6">
 						<!--
 							<form name="popupadvisorlifeform" id="popupadvisorlifeform" method=post action="https://www.hashemian.com/tools/form-post-tester.php/pincodeadvisorlife" >
 							<label for="pincodeadvisorlife" class="contact-input-adviser">
@@ -96,13 +96,14 @@
 						-->
 						<!--Updated Form code for pin code-->
 						<form name="popupadvisorlifeform" id="popupadvisorlifeform" method=get action="/insurance-advisor-near-me/" >
-							<label for="pincodeadvisorlife" class="contact-input-adviser">
+							<label for="pincodeadvisorlife" class="contact-input-adviser vertical-input-label">
 								<input class="pincodeadvisorlife" type="number" id="pincodeadvisorlife" name="pincode" value="" oninvalid="this.setCustomValidity('Please Enter valid Pincode')" oninput="this.value = this.value.toUpperCase(); this.setCustomValidity('');" id="name-input" type="text" placeholder="Enter Pin Code" max="999999" min="100000" maxlength="6" required onKeyPress="if(this.value.length==6) return false;">
 								<input type="hidden" id="verticalLife" name="vertical" value="Life">
 								<button id="popupadvisorlifeformsubmit" type="submit" class="btn">
 									<span>Find Advisor</span>
 								</button>
 							</label>
+							<div class="errtext pt1" id="errMsgPincode"></div>
 						</form>	
 					</div>
 					<p class="text-300 mb-1 ps-4 ps-xl-6 tm-advisor-usp"><span>2.5 Lakh+</span> Turtlemint advisors</p>

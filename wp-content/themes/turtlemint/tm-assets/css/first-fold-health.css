@@ -230,6 +230,35 @@
 	display: none;
   }
   
+  @media only screen and (max-width: 756px) and (min-width: 753px)
+{
+	.car-banner img.desktop {display: none;}
+
+.car-banner img.mobile {display: block;width: 75%;margin: 0 auto;}
+
+.first-fold-car-banner {height: auto;padding-bottom: 0px;}
+
+.car-banner {margin: 0 0 !important;}
+
+.car-banner:after {
+    content: "";
+	background: url("https://www.stagingtech.in/tmhtml/assets/img/shadow.svg") 0 0 no-repeat;
+    
+   display: block;
+    position: absolute;
+    width: 90%;
+    height: 60px;
+    background-size: 100%;
+    left: 15;
+}  
+
+.bike-main-banner-txt {
+    padding-bottom: 5% !important;
+    padding-top: 3% !important;
+}
+	
+}
+  
   @media only screen and (min-width: 500px) and (max-width: 821px) {
 	.contact-input-quote,
 	.contact-input-adviser {

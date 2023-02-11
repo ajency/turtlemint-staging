@@ -32,16 +32,17 @@
                      <p>OR</p>
                   </div>
                   <div class="primary-input">
-					 <p class="text-300 mb-1 ps-4 ps-xl-6 contact-advisor">Find nearby Turtlemint advisor</p>
+					 <p class="text-300 mb-1 ps-4 ps-xl-6 contact-advisor">Find a Turtlemint Advisor Near You</p>
                      <div class="mb-3 ps-4 ps-xl-6">
 					 	<form name="popupadvisorbikeform" id="popupadvisorbikeform" method=get action="/insurance-advisor-near-me/" >
-							<label for="pincodeadvisorbike" class="contact-input-adviser">
+							<label for="pincodeadvisorbike" class="contact-input-adviser vertical-input-label">
 								<input type="number" id="pincodeadvisorbike" name="pincode" value="" oninput="this.value = this.value.toUpperCase(); this.setCustomValidity('');" id="name-input" type="text" placeholder="Enter Pin Code" oninvalid="this.setCustomValidity('Please Enter valid Pincode')" max="999999" min="100000" maxlength="6" required required="" onkeypress="if(this.value.length==6) return false;">
 								<input type="hidden" id="verticalBike" name="vertical" value="TW">
 								<button id="popupadvisorbikeformsubmit" type="submit" class="btn">
 									<span>Find Advisor</span>
 								</button>
 							</label>
+							<div class="errtext pt1" id="errMsgPincode"></div>
 						</form>
                      </div>
                      <p class="text-300 mb-1 ps-4 ps-xl-6 tm-advisor-usp"><span>2.5 Lakh+</span> Turtlemint advisors</p>

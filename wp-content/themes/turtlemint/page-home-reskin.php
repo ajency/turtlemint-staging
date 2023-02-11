@@ -13,7 +13,7 @@ get_header('tmhomereskin');
                 <!-- large screen row start -->		
                 <div class="col-6 first-column" style="">
                     <div class="main-banner-txt">
-                    <h2 class="main-banner-txt-header1" style="/*line-height: 54px;*/">The power of <span  style="color:#009F69">tech +</span> the wisdom of <span  style="color:#009F69">advisors</span></h2>
+                    <h2 class="main-banner-txt-header1" style="/*line-height: 54px;*/">The  <span  style="color:#009F69">Futuristic Way</span> <br class="d-none d-md-block">To Buy <span  style="color:#009F69">Insurance</span></h2>
                     <!-- start show/hide div -->
                     <!--<div class="d-none d-lg-block d-sm-none d-md-none">-->
                     <div class="d-none d-lg-block d-sm-none d-md-block">
@@ -78,7 +78,7 @@ get_header('tmhomereskin');
                     <!-- Buttons -->
                     <div class="cta-btns d-none d-lg-block d-sm-none d-md-block" style="">
                     <!-- <div class="d-none d-lg-block d-sm-none d-md-none" style=""> -->
-                    <div class="row-mid-new" style="display: flex;column-gap: 18px;">
+                    <div class="row-mid-new" style="display: flex;column-gap: 18px !important;">
                         <div class="btns-mid ">
                             <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;color: #333333; ">Get a Quote</button>
                             <p style=""><span style="font-weight: 700;">45+ Insurer</span><br><span style="">companies online</span></p>
@@ -230,7 +230,7 @@ get_header('tmhomereskin');
                 </div>
                 <!-- Buttons -->
                 <div class="d-lg-none d-sm-block d-md-none" style="">
-                    <div class="row-mid-new" style="display: flex;/*column-gap: 18px;*/">
+                    <div class="row-mid-new" style="display: flex; column-gap: 18px !important;">
                     <div class="btns-mid ">
                         <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;border-radius: 8px;color: #333333; margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;padding: 16px 26px 15px 29px;">Get a Quote</button>
                         <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">45+ Insurer</span><br><span style="font-weight: 500;">companies online</span></p>
@@ -258,19 +258,19 @@ get_header('tmhomereskin');
     <div class="row home-whyadvisor-row">
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-01.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>Unbiased<br> Advice</p>
+            <p>Unbiased Advice<br> from Experts near you</p>
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-02.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>Certified Industry <br>Expert</p>
+            <p>40 Lac+ <br>Happy Customers</p>
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-03.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>Renewal & Claim <br>Support</p>
+            <p>Hassle-Free <br>Claim Assistance</p>
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-04.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>Quick Digital Support</p>
+            <p>Easy Policy <br>Renewal</p>
         </div>
     </div>
     <div class="become-psop d-lg-none d-sm-block d-md-block">

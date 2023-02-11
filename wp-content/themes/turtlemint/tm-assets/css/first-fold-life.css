@@ -335,6 +335,31 @@ color: #333333;
 .life-icon img.desktop{}
 .life-icon img.mobile{display:none}
 
+
+@media only screen and (max-width: 756px) and (min-width: 753px)
+{
+	.life-banner img.desktop {display: none;}
+
+
+
+.first-fold-life-banner {height: auto;padding-bottom: 0px;}
+
+.life-banner {margin: 0 0 !important;}
+
+.life-banner img.mobile {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 80px;
+}  
+
+.main-banner-txt-new-23 {
+    padding-bottom: 5% !important;
+    padding-top: 3% !important;
+}
+	
+}
+
 @media only screen and (min-width:500px) and (max-width:821px) {
 	.contact-input-quote, .contact-input-adviser {width: 100%;}
 	
