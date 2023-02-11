@@ -197,7 +197,7 @@ $(document).on('change keyup', '.required', function(e){
     let Disabled = true;
      $(parent).find(".required").each(function() {
        let value = this.value
-       if ((value)&&(value.trim() !='') && $(parent).find('.tm-form-group.tm-error').length < 1)
+       if ((value)&&(value.trim() !=''))// && $(parent).find('.tm-form-group.tm-error').length < 1)
            {
              Disabled = false
            }else{
@@ -208,10 +208,14 @@ $(document).on('change keyup', '.required', function(e){
 
     if(Disabled){
         $(parent).find('.tm-button').prop("disabled", true);
-        $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
-        $('#pincodeForm .tm-form-group').removeClass('tm-error');
-        $('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
-        $('#tmOtpForm .tm-form-group').removeClass('tm-error');
+        if($(parent).attr('id') == 'pincodePopup'){
+          $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+          $('#pincodeForm .tm-form-group').removeClass('tm-error');
+        }
+        if($(parent).attr('id') == 'tmOtpPopup'){
+          $('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
+          $('#tmOtpForm .tm-form-group').removeClass('tm-error');
+        }
     }
     else{
         // console.log($(parent).attr('id'))
@@ -220,6 +224,9 @@ $(document).on('change keyup', '.required', function(e){
         }
         else{
             $(parent).find('.tm-button').prop("disabled", false);
+            if($(parent).find('.tm-form-group.tm-error').length > 0){
+              $(parent).find('.tm-button').prop("disabled", true);
+            }
         }
     }
 

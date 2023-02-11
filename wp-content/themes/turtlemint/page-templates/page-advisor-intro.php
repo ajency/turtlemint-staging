@@ -196,6 +196,7 @@ get_header('tmhome');
                         <li>Avoid claim rejections</li>
                         <li>Get maximum assured claim amount</li>
                     </ul>
+                    <small class="d-block mt-4">Please note: Final Claim settlement is at the discretion of the insurers. </small>
                 </div>
             </div>
             <div class="help-section">
