@@ -786,3 +786,19 @@ endforeach;
 }
 
 add_filter('jpeg_quality', function($arg){return 100;});
+
+/*Abhishek 20230211 CF7 Name Validation only Alpha */
+add_filter( 'wpcf7_validate_text*', 'custom_text_validation_filter', 20, 2 );
+
+function custom_text_validation_filter( $result, $tag ) {
+    if ( 'Lead-Name' == $tag->name ) {
+        // matches any utf words with the first not starting with a number
+        $re = '/^[^\p{N}][\p{L}]*/i';
+
+        if (!preg_match($re, $_POST['Lead-Name'], $matches)) {
+            $result->invalidate($tag, "This is not a valid name!" );
+        }
+    }
+
+    return $result;
+};

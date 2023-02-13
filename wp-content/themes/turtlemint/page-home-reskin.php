@@ -51,7 +51,7 @@ get_header('tmhomereskin');
                                     <img class="bike-img" onClick="changeImage('bike')">
                                     <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike-checked.svg">	
                                 </label>
-                                <p>2 Wheeler</p>
+                                <p>Bike</p>
                                 </div>
                             </div>
                             <div class="bannercrd-img">
@@ -62,7 +62,7 @@ get_header('tmhomereskin');
                                     <img class="car-img" onClick="changeImage('car')">
                                     <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car-checked.svg">
                                 </label>
-                                <p>4 Wheeler</p>
+                                <p>Car</p>
                                 </div>
                             </div>
                         </div>
