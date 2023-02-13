@@ -206,7 +206,7 @@ get_header('tmhomereskin');
                                 <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
                                 <img class="bike-img" onClick="changeImage('bike')">
                             </label>
-                            <p>2 Wheeler</p>
+                            <p>Bike</p>
                         </div>
                     </div>
                     <div class="bannercrd-img">
@@ -216,7 +216,7 @@ get_header('tmhomereskin');
                                 <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
                                 <img class="car-img" onClick="changeImage('car')">
                             </label>
-                            <p>4 Wheeler</p>
+                            <p>Car</p>
                         </div>
                     </div>
                     </div>
