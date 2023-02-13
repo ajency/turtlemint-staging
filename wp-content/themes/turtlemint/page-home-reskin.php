@@ -276,7 +276,7 @@ get_header('tmhomereskin');
     <div class="become-psop d-lg-none d-sm-block d-md-block">
 		<p class="txt-1">Join india's largest advsior network</p>
 		<div class="psop-btn">
-			<p class="btn">Become A POSP with us</p>	
+			<p class="btn" onclick="location.href='https://turtlemintpro.onelink.me/vFlk/1aae1fe7';">Become A POSP with us</p>	
 		</div>
 	</div>
     </div>
