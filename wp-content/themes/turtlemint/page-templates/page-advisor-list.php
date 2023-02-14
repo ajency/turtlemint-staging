@@ -27,7 +27,7 @@ get_header('tmhome');
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/location-icon.svg" alt="location">
                     </div>
                     <p class="popup-heading">Find an advisor near you!</p>
-                    <p class="popup-subheading">Enter your Pincode or give access to your location so we can show you advisors in your area</p>
+                    <p class="popup-subheading">Enter your Pincode so we can show you advisors in your area</p>
                     <form class="tm-form" id="pincodeForm">
                         <div class="form-wrap">
                             <div class="tm-form-group filter-form-group <?php echo (isset($vertical)) ? "d-none" : "" ?>">
