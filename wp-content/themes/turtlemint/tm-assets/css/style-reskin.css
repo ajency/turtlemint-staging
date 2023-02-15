@@ -962,12 +962,19 @@ button:hover,
 	.bannercrd-img	{/*border: 2px solid red;*/}
 }
 
+
+@media screen and (min-device-width: 359px) and (max-device-width: 361px){
+    .row-mid-new{column-gap: 8px !important;}
+}
+
 @media screen and (min-device-width: 360px) and (max-device-width: 390px){
 	.bannercrd-img + .bannercrd-img { margin-left: 18px; }
 	.btns-mid button { padding: 15px 25px;}
-	.row-mid-new{column-gap: 8px;}	
+	.row-mid-new{column-gap: 8px}	
 	.bannercrd-img	{/*border: 2px solid red;*/}
 }
+
+
 	
 @media screen and (min-device-width: 366px) and (max-device-width: 400px){  
 	.bannercrd-img + .bannercrd-img {margin-left: 22px; }

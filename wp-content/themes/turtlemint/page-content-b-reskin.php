@@ -20,7 +20,7 @@
                               <div class="mb-3 ps-4 ps-xl-6">                                 
                               </div>
                               <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Instant Policy Issuance</p>
-                              <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Tax Benefits under section 80D</p>
+                              <p class="text-300 ps-4 ps-xl-6 health-banner-p"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Tax Benefits Under Section 80D</p>
                               <p class="text-300 ps-4 ps-xl-6 health-banner-p d-flex"><img class="tick-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tick-mob.svg" />Claim Support From Experts<br class="desk-hide"></p>
                            </div>
                            <!-- Buttons -->

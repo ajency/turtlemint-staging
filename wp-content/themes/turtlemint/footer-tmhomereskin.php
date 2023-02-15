@@ -970,7 +970,7 @@
 					}
 
 					//GA EVENT START
-					gtag('event','Btn_click-'+img_pressed+'-Find Advisor',{event_category:'HP-Buttons',event_label:'Find Advisor'});
+					gtag('event','Btn_click-'+img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1)+'-Find Advisor',{event_category:'HP-Buttons',event_label:'Find Advisor'});
 					//GA EVENT END
 
 					window.location.href = redirect_url;		
@@ -1000,7 +1000,7 @@
 					}
 
 					//GA EVENT START
-					gtag('event','Btn_click-'+img_pressed+'-Get a Quote',{event_category:'HP-Buttons',event_label:'Get a Quote'});
+					gtag('event','Btn_click-'+img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1)+'-Get a Quote',{event_category:'HP-Buttons',event_label:'Get a Quote'});
 					//GA EVENT END
 
 					window.location.href = redirect_url;				

@@ -1182,7 +1182,8 @@ body {
 }
 
 .tm-content {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
+    margin-bottom: 40px;
 
     p {
         margin-bottom: 0px;
@@ -1193,7 +1194,8 @@ body {
         font-size: 30px;
         line-height: 38px;
         color: #101828;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .body {
@@ -1204,7 +1206,8 @@ body {
     }
 
     @media(max-width:767.98px) {
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
+        margin-bottom: 30px;
 
         .heading {
             font-size: 16px;

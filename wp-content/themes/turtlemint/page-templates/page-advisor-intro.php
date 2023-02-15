@@ -43,11 +43,11 @@ get_header('tmhome');
             <div class="left-side">
                 <h1 class="h1-heading hide-md-down">Find an <span class="tm-highlight-text">Insurance Advisor</span></h1>
                 <p class="h1-heading hide-md-up">Find an<br><span class="tm-highlight-text">Insurance Advisor</span></p>
-                <p class="tm-desc">Turtlemint <b>Insurance Advisors</b> provide expert assistance for all your insurance needs <b>anywhere, anytime</b>.</p>
+                <p class="tm-desc">Turtlemint Insurance Advisors provide expert assistance for all your insurance needs <b>Anywhere, Anytime</b>.</p>
                 <ul class="tm-checklist">
                     <li>Expert Advice You Can Count On</li>
                     <li>Trained & Certified Insurance Advisor</li>
-                    <li>Active claim support for any policy, any insurer</li>
+                    <li>Active Claim Support For Any Policy, Any Insurer</li>
                 </ul>
             </div>
             <div class="right-side">
@@ -71,13 +71,13 @@ get_header('tmhome');
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW" data-value="2_Wheeler">
+                                            <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW" data-value="Bike">
                                             <label for="tm-2-wheeler-insurance">
                                                 <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>Bike
                                             </label>
                                         </li>
                                         <li>
-                                            <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW" data-value="4_Wheeler">
+                                            <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW" data-value="Car">
                                             <label for="tm-4-wheeler-insurance">
                                                 <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>Car
                                             </label>
@@ -162,7 +162,7 @@ get_header('tmhome');
                 </div>
                 <div class="content">
                     <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/unbiased-advise-icon.svg" alt="Unbiased Advice" class="icon hide-md-up">Digitally Empowered Advisors</p>
-                    <p class="desc">Access to a wide network of <b>insurance advisors</b> near you to protect what’s important to you</p>
+                    <p class="desc">Access to a wide network of insurance advisors near you to protect what’s important to you</p>
                     <ul class="tm-checklist">
                         <li>Continuous training and upskilling</li>
                         <li>Well-experienced & equipped with latest products</li>
@@ -196,12 +196,12 @@ get_header('tmhome');
                         <li>Avoid claim rejections</li>
                         <li>Get maximum assured claim amount</li>
                     </ul>
-                    <small class="d-block mt-4">Please note: Final Claim settlement is at the discretion of the insurers. </small>
+                    <!-- <small class="d-block mt-4">Please note: Final Claim settlement is at the discretion of the insurers. </small> -->
                 </div>
             </div>
             <div class="help-section">
                 <div class="content">
-                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/quick-digital-support-icon.svg" alt="Quick Digital SupportUnbiased Advice" class="icon hide-md-up">Personalized Insurance Plans</p>
+                    <p class="heading"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/quick-digital-support-icon.svg" alt="Quick Digital SupportUnbiased Advice" class="icon hide-md-up">Insurance Buying Made Easy</p>
                     <p class="desc">Making insurance buying process simple with instant quotes from our certified experts</p>
                     <ul class="tm-checklist">
                         <li>Option to choose from 45+ top insurers</li>
@@ -332,6 +332,9 @@ get_header('tmhome');
     <div class="tm-content">
         <p class="heading">Is home visit service available?</p>
         <p class="body">Yes, you can request a face-to-face consultation with our expert advisors.</p>
+    </div>
+    <div class="tm-content">
+        <p class="body">*Please note: Final Claim settlement is at the discretion of the insurers.</p>
     </div>
 </div>
 

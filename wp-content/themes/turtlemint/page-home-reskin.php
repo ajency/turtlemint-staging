@@ -230,7 +230,7 @@ get_header('tmhomereskin');
                 </div>
                 <!-- Buttons -->
                 <div class="d-lg-none d-sm-block d-md-none" style="">
-                    <div class="row-mid-new" style="display: flex; column-gap: 18px !important;">
+                    <div class="row-mid-new" style="display: flex; column-gap: 18px;">
                     <div class="btns-mid ">
                         <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;border-radius: 8px;color: #333333; margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;padding: 16px 26px 15px 29px;">Get a Quote</button>
                         <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">45+ Insurer</span><br><span style="font-weight: 500;">companies online</span></p>
@@ -258,7 +258,7 @@ get_header('tmhomereskin');
     <div class="row home-whyadvisor-row">
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-01.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>Unbiased Advice<br> from Experts near you</p>
+            <p>Unbiased Advice<br> From Experts Near You</p>
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-02.svg" class="home-whyadvisor-img" width="150" height=""  />
