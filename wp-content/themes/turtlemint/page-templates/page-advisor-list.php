@@ -209,7 +209,7 @@ get_header('tmhome');
         <span class="hide-md-up">
             <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span><br> Near You</h1>
         </span>
-        <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation and home visit with our <b>Licensed Insurance Advisors</b></p>
+        <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation and home visit with our Insurance Advisors</p>
     </div>
 
     <!-- advisor cards main container -->
@@ -426,7 +426,7 @@ get_header('tmhome');
                 <div class="tm-headings">
                     <div class="left-side">
                         <p class="tm-h1-medium tm-section-heading">What To Expect</p>
-                        <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 Quick Steps To Getting The Right Insurance Advice from our experts</p>
+                        <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right insurance advice from our experts</p>
                     </div>
                     <div class="right-side hide-md-down">
                         <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
@@ -440,7 +440,7 @@ get_header('tmhome');
                         <div class="step-num">Step 1</div>
                         <div class="step-connector"></div>
                         <p class="content">
-                        Search an <b>insurance advisor</b> near you
+                        Search an insurance advisor near you
                         </p>
                     </div>
                     <div class="tm-advise-step">

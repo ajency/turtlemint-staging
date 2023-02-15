@@ -96,8 +96,8 @@ const VERTICAL_JSON = {
 }
 
 const LIMIT = 9;
-const SERVER = 'https://app.mintpro.in';
-const SERVER_2 = 'https://pro.turtlemint.com';
+const SERVER = 'https://app.sanity.turtle-feature.com';
+const SERVER_2 = 'https://pro.sanity.turtle-feature.com';
 const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
 
   async function getPincodeLocation(pincode){
@@ -202,7 +202,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
           <div class="advisor-card">
               <div class="advisor-card__wraper">
                   <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="https://pro.parasite.turtle-feature.com/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -227,7 +227,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="https://pro.parasite.turtle-feature.com/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -303,7 +303,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="https://pro.parasite.turtle-feature.com/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
