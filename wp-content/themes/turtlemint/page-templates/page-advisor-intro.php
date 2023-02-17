@@ -110,10 +110,10 @@ get_header('tmhome');
             <div class="banner-image hide-md-up">
                 <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
             </div>
-            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across The Country.</p>
+            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across the Country.</p>
         </div>
         <div class="right-side">
-            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across The Country.</p>
+            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across the Country.</p>
             <div class="hide-md-down">
                 <div class="stats-section">
                     <div class="stat">
@@ -125,7 +125,7 @@ get_header('tmhome');
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">74L<span class="d-md-none d-lg-inline-block">acs</span>+</p>
+                        <p class="number">74 L<span class="d-md-none d-lg-inline-block">acs</span>+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ get_header('tmhome');
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">74Lacs+</p>
+                        <p class="number">74 Lacs+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ get_header('tmhome');
                     <ul class="tm-checklist">
                         <li>Get your claim in short time</li>
                         <li>Avoid claim rejections</li>
-                        <li>Get maximum assured claim amount</li>
+                        <li>Get maximum assured claim amount*</li>
                     </ul>
                     <!-- <small class="d-block mt-4">Please note: Final Claim settlement is at the discretion of the insurers. </small> -->
                 </div>

@@ -78,7 +78,7 @@ function openPopup(popupId, advisorName, advisorId) {
 
   switch(popupId){
     case "pincodePopup": 
-      gtag('event', 'Popup', {
+      gtag('event', 'Popup-'+sessionStorage.getItem('tm_vertical_data'), {
         'event_category': 'DPL_Popup',
         'event_label': 'Pincode_Popup'
       });
@@ -388,7 +388,7 @@ $('#pincodeForm').submit( function(e){
     let vertical = $(this).find('input[name=tm-insurance-type]:checked').val()
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
-    gtag('event', 'Btn_click-Submit', {
+    gtag('event', 'Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Submit', {
       'event_category': 'DPL_Popup',
       'event_label': 'Submit'
     });

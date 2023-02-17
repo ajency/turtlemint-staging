@@ -721,7 +721,7 @@ get_header('tmhome');
         <a class="tm-button large">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
-            <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">+91 8962995991</a>
+            <a href="tel:02262919080" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">022-62919080</a>
         </div>
 
     </div>
@@ -769,7 +769,7 @@ get_header('tmhome');
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/profile-icon.svg" alt="profile">
                     </div>
                     <p class="popup-heading">Just a bit more about you!</p>
-                    <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
+                    <p class="popup-subheading">Please share your details so that our advisor can connect with you.</p>
                     <form class="tm-form style2" id="getInTouchForm" novalidate>
                         <div class="form-wrap">
                             <div class="tm-form-group">
@@ -789,7 +789,7 @@ get_header('tmhome');
 
                             <p class="error-message text-center" id="maxLimitMsg">You have exceeded the maximum limit for submitting the form. Try again after 30 minutes.</p>
                             <button class="tm-button" type="submit" disabled>Submit</button>
-                            <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
+                            <p class="form-note">You agree to be contacted on WhatsApp by submitting details.</p>
                         </div>
                     </form>
                 </div>

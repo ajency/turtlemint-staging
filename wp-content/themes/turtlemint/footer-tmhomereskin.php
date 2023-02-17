@@ -930,6 +930,10 @@
 		checked = true;
 		img_pressed = img;
 		
+		// GA EVENT START
+		gtag('event','Btn_click-'+img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1),{event_category:'HP-Buttons',event_label: img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1)});
+		// GA EVENT END
+
 	}
 	function changeBtn(value){
 		// if(jQuery("input[type='radio'].radio-grp").is(':checked')) {
