@@ -68,14 +68,14 @@
 			})(window,document,'script','dataLayer','GTM-PCZGBP');</script> -->
 			<!-- End Google Tag Manager -->
 			<!-- Google tag (gtag.js) -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61873031-16"></script>
+			<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61873031-16"></script>
 			<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 
 			gtag('config', 'UA-61873031-16');
-			</script>
+			</script> -->
 		<?php } ?>
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -234,6 +234,18 @@
         </script>
 		<!-- endinject:head -->
 		<?php wp_head(); ?>	
+
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
+			<style>
+				.advisor-card__wraper .advisor-name {
+					display: -webkit-box;
+					-webkit-line-clamp: 1;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			</style>
+		<?php } ?>
 	</head>
 	<body <?php body_class();  ?>>
 	
