@@ -237,12 +237,14 @@
 
 		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
 			<style>
+				@media (min-width: 768px){
 				.advisor-card__wraper .advisor-name {
 					display: -webkit-box;
 					-webkit-line-clamp: 1;
 					-webkit-box-orient: vertical;
 					overflow: hidden;
 					text-overflow: ellipsis;
+				}
 				}
 			</style>
 		<?php } ?>
