@@ -429,7 +429,7 @@ get_header('tmhome');
                         <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right insurance advice from our experts</p>
                     </div>
                     <div class="right-side hide-md-down">
-                        <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors')});">More about Turtlemint Advisors</a>
+                        <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
                     </div>
                 </div>
                 <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
@@ -475,7 +475,7 @@ get_header('tmhome');
                     </div>
                 </div>
                 <div class="hide-md-up link-container">
-                    <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors')});">More about Turtlemint Advisors</a>
+                    <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
                 </div>
             </div>
         </div>
