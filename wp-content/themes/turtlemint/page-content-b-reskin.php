@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="btns-mid ">
                                     <button onclick="gtag('event','Btn_click-Find Advisor',{event_category:'Health_VP-Buttons',event_label:'Find Advisor'});location.href='/insurance-advisor-near-me/?vertical=Health';" type="button" class="btn  btn-lg cta-banner-green" style="">Find Advisor</button>
-                                    <p class="cta-banner-subtext"><span>Connect with nearby </span><br><span style="font-weight: 700;">Turtlemint advisor</span></p>
+                                    <p class="cta-banner-subtext"><span>Connect with nearby </span><br><span style="font-weight: 700;">Turtlemint Advisor</span></p>
                                 </div>
                                 </div>
                             </div>

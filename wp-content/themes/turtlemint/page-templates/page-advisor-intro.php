@@ -354,6 +354,12 @@ get_header('tmhome');
             window.tm_pincode_data = <?php echo $pincode;
                                     } ?>
     });
+
+    $( document ).ready(function() {
+        $(".filter-select-group input[type=radio]").change(function () {
+            gtag('event', 'Btn_click-'+$(this).data('value'), {event_category:'DP_Intro-Buttons',event_label: $(this).data('value')});
+        })
+    })
 </script>
 
 <?php
