@@ -117,15 +117,15 @@ get_header('tmhome');
             <div class="hide-md-down">
                 <div class="stats-section">
                     <div class="stat">
-                        <p class="number">270K+</p>
+                        <p class="number">2.7 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
                         <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
-                        <p class="number">17K+</p>
+                        <p class="number">17 K+</p>
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">74 L<span class="d-md-none d-lg-inline-block">acs</span>+</p>
+                        <p class="number">70 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>
@@ -133,15 +133,15 @@ get_header('tmhome');
             <div class="hide-md-up">
                 <div class="stats-section ">
                     <div class="stat">
-                        <p class="number">270K+</p>
+                        <p class="number">2.7 Lakh+</p>
                         <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
-                        <p class="number">17K+</p>
+                        <p class="number">17 K+</p>
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">74 Lacs+</p>
+                        <p class="number">70 Lakh+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>

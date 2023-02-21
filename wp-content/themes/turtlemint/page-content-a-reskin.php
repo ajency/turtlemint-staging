@@ -45,7 +45,7 @@ get_header('tmproductreskin');
 							<div class="errtext pt1" id="errMsgPincode"></div>
 						</form>
                      </div>
-					 <p class="text-300 mb-1 ps-4 ps-xl-6 tm-advisor-usp"><span>2.5 Lakh+</span> Turtlemint advisors</p>
+					 <p class="text-300 mb-1 ps-4 ps-xl-6 tm-advisor-usp"><span>2.7 Lakh+</span> Turtlemint advisors</p>
                   </div>
                </div>
             </div>
@@ -236,7 +236,7 @@ get_header('tmproductreskin');
 			<div class="col-xl-2 col-lg-3 col-md-4">
 				<div class="custom-become-content">
 					<!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png" /> -->
-					<h3>42 Lakh +</h3>
+					<h3>70 Lakh +</h3>
 					<p>Policies Bought</p>
 				</div>
 			</div>

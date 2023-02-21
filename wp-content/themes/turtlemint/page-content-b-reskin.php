@@ -228,7 +228,7 @@
 					<div class="col-xl-2 col-lg-3 col-md-4">
 						<div class="custom-become-content">
 							<!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png" /> -->
-							<h3>42 Lakh +</h3>
+							<h3>70 Lakh +</h3>
 							<p>Policies Bought</p>
 						</div>
 					</div>
