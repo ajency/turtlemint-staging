@@ -88,7 +88,7 @@ get_header('tmhomereskin');
                         </div>
                         <div class="btns-mid ">
                             <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background:#00A364;color: #FFFFFF;">Find Advisor</button>
-                            <p style=""><span style="font-weight: 700;">2.5 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
+                            <p style=""><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
                         </div>
                     </div>
                     </div>
@@ -147,22 +147,22 @@ get_header('tmhomereskin');
                     <div class="slider-home-banner">
                         <div class="">
                             <div class="">
-                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-slider-01.png" class="" width="" height="auto" frameborder="0" /></a>
+                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/health-insurance.png" class="" width="" height="auto" frameborder="0" alt="Health Insurance" title="Health Insurance" /></a>
                             </div>
                         </div>
                         <div class="">
                             <div class="">
-                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-slider-01.png" class="" width="" height="auto" frameborder="0" /></a>
+                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/life-insurance.png" class="" width="" height="auto" frameborder="0" alt="Life Insurance" title="Life Insurance" /></a>
                             </div>
                         </div>
                         <div class="">
                             <div class="">
-                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-slider-01.png" class="" width="" height="auto" frameborder="0" /></a>
+                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/bike-insurance.png" class="" width="" height="auto" frameborder="0" alt="Bike Insurance" title="Bike Insurance" /></a>
                             </div>
                         </div>
                         <div class="">
                             <div class="">
-                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-slider-01.png" class="" width="" height="auto" frameborder="0" /></a>
+                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-insurance.png" class="" width="" height="auto" frameborder="0" alt="Car Insurance" title="Car Insurance" /></a>
                             </div>
                         </div>
                     </div>
@@ -262,7 +262,7 @@ get_header('tmhomereskin');
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-02.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>40 Lac+ <br>Happy Customers</p>
+            <p>40 Lakh+ <br>Happy Customers</p>
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-03.svg" class="home-whyadvisor-img" width="150" height=""  />
@@ -307,14 +307,14 @@ get_header('tmhomereskin');
 				<div class="col-xl-2 col-lg-3 col-md-4">
                     <div class="custom-become-content">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p1.png" />
-                        <h3>35 Lakh+</h3>
+                        <h3>40 Lakh+</h3>
                         <p>Happy Customers</p>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4">
                     <div class="custom-become-content">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png" />
-                        <h3>2.4 Lakh+</h3>
+                        <h3>2.7 Lakh+</h3>
                         <p>Advisors</p>
                     </div>
                 </div>
@@ -467,7 +467,7 @@ get_header('tmhomereskin');
                             <span class="point-subtext">Find and save all your policies, get reminders, track claims on your fingertips</span></li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Claim any policy</span><br><span class="point-subtext">Get quick claims support from our experts for any policy, any insurer</span></li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>All policies explained</span><br><span class="point-subtext">Understand the features of your policies for complete risk protection</span></li>
-							<li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Consult an expert</span><br><span class="point-subtext">Consult one of our 2.4 lakh+ advisors/POSPs on your insurance</span></li>
+							<li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Consult an expert</span><br><span class="point-subtext">Consult one of our 2.7 lakh+ advisors/POSPs on your insurance</span></li>
                         </ul>
                     </div>
                 </div>

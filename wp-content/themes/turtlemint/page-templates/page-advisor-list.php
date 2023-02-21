@@ -209,7 +209,7 @@ get_header('tmhome');
         <span class="hide-md-up">
             <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span><br> Near You</h1>
         </span>
-        <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Book a free consultation and home visit with our Insurance Advisors</p>
+        <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Get a free consultation and home visit from our Insurance Advisors</p>
     </div>
 
     <!-- advisor cards main container -->
@@ -429,7 +429,7 @@ get_header('tmhome');
                         <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right insurance advice from our experts</p>
                     </div>
                     <div class="right-side hide-md-down">
-                        <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
+                        <a href="<?php echo site_url() ?>/find-insurance-advisor" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
                     </div>
                 </div>
                 <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
@@ -475,7 +475,7 @@ get_header('tmhome');
                     </div>
                 </div>
                 <div class="hide-md-up link-container">
-                    <a href="<?php echo site_url() ?>/advisor-intro" class="tm-link arrow-right-filled">More about Turtlemint Advisors</a>
+                    <a href="<?php echo site_url() ?>/find-insurance-advisor" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
                 </div>
             </div>
         </div>
@@ -721,7 +721,7 @@ get_header('tmhome');
         <a class="tm-button large">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
-            <a href="tel:+918962995991" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">+91 8962995991</a>
+            <a href="tel:02262919080" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">022-62919080</a>
         </div>
 
     </div>
@@ -769,7 +769,7 @@ get_header('tmhome');
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/profile-icon.svg" alt="profile">
                     </div>
                     <p class="popup-heading">Just a bit more about you!</p>
-                    <p class="popup-subheading">Please share your details so that our advisor can connect with you</p>
+                    <p class="popup-subheading">Please share your details so that our advisor can connect with you.</p>
                     <form class="tm-form style2" id="getInTouchForm" novalidate>
                         <div class="form-wrap">
                             <div class="tm-form-group">
@@ -789,7 +789,7 @@ get_header('tmhome');
 
                             <p class="error-message text-center" id="maxLimitMsg">You have exceeded the maximum limit for submitting the form. Try again after 30 minutes.</p>
                             <button class="tm-button" type="submit" disabled>Submit</button>
-                            <p class="form-note">You agree to be contacted on whatsapp by submitting details</p>
+                            <p class="form-note">You agree to be contacted on WhatsApp by submitting details.</p>
                         </div>
                     </form>
                 </div>

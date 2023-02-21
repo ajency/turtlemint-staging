@@ -110,22 +110,22 @@ get_header('tmhome');
             <div class="banner-image hide-md-up">
                 <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
             </div>
-            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across The Country.</p>
+            <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across the Country.</p>
         </div>
         <div class="right-side">
-            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across The Country.</p>
+            <p class="h1-heading hide-md-down">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across the Country.</p>
             <div class="hide-md-down">
                 <div class="stats-section">
                     <div class="stat">
-                        <p class="number">270K+</p>
+                        <p class="number">2.7 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
                         <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
-                        <p class="number">17K+</p>
+                        <p class="number">17 K+</p>
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">74L<span class="d-md-none d-lg-inline-block">acs</span>+</p>
+                        <p class="number">70 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>
@@ -133,15 +133,15 @@ get_header('tmhome');
             <div class="hide-md-up">
                 <div class="stats-section ">
                     <div class="stat">
-                        <p class="number">270K+</p>
+                        <p class="number">2.7 Lakh+</p>
                         <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
-                        <p class="number">17K+</p>
+                        <p class="number">17 K+</p>
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">74Lacs+</p>
+                        <p class="number">70 Lakh+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ get_header('tmhome');
                     <ul class="tm-checklist">
                         <li>Get your claim in short time</li>
                         <li>Avoid claim rejections</li>
-                        <li>Get maximum assured claim amount</li>
+                        <li>Get maximum assured claim amount*</li>
                     </ul>
                     <!-- <small class="d-block mt-4">Please note: Final Claim settlement is at the discretion of the insurers. </small> -->
                 </div>
@@ -354,6 +354,12 @@ get_header('tmhome');
             window.tm_pincode_data = <?php echo $pincode;
                                     } ?>
     });
+
+    $( document ).ready(function() {
+        $(".filter-select-group input[type=radio]").change(function () {
+            gtag('event', 'Btn_click-'+$(this).data('value'), {event_category:'DP_Intro-Buttons',event_label: $(this).data('value')});
+        })
+    })
 </script>
 
 <?php
