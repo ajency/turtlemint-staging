@@ -240,7 +240,7 @@ get_header('tmhomereskin');
                     </div>
                     <div class="btns-mid ">
                         <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background: #00A364;border-radius: 8px;color: #FFFFFF;margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;line-height: 17px;padding: 16px 29px 18px 30px;">Find Advisor</button>
-                        <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">2.5 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
+                        <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
                     </div>
                     </div>
                 </div>
