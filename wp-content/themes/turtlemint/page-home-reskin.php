@@ -314,7 +314,7 @@ get_header('tmhomereskin');
                 <div class="col-xl-2 col-lg-3 col-md-4">
                     <div class="custom-become-content">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png" />
-                        <h3>2.4 Lakh+</h3>
+                        <h3>2.7 Lakh+</h3>
                         <p>Advisors</p>
                     </div>
                 </div>
@@ -467,7 +467,7 @@ get_header('tmhomereskin');
                             <span class="point-subtext">Find and save all your policies, get reminders, track claims on your fingertips</span></li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Claim any policy</span><br><span class="point-subtext">Get quick claims support from our experts for any policy, any insurer</span></li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>All policies explained</span><br><span class="point-subtext">Understand the features of your policies for complete risk protection</span></li>
-							<li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Consult an expert</span><br><span class="point-subtext">Consult one of our 2.4 lakh+ advisors/POSPs on your insurance</span></li>
+							<li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Consult an expert</span><br><span class="point-subtext">Consult one of our 2.7 lakh+ advisors/POSPs on your insurance</span></li>
                         </ul>
                     </div>
                 </div>

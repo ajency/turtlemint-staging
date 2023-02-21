@@ -217,6 +217,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       </div>
                   </div>
                   <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
+                  <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect">Visit Website</a>
               </div>
           </div>
       </div>`
@@ -242,6 +243,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                           </div>
                       </div>
                       <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
+                      <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect">Visit Website</a>
                   </div>
               </div>
           </div>`
@@ -318,6 +320,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                           </div>
                       </div>
                       <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
+                      <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect">Visit Website</a>
                   </div>
               </div>
           </div>`
