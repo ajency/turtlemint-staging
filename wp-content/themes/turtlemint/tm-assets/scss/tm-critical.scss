@@ -442,6 +442,10 @@
         margin-bottom: 0px;
     }
 
+    .h1-heading{
+        margin-top: 0px;
+    }
+
     .tm-find-advisor-form {
         background: #FFFFFF;
         border: 1px solid rgba(217, 217, 217, 0.5);
@@ -517,13 +521,14 @@
     }
 
     @media(min-width:992px) {
+        padding-top: 14px;
         .left-side {
-            padding-top: 14px;
             width: 60%;
         }
 
         .right-side {
             width: 40%;
+            margin-top: 7px;
         }
 
     }
