@@ -262,26 +262,26 @@
 	<!--mobile menu-->
 	<div class="canvas-container mobile-nav">
 		<div class="content-container">
-			<div class="inner-container">
+			<div class="inner-container" style="background-color:#fff;">
 				<a class="" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/logo.png" alt="" style="width: 160px;margin: 0 auto;padding: 15px 14px" class=""></a>
 				<a href="#" class="button mmm main-menu-toggle ">
 					<div class="hamburger"></div>
 				</a>
 				<!--<a href="#" class="button mmm quick-links-toggle">Quick Links</a>-->
-				<div class="submenu-a"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div>
+				<!-- <div class="submenu-a"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div> -->
 				<div style="clear:both"></div>
 			</div>
 		</div>
 		<!-- End content-container -->
 		<div style="z-index: 99; min-height: 1000px !important"  class="main-menu mobile-mega-menu">
 			<div class="content-container">
-				<div class="inner-container">
+				<div class="inner-container" style="background-color:#fff;">
 					<a class="" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/logo.png" alt="" style="width: 160px;margin: 0 auto;padding: 15px 14px" class=""></a>
 					<a href="#" class="button mmm main-menu-toggle ">
 						<div class="hamburger"></div>
 					</a>
 					<!--<a href="#" class="button mmm quick-links-toggle">Quick Links</a>-->
-					<div class="submenu-b"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div>
+					<!-- <div class="submenu-b"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div> -->
 					<div style="clear:both"></div>
 				</div>
 			</div>

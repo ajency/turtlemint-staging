@@ -378,7 +378,10 @@ async function pincodeValidaion(){
     }
     $('#pincodeForm .location-wraper').removeClass('tm-loading')
 }
-
+function tmScrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 $('#pincodeForm').submit( function(e){
     e.preventDefault();
     $('#pincodePopup').removeClass('restrict-event')
@@ -392,6 +395,7 @@ $('#pincodeForm').submit( function(e){
       'event_category': 'DPL_Popup',
       'event_label': 'Submit'
     });
+    tmScrollToTop()
 })
 
 /******* get in touch Form flow ********/

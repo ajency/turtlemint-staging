@@ -207,7 +207,7 @@ get_header('tmhome');
             <h1 class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span> Near You</h1>
         </span>
         <span class="hide-md-up">
-            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span><br> Near You</h1>
+            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span> Near You</h1>
         </span>
         <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Get a free consultation and home visit from our Insurance Advisors</p>
     </div>
