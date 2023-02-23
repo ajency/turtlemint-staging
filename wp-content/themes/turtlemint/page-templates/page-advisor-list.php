@@ -8,8 +8,11 @@ $pincode = isset($_GET["pincode"]) && preg_match('/^[0-9]{6}$/', $_GET["pincode"
 $vertical_array = array('FW','TW','Life','Health');
 $vertical = isset($_GET["vertical"]) && in_array($_GET["vertical"], $vertical_array) ? htmlspecialchars($_GET["vertical"]) : NULL ;
 $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "0";
+$bodyClasses ='';
 
-get_header('tmhome');
+!(isset($pincode) && isset($vertical)) ? $bodyClasses ='tmStopScorll' : $bodyClasses ='';
+
+get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
 ?>
 
 <!-- pincode popup -->
@@ -875,4 +878,4 @@ get_header('tmhome');
 </script>
 
 <?php
-get_footer('tmhome');
+get_footer('tmhomereskin');

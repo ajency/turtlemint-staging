@@ -532,6 +532,13 @@
 
     <!--Javascript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php', 'page-templates/page-advisor-list.php' ) ) ) { ?>
+	<!-- critical js -->
+	<script async src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/tm-critical.js?t=<?php echo time(); ?>"></script>
+	<!-- critical js end -->
+<?php } ?>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 	crossorigin="anonymous"></script>
@@ -1043,5 +1050,11 @@
 		
 	
     <!-- endinject:foot -->
+
+	<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php', 'page-templates/page-advisor-list.php' ) ) ) { ?>
+		<!-- defered js -->
+		<script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/js/locator.js?t=<?php echo time(); ?>" defer></script>
+	<?php } ?>
+
     </body>
 </html>

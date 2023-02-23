@@ -65,6 +65,7 @@ $(".tm-select-option").click(function () {
 /* popup */
 function openPopup(popupId, advisorName, advisorId) {
   $("#" + popupId).addClass("show");
+  $('body').addClass('tmStopScorll')
 
   if(popupId == 'tmOtpPopup'){
     countDownTimer(0, 0, 30);
@@ -100,6 +101,7 @@ function openPopup(popupId, advisorName, advisorId) {
 function closePopup(popupId) {
   if(!$("#" + popupId).hasClass('restrict-event')){
     $("#" + popupId).removeClass("show disableCloseBtn");
+    $('body').removeClass('tmStopScorll')
   }
   if(popupId == 'tmOtpPopup'){
     clearOTP()

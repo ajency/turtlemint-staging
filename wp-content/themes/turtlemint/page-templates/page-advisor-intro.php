@@ -9,7 +9,7 @@ $vertical_array = array('FW', 'TW', 'Life', 'Health');
 $vertical = isset($_GET["vertical"]) && in_array($_GET["vertical"], $vertical_array) ? htmlspecialchars($_GET["vertical"]) : NULL;
 $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "0";
 
-get_header('tmhome');
+get_header('tmhomereskin');
 ?>
 
 <script>
@@ -363,4 +363,4 @@ get_header('tmhome');
 </script>
 
 <?php
-get_footer('tmhome');
+get_footer('tmhomereskin');
