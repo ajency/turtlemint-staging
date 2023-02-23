@@ -332,6 +332,9 @@
 							</li>
 						</ul>
 					</li>
+					<li>
+						<a class="subre2" href="/find-insurance-advisor/">Find Advisor</a>
+					</li>
 					<!--level one end-->
 					<!--<li>
 						<a class="acc__card" herf=""><div class="acc__title">Accordion Title #2</div>
@@ -468,6 +471,13 @@
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -521,6 +531,13 @@
 									<div class="dropdown-header img-text-btn">
 										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-blog.png">
 										<p>Read our Blogs</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
@@ -586,6 +603,13 @@
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -644,6 +668,13 @@
 									<div class="dropdown-header img-text-btn">
 										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-blog.png">
 										<p>Read our Blogs</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
