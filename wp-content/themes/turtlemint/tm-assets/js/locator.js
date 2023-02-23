@@ -65,6 +65,7 @@ $(".tm-select-option").click(function () {
 /* popup */
 function openPopup(popupId, advisorName, advisorId) {
   $("#" + popupId).addClass("show");
+  $('body').addClass('tmStopScorll')
 
   if(popupId == 'tmOtpPopup'){
     countDownTimer(0, 0, 30);
@@ -100,6 +101,7 @@ function openPopup(popupId, advisorName, advisorId) {
 function closePopup(popupId) {
   if(!$("#" + popupId).hasClass('restrict-event')){
     $("#" + popupId).removeClass("show disableCloseBtn");
+    $('body').removeClass('tmStopScorll')
   }
   if(popupId == 'tmOtpPopup'){
     clearOTP()
@@ -378,7 +380,10 @@ async function pincodeValidaion(){
     }
     $('#pincodeForm .location-wraper').removeClass('tm-loading')
 }
-
+function tmScrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 $('#pincodeForm').submit( function(e){
     e.preventDefault();
     $('#pincodePopup').removeClass('restrict-event')
@@ -392,6 +397,7 @@ $('#pincodeForm').submit( function(e){
       'event_category': 'DPL_Popup',
       'event_label': 'Submit'
     });
+    tmScrollToTop()
 })
 
 /******* get in touch Form flow ********/

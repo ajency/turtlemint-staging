@@ -20,6 +20,51 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
+			<title>Find Experienced Insurance Advisors Near You - Turtlemint</title>
+			<meta name="description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
+			<meta name="keywords" content="insurance advisor near me">
+			<!-- og data -->
+			<meta property="og:title" content="Find Experienced Insurance Advisors Near You - Turtlemint">
+			<meta property="og:site_name" content="Turtlemint">
+			<meta property="og:url" content="<?php echo get_permalink( get_the_ID() ); ?>">
+			<meta property="og:description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
+			<meta property="og:type" content="website">
+			<meta property="og:image" content="https://www.turtlemint.com/wp-content/themes/turtlemint/tm-assets/img/logo.png">
+			<!-- twitter card -->
+			<meta name="twitter:card" content="summary">
+			<meta name="twitter:site" content="@helloturtlemint" />
+			<meta property="twitter:title" content="Find Experienced Insurance Advisors Near You - Turtlemint">
+			<meta name="twitter:image" content="https://www.turtlemint.com/wp-content/themes/turtlemint/tm-assets/img/logo.png">
+			<meta property="twitter:description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
+
+
+			<script type="application/ld+json">
+				{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "<?php echo home_url() ?>"
+				},{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Insurance Advisor Near Me",
+					"item": "<?php echo get_permalink( get_the_ID() ); ?>"
+				}]
+				}
+			</script>
+		<?php } ?>
+
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php', 'page-templates/page-advisor-list.php' ) ) ) { ?>
+			<!-- critical css -->
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-critical.css?t=<?php echo time(); ?>" />
+			<!-- critical css end -->
+		<?php } ?>
+
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<!-- SG test -->
 		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-favicon.png" type="image/x-icon">
@@ -43,6 +88,24 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/mn/styles/jquery-mobile-mega-menu-min.css">
         <script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/mn/scripts/vendor/modernizr-min.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/mobilemenu-reskin.css"/>
+
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-intro.php', 'page-templates/page-advisor-list.php' ) ) ) { ?>
+			<!-- defered css -->
+			<link rel="preload" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css?t=<?php echo time(); ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+			<noscript><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/css/tm-styles.css?t=<?php echo time(); ?>"></noscript>
+			<!-- defered css end -->
+
+			<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+				;
+				})(window,document,'script','dataLayer','GTM-PCZGBP');
+			</script>
+			<!-- End Google Tag Manager -->
+		<?php } ?>
+		
 		<!-- Google Tag Manager -->
 		<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -174,8 +237,29 @@
         </script>
 		<!-- endinject:head -->
 		<?php wp_head(); ?>	
+
+		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
+			<style>
+				@media (min-width: 768px){
+				.advisor-card__wraper .advisor-name {
+					display: -webkit-box;
+					-webkit-line-clamp: 1;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				}
+			</style>
+		<?php } ?>
 	</head>
-	<body <?php body_class();  ?>>
+	<?php 
+		if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) {
+			$tmBodyClasses = $args['tmBodyClasses'];
+		}else{
+			$tmBodyClasses = '';
+		}
+	?>
+	<body <?php body_class($tmBodyClasses);  ?>>
 	<div class="mobile-nav"></div>
 	<!--mobile menu-->
 	<div class="canvas-container mobile-nav">
@@ -332,6 +416,9 @@
 							</li>
 						</ul>
 					</li>
+					<li>
+						<a class="subre2" href="/find-insurance-advisor/">Find Advisor</a>
+					</li>
 					<!--level one end-->
 					<!--<li>
 						<a class="acc__card" herf=""><div class="acc__title">Accordion Title #2</div>
@@ -468,6 +555,13 @@
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -521,6 +615,13 @@
 									<div class="dropdown-header img-text-btn">
 										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-blog.png">
 										<p>Read our Blogs</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
@@ -586,6 +687,13 @@
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -644,6 +752,13 @@
 									<div class="dropdown-header img-text-btn">
 										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-blog.png">
 										<p>Read our Blogs</p>
+										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
+									</div>
+								</a>
+								<a href="/find-insurance-advisor/">
+									<div class="dropdown-header img-text-btn">
+										<img class="img-menu-1" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png">
+										<p>Find Advisor</p>
 										<img class="img-menu-arrow" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/menu-arrow-next.png">
 									</div>
 								</a>

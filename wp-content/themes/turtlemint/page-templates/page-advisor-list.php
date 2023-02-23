@@ -8,8 +8,11 @@ $pincode = isset($_GET["pincode"]) && preg_match('/^[0-9]{6}$/', $_GET["pincode"
 $vertical_array = array('FW','TW','Life','Health');
 $vertical = isset($_GET["vertical"]) && in_array($_GET["vertical"], $vertical_array) ? htmlspecialchars($_GET["vertical"]) : NULL ;
 $offset = isset($_GET["offset"]) ? htmlspecialchars($_GET["offset"]) : "0";
+$bodyClasses ='';
 
-get_header('tmhome');
+!(isset($pincode) && isset($vertical)) ? $bodyClasses ='tmStopScorll' : $bodyClasses ='';
+
+get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
 ?>
 
 <!-- pincode popup -->
@@ -207,7 +210,7 @@ get_header('tmhome');
             <h1 class="tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span> Near You</h1>
         </span>
         <span class="hide-md-up">
-            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span><br> Near You</h1>
+            <h1 class=" tm-h1-regular tm-section-heading"><span class="tm-h1-bold tm-highlight-text agent-count-js">45 Insurance Advisors</span> Near You</h1>
         </span>
         <p class="tm-body tm-grey-text mb-0 tm-section-subheading">Get a free consultation and home visit from our Insurance Advisors</p>
     </div>
@@ -875,4 +878,4 @@ get_header('tmhome');
 </script>
 
 <?php
-get_footer('tmhome');
+get_footer('tmhomereskin');

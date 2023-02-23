@@ -202,7 +202,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
           <div class="advisor-card">
               <div class="advisor-card__wraper">
                   <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -217,6 +217,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       </div>
                   </div>
                   <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
+                  <br/>
                   <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect">Visit Website</a>
               </div>
           </div>
@@ -228,7 +229,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -243,6 +244,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                           </div>
                       </div>
                       <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
+                      <br/>
                       <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect">Visit Website</a>
                   </div>
               </div>
@@ -305,7 +307,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
                       <div class="advisor-image">
-                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'">' : '' }
+                      ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
@@ -320,6 +322,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                           </div>
                       </div>
                       <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
+                      <br/>
                       <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect">Visit Website</a>
                   </div>
               </div>

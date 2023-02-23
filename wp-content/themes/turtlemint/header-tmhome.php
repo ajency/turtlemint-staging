@@ -268,7 +268,7 @@
 					<div class="hamburger"></div>
 				</a>
 				<!--<a href="#" class="button mmm quick-links-toggle">Quick Links</a>-->
-				<div class="submenu-a"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div>
+				<!-- <div class="submenu-a"><a class="" target="_blank" href="https://turtlemintpro.onelink.me/vFlk/1aae1fe7">Become a PoSP with us</a><a class="" href="/raise-claim/">Raise a Claim</a></div> -->
 				<div style="clear:both"></div>
 			</div>
 		</div>
