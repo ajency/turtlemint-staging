@@ -327,7 +327,7 @@ get_header('tmhomereskin');
     </div>
     <div class="tm-content">
         <p class="heading">Is there any support for claims?</p>
-        <p class="body">There is full claim support from Turtlemint PoSP Advisor for any policy, any insurer whether bought from Turtlemint. You can raise a claim by calling <a class="tm-highlight-text" href="tel:18002660101"><b>1800 266 0101</b></a> or emailing at <a class="tm-highlight-text" href="mailto:claims@turtlemint.com"><b>claims@turtlemint.com</b></a> and submit documents as advised by our claims expert.</p>
+        <p class="body">There is full claim support from Turtlemint PoSP Advisor for any policy, any insurer irrespective of where the policy is taken from. Raise claim requests and keep track on-the-go by downloading the <a class="tm-highlight-text" href="https://turtlemint.onelink.me/b9Hg/dg35qnwv" target="_blank"><b>Turtlemint App</b></a> and get end to end claim support. You can also file a claim by calling <a class="tm-highlight-text" href="tel:18002660101"><b>1800 266 0101</b></a> or emailing at <a class="tm-highlight-text" href="mailto:claims@turtlemint.com"><b>claims@turtlemint.com</b></a> and submit documents as advised by our claims expert.</p>
     </div>
     <div class="tm-content">
         <p class="heading">Is home visit service available?</p>

@@ -252,7 +252,13 @@
 			</style>
 		<?php } ?>
 	</head>
-	<?php $tmBodyClasses = $args['tmBodyClasses']; ?>
+	<?php 
+		if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) {
+			$tmBodyClasses = $args['tmBodyClasses'];
+		}else{
+			$tmBodyClasses = '';
+		}
+	?>
 	<body <?php body_class($tmBodyClasses);  ?>>
 	<div class="mobile-nav"></div>
 	<!--mobile menu-->
