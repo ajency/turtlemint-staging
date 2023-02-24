@@ -117,7 +117,7 @@ get_header('tmhomereskin');
             <div class="hide-md-down">
                 <div class="stats-section">
                     <div class="stat">
-                        <p class="number">2.7 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
+                        <p class="number">2.7 L<span class="d-md-none d-xl-inline-block">akh</span>+</p>
                         <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
@@ -125,7 +125,7 @@ get_header('tmhomereskin');
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">70 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
+                        <p class="number">70 L<span class="d-md-none d-xl-inline-block">akh</span>+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>

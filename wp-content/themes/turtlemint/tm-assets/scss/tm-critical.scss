@@ -99,6 +99,9 @@
             text-align: center;
             color: #4D5556;
             margin-bottom: 31px;
+            b{
+                font-weight: 600;
+            }
         }
 
         .locate-me-link {
@@ -255,7 +258,7 @@
             font-family: 'Montserrat';
 
             a.breadcrum-text {
-                color: #3B3B3B;
+                color: #666666;
                 text-decoration: none;
                 transition: all 0.2s ease-in-out;
 
@@ -521,7 +524,7 @@
     }
 
     @media(min-width:992px) {
-        padding-top: 14px;
+        padding-top: 4px;
         .left-side {
             width: 60%;
         }
@@ -573,14 +576,16 @@
                     }
 
                     .filter-select-group {
-                        gap: auto;
+                        gap: 15px;
 
                         li {
-                            max-width: 100%;
+                            max-width: 58px;
                         }
 
                         label span {
                             height: 58px;
+                            width: 58px;
+                            padding: 13px;
                         }
                     }
 
@@ -597,10 +602,13 @@
         }
     }
     @media(max-width:575.98px){
-        &__wraper{
-            .find-advisor-section{
-                .tm-find-advisor-form{
-                    max-width: 100%;
+        .tm-find-advisor-form{
+            max-width: 100%;
+            &__wraper{
+                .tm-form{
+                    .filter-select-group{
+                        flex-wrap: wrap;
+                    }
                 }
             }
         }

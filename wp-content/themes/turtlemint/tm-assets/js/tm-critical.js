@@ -207,11 +207,11 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                   <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
                   <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
                   <div class="row tm-stats">
-                      <div class="col-6 stat">
+                      <div class="stat">
                           <p class="tm-h2-regular stat-title">${Math.floor(advisor.yearsOfExperience)} Years</p>
                           <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
                       </div>
-                      <div class="col-6 stat">
+                      <div class="stat">
                           <p class="tm-h2-regular stat-title">${Math.floor(advisor.customersServed)}+</p>
                           <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                       </div>
@@ -234,11 +234,11 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
                       <div class="row tm-stats">
-                          <div class="col-6 stat">
+                          <div class="stat">
                               <p class="tm-h2-regular stat-title">${Math.floor(advisor.yearsOfExperience)} Years</p>
                               <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
                           </div>
-                          <div class="col-6 stat">
+                          <div class="stat">
                               <p class="tm-h2-regular stat-title">${Math.floor(advisor.customersServed)}+</p>
                               <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                           </div>
@@ -312,11 +312,11 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
                       <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
                       <div class="row tm-stats">
-                          <div class="col-6 stat">
+                          <div class="stat">
                               <p class="tm-h2-regular stat-title">${Math.floor(advisor.yearsOfExperience)} Years</p>
                               <p class="tm-body tm-grey-text stat-subtitle">Experience</p>
                           </div>
-                          <div class="col-6 stat">
+                          <div class="stat">
                               <p class="tm-h2-regular stat-title">${Math.floor(advisor.customersServed)}+</p>
                               <p class="tm-body tm-grey-text stat-subtitle">Policies Sold</p>
                           </div>

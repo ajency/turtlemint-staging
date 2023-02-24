@@ -373,6 +373,21 @@ body {
         .tm-stats {
             margin-bottom: 24px;
             align-content: center;
+            margin-left: 0px;
+            margin-right: 0px;
+            justify-content: center;
+            position: relative;
+
+            &:after {
+                content: '';
+                height: 42px;
+                width: 1px;
+                background-color: #000000;
+                opacity: 0.2;
+                position: absolute;
+                left: calc(50% - 4.2px);
+                top: calc(50% - 21px);
+            }
 
             .stat-title {
                 margin-bottom: 8px;
@@ -383,19 +398,13 @@ body {
             }
 
             .stat {
-                &:not(:last-child) {
-                    position: relative;
-
-                    &:after {
-                        content: '';
-                        height: 100%;
-                        width: 1px;
-                        background-color: #000000;
-                        opacity: 0.2;
-                        position: absolute;
-                        right: 0px;
-                        top: 0px;
-                    }
+                &:first-child{
+                    padding-left: 0px;
+                    padding-right: 24px;
+                }
+                &:last-child{
+                    padding-right: 0px;
+                    padding-left: 24px;
                 }
             }
         }
@@ -705,6 +714,21 @@ body {
             }
         }
     }
+
+    @media(max-width:301.98px){
+        .form-note{
+            &.hide-custom-down{
+                display: none !important;
+            }
+        }
+    }
+    @media(min-width:302px){
+        .form-note{
+            &.hide-custom-up{
+                display: none !important;
+            }
+        }
+    }
 }
 
 #tmOtpPopup {
@@ -715,7 +739,7 @@ body {
 
 .tm-advisor-stats-section {
     display: grid;
-    grid-template-columns: 30% 55%;
+    grid-template-columns: 36.1% 55%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
@@ -1015,6 +1039,7 @@ body {
                 img {
                     height: 24px;
                     width: 25px;
+                    margin: initial;
                 }
             }
 
@@ -1104,11 +1129,12 @@ body {
         .tm-testimonial {
             &__wraper {
                 .content {
-                    padding-left: 45px;
-                    padding-right: 57px;
+                    padding-left: 53px;
+                    padding-right: 48px;
                     padding-top: 15px;
                     font-size: 14px;
                     line-height: 145%;
+                    margin-bottom: 23px;
 
                     &:before,
                     &:after {
@@ -1119,13 +1145,14 @@ body {
                     &:before {
                         left: 0px;
                         top: 0px;
-                        width: 35px;
+                        width: 43px;
+                        height: 50px;
                         background-position: right top;
                     }
 
                     &:after {
                         top: inherit;
-                        right: 0px;
+                        right: 9px;
                         bottom: -20px;
                     }
                 }

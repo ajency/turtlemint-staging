@@ -792,7 +792,8 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
 
                             <p class="error-message text-center" id="maxLimitMsg">You have exceeded the maximum limit for submitting the form. Try again after 30 minutes.</p>
                             <button class="tm-button" type="submit" disabled>Submit</button>
-                            <p class="form-note">You agree to be contacted on WhatsApp by submitting details.</p>
+                            <p class="form-note hide-custom-up">You agree to be contacted on WhatsApp by submitting details.</p>
+                            <p class="form-note hide-custom-down">You agree to be contacted on WhatsApp by<br>submitting details.</p>
                         </div>
                     </form>
                 </div>
