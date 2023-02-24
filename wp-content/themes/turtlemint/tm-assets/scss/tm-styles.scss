@@ -1009,7 +1009,7 @@ body {
 
             .review {
                 display: flex;
-                gap: 5.6px;
+                gap: 4px;
                 margin-bottom: 21px;
 
                 img {
@@ -1143,6 +1143,7 @@ body {
                     img {
                         height: 17px;
                         width: 18px;
+                        margin: initial;
                     }
                 }
 
