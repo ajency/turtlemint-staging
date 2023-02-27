@@ -453,6 +453,31 @@ $('#getInTouchForm').submit( async function(e){
   $(this).find('.tm-button').addClass('tm-loader')
   const name = $(this).find('#tm-name').val()
   const phone = $(this).find('#tm-mobileNo').val()
+
+  /* Lead Details Tracking | Start */
+  gtag('event', 'LF-Btn_click-Submit', {
+    'event_category': 'DPL_Lead_Details',
+    'event_label': 'LF-' + name + '_' + phone
+  });
+
+  //google sheet form submition
+
+  /* jQuery.ajax({
+    url : '../wp-content/themes/turtlemint/tm-google-sheet/leads-sheet.php',
+    type: 'post',
+    dataType: 'json',
+    data: {
+      'consumer_name': name,
+      'consumer_phone': phone
+    },
+    success: function(obj){
+      console.log("Success!")
+      console.log(obj.result)
+    }
+  }); */
+
+  /* Lead Details Tracking | End */
+
   try{
     let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=turtlemint&source=Consumer', {
       'method' : 'GET',
