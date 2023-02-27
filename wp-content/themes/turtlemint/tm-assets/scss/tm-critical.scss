@@ -224,7 +224,8 @@
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 border-radius: 9.48347px;
                 margin-bottom: 12px;
-                padding: 14px;
+                //padding: 14px;
+                padding: 0px;
                 transition: all 0.2s ease-in-out;
             }
         }
@@ -585,7 +586,8 @@
                         label span {
                             height: 58px;
                             width: 58px;
-                            padding: 13px;
+                            //padding: 13px;
+                            padding: 0px;
                         }
                     }
 

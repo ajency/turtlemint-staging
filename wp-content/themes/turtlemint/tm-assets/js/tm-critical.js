@@ -205,7 +205,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                   </div>
                   <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
-                  <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
+                  <p class="tm-body tm-grey-text advisor-location">${advisor.area}</p>
                   <div class="row tm-stats">
                       <div class="stat">
                           <p class="tm-h2-regular stat-title">${Math.floor(advisor.yearsOfExperience)} Years</p>
@@ -232,7 +232,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
-                      <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
+                      <p class="tm-body tm-grey-text advisor-location">${advisor.area}</p>
                       <div class="row tm-stats">
                           <div class="stat">
                               <p class="tm-h2-regular stat-title">${Math.floor(advisor.yearsOfExperience)} Years</p>
@@ -310,7 +310,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                       </div>
                       <p class="tm-h2-bold advisor-name" title="${advisor.partnerName.toUpperCase()}">${advisor.partnerName}</p>
-                      <p class="tm-body tm-grey-text advisor-location">${advisor.area}, ${advisor.city}</p>
+                      <p class="tm-body tm-grey-text advisor-location">${advisor.area}</p>
                       <div class="row tm-stats">
                           <div class="stat">
                               <p class="tm-h2-regular stat-title">${Math.floor(advisor.yearsOfExperience)} Years</p>

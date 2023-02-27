@@ -211,11 +211,13 @@ $(document).on('change keyup', '.required', function(e){
     if(Disabled){
         $(parent).find('.tm-button').prop("disabled", true);
         if($(parent).attr('id') == 'pincodePopup'){
-          $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+         // $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+          $('#pincodeForm .error-message').removeClass('d-block').addClass('d-none')
           $('#pincodeForm .tm-form-group').removeClass('tm-error');
         }
         if($(parent).attr('id') == 'tmOtpPopup'){
-          $('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
+          //$('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
+          $('#tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
           $('#tmOtpForm .tm-form-group').removeClass('tm-error');
         }
     }
@@ -375,7 +377,7 @@ async function pincodeValidaion(){
         $('#pincodeForm .tm-form-group').addClass('tm-error');
     }
     else{
-        $('#pincodeForm .location-name:not(.location-name-skeleton)').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
+        //$('#pincodeForm .location-name:not(.location-name-skeleton)').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
         $('#pincodeForm .tm-button').prop("disabled", false);
     }
     $('#pincodeForm .location-wraper').removeClass('tm-loading')

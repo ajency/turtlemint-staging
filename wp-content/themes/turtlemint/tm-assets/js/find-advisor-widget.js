@@ -2,19 +2,23 @@
 const REDIRECT_CONFIG = [
     {
         "source": "https://*/life-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Life"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Life",
+        "verticalName": "Life"
     },
     {
         "source": "https://*/car-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=FW"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=FW",
+        "verticalName": "4 Wheeler"
     },
     {
         "source": "https://*/two-wheeler-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=TW"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=TW",
+        "verticalName": "2 Wheeler"
     },
     {
         "source": "https://*/health-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Health"
+        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Health",
+        "verticalName": "Health"
     }
 ];
 
@@ -134,7 +138,17 @@ async function redirect(){
                 // console.log(sourceURL,"\n",formatedSubUrl,"\n",formatedUrl,"\n",regExp,"\n",regExp.test(sourceURL))
                 return regExp.test(sourceURL)
             })
-            matchURL ? targetURL = matchURL.target : "";
+            //matchURL ? targetURL = matchURL.target : "";
+            if(matchURL){
+
+                targetURL = matchURL.target;
+                let targetVertical = matchURL.verticalName;
+                console.log('Find_Advisor_Widget-'+targetVertical)
+                gtag('event', 'Find_Advisor_Widget_Click', {
+                    'event_category': 'Find_Advisor_Widget',
+                    'event_label': 'Find_Advisor_Widget-'+targetVertical
+                });
+            }
         }
     }
     catch(e){
