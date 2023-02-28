@@ -2,22 +2,22 @@
 const REDIRECT_CONFIG = [
     {
         "source": "https://*/life-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Life",
+        "target": "https://turtlemint.com/insurance-advisor-near-me/?vertical=Life",
         "verticalName": "Life"
     },
     {
         "source": "https://*/car-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=FW",
+        "target": "https://turtlemint.com/insurance-advisor-near-me/?vertical=FW",
         "verticalName": "4 Wheeler"
     },
     {
         "source": "https://*/two-wheeler-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=TW",
+        "target": "https://turtlemint.com/insurance-advisor-near-me/?vertical=TW",
         "verticalName": "2 Wheeler"
     },
     {
         "source": "https://*/health-insurance/*",
-        "target": "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/?vertical=Health",
+        "target": "https://turtlemint.com/insurance-advisor-near-me/?vertical=Health",
         "verticalName": "Health"
     }
 ];
@@ -122,9 +122,9 @@ const REDIRECT_CONFIG = [
 
 async function redirect(){
     const sourceURL = window.location.href;
-    let targetURL = "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/"
+    let targetURL = "https://turtlemint.com/insurance-advisor-near-me/"
     try{
-        // let response = await fetch('https://turtlemint.parasite.turtle-feature.com/find-advisor-widget/redirect-config.json');
+        // let response = await fetch('https://turtlemint.com/find-advisor-widget/redirect-config.json');
         // let data = await response.json();
         let data = REDIRECT_CONFIG;
         if(data.length > 0){
