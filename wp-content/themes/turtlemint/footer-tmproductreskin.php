@@ -777,9 +777,5 @@
 	.bottom-seo-text ol li{list-style-type: auto;} 
 </style>
 <!-- endinject:foot -->
-
-<?php if ( is_page_template( array( 'page-content-c-reskin.php' ) ) ) { ?>
-	<script src="http://localhost/turtlemint-staging/wp-content/themes/turtlemint/tm-assets/js/find-advisor-widget.js" type="text/javascript" defer></script>
-<?php } ?>
 </body>
 </html>
