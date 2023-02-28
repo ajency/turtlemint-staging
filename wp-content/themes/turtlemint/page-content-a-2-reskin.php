@@ -57,7 +57,7 @@
                   <div class="">
                      <div class="car-banner">
                         <img alt="Bike Insurance" title="Bike Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-bike-insurance.png" class="desktop" width="" height="auto" frameborder="0" />
-                        <img alt="Bike Insurance" title="Bike Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-bike-insurance.png" class="mobile" width="" height="auto" frameborder="0" />
+                        <img alt="Bike Insurance" title="Bike Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-bike-insurance-mob.png" class="mobile" width="" height="auto" frameborder="0" />
                      </div>
                   </div>
                </div>
