@@ -65,8 +65,8 @@
                         <div class="slider-home-banner">
                            <div class="">
                               <div class="car-banner">
-                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/health-banner-desk-01-2x.png" class="desktop" width="" height="auto" frameborder="0" />
-                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/health-banner-mob-01-2x.png" class="mobile health-banner-mob" width="" height="auto" frameborder="0" />
+                                 <img alt="Health Insurance" title="Health Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/health-insurance.png" class="desktop" width="" height="auto" frameborder="0" />
+                                 <img alt="Health Insurance" title="Health Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/health-insurance.png" class="mobile health-banner-mob" width="" height="auto" frameborder="0" />
                               </div>
                            </div>
                         </div>

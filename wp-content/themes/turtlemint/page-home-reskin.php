@@ -147,22 +147,22 @@ get_header('tmhomereskin');
                     <div class="slider-home-banner">
                         <div class="">
                             <div class="">
-                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/health-insurance.png" class="" width="" height="auto" frameborder="0" alt="Health Insurance" title="Health Insurance" /></a>
+                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-insurance.png" class="" width="" height="auto" frameborder="0" alt="Car Insurance" title="Car Insurance" /></a>
                             </div>
                         </div>
                         <div class="">
                             <div class="">
-                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/life-insurance.png" class="" width="" height="auto" frameborder="0" alt="Life Insurance" title="Life Insurance" /></a>
+                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/health-insurance.png" class="" width="" height="auto" frameborder="0" alt="Health Insurance" title="Health Insurance" /></a>
                             </div>
                         </div>
                         <div class="">
                             <div class="">
-                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/bike-insurance.png" class="" width="" height="auto" frameborder="0" alt="Bike Insurance" title="Bike Insurance" /></a>
+                                <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/life-insurance.png" class="" width="" height="auto" frameborder="0" alt="Life Insurance" title="Life Insurance" /></a>
                             </div>
                         </div>
                         <div class="">
                             <div class="">
-                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-insurance.png" class="" width="" height="auto" frameborder="0" alt="Car Insurance" title="Car Insurance" /></a>
+                                <a href="#"> <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-bike-insurance.png" class="" width="" height="auto" frameborder="0" alt="Bike Insurance" title="Bike Insurance" /></a>
                             </div>
                         </div>
                     </div>
@@ -334,15 +334,15 @@ get_header('tmhomereskin');
     <!-- ======= Become A Turtlemint Advisor End ======= -->
     <div class="row-2 video-row">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-end">
                 <div class="col-lg-5 col-md-6">
                     <!-- <div class="custom-many-optns">
                         <h3>Too Many Options Can Make It Tough to Choose a Policy.</h3>
                         <h4>We have tried to simplify<br>it for you.</h4>
                     </div> -->
-                    <img class="d-none d-lg-block d-sm-none d-md-none" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/MSD-Banner-Desktop.webp"  frameborder="0" />
-					<img class="d-none d-md-block d-sm-none d-lg-none" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/MSD-Banner-Tab.webp"   frameborder="0" />
-					<img style="margin:0 auto;display: block; padding-bottom: 40px;" class="d-sm-block d-md-none d-lg-none" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/MSD-Banner-Mob.webp"   frameborder="0" />
+                    <img class="d-none d-lg-block d-sm-none d-md-none" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/stress-free-claims.webp"  frameborder="0" alt ="Stress free claims" title="Stress free claims" />
+					<img class="d-none d-md-block d-sm-none d-lg-none" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/stress-free-claims.webp"   frameborder="0" alt ="Stress free claims" title="Stress free claims" />
+					<img style="margin:0 auto;display: block; padding-bottom: 40px;" class="d-sm-block d-md-none d-lg-none" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/stress-free-claims.webp"   frameborder="0" alt ="Stress free claims" title="Stress free claims" />
                 </div>
 
                 <!-- Video slider visible only on mobile -->

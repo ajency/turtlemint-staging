@@ -771,14 +771,14 @@
 		</script>
 		<!-- End Google Tag Manager -->
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61873031-16"></script>
+		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61873031-16"></script>
 		<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-61873031-16');
-		</script>
+		</script> -->
 		<script>
             function addGTM(url)
             {

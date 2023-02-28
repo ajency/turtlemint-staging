@@ -56,8 +56,8 @@
                <div class="slider-home-banner">
                   <div class="">
                      <div class="car-banner">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/dhoni-byke.png" class="desktop" width="" height="auto" frameborder="0" />
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/dhoni-byke-mobile.png" class="mobile" width="" height="auto" frameborder="0" />
+                        <img alt="Bike Insurance" title="Bike Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-bike-insurance.png" class="desktop" width="" height="auto" frameborder="0" />
+                        <img alt="Bike Insurance" title="Bike Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/car-bike-insurance.png" class="mobile" width="" height="auto" frameborder="0" />
                      </div>
                   </div>
                </div>
