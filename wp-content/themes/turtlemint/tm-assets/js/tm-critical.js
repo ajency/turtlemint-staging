@@ -96,8 +96,8 @@ const VERTICAL_JSON = {
 }
 
 const LIMIT = 9;
-const SERVER = 'https://app.sanity.turtle-feature.com';
-const SERVER_2 = 'https://pro.sanity.turtle-feature.com';
+const SERVER = 'https://app.mintpro.in';
+const SERVER_2 = 'https://pro.turtlemint.com';
 const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
 
   async function getPincodeLocation(pincode){

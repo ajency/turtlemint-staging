@@ -38,7 +38,7 @@ const REDIRECT_CONFIG = [
         transform: scale(0);
         animation: popout 0.5s cubic-bezier(0.35, 0.23, 1, 1.34) forwards;
         width: auto;
-        //display: none;
+        display: none;
     }
     #advisor__widget p{
         font-weight: 600;
@@ -122,9 +122,9 @@ const REDIRECT_CONFIG = [
 
 async function redirect(){
     const sourceURL = window.location.href;
-    let targetURL = "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/"
+    let targetURL = "https://turtlemint.com/insurance-advisor-near-me/"
     try{
-        // let response = await fetch('https://turtlemint.parasite.turtle-feature.com/find-advisor-widget/redirect-config.json');
+        // let response = await fetch('https://turtlemint.com/find-advisor-widget/redirect-config.json');
         // let data = await response.json();
         let data = REDIRECT_CONFIG;
         if(data.length > 0){
