@@ -211,11 +211,13 @@ $(document).on('change keyup', '.required', function(e){
     if(Disabled){
         $(parent).find('.tm-button').prop("disabled", true);
         if($(parent).attr('id') == 'pincodePopup'){
-          $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+         // $('#pincodeForm .location-name:not(.location-name-skeleton), #pincodeForm .error-message').removeClass('d-block').addClass('d-none')
+          $('#pincodeForm .error-message').removeClass('d-block').addClass('d-none')
           $('#pincodeForm .tm-form-group').removeClass('tm-error');
         }
         if($(parent).attr('id') == 'tmOtpPopup'){
-          $('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
+          //$('#tmOtpForm .location-name:not(.location-name-skeleton), #tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
+          $('#tmOtpForm .error-message').removeClass('d-block').addClass('d-none')
           $('#tmOtpForm .tm-form-group').removeClass('tm-error');
         }
     }
@@ -375,7 +377,7 @@ async function pincodeValidaion(){
         $('#pincodeForm .tm-form-group').addClass('tm-error');
     }
     else{
-        $('#pincodeForm .location-name:not(.location-name-skeleton)').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
+        //$('#pincodeForm .location-name:not(.location-name-skeleton)').text(pincodeData.area+', '+pincodeData.city+', '+pincodeData.state).removeClass('d-none')
         $('#pincodeForm .tm-button').prop("disabled", false);
     }
     $('#pincodeForm .location-wraper').removeClass('tm-loading')
@@ -453,6 +455,33 @@ $('#getInTouchForm').submit( async function(e){
   $(this).find('.tm-button').addClass('tm-loader')
   const name = $(this).find('#tm-name').val()
   const phone = $(this).find('#tm-mobileNo').val()
+
+  /* Lead Details Tracking | Start */
+  //google sheet form submition
+
+  /* jQuery.ajax({
+    url : '../wp-content/themes/turtlemint/tm-google-sheet/leads-sheet.php',
+    type: 'post',
+    dataType: 'json',
+    data: {
+      'consumer_name': name,
+      'consumer_phone': phone
+    },
+    success: function(obj){
+      console.log("Success!")
+      console.log(obj.result)
+    }
+  }); */
+
+  /* Lead Details Tracking | End */
+
+    /* Lead Details Tracking | Start */
+    gtag('event', sessionStorage.getItem('tm_vertical_data') + '-'+ window.tm_advisor_name, {
+      'event_category': 'DPL_Lead_Details',
+      'event_label': name + '-' + phone
+    });
+    /* Lead Details Tracking | End */
+
   try{
     let response = await fetch(SERVER_2+'/api/commonverticals/v1/otp/send?mobile='+phone+'&broker=turtlemint&source=Consumer', {
       'method' : 'GET',

@@ -58,25 +58,25 @@ get_header('tmhomereskin');
                                 <div class="tm-form-group filter-form-group">
                                     <label>Select Insurance Type</label>
                                     <ul class="filter-select-group">
-                                        <li>
+                                        <li title="Health Insurance">
                                             <input type="radio" name="vertical" id="tm-health-insurance" value="Health" data-value="Health" required>
                                             <label for="tm-health-insurance">
                                                 <span class="icon" id="health-icon" icon-colored="health2-icon" icon-default="health-icon"></span>Health
                                             </label>
                                         </li>
-                                        <li>
+                                        <li title="Life Insurance">
                                             <input type="radio" name="vertical" id="tm-life-insurance" value="Life" data-value="Life">
                                             <label for="tm-life-insurance">
                                                 <span class="icon" id="life-icon" icon-colored="life2-icon" icon-default="life-icon"></span>Life
                                             </label>
                                         </li>
-                                        <li>
+                                        <li title="Bike Insurance">
                                             <input type="radio" name="vertical" id="tm-2-wheeler-insurance" value="TW" data-value="Bike">
                                             <label for="tm-2-wheeler-insurance">
                                                 <span class="icon" id="two-wheeler-icon" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>Bike
                                             </label>
                                         </li>
-                                        <li>
+                                        <li title="Car Insurance">
                                             <input type="radio" name="vertical" id="tm-4-wheeler-insurance" value="FW" data-value="Car">
                                             <label for="tm-4-wheeler-insurance">
                                                 <span class="icon" id="four-wheeler-icon" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>Car
@@ -117,7 +117,7 @@ get_header('tmhomereskin');
             <div class="hide-md-down">
                 <div class="stats-section">
                     <div class="stat">
-                        <p class="number">2.7 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
+                        <p class="number">2.7 L<span class="d-md-none d-xl-inline-block">akh</span>+</p>
                         <p class="title">Insurance Advisors</p>
                     </div>
                     <div class="stat">
@@ -125,7 +125,7 @@ get_header('tmhomereskin');
                         <p class="title">Pin Codes</p>
                     </div>
                     <div class="stat">
-                        <p class="number">70 L<span class="d-md-none d-lg-inline-block">akh</span>+</p>
+                        <p class="number">70 L<span class="d-md-none d-xl-inline-block">akh</span>+</p>
                         <p class="title">Policies Sold</p>
                     </div>
                 </div>

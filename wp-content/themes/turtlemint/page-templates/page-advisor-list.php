@@ -36,25 +36,25 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
                             <div class="tm-form-group filter-form-group <?php echo (isset($vertical)) ? "d-none" : "" ?>">
                                 <label for="pincode">Select Insurance Type</label>
                                 <ul class="filter-select-group">
-                                    <li>
+                                    <li title="Health Insurance">
                                         <input type="radio" name="tm-insurance-type" id="tm-health-insurance" <?php echo $vertical=="Health" ? "checked" : ""; ?> value="Health">
                                         <label for="tm-health-insurance">
                                             <span class="icon" id="<?php echo $vertical=="Health" ? "health2-icon" : "health-icon"; ?>" icon-colored="health2-icon" icon-default="health-icon"></span>Health
                                         </label>
                                     </li>
-                                    <li>
+                                    <li title="Life Insurance">
                                         <input type="radio" name="tm-insurance-type" id="tm-life-insurance" <?php echo $vertical=="Life" ? "checked" : ""; ?> value="Life">
                                         <label for="tm-life-insurance">
                                             <span class="icon" id="<?php echo $vertical=="life" ? "life2-icon" : "life-icon"; ?>" icon-colored="life2-icon" icon-default="life-icon"></span>Life
                                         </label>
                                     </li>
-                                    <li>
+                                    <li title="Bike Insurance">
                                         <input type="radio" name="tm-insurance-type" id="tm-2-wheeler-insurance" <?php echo $vertical=="TW" ? "checked" : ""; ?> value="TW">
                                         <label for="tm-2-wheeler-insurance">
                                             <span class="icon" id="<?php echo $vertical=="TW" ? "two-wheeler2-icon" : "two-wheeler-icon"; ?>" icon-colored="two-wheeler2-icon" icon-default="two-wheeler-icon"></span>Bike
                                         </label>
                                     </li>
-                                    <li>
+                                    <li title="Car Insurance">
                                         <input type="radio" name="tm-insurance-type" id="tm-4-wheeler-insurance" <?php echo $vertical=="FW" ? "checked" : ""; ?> <?php echo $vertical== null ? "checked" : ""; ?> value="FW">
                                         <label for="tm-4-wheeler-insurance">
                                             <span class="icon" id="<?php if($vertical=="FW"){echo "four-wheeler2-icon";} elseif($vertical== null){echo "four-wheeler2-icon";} else{echo "four-wheeler-icon";} ?>" icon-colored="four-wheeler2-icon" icon-default="four-wheeler-icon"></span>Car
@@ -97,10 +97,10 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
                                 </div>
                                 <p class="error-message"></p>
                             </div>
-                            <div class="location-wraper"> <!-- add loading class here -->
+                            <!-- <div class="location-wraper">add loading class here
                                 <p class="location-name location-name-skeleton"></p>
                                 <p class="location-name d-none">Navada, Patna, Bihar</p>
-                            </div>
+                            </div> -->
                         </div>
 
                         <button class="tm-button" <?php echo !(isset($pincode)) ? 'disabled':''; ?> >Submit</button>
@@ -432,7 +432,7 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
                         <p class="tm-body-regular tm-grey-text mb-0 tm-section-subheading">4 quick steps to getting the right insurance advice from our experts</p>
                     </div>
                     <div class="right-side hide-md-down">
-                        <a href="<?php echo site_url() ?>/find-insurance-advisor" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
+                        <a href="<?php echo site_url() ?>/find-insurance-advisor" class="tm-link arrow-right-filled" onclick="gtag('event', 'DPL-DP_Intro-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
                     </div>
                 </div>
                 <div class="tm-scrollbar-mob-horizontal tm-advise-steps">
@@ -478,7 +478,7 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
                     </div>
                 </div>
                 <div class="hide-md-up link-container">
-                    <a href="<?php echo site_url() ?>/find-insurance-advisor" class="tm-link arrow-right-filled" onclick="gtag('event', 'DP_Intro_page-Link-Clicks', {event_category:'DPL_Link-Clicks',event_label: 'More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
+                    <a href="<?php echo site_url() ?>/find-insurance-advisor" class="tm-link arrow-right-filled" onclick="gtag('event', 'DPL-DP_Intro-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click More about Turtlemint Advisors'});">More about Turtlemint Advisors</a>
                 </div>
             </div>
         </div>
@@ -792,7 +792,8 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
 
                             <p class="error-message text-center" id="maxLimitMsg">You have exceeded the maximum limit for submitting the form. Try again after 30 minutes.</p>
                             <button class="tm-button" type="submit" disabled>Submit</button>
-                            <p class="form-note">You agree to be contacted on WhatsApp by submitting details.</p>
+                            <p class="form-note hide-custom-up">You agree to be contacted on WhatsApp by submitting details.</p>
+                            <p class="form-note hide-custom-down">You agree to be contacted on WhatsApp by<br>submitting details.</p>
                         </div>
                     </form>
                 </div>

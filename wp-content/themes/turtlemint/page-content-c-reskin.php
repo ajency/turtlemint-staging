@@ -122,8 +122,8 @@
                                         <p class="mb-0"><span style="font-weight: 700;">1 Cr</span> Life Cover at <span style="font-weight: 700;">₹ 400/Month*</span></p>
                                         <p class="mb-0">Avail Tax Benefits under Section 80 (C)</p>
                                     </div>
-                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/dhoni-life.png" class="desktop" width="" height="auto" frameborder="0" />
-                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/dhoni-life-mobile.png" class="mobile" width="" height="auto" frameborder="0" />
+                                    <img alt="Life Insurance" title="Life Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/life-insurance.png" class="desktop" width="" height="auto" frameborder="0" />
+                                    <img alt="Life Insurance" title="Life Insurance" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/tm-img/life-insurance.png" class="mobile" width="" height="auto" frameborder="0" />
                                     <div class="strike-mb d-lg-none d-sm-block d-md-block">
                                         <p class="mb-0"><span style="font-weight: 700;">1 Cr</span> Life Cover at <span style="font-weight: 700;">₹ 400/Month*</span></p>
                                         <p class="mb-0">Avail Tax Benefits under Section 80 (C)</p>
