@@ -120,6 +120,10 @@ const REDIRECT_CONFIG = [
     document.body.append(style,widget) ;
 })();
 
+//let analytic = require ('turtlefin-analytics-wrapper');
+
+window.dataLayer = window.dataLayer || [];
+
 async function redirect(){
     const sourceURL = window.location.href;
     let targetURL = "https://turtlemint.parasite.turtle-feature.com/insurance-advisor-near-me/"
@@ -143,11 +147,21 @@ async function redirect(){
 
                 targetURL = matchURL.target;
                 let targetVertical = matchURL.verticalName;
-                console.log('Find_Advisor_Widget-'+targetVertical)
-                gtag('event', 'Find_Advisor_Widget_Click', {
-                    'event_category': 'Find_Advisor_Widget',
-                    'event_label': 'Find_Advisor_Widget-'+targetVertical
-                });
+
+                    dataLayer.push(
+                    {
+                        eventName: 'Find_Advisor_Widget',
+                        gaAction: 'Find_Advisor_Widget_Click',
+                        gaLabel: 'Find_Advisor_Widget-'+targetVertical,
+                        gaValue: 'Find_Advisor_Widget-'+targetVertical,
+                        gaCategory: 'Find_Advisor_Widget',
+                        event: "track_events",
+                        deviceType: window.outerWidth < 767 ? 'mobile': 'desktop',
+                        "time" : new Date(),
+                        userFlow:'b2c',
+                        source: "vertical"
+                    }
+                )
             }
         }
     }
