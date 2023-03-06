@@ -1,2 +1,8 @@
 wp-content/plugins
 wp-content/uploads
+wp-content/cache
+wp-content/backups-dup-lite
+wp-content/wflogs
+wp-content/debug.log
+.htaccess
+wp-config.php
