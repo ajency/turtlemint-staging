@@ -15,6 +15,16 @@ $bodyClasses ='';
 get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
 ?>
 
+<?php if(isset($vertical) && !(isset($pincode))) { ?>
+<script>
+    let passedVeritcal = "<?php echo $vertical; ?>";
+    gtag('event', 'Popup-'+passedVeritcal, {
+        'event_category': 'DPL_Popup',
+        'event_label': 'Pincode_Popup'
+    });
+</script>
+<?php } ?>
+
 <!-- pincode popup -->
 <div class="tm-popup <?php echo !(isset($pincode) && isset($vertical)) ? "show restrict-event disableCloseBtn" : ""; ?>" id="pincodePopup">
     <div class="tm-popup-dialog" role="document">
