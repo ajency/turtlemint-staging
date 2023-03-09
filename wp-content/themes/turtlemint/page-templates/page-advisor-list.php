@@ -731,10 +731,10 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
         </div>
         <p class="tm-h2-bold tm-heading">We are recruiting advisors in your area</p>
         <p class="tm-subheading">Submit your contact details to get free advise from Turtlemint insurance experts.</p>
-        <a class="tm-button large">Get in touch</a>
+        <a class="tm-button large" onclick=" gtag('event', 'GIT-Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Get in touch', {'event_category': 'No_DPL-Page', 'event_label': 'GIT'});">Get in touch</a>
         <div class="call-details">
             <p class="title">Call us to get advise</p>
-            <a href="tel:02262919080" class="tm-link"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">022-62919080</a>
+            <a href="tel:02262919080" class="tm-link" onclick="gtag('event', 'DPL-Inbound_call-Linkclicks', {'event_category': 'No_DPL-Page', 'event_label': 'Link-click 022-62919080'});"><img height="32" width="32" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/call-icon.png" alt="call">022-62919080</a>
         </div>
 
     </div>

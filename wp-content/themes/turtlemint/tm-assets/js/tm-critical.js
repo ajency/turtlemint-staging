@@ -280,6 +280,9 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       window.history.pushState(null, '', url.toString());
       $('.advisor-list-wraper').addClass('d-none')
       $('#empty-screen-wrap').removeClass('d-none')
+
+      gtag('event', 'No_DPL-'+sessionStorage.getItem('tm_vertical_data'), {'event_category': 'No_DPL-Page', 'event_label': 'No_DPL-PV'});
+
       $('#pincodeForm .tm-button').removeClass('tm-loader')
       populateVertical()
       closePopup('pincodePopup')
