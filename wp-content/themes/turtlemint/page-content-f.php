@@ -16,9 +16,9 @@ get_header();
                     </div>
                     <div class="col-xs-12 col-md-6 col-sm-6">
                         <div class="banner-text-section">
-                            <h1 class="h1-text">Raising claim request was never this easy </h1>
-                            <p class="banner-paragraph-text">This service is free for everyone, even if you did not  buy your policy with us.</p>
-                            <a href="#claim-form"><button type="button" class="cta-1" onclick="dataLayer.push({'event':'mega-menu','eventName': 'Raise-Claim-top', gaCategory:'megaMenu', gaAction: eventName})";>Raise Claim</button></a>
+                            <h1 class="h1-text">Filing A Claim Is Now Made Easy! </h1>
+                            <p class="banner-paragraph-text">Get The Turtlemint App for hassle-free & quick claim support from our experts</p>
+                            <a href="https://turtlemint.onelink.me/b9Hg/v6fe09ml"><button type="button" class="cta-1">Download Now</button></a>
                         </div>
                     </div>
                 </div>
@@ -27,9 +27,9 @@ get_header();
                 <div class="row visible-xs hidden-sm hidden-md hidden-lg">
                     <div class="col-xs-12 col-md-6 col-sm-6">
                         <div class="banner-text-section"> 
-                            <h1 class="h1-text">Raising claim request was never this easy </h1> 
-                            <p class="banner-paragraph-text">This service is free for everyone, even if you did not  buy your policy with us.</p> 
-                            <button type="button" class="cta-1">Raise Claim</button>                             
+                            <h1 class="h1-text">Filing A Claim Is Now Made Easy! </h1> 
+                            <p class="banner-paragraph-text">Get The Turtlemint App for hassle-free & quick claim support from our experts</p> 
+                            <button type="button" class="cta-1" onclick="location.href='https://turtlemint.onelink.me/b9Hg/v6fe09ml';">Download Now</button>                             
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6 col-sm-6"> 
@@ -114,7 +114,7 @@ get_header();
         <div class="container">
             <div class="row section-style">
                 <div class="col-xs-12">
-                    <h2 class="h2-style text-center">We have helped customers get more than 10 crores in claims paid.</h2>
+                    <h2 class="h2-style text-center">We have helped customers get more than 54 crores in claims paid.</h2>
                     <div>
                         <img src="https://i.imgur.com/gZ5HY0U.png" class="img-responsive quote-image">
                     </div>
@@ -154,7 +154,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div id="claim-form" class="container-fluid form-banner">
+        <div id="claim-form" class="container-fluid form-banner d-none" style="display:none !important;">
             <div class="col-xs-12 section-inside-style">
                 <h2 class="h2-style text-center">Share details for raising claim request</h2> 
                 <p class="paragraph-text text-center"><a href="/user/login">Login here</a> if you are an existing customer</p>

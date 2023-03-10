@@ -105,10 +105,10 @@ get_header('tmhomereskin');
         <div class="left-side tm-loading">
             <div class="banner-image tm-image-skeleton"></div>
             <div class="banner-image hide-md-down">
-                <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Advisors Across Country">
+                <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner.png" alt="Turtlemint Insurance Advisors" title="Turtlemint Insurance Advisors">
             </div>
             <div class="banner-image hide-md-up">
-                <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Advisors Across Country">
+                <img onload="imageSkeletons(this)" src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/tm-img/advisor-intro-banner-mob.png" alt="Turtlemint Insurance Advisors" title="Turtlemint Insurance Advisors">
             </div>
             <p class="h1-heading hide-md-up">Connecting <span class="tm-highlight-text">Customers</span> and <span class="tm-highlight-text">Advisors</span> Across the Country.</p>
         </div>
