@@ -88,7 +88,7 @@ function openPopup(popupId, advisorName, advisorId) {
     case "getInTouchPopup":
       gtag('event', 'GIT-Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Get-In-Touch', {
         'event_category': 'DPL_Buttons',
-        'event_label': 'GIT-'+window.tm_advisor_name
+        'event_label': 'GIT-' + window.tm_advisor_name + '-' + JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode
       });
       break;
     
@@ -395,9 +395,10 @@ $('#pincodeForm').submit( function(e){
     let vertical = $(this).find('input[name=tm-insurance-type]:checked').val()
     $('.tm-select-option[data-value='+vertical+']').addClass('selected')
     getAdvisorList(JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode,vertical)
+
     gtag('event', 'Btn_click-'+sessionStorage.getItem('tm_vertical_data')+'-Submit', {
       'event_category': 'DPL_Popup',
-      'event_label': 'Submit'
+      'event_label': 'Submit-'+ JSON.parse(sessionStorage.getItem('tm_pincode_data')).pinCode
     });
     tmScrollToTop()
 })
