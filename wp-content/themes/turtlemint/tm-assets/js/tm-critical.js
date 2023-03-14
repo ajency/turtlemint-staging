@@ -129,10 +129,10 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       catch(err){
         //TODO remove .text() line  
         // $('#pincode-filter-input').text(pincode)
-        console.log('Get Pincode Location error: ', err)
+        console.log('Pincode not found'+ pincode)
         gtag('event', 'DPL-'+sessionStorage.getItem('tm_vertical_data')+'-Message-Invalid-Pincode', {
             'event_category': 'DPL_Popup',
-            'event_label': 'Pincode not found'
+            'event_label': 'Pincode not found-'+ pincode
         });
 
         //TODO comment window.tm_pincode and remove false return
