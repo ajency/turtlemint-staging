@@ -131,7 +131,7 @@
 				<p><span style="font-weight: 600;">Turtlemint Insurance Broking Services Pvt Ltd (f/k  Invictus Insurance Broking Services Pvt Ltd)</span></p>
 				<p><a href="/irda-license/"><span style="text-decoration: underline;">IRDAI License No. 487,</span></a></br>
 					Composite Broker,</br>
-					Valid upto : 02/04/2023 (Renewable) 
+					Valid upto : 02/04/2026 (Renewable) 
 				</p>
 				<p><span style="font-weight: 600;">Principal Officer: Vilas Gandre,</span></br><a href="tel:18002660101"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><u>1800 266 0101</u></a></br> <a href="tel:+919833248023"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><u>+91-9833248023</u></a> </p>
 				<p><span style="font-weight: 600;">Secured by:</span></p>
@@ -251,7 +251,7 @@
 						<p><span style="font-weight: 600;">Turtlemint Insurance Broking Services Pvt Ltd (f/k  Invictus Insurance Broking Services Pvt Ltd)</span></p>
 						<p><a href="/irda-license/"><span style="text-decoration: underline;">IRDAI License No. 487,</span></a></br>
 							Composite Broker,</br>
-							Valid upto : 02/04/2023 (Renewable) 
+							Valid upto : 02/04/2026 (Renewable) 
 						</p>
 						<p><span style="font-weight: 600;">Principal Officer: Vilas Gandre,</span></br><a href="tel:18002660101"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><u>1800 266 0101</u></a></br> <a href="tel:+919833248023"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><u>+91-9833248023</u></a> </p>
 						<p><span style="font-weight: 600;">Secured by:</span></p>
@@ -373,7 +373,7 @@
 						<p><span style="font-weight: 600;">Turtlemint Insurance Broking Services Pvt Ltd (f/k  Invictus Insurance Broking Services Pvt Ltd)</span></p>
 						<p><a href="/irda-license/"><span style="text-decoration: underline;">IRDAI License No. 487,</span></a></br>
 							Composite Broker,</br>
-							Valid upto : 02/04/2023 (Renewable) 
+							Valid upto : 02/04/2026 (Renewable) 
 						</p>
 						<p><span style="font-weight: 600;">Principal Officer: Vilas Gandre,</span></br><a href="tel:18002660101"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><u>1800 266 0101</u></a></br> <a href="tel:+919833248023"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><u>+91-9833248023</u></a> </p>
 						<p><span style="font-weight: 600;">Secured by:</span></p>
