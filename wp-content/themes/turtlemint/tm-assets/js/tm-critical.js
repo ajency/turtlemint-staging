@@ -129,11 +129,16 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
       catch(err){
         //TODO remove .text() line  
         // $('#pincode-filter-input').text(pincode)
-        console.log('Pincode not found'+ pincode)
-        gtag('event', 'DPL-'+sessionStorage.getItem('tm_vertical_data')+'-Message-Invalid-Pincode', {
-            'event_category': 'DPL_Popup',
-            'event_label': 'Pincode not found-'+ pincode
-        });
+        let invalidPincodeVertical = sessionStorage.getItem('tm_vertical_data');
+        if(invalidPincodeVertical != null){
+            //console.log('Pincode not found-'+ pincode + ', vertical-' + invalidPincodeVertical)
+            gtag('event', 'DPL-'+invalidPincodeVertical+'-Message-Invalid-Pincode', {
+                'event_category': 'DPL_Popup',
+                'event_label': 'Pincode not found-'+ pincode
+            });
+        }else{
+            console.log('null vertical')
+        }
 
         //TODO comment window.tm_pincode and remove false return
         //   sessionStorage.setItem('tm_pincode_data', JSON.stringify({
@@ -201,6 +206,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
           htmlFirstFold += `<div class="tm-advisor-wrap">
           <div class="advisor-card">
               <div class="advisor-card__wraper">
+                  <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect" onclick="gtag('event', 'DPL-Partner_Website-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click Visit Website'});">Visit Website</a>
                   <div class="advisor-image">
                       ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                   </div>
@@ -218,7 +224,6 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                   </div>
                   <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
                   <br/>
-                  <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect" onclick="gtag('event', 'DPL-Partner_Website-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click Visit Website'});">Visit Website</a>
               </div>
           </div>
       </div>`
@@ -228,6 +233,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               htmlLastFold += `<div class="tm-advisor-wrap">
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
+                      <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect" onclick="gtag('event', 'DPL-Partner_Website-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click Visit Website'});">Visit Website</a>
                       <div class="advisor-image">
                       ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                       </div>
@@ -245,7 +251,6 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       </div>
                       <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
                       <br/>
-                      <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect" onclick="gtag('event', 'DPL-Partner_Website-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click Visit Website'});">Visit Website</a>
                   </div>
               </div>
           </div>`
@@ -309,6 +314,7 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
           html += `<div class="tm-advisor-wrap">
               <div class="advisor-card">
                   <div class="advisor-card__wraper">
+                      <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect" onclick="gtag('event', 'DPL-Partner_Website-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click Visit Website'});">Visit Website</a>
                       <div class="advisor-image">
                       ${ advisor.profilePicUrl ? '<img src="'+SERVER_2+'/api/files/v1/view/'+advisor.profilePicUrl+'?broker=turtlemint" alt="'+VERTICAL_JSON[sessionStorage.getItem('tm_vertical_data')]+' Insurance advisor in '+advisor.city+'" onerror="this.style.display=\'none\'">' : '' }
                       </div>
@@ -326,7 +332,6 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
                       </div>
                       <a onclick="openPopup('getInTouchPopup', '${advisor.partnerName}', '${advisor.partnerId}')" class="tm-button">Get In Touch</a>
                       <br/>
-                      <a target="_blank" href="https://advisor.turtlemint.com/profile/${advisor.dpNo}/${advisor.partnerName}" class="tm-link tm-redirect" onclick="gtag('event', 'DPL-Partner_Website-Linkclicks', {event_category:'LinkClicks',event_label: 'Link-click Visit Website'});">Visit Website</a>
                   </div>
               </div>
           </div>`

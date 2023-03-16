@@ -333,6 +333,7 @@ body {
 
     &__wraper {
         padding: 20px;
+        padding-bottom: 24px;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -348,6 +349,14 @@ body {
             left: 0px;
             top: 0px;
             z-index: -1;
+        }
+
+        .tm-link{
+            &.tm-redirect{
+                position: absolute;
+                right: 12px;
+                top: 12px;
+            }
         }
 
         .advisor-image {
@@ -415,12 +424,20 @@ body {
 
     @media(max-width:767.98px) {
         &__wraper {
+            padding-bottom: 24px;
             &:before {
                 height: 68px;
             }
 
+            .tm-link{
+                &.tm-redirect{
+                    right: 7px;
+                    top: 8px;
+                }
+            }
+
             .advisor-image {
-                margin-top: 4px;
+                margin-top: 0px;
                 margin-bottom: 16px;
                 width: 80px;
                 height: 80px;
