@@ -14,85 +14,88 @@ get_header('tmhomereskin');
                 <div class="col-6 first-column" style="">
                     <div class="main-banner-txt">
                     <h2 class="main-banner-txt-header1" style="/*line-height: 54px;*/">The  <span  style="color:#009F69">Futuristic Way</span> <br class="d-none d-md-block">To Buy <span  style="color:#009F69">Insurance</span></h2>
-                    <!-- start show/hide div -->
-                    <!--<div class="d-none d-lg-block d-sm-none d-md-none">-->
-                    <div class="d-none d-lg-block d-sm-none d-md-block">
-                        <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
-                        <div class="banner-crd" style="display:flex;">
-                            <br>						
-                            <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
-                            <div class="bannercrd-img">
-                                <div class="banner-img">
-                                <label class="select-type-health-desk">
-                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="health">
-                                    <img class="health-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health.svg" onClick="changeImage('health')"> -->
-                                    <img class="health-img" onClick="changeImage('health')">
-                                    <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health-checked.svg">							
-                                </label>
-                                <p>Health</p>
+                    </div>
+
+                    <div class="tm-border-box d-none d-lg-block d-sm-none d-md-block">
+                        <!-- start show/hide div -->
+                        <!--<div class="d-none d-lg-block d-sm-none d-md-none">-->
+                        <div class="d-none d-lg-block d-sm-none d-md-block">
+                            <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
+                            <div class="banner-crd" style="display:flex;">
+                                <br>						
+                                <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
+                                <div class="bannercrd-img">
+                                    <div class="banner-img">
+                                    <label class="select-type-health-desk">
+                                        <!-- <input class="radio-grp" type="radio" name="radio-btns" value="health">
+                                        <img class="health-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health.svg" onClick="changeImage('health')"> -->
+                                        <img class="health-img" onClick="changeImage('health')">
+                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health-checked.svg">							
+                                    </label>
+                                    <p>Health</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bannercrd-img">
-                                <div class="banner-img">
-                                <label class="select-type-life-desk">
-                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="life">
-                                    <img class="life-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life.svg" onClick="changeImage('life')"> -->
-                                    <img class="life-img" onClick="changeImage('life')">
-                                    <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life-checked.svg">	
-                                </label>
-                                <p>Life</p>
+                                <div class="bannercrd-img">
+                                    <div class="banner-img">
+                                    <label class="select-type-life-desk">
+                                        <!-- <input class="radio-grp" type="radio" name="radio-btns" value="life">
+                                        <img class="life-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life.svg" onClick="changeImage('life')"> -->
+                                        <img class="life-img" onClick="changeImage('life')">
+                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life-checked.svg">	
+                                    </label>
+                                    <p>Life</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bannercrd-img">
-                                <div class="banner-img">
-                                <label class="select-type-bike-desk">
-                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="bike">
-                                    <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
-                                    <img class="bike-img" onClick="changeImage('bike')">
-                                    <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike-checked.svg">	
-                                </label>
-                                <p>Bike</p>
+                                <div class="bannercrd-img">
+                                    <div class="banner-img">
+                                    <label class="select-type-bike-desk">
+                                        <!-- <input class="radio-grp" type="radio" name="radio-btns" value="bike">
+                                        <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
+                                        <img class="bike-img" onClick="changeImage('bike')">
+                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike-checked.svg">	
+                                    </label>
+                                    <p>Bike</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bannercrd-img">
-                                <div class="banner-img banner-img-life-mid">
-                                <label class="select-type-car-desk">
-                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="car">
-                                    <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
-                                    <img class="car-img" onClick="changeImage('car')">
-                                    <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car-checked.svg">
-                                </label>
-                                <p>Car</p>
+                                <div class="bannercrd-img">
+                                    <div class="banner-img banner-img-life-mid">
+                                    <label class="select-type-car-desk">
+                                        <!-- <input class="radio-grp" type="radio" name="radio-btns" value="car">
+                                        <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
+                                        <img class="car-img" onClick="changeImage('car')">
+                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car-checked.svg">
+                                    </label>
+                                    <p>Car</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end show/hide div -->
-                    </div>
-                    <!-- <div class="row d-none d-lg-block d-sm-none d-md-none" style="margin-top: 50px;margin-left: 0px"> -->
-                    <div class="row error-msg-div d-none d-lg-block d-sm-none d-md-block" style="">
-                    <p class="error-msg" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 14px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
-                        Please select type of insurance to proceed to the next step
-                    </p>
-                    </div>
-                    <!-- Buttons -->
-                    <div class="cta-btns d-none d-lg-block d-sm-none d-md-block" style="">
-                    <!-- <div class="d-none d-lg-block d-sm-none d-md-none" style=""> -->
-                    <div class="row-mid-new" style="display: flex;column-gap: 18px !important;">
-                        <div class="btns-mid ">
-                            <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;color: #333333; ">Get a Quote</button>
-                            <p style=""><span style="font-weight: 700;">45+ Insurer</span><br><span style="">companies online</span></p>
+                        <!-- end show/hide div -->
+                        <!-- <div class="row d-none d-lg-block d-sm-none d-md-none" style="margin-top: 50px;margin-left: 0px"> -->
+                        <div class="row error-msg-div d-none d-lg-block d-sm-none d-md-block" style="">
+                        <p class="error-msg" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 14px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
+                            Please select type of insurance to proceed to the next step
+                        </p>
                         </div>
-                        <div class="btns-mid or" style="line-height: 3;">
-                            <span style="">or</span>
+                        <!-- Buttons -->
+                        <div class="cta-btns d-none d-lg-block d-sm-none d-md-block" style="">
+                        <!-- <div class="d-none d-lg-block d-sm-none d-md-none" style=""> -->
+                        <div class="row-mid-new" style="display: flex;column-gap: 18px !important;">
+                            <div class="btns-mid ">
+                                <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;color: #333333; ">Get a Quote</button>
+                                <p style=""><span style="font-weight: 700;">45+ Insurer</span><br><span style="">companies online</span></p>
+                            </div>
+                            <div class="btns-mid or" style="line-height: 3;">
+                                <span style="">or</span>
+                            </div>
+                            <div class="btns-mid ">
+                                <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background:#00A364;color: #FFFFFF;">Find Advisor</button>
+                                <p style=""><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
+                            </div>
                         </div>
-                        <div class="btns-mid ">
-                            <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background:#00A364;color: #FFFFFF;">Find Advisor</button>
-                            <p style=""><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
                         </div>
+                        <!-- Buttons -->
                     </div>
-                    </div>
-                    <!-- Buttons -->
                     <!-- Modal -->
                     <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog ">
@@ -171,80 +174,83 @@ get_header('tmhomereskin');
                 </div>
             </div>
             <!-- large screen row end -->
-            <div class="row sm-device col" style="margin-top: -35px">
+            <div class="row sm-device col border-box-wrap-mobile" style="margin-top: -35px">
                 <!-- small screen row start -->
-                <!-- <div class="d-lg-none d-sm-block d-md-block"> -->
-                <div class="d-lg-none d-sm-block d-md-none">
-                    <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
-                    <div class="banner-crd" style="display:flex;">
-                    <br>						
-                    <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
-                    <div class="bannercrd-img">
-                        <div class="banner-img">
-                            <label class="select-type-health-mob">
-                                <!-- <input class="radio-grp" type="radio" name="radio-btns" value="health">
-                                <img class="health-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health.svg"> -->
-                                <img class="health-img" onClick="changeImage('health')">
-                            </label>
-                            <p>Health</p>
+
+                <div class="tm-border-box d-lg-none d-sm-block d-md-none">
+                    <!-- <div class="d-lg-none d-sm-block d-md-block"> -->
+                    <div class="d-lg-none d-sm-block d-md-none">
+                        <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
+                        <div class="banner-crd" style="display:flex;">
+                        <br>						
+                        <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
+                        <div class="bannercrd-img">
+                            <div class="banner-img">
+                                <label class="select-type-health-mob">
+                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="health">
+                                    <img class="health-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health.svg"> -->
+                                    <img class="health-img" onClick="changeImage('health')">
+                                </label>
+                                <p>Health</p>
+                            </div>
+                        </div>
+                        <div class="bannercrd-img">
+                            <div class="banner-img">
+                                <label class="select-type-life-mob">
+                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="life">
+                                    <img class="life-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life.svg" onClick="changeImage('life')"> -->
+                                    <img class="life-img" onClick="changeImage('life')">
+                                </label>
+                                <p>Life</p>
+                            </div>
+                        </div>
+                        <div class="bannercrd-img">
+                            <div class="banner-img">
+                                <label class="select-type-bike-mob">
+                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="bike">
+                                    <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
+                                    <img class="bike-img" onClick="changeImage('bike')">
+                                </label>
+                                <p>Bike</p>
+                            </div>
+                        </div>
+                        <div class="bannercrd-img">
+                            <div class="banner-img banner-img-life-mid">
+                                <label class="select-type-car-mob">
+                                    <!-- <input class="radio-grp" type="radio" name="radio-btns" value="car">
+                                    <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
+                                    <img class="car-img" onClick="changeImage('car')">
+                                </label>
+                                <p>Car</p>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <div class="bannercrd-img">
-                        <div class="banner-img">
-                            <label class="select-type-life-mob">
-                                <!-- <input class="radio-grp" type="radio" name="radio-btns" value="life">
-                                <img class="life-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life.svg" onClick="changeImage('life')"> -->
-                                <img class="life-img" onClick="changeImage('life')">
-                            </label>
-                            <p>Life</p>
+                    <!-- end show/hide div -->
+                    <!--</div>-->
+                    <div class="d-lg-none d-sm-block d-md-none" style="">
+                        <p class="error-msg error-msg-mb" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 12px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
+                        Please select type of insurance to proceed to the next step
+                        </p>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-lg-none d-sm-block d-md-none" style="">
+                        <div class="row-mid-new" style="display: flex; column-gap: 18px;">
+                        <div class="btns-mid ">
+                            <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;border-radius: 8px;color: #333333; margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;padding: 16px 26px 15px 29px;">Get a Quote</button>
+                            <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">45+ Insurer</span><br><span style="font-weight: 500;">companies online</span></p>
+                        </div>
+                        <div class="btns-mid" style="line-height: 3;">
+                            <span style="font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 12px;line-height: 15px;color: #000000;">or</span>
+                        </div>
+                        <div class="btns-mid ">
+                            <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background: #00A364;border-radius: 8px;color: #FFFFFF;margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;line-height: 17px;padding: 16px 29px 18px 30px;">Find Advisor</button>
+                            <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
+                        </div>
                         </div>
                     </div>
-                    <div class="bannercrd-img">
-                        <div class="banner-img">
-                            <label class="select-type-bike-mob">
-                                <!-- <input class="radio-grp" type="radio" name="radio-btns" value="bike">
-                                <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
-                                <img class="bike-img" onClick="changeImage('bike')">
-                            </label>
-                            <p>Bike</p>
-                        </div>
-                    </div>
-                    <div class="bannercrd-img">
-                        <div class="banner-img banner-img-life-mid">
-                            <label class="select-type-car-mob">
-                                <!-- <input class="radio-grp" type="radio" name="radio-btns" value="car">
-                                <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
-                                <img class="car-img" onClick="changeImage('car')">
-                            </label>
-                            <p>Car</p>
-                        </div>
-                    </div>
-                    </div>
+                    <!-- Buttons -->
                 </div>
-                <!-- end show/hide div -->
-                <!--</div>-->
-                <div class="d-lg-none d-sm-block d-md-none" style="">
-                    <p class="error-msg error-msg-mb" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 12px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
-                    Please select type of insurance to proceed to the next step
-                    </p>
-                </div>
-                <!-- Buttons -->
-                <div class="d-lg-none d-sm-block d-md-none" style="">
-                    <div class="row-mid-new" style="display: flex; column-gap: 18px;">
-                    <div class="btns-mid ">
-                        <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;border-radius: 8px;color: #333333; margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;padding: 16px 26px 15px 29px;">Get a Quote</button>
-                        <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">45+ Insurer</span><br><span style="font-weight: 500;">companies online</span></p>
-                    </div>
-                    <div class="btns-mid" style="line-height: 3;">
-                        <span style="font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 12px;line-height: 15px;color: #000000;">or</span>
-                    </div>
-                    <div class="btns-mid ">
-                        <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background: #00A364;border-radius: 8px;color: #FFFFFF;margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;line-height: 17px;padding: 16px 29px 18px 30px;">Find Advisor</button>
-                        <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
-                    </div>
-                    </div>
-                </div>
-                <!-- Buttons -->
             </div>
             <!-- small screen row end -->
             <!--	</div>
