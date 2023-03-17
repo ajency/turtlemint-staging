@@ -1080,3 +1080,61 @@ button:hover,
 }
 /* Home vertical icons end */
 /* MID */
+
+
+@media (max-width: 768px){
+    .main-banner{
+        padding-bottom: 56px;
+    }
+    .border-box-wrap-mobile {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0px !important;
+        justify-content: center !important;
+    }
+}
+@media (max-width: 414px){
+    .main-banner {
+        padding-bottom: 56px !important;
+    }
+}
+/* main banner form | start */
+.tm-border-box {
+    margin-top: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    padding: 32px 32px 40px;
+}
+.tm-border-box .main-banner-txt-header2 {
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+}
+.tm-border-box .bannercrd-img .banner-img{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 9.48347px;
+}
+.tm-border-box .cta-btns button{
+    margin-bottom: 19px;
+    font-weight: 700;
+}
+.tm-border-box .btns-mid p{
+    margin-bottom: 0px;
+}
+@media(max-width:767.98px){
+    .tm-border-box {
+        margin-top: 46px;
+        border-radius: 20px;
+        padding: 20px 14px;
+    }
+    .tm-border-box .main-banner-txt-header2 {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 12px;
+    }
+}
+/* main banner form | end */
