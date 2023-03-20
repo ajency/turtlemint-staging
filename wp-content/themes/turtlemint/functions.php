@@ -802,3 +802,34 @@ function custom_text_validation_filter( $result, $tag ) {
 
     return $result;
 };
+
+
+//  ==========================
+/* Event Tracking Settings */
+//  ==========================
+
+function tm_customize_register($wp_customize){
+
+    $wp_customize->add_section('tm_event_tracking_settings', array(
+        'title'    => __('Event Tracking Settings', 'turtlemint'),
+        'priority' => 120,
+    ));
+/* Add custom field for GA tracking ID */
+    $wp_customize->add_setting('tm_ga_tracking_id', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control('tm_ga_tracking_id', array(
+        'label'      => __('GA Tracking ID', 'turtlemint'),
+        'description' => sprintf(
+            '<p>Your "UA-" ID appears at the top of the Property Settings page.</p>'
+        ),
+        'section'    => 'tm_event_tracking_settings',
+        'settings'   => 'tm_ga_tracking_id',
+    ));
+}
+
+add_action('customize_register', 'tm_customize_register');

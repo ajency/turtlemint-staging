@@ -548,6 +548,31 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/slick/slick.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/index.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/tm-assets/js/verticalLanding.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+;
+})(window,document,'script','dataLayer','GTM-PCZGBP');</script>
+<!-- End Google Tag Manager -->
+
+<?php $ga_tracking_id = get_option('tm_ga_tracking_id', ''); 
+if($ga_tracking_id):
+?>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_tracking_id ?>"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', '<?php echo $ga_tracking_id ?>' );
+</script>
+<!-- End Google tag (gtag.js) -->
+<?php endif; ?>
+
 <script>
 	jQuery('.slider-nav').slick({
 	    slidesToShow: 6,
