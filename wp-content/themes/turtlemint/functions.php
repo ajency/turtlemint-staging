@@ -830,6 +830,21 @@ function tm_customize_register($wp_customize){
         'section'    => 'tm_event_tracking_settings',
         'settings'   => 'tm_ga_tracking_id',
     ));
+    $wp_customize->add_setting('tm_ga4_tracking_id', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control('tm_ga4_tracking_id', array(
+        'label'      => __('GA4 Tracking ID', 'turtlemint'),
+        'description' => sprintf(
+            '<p>Your "G-" ID appears in the GA4 setup assistant.</p>'
+        ),
+        'section'    => 'tm_event_tracking_settings',
+        'settings'   => 'tm_ga4_tracking_id',
+    ));
 }
 
 add_action('customize_register', 'tm_customize_register');

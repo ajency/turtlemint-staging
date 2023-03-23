@@ -516,8 +516,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PCZGBP');</script>
 <!-- End Google Tag Manager -->
 
-<?php $ga_tracking_id = get_option('tm_ga_tracking_id', ''); 
-if($ga_tracking_id):
+<?php
+$ga_tracking_id = get_option('tm_ga_tracking_id', '');
+$ga4_tracking_id = get_option('tm_ga4_tracking_id', ''); 
+
+if($ga_tracking_id || $ga4_tracking_id):
 ?>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_tracking_id ?>"></script>
@@ -525,11 +528,18 @@ if($ga_tracking_id):
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+<?php endif; ?>
 
-gtag('config', '<?php echo $ga_tracking_id ?>' );
+<?php if($ga_tracking_id):?>
+    gtag('config', '<?php echo $ga_tracking_id ?>' );
+<?php endif; ?>
+
+<?php if($ga4_tracking_id):?>
+    gtag('config', '<?php echo $ga4_tracking_id ?>' );
+<?php endif; ?>
+
 </script>
 <!-- End Google tag (gtag.js) -->
-<?php endif; ?>
 
 <script>
 	$('.slider-nav').slick({
