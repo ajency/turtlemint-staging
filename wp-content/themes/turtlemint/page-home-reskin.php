@@ -21,8 +21,7 @@ get_header('tmhomereskin');
                         <!--<div class="d-none d-lg-block d-sm-none d-md-none">-->
                         <div class="d-none d-lg-block d-sm-none d-md-block">
                             <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
-                            <div class="banner-crd" style="display:flex;">
-                                <br>						
+                            <div class="banner-crd" style="display:flex;">						
                                 <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
                                 <div class="bannercrd-img">
                                     <div class="banner-img">
@@ -80,7 +79,7 @@ get_header('tmhomereskin');
                         <!-- Buttons -->
                         <div class="cta-btns d-none d-lg-block d-sm-none d-md-block" style="">
                         <!-- <div class="d-none d-lg-block d-sm-none d-md-none" style=""> -->
-                        <div class="row-mid-new" style="display: flex;column-gap: 18px !important;">
+                        <div class="row-mid-new">
                             <div class="btns-mid ">
                                 <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;color: #333333; ">Get a Quote</button>
                                 <p style=""><span style="font-weight: 700;">45+ Insurer</span><br><span style="">companies online</span></p>
@@ -235,7 +234,7 @@ get_header('tmhomereskin');
                     </div>
                     <!-- Buttons -->
                     <div class="d-lg-none d-sm-block d-md-none" style="">
-                        <div class="row-mid-new" style="display: flex; column-gap: 18px;">
+                        <div class="row-mid-new">
                         <div class="btns-mid ">
                             <button onclick="changeBtn('redirect')" type="button" class="btn  btn-lg" style="background: #F4C061;border-radius: 8px;color: #333333; margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;padding: 16px 26px 15px 29px;">Get a Quote</button>
                             <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">45+ Insurer</span><br><span style="font-weight: 500;">companies online</span></p>
@@ -305,7 +304,7 @@ get_header('tmhomereskin');
     </div> -->
     <!-- ======= Too Many Options Can Make End ======= -->
     <div class="row-2">
-        <div class="container secondary-banner padd-tb-50">
+        <div class="container secondary-banner padd-tb-50 d-none">
             <!-- <h3 class="custom-become-part">Become Part Of <br class="d-block d-sm-none">The Evergrowing <br class="d-block d-sm-none">Turtlemint Family</h3> -->
 			<h3 class="custom-become-part">Connecting customers and advisors across the country.</h3>
             <div class="row partner-row padd-tb-30">
