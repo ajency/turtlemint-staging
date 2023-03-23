@@ -802,5 +802,38 @@ gtag('config', '<?php echo $ga_tracking_id ?>' );
 	.bottom-seo-text ol li{list-style-type: auto;} 
 </style>
 <!-- endinject:foot -->
+
+	<!-- CF7 Mail Sent Function -->
+	<?php
+		$formArgs= array('post_type' => 'wpcf7_contact_form', 'posts_per_page' => -1);
+		$tmCf7Forms = get_posts( $formArgs );
+		$tm_post_ids = wp_list_pluck( $tmCf7Forms , 'ID' );
+		$tm_form_titles = wp_list_pluck( $tmCf7Forms , 'post_title' );
+		
+		$tm_sf7_forms_data = [];
+
+		foreach( $tm_post_ids as $index => $tm_post_id ) {
+			$tm_sf7_forms_data['ID_'.$tm_post_id] = $tm_form_titles[$index];
+		}
+	?>
+	<script type="text/javascript">
+		let tm_cf7_form_data = <?php echo json_encode($tm_sf7_forms_data); ?>;
+		document.addEventListener( "wpcf7mailsent", 
+			function (event) {
+				let formId = event.detail.contactFormId;
+				if ('undefined' !== typeof tm_cf7_form_data) {
+					formTitle = tm_cf7_form_data['ID_' + formId];
+				} else {
+					formTitle = 'Form ID ' + formId;
+				}
+				gtag("event", "Mail Sent", {
+					event_category: "Contact Form 7",
+					event_label: formTitle,
+				});
+			},
+			false
+		);
+	</script>
+
 </body>
 </html>
