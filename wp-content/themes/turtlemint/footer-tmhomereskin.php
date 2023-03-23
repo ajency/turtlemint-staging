@@ -966,6 +966,18 @@ gtag('config', '<?php echo $ga_tracking_id ?>' );
 		gtag('event','Btn_click-'+img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1),{event_category:'HP-Buttons',event_label: img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1)});
 		// GA EVENT END
 
+		/* button animation */
+		let ctaButtons = $('.tm-border-box').find('.row-mid-new button');
+		if($(ctaButtons).hasClass('buttonPulse')){
+			console.log('has class!')
+			$(ctaButtons).removeClass('buttonPulse');
+			setTimeout(function() {
+				$(ctaButtons).addClass('buttonPulse');
+			}, 1000);
+		}else{
+			$(ctaButtons).addClass('buttonPulse');
+		}
+
 	}
 	function changeBtn(value){
 		// if(jQuery("input[type='radio'].radio-grp").is(':checked')) {
