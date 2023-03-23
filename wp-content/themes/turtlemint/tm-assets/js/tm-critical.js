@@ -366,3 +366,32 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
     window.removeEventListener("scroll", handleInfiniteScroll);
   };
   //infinite scrolling end
+
+    // GA Events
+  document.getElementById('LifeDropdownMenuDesk').addEventListener('click', function() {
+    gtag('event', 'Life', {
+      'event_category': 'Mega-Menu-Click',
+      'event_label': 'Life Menu Clicked'
+    });
+  });
+  
+  document.getElementById('HealthDropdownMenuDesk').addEventListener('click', function() {
+    gtag('event', 'Health', {
+      'event_category': 'Mega-Menu-Click',
+      'event_label': 'Health Menu Clicked'
+    });
+  });
+  
+  document.getElementById('BikeDropdownMenuDesk').addEventListener('click', function() {
+    gtag('event', 'Bike', {
+      'event_category': 'Mega-Menu-Click',
+      'event_label': 'Bike Menu Clicked'
+    });
+  });
+  
+  document.getElementById('CarDropdownMenuDesk').addEventListener('click', function() {
+    gtag('event', 'Car', {
+      'event_category': 'Mega-Menu-Click',
+      'event_label': 'Car Menu Clicked'
+    });
+  });

@@ -278,5 +278,16 @@
     border-color: transparent;
   }
 </style>
+<script>
+  const ctas = document.getElementsByClassName("quote-cta");
+  for (let i = 0; i < ctas.length; i++) {
+    ctas[i].addEventListener("click", function() {
+      gtag("event", "CTA-InContent-Action", {
+        event_category: "SEO",
+        event_label: "CTA-InContent-Label",
+      });
+    });
+  }
+</script>
 <?php
 get_footer('tmphase2');

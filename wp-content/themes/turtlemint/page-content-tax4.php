@@ -734,5 +734,16 @@
     taxSaverCalc();
 });
         </script>
+        <script type="text/javascript">
+            const ctas = document.getElementsByClassName("calculate-tax-savings-cta");
+            for (let i = 0; i < ctas.length; i++) {
+            ctas[i].addEventListener("click", function () {
+                gtag("event", "PPCLeadCTA", {
+                event_category: "PPC",
+                event_label: "PPCLeadCTA-TaxCalc-Calculate-Button",
+                });
+            });
+            }
+        </script>
 	</body>
 </html>
