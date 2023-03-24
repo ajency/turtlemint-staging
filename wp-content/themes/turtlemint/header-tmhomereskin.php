@@ -22,23 +22,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php if ( is_page_template( array( 'page-templates/page-advisor-list.php' ) ) ) { ?>
-			<title>Find Experienced Insurance Advisors Near You - Turtlemint</title>
-			<meta name="description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
-			<meta name="keywords" content="insurance advisor near me">
-			<!-- og data -->
-			<meta property="og:title" content="Find Experienced Insurance Advisors Near You - Turtlemint">
-			<meta property="og:site_name" content="Turtlemint">
-			<meta property="og:url" content="<?php echo get_permalink( get_the_ID() ); ?>">
-			<meta property="og:description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
-			<meta property="og:type" content="website">
-			<meta property="og:image" content="https://www.turtlemint.com/wp-content/themes/turtlemint/tm-assets/img/logo.png">
-			<!-- twitter card -->
-			<meta name="twitter:card" content="summary">
-			<meta name="twitter:site" content="@helloturtlemint" />
-			<meta property="twitter:title" content="Find Experienced Insurance Advisors Near You - Turtlemint">
-			<meta name="twitter:image" content="https://www.turtlemint.com/wp-content/themes/turtlemint/tm-assets/img/logo.png">
-			<meta property="twitter:description" content="Book a free consultation with our certified and experienced insurance advisors near you. Contact a Turtlemint Insurance Advisor today!">
-
 
 			<script type="application/ld+json">
 				{
