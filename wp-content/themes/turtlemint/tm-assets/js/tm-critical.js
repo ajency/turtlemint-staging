@@ -111,8 +111,8 @@ const API_KEY = "26f4535b-0c0a-4251-8697-4919ce7b58c7";
               headers: headersList
           });
           let data = await response.json();
-        //   console.log(data)
-          if(data.area && data.city && data.city){
+          //console.log(data)
+          if(!(data.status == 'failure')){
               
             //TODO
             //replace hardcoded object with data
