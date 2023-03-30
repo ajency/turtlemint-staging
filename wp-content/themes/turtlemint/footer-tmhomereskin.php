@@ -638,7 +638,7 @@
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		dots: true,
+		dots: false,
 		prevArrow: false,
 		nextArrow: false,
 		responsive: [{
@@ -647,7 +647,7 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				infinite: true,
-				dots: true
+				dots: false
 			}
 		},
 		{
@@ -655,6 +655,7 @@
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
+				dots: false
 			}
 		},
 		{
@@ -662,6 +663,7 @@
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
+				dots: false
 			}
 		}
 		],
@@ -931,7 +933,11 @@
 		$('.life-img').removeClass('life-checked');
 		$('.bike-img').removeClass('bike-checked');
 		$('.car-img').removeClass('car-checked');
-		
+		$('.untick-check').addClass('green-check');
+		$('.green-check').removeClass('untick-check');
+		$('.grey-two').addClass('green-two');
+		$('.green-two').removeClass('grey-two');
+
 		$('.'+img_selector).addClass(img+'-checked');
 		
 		checked = true;
@@ -1058,7 +1064,7 @@
 			};
 	}
 </script>
-
+		
 		
 	
     <!-- endinject:foot -->

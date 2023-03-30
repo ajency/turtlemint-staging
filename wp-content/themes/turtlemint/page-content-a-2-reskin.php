@@ -45,7 +45,7 @@
 							<div class="errtext pt1" id="errMsgPincode"></div>
 						</form>
                      </div>
-                     <p class="text-300 mb-1 ps-4 ps-xl-6 tm-advisor-usp"><span>2.7 Lakh+</span> Turtlemint advisors</p>
+                     <p class="text-300 mb-1 ps-4 ps-xl-6 tm-advisor-usp"><span>2.8 Lakh+</span> Turtlemint advisors</p>
                   </div>
                </div>
             </div>

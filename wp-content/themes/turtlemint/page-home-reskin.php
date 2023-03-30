@@ -19,7 +19,14 @@ get_header('tmhomereskin');
                     <div class="tm-border-box d-none d-lg-block d-sm-none d-md-block">
                         <!-- start show/hide div -->
                         <!--<div class="d-none d-lg-block d-sm-none d-md-none">-->
-                        <div class="d-none d-lg-block d-sm-none d-md-block">
+                        <div class="check-btns">
+                            <img class="untick-check">
+                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
+                            <div class="line"></div>
+                            <img class="grey-two">
+                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/2-green.png.png">
+                        </div>
+                        <div class="d-none d-lg-block d-sm-none d-md-block align-box">
                             <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
                             <div class="banner-crd" style="display:flex;">						
                                 <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
@@ -69,15 +76,16 @@ get_header('tmhomereskin');
                                 </div>
                             </div>
                         </div>
-                        <!-- end show/hide div -->
-                        <!-- <div class="row d-none d-lg-block d-sm-none d-md-none" style="margin-top: 50px;margin-left: 0px"> -->
-                        <div class="row error-msg-div d-none d-lg-block d-sm-none d-md-block" style="">
+                        <div class="row error-msg-div d-none d-lg-block d-sm-none d-md-block error-align" style="">
                         <p class="error-msg" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 14px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
                             Please select type of insurance to proceed to the next step
                         </p>
                         </div>
+                        <P class="help-text">How can we help you?</P>
+                        <!-- end show/hide div -->
+                        <!-- <div class="row d-none d-lg-block d-sm-none d-md-none" style="margin-top: 50px;margin-left: 0px"> -->
                         <!-- Buttons -->
-                        <div class="cta-btns d-none d-lg-block d-sm-none d-md-block" style="">
+                        <div class="cta-btns d-none d-lg-block d-sm-none d-md-block align-cta-btn" style="">
                         <!-- <div class="d-none d-lg-block d-sm-none d-md-none" style=""> -->
                         <div class="row-mid-new">
                             <div class="btns-mid ">
@@ -89,7 +97,7 @@ get_header('tmhomereskin');
                             </div>
                             <div class="btns-mid ">
                                 <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background:#00A364;color: #FFFFFF;">Find Advisor</button>
-                                <p style=""><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
+                                <p style=""><span style="font-weight: 700;">2.8 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
                             </div>
                         </div>
                         </div>
@@ -173,12 +181,21 @@ get_header('tmhomereskin');
                 </div>
             </div>
             <!-- large screen row end -->
-            <div class="row sm-device col border-box-wrap-mobile" style="margin-top: -35px">
+            <div class="row sm-device col border-box-wrap-mobile" style="margin-top: -70px">
                 <!-- small screen row start -->
 
                 <div class="tm-border-box d-lg-none d-sm-block d-md-none">
+                    <div class="check-btns">
+                            <img class="untick-check">
+                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
+                            <!-- <img class="green-check"> -->
+                            <div class="line"></div>
+                            <img class="grey-two">
+                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/2-green.png.png">
+                            <!-- <img class="green-two"> -->
+                    </div>
                     <!-- <div class="d-lg-none d-sm-block d-md-block"> -->
-                    <div class="d-lg-none d-sm-block d-md-none">
+                    <div class="d-lg-none d-sm-block d-md-none align-text-mob">
                         <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
                         <div class="banner-crd" style="display:flex;">
                         <br>						
@@ -227,11 +244,13 @@ get_header('tmhomereskin');
                     </div>
                     <!-- end show/hide div -->
                     <!--</div>-->
-                    <div class="d-lg-none d-sm-block d-md-none" style="">
-                        <p class="error-msg error-msg-mb" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 12px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
+                    <div class="d-lg-none d-sm-block d-md-none align-error-mob" style="">
+                        <p class="error-msg error-msg-mb align-msg" style="visibility: hidden;font-family: 'Montserrat';font-style: normal;font-weight: 500;font-size: 12px;line-height: 17px;letter-spacing: 0.01em;color: #FF3B30;">
                         Please select type of insurance to proceed to the next step
                         </p>
                     </div>
+                    <P class="help-text">How can we help you?</P>
+                    
                     <!-- Buttons -->
                     <div class="d-lg-none d-sm-block d-md-none" style="">
                         <div class="row-mid-new">
@@ -244,11 +263,12 @@ get_header('tmhomereskin');
                         </div>
                         <div class="btns-mid ">
                             <button onclick="changeBtn('popup')" type="button" class="btn  btn-lg" style="background: #00A364;border-radius: 8px;color: #FFFFFF;margin-bottom: 9px;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 14px;line-height: 17px;padding: 16px 29px 18px 30px;">Find Advisor</button>
-                            <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">2.7 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
+                            <p style="font-family: 'Montserrat';font-style: normal;font-size: 12px;line-height: 18px;letter-spacing: 0.01em;"><span style="font-weight: 700;">2.8 Lakh+</span><br><span style="font-weight: 500;">Turtlemint advisors</span></p>
                         </div>
                         </div>
                     </div>
                     <!-- Buttons -->
+                    
                 </div>
             </div>
             <!-- small screen row end -->
@@ -267,7 +287,7 @@ get_header('tmhomereskin');
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-02.svg" class="home-whyadvisor-img" width="150" height=""  />
-            <p>40 Lakh+ <br>Happy Customers</p>
+            <p>40 Lakh+ <br>Customers</p>
         </div>
         <div class="home-whyadvisor">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-whyadvisor-03.svg" class="home-whyadvisor-img" width="150" height=""  />
@@ -319,7 +339,7 @@ get_header('tmhomereskin');
                 <div class="col-xl-2 col-lg-3 col-md-4">
                     <div class="custom-become-content">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/p2.png" />
-                        <h3>2.7 Lakh+</h3>
+                        <h3>2.8 Lakh+</h3>
                         <p>Advisors</p>
                     </div>
                 </div>
@@ -472,7 +492,7 @@ get_header('tmhomereskin');
                             <span class="point-subtext">Find and save all your policies, get reminders, track claims on your fingertips</span></li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Claim any policy</span><br><span class="point-subtext">Get quick claims support from our experts for any policy, any insurer</span></li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>All policies explained</span><br><span class="point-subtext">Understand the features of your policies for complete risk protection</span></li>
-							<li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Consult an expert</span><br><span class="point-subtext">Consult one of our 2.7 lakh+ advisors/POSPs on your insurance</span></li>
+							<li><img src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/checkmark.png" class="checkmark"><span>Consult an expert</span><br><span class="point-subtext">Consult one of our 2.8 lakh+ advisors/POSPs on your insurance</span></li>
                         </ul>
                     </div>
                 </div>

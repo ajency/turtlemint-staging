@@ -855,7 +855,7 @@ button:hover,
 	border-radius: 4px;	
 }
 .error-msg-div{
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-left: 0px !important;
 }
 .cta-btns button{
@@ -1065,6 +1065,19 @@ button:hover,
 .car-img {
   content: url('../img/home-banner-icon-car.svg');
 }
+.green-check {
+  content: url('../img/green-check.png');
+}
+.untick-check {
+    content: url('../img/untick.png');
+  }
+.green-two {
+    content: url('../img/2-green.png');
+}
+.grey-two {
+    content: url('../img/2-icon.png');
+}
+
 
 .health-img.health-checked {
   content: url('../img/home-banner-icon-health-checked.svg');
@@ -1101,12 +1114,9 @@ button:hover,
 /* main banner form | start */
 .tm-border-box {
     margin-top: 32px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 24px;
-    padding: 32px 32px 40px;
 }
 .tm-border-box .main-banner-txt-header2 {
-    margin-top: 0px;
+    margin-top: 15px;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -1140,8 +1150,8 @@ button:hover,
     margin-bottom: 0px;
 }
 .tm-border-box .row-mid-new{
-    column-gap: 15px;
     display: flex;
+    justify-content: space-evenly;
 }
 @media(max-width:767.98px){
     .tm-border-box {
@@ -1162,7 +1172,7 @@ button:hover,
     }
     .tm-border-box .row-mid-new {
         column-gap: 13px;
-        justify-content: space-between;
+        margin-left: unset;
     }
     .tm-border-box .banner-crd {
         justify-content: space-between;
@@ -1197,3 +1207,67 @@ button:hover,
 		transform: scale(1);
 	}
 }
+
+	.untick-check {
+    	margin-bottom: -24px;
+	}
+	.green-check {
+    	margin-bottom: -24px;
+	}
+	.align-box {
+    	margin-left: 40px;
+		margin-top: -227px;
+	}
+	.check-btns {
+    	width: 27px;
+	}
+	.line {
+		border-left: 1px dashed #000000;
+		height: 160px;
+		margin-left: 12px;
+		opacity: 0.3;
+		margin-top: 15px;
+	}
+	.help-text {
+		margin-top: -10px;
+		margin-left: 40px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 24px;
+		letter-spacing: 0.01em;
+		text-align: left;
+		color: #000000;
+		font-family: 'Montserrat';
+	}
+	.error-align {
+    	margin-top: 40px;
+	}
+	p.error-msg {
+    	margin-left: 40px;
+	}
+	.align-cta-btn {
+    	margin-left: 20px !important;
+	}
+
+	@media(max-width:768px) {
+		.align-text-mob {
+    		margin-left: 40px;
+			margin-top: -225px;
+		}
+		.help-text {
+			padding-top: 15px;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 17px;
+			letter-spacing: 0.01em;
+			text-align: left;
+		}
+		.align-error-mob {
+			margin-left: 25px;
+		}
+		p.error-msg {
+    		margin-left: 20px;
+			padding-top: 15px;
+			margin-top: unset !important;
+		}
+	}
