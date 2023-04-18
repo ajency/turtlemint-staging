@@ -245,8 +245,8 @@ img.blank-tick {
     margin: auto;
     text-align: center;
     display: block;
-    width: 30.99px;
-    height: 28px;
+    width: 35.93px;
+    height: 32.93px;
     margin-left: 16.04px;
 	/* padding: 15%; */
 }
@@ -776,7 +776,7 @@ img.blank-tick {
 	text-align: center;
 	color: #333333;
     margin-left: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 @media(max-width: 768px) {
     .banner-img p {
@@ -1294,6 +1294,10 @@ button:hover,
     }
 }
 
+label {
+    margin-bottom: 0 !important;
+}
+
 .tm-border-box .cta-btns button{
     margin-bottom: 19px;
     font-weight: 700;
@@ -1382,14 +1386,14 @@ button:hover,
 	}
 	.align-box {
     	margin-left: 40px;
-		margin-top: -227px;
+		margin-top: -276px;
 	}
 	.check-btns {
     	width: 27px;
 	}
 	.line {
 		border-left: 1px dashed #000000;
-		height: 160px;
+		height: 209px;
 		margin-left: 12px;
 		opacity: 0.3;
 		margin-top: 15px;
@@ -1406,7 +1410,8 @@ button:hover,
 		font-family: 'Montserrat';
 	}
 	.error-align {
-    	margin-top: 40px;
+    	margin-top: 10px;
+        margin-bottom: 10px;
 	}
 	p.error-msg {
     	margin-left: 40px;
@@ -1418,7 +1423,7 @@ button:hover,
 	@media(max-width:768px) {
 		.align-text-mob {
     		margin-left: 40px;
-			margin-top: -225px;
+			margin-top: -303px;
 		}
 		.help-text {
 			padding-top: 15px;
@@ -1434,6 +1439,10 @@ button:hover,
 		p.error-msg {
     		margin-left: 20px;
 			padding-top: 15px;
-			margin-top: unset !important;
+			margin-top: 0 !important;
+            margin-bottom: 10px;
 		}
+        .line {
+            height: 240px;
+        }
 	}
