@@ -24,54 +24,58 @@ get_header('tmhomereskin');
                             <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                             <div class="line"></div>
                             <img class="grey-two">
-                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/2-green.png.png">
+                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                         </div>
                         <div class="d-none d-lg-block d-sm-none d-md-block align-box">
                             <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
                             <div class="banner-crd" style="display:flex;">						
                                 <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
-                                <div class="bannercrd-img">
+                                <div class="bannercrd-img health-card" onclick="changeImage('health')" >
                                     <div class="banner-img">
                                     <label class="select-type-health-desk">
                                         <!-- <input class="radio-grp" type="radio" name="radio-btns" value="health">
                                         <img class="health-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health.svg" onClick="changeImage('health')"> -->
-                                        <img class="health-img" onClick="changeImage('health')">
-                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health-checked.svg">							
+                                        <img class="health-img">	
                                     </label>
                                     <p>Health</p>
+                                    <img class="blank-tick blank-tick-health" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                    <img class="hide-imgs no-lazy green-imgs" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                                     </div>
                                 </div>
-                                <div class="bannercrd-img">
+                                <div class="bannercrd-img life-card" onclick="changeImage('life')">
                                     <div class="banner-img">
                                     <label class="select-type-life-desk">
                                         <!-- <input class="radio-grp" type="radio" name="radio-btns" value="life">
                                         <img class="life-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life.svg" onClick="changeImage('life')"> -->
-                                        <img class="life-img" onClick="changeImage('life')">
-                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life-checked.svg">	
+                                        <img class="life-img">	
                                     </label>
                                     <p>Life</p>
+                                    <img class="blank-tick blank-tick-life" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                    <img class="hide-imgs-life no-lazy green-img-life" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                                     </div>
                                 </div>
-                                <div class="bannercrd-img">
+                                <div class="bannercrd-img bike-card" onclick="changeImage('bike')">
                                     <div class="banner-img">
                                     <label class="select-type-bike-desk">
                                         <!-- <input class="radio-grp" type="radio" name="radio-btns" value="bike">
                                         <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
                                         <img class="bike-img" onClick="changeImage('bike')">
-                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike-checked.svg">	
                                     </label>
                                     <p>Bike</p>
+                                    <img class="blank-tick blank-bike" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                    <img class="hide-imgs-bike no-lazy green-img-bike" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                                     </div>
                                 </div>
-                                <div class="bannercrd-img">
+                                <div class="bannercrd-img car-card" onclick="changeImage('car')">
                                     <div class="banner-img banner-img-life-mid">
                                     <label class="select-type-car-desk">
                                         <!-- <input class="radio-grp" type="radio" name="radio-btns" value="car">
                                         <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
-                                        <img class="car-img" onClick="changeImage('car')">
-                                        <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car-checked.svg">
+                                        <img class="car-img">
                                     </label>
                                     <p>Car</p>
+                                    <img class="blank-tick blank-car" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                    <img class="hide-imgs-car no-lazy green-img-car" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                                     </div>
                                 </div>
                             </div>
@@ -191,53 +195,60 @@ get_header('tmhomereskin');
                             <!-- <img class="green-check"> -->
                             <div class="line"></div>
                             <img class="grey-two">
-                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/2-green.png.png">
+                            <img class="d-none no-lazy" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                             <!-- <img class="green-two"> -->
                     </div>
                     <!-- <div class="d-lg-none d-sm-block d-md-block"> -->
                     <div class="d-lg-none d-sm-block d-md-none align-text-mob">
                         <p class="main-banner-txt-header2 " style=" ">Select type of insurance </p>
-                        <div class="banner-crd" style="display:flex;">
-                        <br>						
+                        <div class="banner-crd" style="display:flex;">					
                         <!--<div class="col-lg-2 col-md-3 col-6 mb-3 bannercrd-img">-->
-                        <div class="bannercrd-img">
+                        <div class="bannercrd-img health-card" onClick="changeImage('health')">
                             <div class="banner-img">
                                 <label class="select-type-health-mob">
                                     <!-- <input class="radio-grp" type="radio" name="radio-btns" value="health">
                                     <img class="health-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-health.svg"> -->
-                                    <img class="health-img" onClick="changeImage('health')">
+                                    <img class="health-img">
                                 </label>
                                 <p>Health</p>
+                                <img class="blank-tick blank-tick-health" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                <img class="hide-imgs no-lazy green-imgs" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                             </div>
                         </div>
-                        <div class="bannercrd-img">
+                        <div class="bannercrd-img life-card" onClick="changeImage('life')">
                             <div class="banner-img">
                                 <label class="select-type-life-mob">
                                     <!-- <input class="radio-grp" type="radio" name="radio-btns" value="life">
                                     <img class="life-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-life.svg" onClick="changeImage('life')"> -->
-                                    <img class="life-img" onClick="changeImage('life')">
+                                    <img class="life-img">
                                 </label>
                                 <p>Life</p>
+                                <img class="blank-tick blank-tick-life" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                <img class="hide-imgs-life no-lazy green-img-life" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                             </div>
                         </div>
-                        <div class="bannercrd-img">
+                        <div class="bannercrd-img bike-card" onClick="changeImage('bike')">
                             <div class="banner-img">
                                 <label class="select-type-bike-mob">
                                     <!-- <input class="radio-grp" type="radio" name="radio-btns" value="bike">
                                     <img class="bike-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-bike.svg" onClick="changeImage('bike')"> -->
-                                    <img class="bike-img" onClick="changeImage('bike')">
+                                    <img class="bike-img">
                                 </label>
                                 <p>Bike</p>
+                                <img class="blank-tick blank-bike" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                <img class="hide-imgs-bike no-lazy green-img-bike" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                             </div>
                         </div>
-                        <div class="bannercrd-img">
+                        <div class="bannercrd-img car-card" onClick="changeImage('car')">
                             <div class="banner-img banner-img-life-mid">
                                 <label class="select-type-car-mob">
                                     <!-- <input class="radio-grp" type="radio" name="radio-btns" value="car">
                                     <img class="car-img" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/home-banner-icon-car.svg" onClick="changeImage('car')"> -->
-                                    <img class="car-img" onClick="changeImage('car')">
+                                    <img class="car-img">
                                 </label>
                                 <p>Car</p>
+                                <img class="blank-tick blank-car" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/blank-tick.png">
+                                <img class="hide-imgs-car no-lazy green-img-car" src="<?php bloginfo('stylesheet_directory'); ?>/tm-assets/img/green-check.png">
                             </div>
                         </div>
                         </div>

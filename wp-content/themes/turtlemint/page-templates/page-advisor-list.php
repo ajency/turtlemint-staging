@@ -155,19 +155,19 @@ get_header('tmhomereskin', array('tmBodyClasses' => $bodyClasses));
                     <div class="tm-select-dropdown">
                         <div class="tm-select-value" data-value="FW" onclick="tmSelectDropdown(this)"><img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg" alt="4 Wheeler Insurance" class="icon"> <span class="title">Car</span></div>
                         <div class="tm-select-options">
-                            <div title="4 Wheeler Insurance" class="tm-select-option <?php echo $vertical=="FW" ? "selected" : ""; ?>" data-value="FW" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-colored-icon.svg">
+                            <div title="4 Wheeler Insurance" class="tm-select-option <?php echo $vertical=="FW" ? "selected" : ""; ?>" data-value="FW" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/4-wheeler-icon.svg" alt="4 Wheeler Insurance" class="icon">
                                 <span class="title">Car</span>
                             </div>
-                            <div title="2 Wheeler Insurance" class="tm-select-option <?php echo $vertical=="TW" ? "selected" : ""; ?>" data-value="TW" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-colored-icon.svg">
+                            <div title="2 Wheeler Insurance" class="tm-select-option <?php echo $vertical=="TW" ? "selected" : ""; ?>" data-value="TW" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/2-wheeler-icon.svg" alt="2 Wheeler Insurance" class="icon">
                                 <span class="title">Bike</span>
                             </div>
-                            <div title="Life Insurance" class="tm-select-option <?php echo $vertical=="Life" ? "selected" : ""; ?>" data-value="Life" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-colored-icon.svg">
+                            <div title="Life Insurance" class="tm-select-option <?php echo $vertical=="Life" ? "selected" : ""; ?>" data-value="Life" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/life-icon.svg" alt="Life Insurance" class="icon">
                                 <span class="title">Life</span>
                             </div>
-                            <div title="Health Insurance" class="tm-select-option <?php echo $vertical=="Health" ? "selected" : ""; ?>" data-value="Health" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-colored-icon.svg">
+                            <div title="Health Insurance" class="tm-select-option <?php echo $vertical=="Health" ? "selected" : ""; ?>" data-value="Health" onclick="tmSelectDropdown(this, true)" data-icon="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-icon.svg">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/tm-assets/img/icons/health-icon.svg" alt="Health Insurance" class="icon">
                                 <span class="title">Health </span>
                             </div>

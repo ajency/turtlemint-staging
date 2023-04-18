@@ -108,13 +108,135 @@ img {
     padding-bottom: 30px;
 	*/
 }
+
+img.blank-tick {
+    width: 20px !important;
+    height: 20px !important;
+}
+.blank-tick-health {
+    margin-left: 65px !important;
+    margin-top: 8px !important;
+}
+.blank-tick-life {
+    margin-left: 89px !important;
+    margin-top: 8px !important;
+}
+.blank-bike {
+    margin-left: 83px !important;
+    margin-top: 8px !important;
+}
+.blank-car {
+    margin-left: 91px !important;
+    margin-top: 8px !important;
+}
+
+.green-imgs {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 65px !important;
+    margin-top: 8px !important;
+}
+
+.green-img-life {
+    margin-left: 89px !important;
+    margin-top: 8px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.green-img-bike {
+    margin-left: 83px !important;
+    margin-top: 8px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.green-img-car {
+    margin-left: 91px !important;
+    margin-top: 8px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+@media(max-width: 768px) {
+    .blank-tick-health {
+        margin-left: 0px !important;
+        margin-top: 2px !important;
+    }
+    .blank-tick-life {
+        margin-left: 25px !important;
+        margin-top: 2px !important;
+    }
+    .blank-bike {
+        margin-left: 20px !important;
+        margin-top: 2px !important;
+    }
+    .blank-car {
+        margin-left: 25px !important;
+        margin-top: 2px !important;
+    }
+    .green-imgs {
+        margin-left: 0px !important;
+        margin-top: 2px !important;
+    }
+    .green-img-life {
+        margin-left: 25px !important;
+        margin-top: 2px !important;
+    }
+    .green-img-bike {
+        margin-left: 20px !important;
+        margin-top: 2px !important;
+    }
+    .green-img-car {
+        margin-left: 25px !important;
+        margin-top: 2px !important;
+    }
+}
+.bannercrd-img:nth-child(1),
+.bannercrd-img:nth-child(2) {
+  margin-bottom: 16px;
+}
 .banner-img{    
 	width: 80px;
 	height: 80px;
 	border-radius: 12.9545px;
 	background: #FFFFFF;
 	background: url(../img/banner-img-rectangle.svg);
+    display: flex;
 }
+
+.green-imgs {
+    display: block !important;
+    padding: 0 !important;
+ }
+ .green-img-life {
+    display: block !important;
+    padding: 0 !important;
+ }
+ .green-img-bike {
+    display: block !important;
+    padding: 0 !important;
+ }
+ .green-img-car {
+    display: block !important;
+    padding: 0 !important;
+ }
+
+ .hide-imgs {
+    display: none !important;
+ }
+
+ .hide-imgs-life {
+    display: none !important;
+ }
+
+ .hide-imgs-car {
+    display: none !important;
+ }
+
+ .hide-imgs-bike {
+    display: none !important;
+ }
 
 .banner-img:hover{
     /*border: 2px solid #009F69;*/
@@ -123,9 +245,10 @@ img {
     margin: auto;
     text-align: center;
     display: block;
-    width: 70px;
-	height: 80px;
-	padding: 15%;
+    width: 30.99px;
+    height: 28px;
+    margin-left: 16.04px;
+	/* padding: 15%; */
 }
 .banner-img-life img{
     /* width: 34px; */
@@ -640,18 +763,25 @@ img {
 .home-whyadvisor p{
 	text-align: center;
 }
-.bannercrd-img + .bannercrd-img {
+/* .bannercrd-img + .bannercrd-img {
     margin-left: 45px; 
-}
+} */
 .banner-img p{
 	
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 500;
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 16px;
+	line-height: 19.5   px;
 	text-align: center;
 	color: #333333;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+@media(max-width: 768px) {
+    .banner-img p {
+        font-size: 14px;
+    }
 }
 
 .btns-mid p{
@@ -776,9 +906,9 @@ button:hover,
 .shadow p{
 	font-weight: 600;
 }
-.shadow img{
+/* .shadow img{
 	padding: 12%;
-}
+} */
 .home-whyadvisor-row{
 	display: flex;
 	flex-wrap: wrap;
@@ -914,7 +1044,7 @@ button:hover,
 	}
 	.banner-img {
 	  width: 64px;
-	  height: 64px;
+	  height: 64px; 
 	}
 	.banner-img img {
 	  height: 55px;
@@ -957,7 +1087,7 @@ button:hover,
 /* Ipad End */
 
 @media screen and (min-device-width: 300px) and (max-device-width: 365px){  
-	.bannercrd-img + .bannercrd-img { margin-left: 10px; }
+	/* .bannercrd-img + .bannercrd-img { margin-left: 10px; } */
 	.btns-mid button { padding-left: 15px; padding-right: 12px; }	
 	.bannercrd-img	{/*border: 2px solid red;*/}
 }
@@ -968,7 +1098,7 @@ button:hover,
 }
 
 @media screen and (min-device-width: 360px) and (max-device-width: 390px){
-	.bannercrd-img + .bannercrd-img { margin-left: 18px; }
+	/* .bannercrd-img + .bannercrd-img { margin-left: 18px; } */
 	.btns-mid button { padding: 15px 25px;}
 	.row-mid-new{column-gap: 8px}	
 	.bannercrd-img	{/*border: 2px solid red;*/}
@@ -977,7 +1107,7 @@ button:hover,
 
 	
 @media screen and (min-device-width: 366px) and (max-device-width: 400px){  
-	.bannercrd-img + .bannercrd-img {margin-left: 22px; }
+	/* .bannercrd-img + .bannercrd-img {margin-left: 22px; } */
 	.btns-mid button { padding: 15px 30px;}
 	.row-mid-new{column-gap: 8px;}	
 	.bannercrd-img	{/*border: 2px solid green;*/}	
@@ -1077,9 +1207,14 @@ button:hover,
 .grey-two {
     content: url('../img/2-icon.png');
 }
+.blank-tick {
+    content: url('../img/blank-tick.png');
+}
+.green-check-for-card {
+    content: url('../img/green-check.png');
+  }
 
-
-.health-img.health-checked {
+/* .health-img.health-checked {
   content: url('../img/home-banner-icon-health-checked.svg');
 }
 .life-img.life-checked {
@@ -1090,7 +1225,7 @@ button:hover,
 }
 .car-img.car-checked {
   content: url('../img/home-banner-icon-car-checked.svg');
-}
+} */
 /* Home vertical icons end */
 /* MID */
 
@@ -1127,7 +1262,38 @@ button:hover,
     background: #FFFFFF;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
     border-radius: 9.48347px;
+    width: 206px;
+    height: 64px;
+    align-items: center;
 }
+.banner-crd {
+    width: 480px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: -23px;
+}
+.bannercrd-img {
+    border: 1px solid rgba(0, 159, 105, 0.3);
+    border-radius: 9.48347px;
+}
+.selected-card {
+    border: 1px solid #009F69;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 9.48347px;
+}
+@media(max-width:768px){
+    .banner-crd {
+        width: 312px;
+        margin-left: 0;
+    }
+    .tm-border-box .bannercrd-img .banner-img {
+        width: 143px;
+    }
+    .banner-img label {
+        margin-bottom: 0 !important;
+    }
+}
+
 .tm-border-box .cta-btns button{
     margin-bottom: 19px;
     font-weight: 700;
