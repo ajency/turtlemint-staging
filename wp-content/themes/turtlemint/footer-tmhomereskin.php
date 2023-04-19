@@ -1027,42 +1027,50 @@
 			$('.green-imgs').removeClass('hide-imgs');
 			$('.green-imgs').show();
 			$('.health-card').css({
-				border: '1px solid #009F69',
+				borderColor: '#009F69',
+				border: '1px solid transparent',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
-
+			console.log('Image changed:', img);
 		} else if (img === 'life') {
 			$('.blank-tick-life').hide();
 			$('.green-img-life').removeClass('hide-imgs-life');
 			$('.green-img-life').show();
 			$('.life-card').css({
-				border: '1px solid #009F69',
+				borderColor: '#009F69',
+				border: '1px solid transparent',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
+			console.log('Image changed:', img);
 		} else if (img === 'bike') {
 			$('.blank-bike').hide();
 			$('.green-img-bike').removeClass('hide-imgs-bike');
 			$('.green-img-bike').show();
 			$('.bike-card').css({
-				border: '1px solid #009F69',
+				borderColor: '#009F69',
+				border: '1px solid transparent',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
+			console.log('Image changed:', img);
 		} else {
 			$('.blank-car').hide();
 			$('.green-img-car').removeClass('hide-imgs-car');
 			$('.green-img-car').show();
 			$('.car-card').css({
-				border: '1px solid #009F69',
+				borderColor: '#009F69',
+				border: '1px solid transparent',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
+			console.log('Image changed:', img);
 		}
 
 		// unselect the previously selected card
-		if (selected_card !== '') {
+		if (selected_card !== img) {
+			if (selected_card !== '') {
 			$('.' + selected_card + '-img').removeClass(selected_card + '-checked');
 			if (selected_card === 'health') {
 				$('.blank-tick-health').show();
@@ -1072,6 +1080,7 @@
 					boxShadow: '',
 					borderRadius: ''
 				});
+				console.log('Image unselected:', img);
 			} else if (selected_card === 'life') {
 				$('.blank-tick-life').show();
 				$('.green-img-life').addClass('hide-imgs-life');
@@ -1080,6 +1089,7 @@
 					boxShadow: '',
 					borderRadius: ''
 				});
+				console.log('Image unselected:', img);
 			} else if (selected_card === 'bike') {
 				$('.blank-bike').show();
 				$('.green-img-bike').addClass('hide-imgs-bike');
@@ -1088,6 +1098,7 @@
 					boxShadow: '',
 					borderRadius: ''
 				});
+				console.log('Image unselected:', img);
 			} else {
 				$('.blank-car').show();
 				$('.green-img-car').addClass('hide-imgs-car');
@@ -1096,7 +1107,9 @@
 					boxShadow: '',
 					borderRadius: ''
 				});
+				console.log('Image unselected:', img);
 			}
+		}
 		}
 
 		selected_card = img; // set the currently selected card to the new selection

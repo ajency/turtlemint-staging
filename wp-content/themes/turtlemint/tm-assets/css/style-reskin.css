@@ -114,45 +114,45 @@ img.blank-tick {
     height: 20px !important;
 }
 .blank-tick-health {
-    margin-left: 65px !important;
+    margin-left: 56px !important;
     margin-top: 8px !important;
 }
 .blank-tick-life {
-    margin-left: 89px !important;
+    margin-left: 81px !important;
     margin-top: 8px !important;
 }
 .blank-bike {
-    margin-left: 83px !important;
+    margin-left: 74px !important;
     margin-top: 8px !important;
 }
 .blank-car {
-    margin-left: 91px !important;
+    margin-left: 82px !important;
     margin-top: 8px !important;
 }
 
 .green-imgs {
     width: 20px !important;
     height: 20px !important;
-    margin-left: 65px !important;
+    margin-left: 56px !important;
     margin-top: 8px !important;
 }
 
 .green-img-life {
-    margin-left: 89px !important;
+    margin-left: 81px !important;
     margin-top: 8px !important;
     width: 20px !important;
     height: 20px !important;
 }
 
 .green-img-bike {
-    margin-left: 83px !important;
+    margin-left: 74px !important;
     margin-top: 8px !important;
     width: 20px !important;
     height: 20px !important;
 }
 
 .green-img-car {
-    margin-left: 91px !important;
+    margin-left: 82px !important;
     margin-top: 8px !important;
     width: 20px !important;
     height: 20px !important;
@@ -245,8 +245,8 @@ img.blank-tick {
     margin: auto;
     text-align: center;
     display: block;
-    width: 35.93px;
-    height: 32.93px;
+    width: 40px;
+    height: 40px;
     margin-left: 16.04px;
 	/* padding: 15%; */
 }
@@ -1270,7 +1270,7 @@ button:hover,
     width: 480px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: -23px;
+    margin-left: -22px;
 }
 .bannercrd-img {
     border: 1px solid rgba(0, 159, 105, 0.3);
