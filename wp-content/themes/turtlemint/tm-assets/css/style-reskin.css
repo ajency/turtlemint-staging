@@ -1285,6 +1285,7 @@ button:hover,
     .banner-crd {
         width: 312px;
         margin-left: 0;
+        padding-bottom: 0 !important;
     }
     .tm-border-box .bannercrd-img .banner-img {
         width: 143px;
@@ -1423,7 +1424,7 @@ label {
 	@media(max-width:768px) {
 		.align-text-mob {
     		margin-left: 40px;
-			margin-top: -303px;
+			margin-top: -283px;
 		}
 		.help-text {
 			padding-top: 15px;
@@ -1443,6 +1444,6 @@ label {
             margin-bottom: 10px;
 		}
         .line {
-            height: 240px;
+            height: 220px;
         }
 	}

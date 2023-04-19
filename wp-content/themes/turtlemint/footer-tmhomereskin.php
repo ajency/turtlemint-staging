@@ -1027,8 +1027,7 @@
 			$('.green-imgs').removeClass('hide-imgs');
 			$('.green-imgs').show();
 			$('.health-card').css({
-				borderColor: '#009F69',
-				border: '1px solid transparent',
+				border: '1px solid #009F69',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
@@ -1038,8 +1037,7 @@
 			$('.green-img-life').removeClass('hide-imgs-life');
 			$('.green-img-life').show();
 			$('.life-card').css({
-				borderColor: '#009F69',
-				border: '1px solid transparent',
+				border: '1px solid #009F69',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
@@ -1049,8 +1047,7 @@
 			$('.green-img-bike').removeClass('hide-imgs-bike');
 			$('.green-img-bike').show();
 			$('.bike-card').css({
-				borderColor: '#009F69',
-				border: '1px solid transparent',
+				border: '1px solid #009F69',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
@@ -1060,8 +1057,7 @@
 			$('.green-img-car').removeClass('hide-imgs-car');
 			$('.green-img-car').show();
 			$('.car-card').css({
-				borderColor: '#009F69',
-				border: '1px solid transparent',
+				border: '1px solid #009F69',
 				boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.08)',
 				borderRadius: '9.48347px'
 			});
@@ -1076,7 +1072,7 @@
 				$('.blank-tick-health').show();
 				$('.green-imgs').addClass('hide-imgs');
 				$('.health-card').css({
-					border: 'none',
+					border: '1px solid rgba(0, 159, 105, 0.3)',
 					boxShadow: '',
 					borderRadius: ''
 				});
@@ -1085,7 +1081,7 @@
 				$('.blank-tick-life').show();
 				$('.green-img-life').addClass('hide-imgs-life');
 				$('.life-card').css({
-					border: 'none',
+					border: '1px solid rgba(0, 159, 105, 0.3)',
 					boxShadow: '',
 					borderRadius: ''
 				});
@@ -1094,7 +1090,7 @@
 				$('.blank-bike').show();
 				$('.green-img-bike').addClass('hide-imgs-bike');
 				$('.bike-card').css({
-					border: 'none',
+					border: '1px solid rgba(0, 159, 105, 0.3)',
 					boxShadow: '',
 					borderRadius: ''
 				});
@@ -1103,7 +1099,7 @@
 				$('.blank-car').show();
 				$('.green-img-car').addClass('hide-imgs-car');
 				$('.car-card').css({
-					border: 'none',
+					border: '1px solid rgba(0, 159, 105, 0.3)',
 					boxShadow: '',
 					borderRadius: ''
 				});
@@ -1119,10 +1115,12 @@
 		checked = true;
 		img_pressed = img;
 
+		console.log(selected_card);
+
 		// GA EVENT START
-		gtag('event', 'Btn_click-' + img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1), {
+		gtag('event', 'Btn_click-' + selected_card.charAt(0).toUpperCase() + selected_card.slice(1), {
 			event_category: 'HP-Buttons',
-			event_label: img_pressed.charAt(0).toUpperCase() + img_pressed.slice(1)
+			event_label: selected_card.charAt(0).toUpperCase() + selected_card.slice(1)
 		});
 		// GA EVENT END
 
