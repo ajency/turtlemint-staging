@@ -115,6 +115,9 @@
 						<li>
 							<a href="/wp-content/uploads/2023/01/Grievance-Redressal-Policy.pdf" target="_blank">Grievance Policy</a>
 						</li>
+						<li>
+							<a href="/wp-content/uploads/TIB-CSR-policy.pdf" target="_blank">CSR Policy</a>
+						</li>
 						<!-- <li>
 							<a href="https://www.flurish.in/" target="_blank">Flurish</a>
 						</li> -->
@@ -229,6 +232,9 @@
 							</li>
 							<li>
 								<a href="/wp-content/uploads/2023/01/Grievance-Redressal-Policy.pdf" target="_blank">Grievance Policy</a>
+							</li>
+							<li>
+								<a href="/wp-content/uploads/2023/05/TIB-CSR-policy.pdf" target="_blank">CSR Policy</a>
 							</li>
 							<!-- <li>
 								<a href="https://www.flurish.in/" target="_blank">Flurish</a>
@@ -351,6 +357,9 @@
 							</li>
 							<li>
 								<a href="/wp-content/uploads/2023/01/Grievance-Redressal-Policy.pdf" target="_blank">Grievance Policy</a>
+							</li>
+							<li>
+								<a href="/wp-content/uploads/2023/05/TIB-CSR-policy.pdf" target="_blank">CSR Policy</a>
 							</li>
 							<!-- <li>
 								<a href="https://www.flurish.in/" target="_blank">Flurish</a>
