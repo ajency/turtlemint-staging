@@ -1161,5 +1161,50 @@
 			}
 		</style>
 <!-- endinject:foot -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+	;
+	})(window,document,'script','dataLayer','GTM-PCZGBP');
+</script>
+<!-- End Google Tag Manager -->
+
+<?php
+	/* Customize Variables */
+	$ga_tracking_id = get_option('tm_ga_tracking_id', '');
+	$ga4_tracking_id = get_option('tm_ga4_tracking_id', '');
+?>
+
+<?php if ($ga_tracking_id || $ga4_tracking_id) : ?>
+	<!-- Google tag (gtag.js) -->
+
+	<?php if ($ga_tracking_id) : ?>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_tracking_id; ?>"></script>
+	<?php elseif ($ga4_tracking_id) : ?>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga4_tracking_id; ?>"></script>
+	<?php endif; ?>
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		<?php if ($ga_tracking_id) : ?>
+			gtag('config', '<?php echo $ga_tracking_id; ?>');
+		<?php endif; ?>
+
+		<?php if ($ga4_tracking_id) : ?>
+			gtag('config', '<?php echo $ga4_tracking_id; ?>');
+		<?php endif; ?>
+	</script>
+
+<?php endif; ?>
+
 </body>
 </html>

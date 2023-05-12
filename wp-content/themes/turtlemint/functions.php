@@ -802,3 +802,55 @@ function custom_text_validation_filter( $result, $tag ) {
 
     return $result;
 };
+
+/*********** Customize Fields | Start *************/
+
+/************ Event Tracking Settings ************/
+
+function tm_customize_register($wp_customize){
+
+    $wp_customize->add_section('tm_event_tracking_settings', array(
+        'title'    => __('Event Tracking Settings', 'turtlemint-child'),
+        'priority' => 120,
+    ));
+
+    /* Add custom field for the GA4 tracking ID */
+
+    $wp_customize->add_setting('tm_ga4_tracking_id', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control('tm_ga4_tracking_id', array(
+        'label'      => __('GA4 Tracking ID', 'turtlemint-child'),
+        'description' => sprintf(
+            '<p>Your "G-" ID appears in the GA4 setup assistant.</p>'
+        ),
+        'section'    => 'tm_event_tracking_settings',
+        'settings'   => 'tm_ga4_tracking_id',
+    ));
+
+    /* Add custom field for the GA tracking ID */
+
+    $wp_customize->add_setting('tm_ga_tracking_id', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control('tm_ga_tracking_id', array(
+        'label'      => __('GA Tracking ID', 'turtlemint-child'),
+        'description' => sprintf(
+            '<p>Your "UA-" ID appears at the top of the Property Settings page.</p>'
+        ),
+        'section'    => 'tm_event_tracking_settings',
+        'settings'   => 'tm_ga_tracking_id',
+    ));
+}
+
+add_action('customize_register', 'tm_customize_register');
+
+/*********** Customize Fields | End *************/
